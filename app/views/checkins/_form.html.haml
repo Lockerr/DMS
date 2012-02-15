@@ -1,0 +1,22 @@
+.new_checkin{:style => 'display: none', :id => @checkin.id}
+  .errors
+  .checkin_form
+    .damage
+      %label Повреждения
+      = check_box :checkin, :damage
+    .comments
+      %label Описание
+      %br/
+      = text_area :checkin, :comments, :rows => 5
+    .files
+      %label Фотографии
+
+      #content
+        %form#form1{:action => "index.php", :enctype => "multipart/form-data", :method => "post"}
+          #fsUploadProgress.fieldset.flash
+          #divStatus 0 Файлов загружено
+          %div
+            %span#spanButtonPlaceHolder
+            -#%input#btnCancel{:disabled => "disabled", :onclick => "swfu.cancelQueue();", :style => "margin-left: 2px; font-size: 8pt; height: 29px;", :type => "button", :value => "Cancel All Uploads"}/
+    .buttons
+      = link_to 'update','#',  :class => 'update_checkin',:id => @checkin.id

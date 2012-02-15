@@ -1,0 +1,12 @@
+.car_form {
+  display: table;
+  div { display: table-row;}
+  label, select, input {
+    display: table-cell;
+  }
+}
+
+.errors {
+  background: red;
+
+}

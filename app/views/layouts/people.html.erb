@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DmsExt</title>
+  <%= stylesheet_link_tag "people" %>
+  <%= stylesheet_link_tag "jquery-ui" %>
+  <%= stylesheet_link_tag "commons" %>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "jquery_ujs" %>
+  <%= javascript_include_tag "jquery-ui" %>
+  <%= javascript_include_tag "datepicker-ru" %>
+  <%= javascript_include_tag "people" %>
+  <%= javascript_include_tag "masked" %>
+  <%= javascript_include_tag "TypeWatch" %>
+
+
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= link_to 'Наличие', cars_path %>
+<%= link_to 'Клиенты', people_path %>
+<%= current_user.email if current_user %>
+<%= yield %>
+
+</body>
+</html>

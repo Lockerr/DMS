@@ -1,0 +1,43 @@
+.header.header
+  .subject.cell
+    Повод
+  .action.cell
+    Событие
+  .action_date.cell
+    Дата
+  .action_time.cell
+    Время
+  .next_subject.cell
+    Следующий повод
+  .next_action.cell
+    Следующее событие
+  .next_action_date.cell
+    Дата
+  .next_action_time.cell
+    Время
+  .description.cell
+    Комментарий
+
+- unless @communications.any?
+  Empty set
+
+- for communication in @communications
+  .communication.row
+    .subject.cell
+      = communication.subject
+    .action.cell
+      = communication.action
+    .action_date.cell
+      = communication.action_date.strftime('%d.%m.%y') if communication.action_date
+    .action_time.cell
+      = communication.action_date.strftime('%H:%M') if communication.action_date
+    .next_subject.cell
+      = communication.next_subject
+    .next_action.cell
+      = communication.next_action
+    .next_action_date.cell
+      = communication.next_action_date.strftime('%d.%m.%y') if communication.next_action_date
+    .next_action_time.cell
+      = communication.next_action_time
+    .description.cell
+      = communication.descriptions

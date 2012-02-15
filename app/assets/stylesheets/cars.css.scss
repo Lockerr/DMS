@@ -1,0 +1,287 @@
+.top-box {
+  height: 45%;
+  background: rgb(238, 238, 238);
+  position: fixed;
+  top: 0px;
+  overflow: auto;
+  z-index: 1000;
+  width: 100%;
+  .top-left {
+    width: 49%;
+    float: left;
+    height: 100%;
+    border-right: 1px dotted green;
+    overflow-y: auto;
+  }
+  .top-right {
+    width: 49%;
+    float: left;
+    htight: 100%;
+    overflow-y: auto;
+  }
+}
+
+
+.cars_table {
+  font-size: 75%;
+  /*width: auto;*/
+  font-family: arial;
+  display: table;
+  border: 1px solid lightBlue;
+  padding: 0px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+
+  .id, .order, .klasse, .model, .line, .color, .vin, .state, .prod_date,
+  .interior, .price, .options, .person, .published,
+  .arrival, .days_at_stock, .comments,
+  .vp,.insurance,.manager,.payment,.car_type,.run  {
+    white-space: nowrap;
+    display: table-cell;
+    border: 1px solid lightBlue;
+    padding: 2px;
+    overflow: hidden;
+    text-overflow: hidden;
+    height: 22px;
+    &.warn {
+    background-color: red;
+    color: white;
+  }
+
+  }
+   input, select {
+     padding: 0;
+     margin: 0;
+     font-size: 80%;
+     width: auto;
+   }
+   .id {width: 27px}
+   .order {
+     width: 67px;
+     #car_order {
+     width: 67px;
+     }
+
+   }
+   .line {
+     width: 10px;
+     #car_line_id {
+     width: 20px;
+     }
+     }
+   .klasse {
+     width: 50px;
+     #car_klasse_id {
+       width: 33px
+     }
+   }
+   .person {
+     width: 33px;
+   }
+
+   .options {
+       width: 33px;
+   }
+
+   .model {
+     width: 100px;
+     #car_model_id {
+       width: 100px;
+     }
+   }
+
+
+  .title { display:table-caption;}
+
+  .cars {
+    display: table-row-group;
+    top: 33%;
+    }
+
+  .header, .filters {
+
+    display: table-header-group;
+    background: #63CBDB;
+    text-align: center;
+    overflow: hidden;
+    height: 22px;
+
+
+
+  }
+  .filters {
+    top: 27%;
+  }
+  .header {
+    top: 25%;
+    font-size: 80%;
+  }
+  .edited_car {
+    display: table-row;
+    background: yellow;
+  }
+
+  .car {
+    display: table-row;
+    background: none;
+    &:hover { background: lightgray;}
+  }
+
+
+
+
+
+  .footer {
+    .add, .edit, .delete {
+      height: 18px;
+      width: 18px;
+      display: table-row;
+      -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+      box-shadow: inset 0px 1px 0px 0px #ffffff;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #add8e6), color-stop(1, #6b96a3));
+      background: -moz-linear-gradient(center top, #add8e6 5%, #6b96a3 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#add8e6', endColorstr='#6b96a3');
+      background-color: #add8e6;
+      -moz-border-radius: 6px;
+      -webkit-border-radius: 6px;
+      border-radius: 6px;
+      border: 1px solid #dcdcdc;
+      display: inline-block;
+      color: #777777;
+      font-family: arial;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 1px 1px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 1px 1px 0px #ffffff;
+      &:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6b96a3), color-stop(1, #add8e6));
+        background: -moz-linear-gradient(center top, #6b96a3 5%, #add8e6 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b96a3', endColorstr='#add8e6');
+        background-color: #6b96a3; }
+      &:active {
+        position: relative;
+        top: 1px; }
+    }
+
+  }
+
+}
+
+
+
+
+
+
+td {
+	font: 10pt Helvetica, Arial, sans-serif;
+	vertical-align: top;
+}
+
+.progressWrapper {
+	width: 200px;
+	overflow: hidden;
+  float: left
+}
+
+.progressContainer {
+	margin: 5px;
+	padding: 4px;
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+/* Message */
+.message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+/* Error */
+.red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+/* Current */
+.green {
+	border: solid 1px #DDF0DD;
+	background-color: #EBFFEB;
+}
+
+/* Complete */
+.blue {
+	border: solid 1px #CEE2F2;
+	background-color: #F0F5FF;
+}
+
+.progressName {
+	font-size: 8pt;
+	font-weight: 700;
+	color: #555;
+	width: 323px;
+	height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.progressBarInProgress,
+.progressBarComplete,
+.progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+
+.progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+.progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.progressBarStatus {
+	margin-top: 2px;
+	width: 337px;
+	font-size: 7pt;
+	font-family: Arial;
+	text-align: left;
+	white-space: nowrap;
+}
+
+a.progressCancel {
+	font-size: 0;
+	display: block;
+	height: 0px;
+	width: 0px;
+	background-image: url(../images/cancelbutton.gif);
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+
+a.progressCancel:hover {
+	background-position: 0px 0px;
+}
+
+
+.new_car {
+  .errors { color: red;}
+  .klasse, .model, .line { float: left}
+  hr {width: 100%; border: none}
+  .color, .interior {width: 55px;float: left}
+
+}
+

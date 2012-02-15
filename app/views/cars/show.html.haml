@@ -1,0 +1,45 @@
+.car{:id => @car.id}
+  .id
+    = @car.id
+  .order
+    = @car.order
+  .klasse
+    = @car.klasse_id
+  .model
+    =@car.model.name
+  .line
+    =@car.line_id
+  .vin
+    =@car.vin
+  .color
+    = @car.color_id
+  .interior
+    = @car.interior_id
+  .price
+    = @car.price
+  .options
+    = @car.options
+  .person
+    = @car.person.try(:name)
+  .published
+    = @car.published
+  .arrival
+    = @car.arrival
+  .days_at_stock
+    = @car.days_at_stock
+  .comments
+    = @car.comments
+  .vp
+    = @car.vp
+  .insurance
+    = @car.insurance
+  .manager
+    = @car.manager.try(:name)
+  .payment
+    = @car.payment
+  .car_type
+    = @car.car_type
+  .run
+    = @car.run
+
+

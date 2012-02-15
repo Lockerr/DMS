@@ -1,0 +1,50 @@
+-#- for car in @cars
+.car{:id => car.id}
+  .id
+    = car.id
+  .order
+    = car.order
+  .klasse
+    = car.klasse.name
+  .model
+    =car.model.name
+  .line
+    =car.line.name
+  .vin
+    =car.vin
+  .color
+    = car.color_id
+  .interior
+    = car.interior_id
+  .price
+    = number_to_currency(car.price, :precision => 0, :delimiter => ",", :unit => '')
+  .options
+    = car.options
+  .person
+    = car.person.try(:name)
+  .published
+    = car.published
+  .state
+    = car.state
+  .prod_date
+    = car.prod_date
+  .arrival
+    = car.arrival
+  .days_at_stock
+    = car.days_at_stock
+  .comments
+    = car.comments
+  .vp
+    = car.vp
+  .insurance
+    = car.insurance
+  .manager
+    = car.manager.try(:name)
+  .payment
+    = car.payment.try(:name)
+  .car_type
+    = car.car_type
+  .run
+    = car.run
+
+

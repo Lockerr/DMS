@@ -1,0 +1,110 @@
+.top-box
+  .top-left
+  .top-right
+
+= render 'functions'
+
+
+.mid-box
+  .cars_table
+    .header
+      .id
+        \#
+
+      .order Номер заказа
+      .klasse Класс
+      .model Модель
+      .line Линия
+      .vin VIN
+      .color Цвет
+      .interior Салон
+      .price Цена
+      .options Опции
+      .person Клиент
+      .published Сайт
+      .state Состояния
+      .prod_date ДатаЗавод
+      .arrival Прибытие
+      .days_at_stock На складе
+      .comments Комментарий
+      .vp ПТС
+      .insurance Страховка
+      .manager Менеджер
+      .payment З/П
+      .car_type Б/У
+      .run Пробег
+    .filters
+      .id
+        = text_field :search, :id, :size => 1, :class => :filter
+      .order
+        = text_field :search, :order, :size => 2, :class => :filter
+      .klasse
+        = text_field :search, :klasse, :size => 2, :class => :filter
+      .model
+        = text_field :search, :model, :size => 2, :class => :filter
+      .line
+        = text_field :search, :line, :size => 2, :class => :filter
+      .vin
+        = text_field :search, :vin, :size => 2, :class => :filter
+      .color
+        = text_field :search, :color_id, :size => 2, :class => :filter
+      .interior
+        = text_field :search, :interior_id, :size => 2, :class => :filter
+      .price
+        = text_field :search, :price, :size => 2, :class => :filter
+      .options
+        = text_field :search, :options, :size => 2, :class => :filter
+      .person
+        = text_field :search, :person, :size => 2, :class => :filter
+      .published
+        = check_box :search, :published, :size => 2, :class => :filter
+        \|
+        = check_box :search, :unpublished, :size => 2, :class => :filter
+      .state
+        = text_field :search, :state, :size => 4, :class => :filter
+
+      .arrival
+        = text_field :search, :arrival, :size => 2, :class => :filter
+      .days_at_stock
+        = text_field :search, :days_at_stock, :size => 2, :class => :filter
+      .comments
+        = text_field :search, :comments, :size => 2, :class => :filter
+      .vp
+        = text_field :search, :vp, :size => 2, :class => :filter
+      .insurance
+        = text_field :search, :insurance, :size => 2, :class => :filter
+      .manager
+        = text_field :search, :manager, :size => 2, :class => :filter
+      .payment
+        = text_field :search, :payment, :size => 2, :class => :filter
+      .car_type
+        = text_field :search, :car_type, :size => 2, :class => :filter
+      .run
+        = text_field :search, :run, :size => 2, :class => :filter
+
+    .cars
+      - for car in @cars
+        = render car
+    .footer
+      .add
+        +
+      .edit
+        \/
+      .delete
+        X
+
+    .pager
+      .first
+      .previous
+      .picker
+        = text_field :pager, :page, :size => 2
+      .next
+      .last
+    .info
+      .pager-info
+
+  .checkin_form
+  = render 'from'
+  .contract_form
+.respond
+

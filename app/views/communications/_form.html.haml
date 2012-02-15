@@ -1,0 +1,27 @@
+.new_person
+  .errors
+  .person_from
+    .name
+      %label Имя
+      = text_field :person, :name
+    .phones
+      %label Телефоны
+      = text_field :person, :phones
+    .email
+      %label e-mail
+      = text_field :person, :email
+    .descriptions
+      %label Комментарий
+      = text_field :person, :desc
+    .package
+      %label Комплектация
+      = text_field :person, :package
+    .model_id
+      %label Модель
+      = text_field :person, :model
+    .manager_id
+      %label Менеджер
+      = text_field :person, :manager
+    .order_id
+      %label Номер заказа
+      = text_field :person, :order

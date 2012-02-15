@@ -1,0 +1,157 @@
+// Place all the styles related to the people controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.people_table {
+
+
+  input, select {
+    padding: 0;
+    margin: 0;
+  }
+
+  .id {width: 10px}
+  .order {width: 72px;}
+  .line {
+    width: 10px;
+    #person_line_id {
+    width: 20px;
+    }
+    }
+
+  .model {
+    width: 80px;
+    #person_model_id {
+      width: 80px;
+    }
+  }
+
+  .title { display:table-caption;}
+
+  .people { display: table-row-group;}
+
+
+  .edited_person {
+    display: table-row;
+    background: yellow;
+  }
+
+  .person {
+    display: table-row;
+    background: none;
+    &:hover { background: lightgray;}
+  }
+
+
+
+
+
+  .footer {
+    .add, .edit, .delete {
+      height: 18px;
+      width: 18px;
+      display: table-row;
+      -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+      box-shadow: inset 0px 1px 0px 0px #ffffff;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #add8e6), color-stop(1, #6b96a3));
+      background: -moz-linear-gradient(center top, #add8e6 5%, #6b96a3 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#add8e6', endColorstr='#6b96a3');
+      background-color: #add8e6;
+      -moz-border-radius: 6px;
+      -webkit-border-radius: 6px;
+      border-radius: 6px;
+      border: 1px solid #dcdcdc;
+      display: inline-block;
+      color: #777777;
+      font-family: arial;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 1px 1px;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 1px 1px 0px #ffffff;
+      &:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6b96a3), color-stop(1, #add8e6));
+        background: -moz-linear-gradient(center top, #6b96a3 5%, #add8e6 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b96a3', endColorstr='#add8e6');
+        background-color: #6b96a3; }
+      &:active {
+        position: relative;
+        top: 1px; }
+    }
+
+  }
+
+}
+
+
+
+
+
+*  {
+ &.cell {
+display: table-cell;
+border: 1px solid lightBlue;
+padding: 2px;
+overflow: hidden;
+text-overflow: hidden;
+height: 22px;
+}
+&.row {
+  display: table-row;
+  background: none;
+  &:hover { background: lightgray;}
+  &.selected {
+   background: lightblue;
+  }
+}
+&.table {
+  display: table;
+  font-size: 75%;
+  font-family: arial;
+  border: 1px solid lightBlue;
+  padding: 0px;
+  overflow: hidden;
+}
+&.header, &.filters,{
+
+    display: table-header-group;
+    background: #63CBDB;
+    text-align: center;
+    overflow: hidden;
+    height: 22px;
+    table-layout:fixed;
+
+
+    .id {
+      min-width: 22px;
+      max-width: 40px;
+    }
+  }
+}
+
+.button_add {
+  width: 100%;
+  -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, lightBlue), color-stop(1, rgb(107, 150, 163)));
+  background: -moz-linear-gradient(center top, lightBlue 5%, rgb(107, 150, 163) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#add8e6', endColorstr='#6b96a3');
+  background-color: lightBlue;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid gainsboro;
+  display: inline-block;
+  color: rgb(119, 119, 119);
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px white;
+  border-image: initial;
+}

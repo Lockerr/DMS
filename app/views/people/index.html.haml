@@ -1,0 +1,92 @@
+= render 'functions'
+.mid-box
+  .people_table.table
+    .title
+      Клиенты
+
+    .header.header
+      .id.cell
+        \#
+      .name.cell
+        ФИО
+      .phones.cell
+        Телефоны
+      .email.cell
+        e-mail
+      .descriptions.cell
+        Комментарий
+      .package.cell
+        Комплеаткция
+      .model_id.cell
+        Модель
+      .manager_id.cell
+        Менеджер
+      .order_id.cell
+        Номер заказ
+
+    .filters.header
+      .id.cell
+        = text_field :search, :id, :size => 1, :class => :filter
+      .name.cell
+        = text_field :search, :name, :size => 1, :class => :filter
+      .phones.cell
+        = text_field :search, :phones, :size => 1, :class => :filter
+      .email.cell
+        = text_field :search, :email, :size => 1, :class => :filter
+      .descriptions.cell
+        = text_field :search, :desc, :size => 1, :class => :filter
+      .package.cell
+        = text_field :search, :package, :size => 1, :class => :filter
+      .model_id.cell
+        = text_field :search, :model, :size => 1, :class => :filter
+      .manager_id.cell
+        = text_field :search, :manager, :size => 1, :class => :filter
+      .order_id.cell
+        = text_field :search, :order, :size => 1, :class => :filter
+
+    .people.table
+      - for person in @people
+        .person.row{:id => person.id}
+          .id.cell
+            =person.id
+          .name.cell
+            =person.name
+          .phones.cell
+            =person.phones
+          .email.cell
+            = person.email
+          .descriptions.cell
+            = person.descriptions
+          .package.cell
+            = person.package
+          .model_id.cell
+            -#= person.model.inspect
+          .manager_id.cell
+            = person.manager.try(:name)
+          .order_id.cell
+            = person.order_id
+
+    .footer
+      .add
+        +
+      .edit
+        \/
+      .delete
+        X
+
+    .pager
+      .first
+      .previous
+      .picker
+        = text_field :pager, :page, :size => 2
+      .next
+      .last
+    .info
+      .pager-info
+.top-box
+  .communications.table
+
+
+
+
+  -#s Встреча звонок письмо тест-драйв

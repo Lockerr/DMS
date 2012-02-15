@@ -1,0 +1,77 @@
+.new_car{:style => 'display: none'}
+  .errors
+  .car_form
+    .order
+      %label Номер заказа
+      = text_field :car, :order
+    %hr/
+    -#.klasse
+    -#  %label Класс
+    -#  = collection_select(:car, :klasse_id, Klasse.all, :id, :name, :prompt => true)
+    -#
+    .model
+      %labelМодель
+      = collection_select(:car, :model_id, Model.all, :id, :name, :prompt => true)
+      -#= text_field :new, :model_name
+
+    .line
+      %label Линия
+      = collection_select(:car, :line_id, Line.all, :id, :name, :prompt => true)
+      -#= text_field :new, :line_name
+    %hr/
+    .vin
+      %label VIN
+      = text_field :car,  :vin
+    .color
+      %label Цвет
+      = text_field :car,  :color_id, :size => 5
+    .interior
+      %label Салон
+      = text_field :car,  :interior_id, :size => 5
+    %hr
+    .price
+      %label Цена
+      = text_field :car,  :price
+    .options
+      %label Опции
+      = text_field :car,  :options
+    .person
+      %label Клиент
+      = collection_select(:car, :person_id, Person.all, :id, :name_with_phone, :prompt => true)
+    .published
+      %label Сайт
+      = check_box :car, :published
+    .state
+      = select :car, :state,[1 => 'x', 2=> 'y'] ,:prompt => true
+    .prod_state
+    .arrival
+      %label Прибытие
+      = text_field :car,  :arrival
+    .comments
+      %label Комментарий
+      = text_field :car,  :comments
+    .vp
+      %label ПТС
+      = text_field :car,  :vp
+    .insurance
+      %label Страховка
+      = text_field :car,  :insurance
+    -#.manager
+    -#  %label Менеджер
+    -#  = collection_select(:car, :manager_id, Manager.all, :id, :name, :prompt => true)
+    -#
+    -#
+    -#.payment
+    -#  %label З/П
+    -#
+    -#  = collection_select(:car, :payment_id, Manager.all, :id, :name, :prompt => true)
+    .car_type
+      %label Тип А/М
+      = text_field :car,  :car_type
+    .run
+      %label Пробег
+      = text_field :car,  :run
+    .controls
+      = button_tag 'Ok', :class => :control_button, :id => :ok
+      = button_tag 'Отмена'
+

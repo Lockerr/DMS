@@ -1,0 +1,21 @@
+.communication.row.new_communication{:id => @communication.person_id}
+  .subject.cell
+    = text_field :communication, :subject, :size => 16
+  .action.cell
+    = select :communication, :action, options_for_select([["звонок", 'call'], ["встреча", 'meet'],['email', 'email'],['сайт', 'site']])
+  .action_date.cell
+    = text_field :communication, :action_date, :size => 8, :value => Time.now.strftime('%d.%m.%y')
+  .action_time.cell
+    = text_field :communication, :action_time, :size => 8, :value => Time.now.strftime('%H:%M')
+  .next_action.cell
+    = text_field :communication, :next_subject, :size => 8
+  .next_action.cell
+    = select :communication, :next_action, options_for_select([["звонок", 'call'], ["встреча", 'meet'],['email', 'email'],['сайт', 'site']])
+  .next_action_date.cell
+    = text_field :communication, :next_action_date, :size => 8
+  .next_action_time.cell
+    = text_field :communication, :next_action_time, :size => 8
+
+
+  .description
+    = text_field :communication, :descriptions

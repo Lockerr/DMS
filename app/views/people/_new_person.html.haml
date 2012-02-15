@@ -1,0 +1,19 @@
+.person.row.new_person
+  .id.cell
+    = #
+  .name.cell
+    = text_field :person, :name
+  .phones.cell
+    = phone_field :person, :phones
+  .email.cell
+    = email_field :person, :email
+  .descriptions.cell
+    = text_field :person, :descriptions
+  .package.cell
+    = text_field :person, :package
+  .model_id.cell
+    = collection_select(:person, :model_id, Model.all, :id, :name, :prompt => true)
+  .manager_id.cell
+    = collection_select(:person, :manager_id, Manager.all, :id, :name, :prompt => true)
+  .order_id.cell
+    = collection_select(:person, :order_id, Car.order('cars.order').all, :id, :order, :prompt => true)
