@@ -15,6 +15,8 @@ gem 'hpricot'
 gem 'paperclip'
 gem 'ru_propisju'
 gem 'russian'
+gem 'spreadsheet'
+gem 'hirb'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,0 +1,29 @@
+@media all {
+       body {
+        border: 1px solid;
+        font-family: Times;
+        font-size: 12pt;
+        margin-bottom: 55px;
+       }
+       h1,h2 {
+         text-align: center;
+         font-size: 12pt;
+       }
+       .city {float: left;}
+       .top_date {float: right;}
+
+       p {
+        margin: 0;
+        text-align: justify;
+       }
+
+       h2 {font-weight: normal;}
+       hr {page-break-after: always;}
+
+       .page-break  { display:block; page-break-after:always;  border: 1px dotted green;}
+
+       .colon-top-left {position: fixed;top: 1px; right: 0px;}
+       .colon-bottom-left {position: fixed;top: 1300px; left: 0px;}
+       .colon-bottom-right {position: fixed;top: 1300px; right: 0px;}
+
+      }

@@ -1,0 +1,43 @@
+!!! 5
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    -#%meta{:name => 'pdfkit-footer_html', :content => pdf_footer_url}
+    -#= stylesheet_link_tag "#{request.protocol}#{request.host_with_port}/stylesheets/pdf.css", :media => 'all'
+    :css
+      @media all {
+        body {
+        font-family: Times;
+        font-size: 12pt;
+        margin-bottom: 55px;
+        }
+
+        h1,h2 {
+          text-align: center;
+          font-size: 12pt;
+        }
+        .city {
+          float: left;
+        }
+        .top_date {
+          float: right;
+        }
+
+        p {
+          margin: 0;
+          text-align: justify;
+        }
+
+        h2 {font-weight: normal;}
+        hr {page-break-after: always;}
+
+        .page-break  { display:block; page-break-after:always;  border: 1px dotted green;}
+
+        .colon-top-left {position: fixed;top: 1px; right: 0px;}
+        .colon-bottom-left {float: left; left: 0px; margin-top: 50px;border: 1px solid red}
+        .colon-bottom-right {float: right;right: 0px; margin-top: 50px; border: 1px solid red;}
+
+        }
+        .paginator {width: 890px; padding-bottom: 15px; margin-left: 812px; display: inline;}
+  %body
+    = yield(:layout)

@@ -9,7 +9,7 @@
   .model
     =car.model.name
   .line
-    =car.line.name
+    =car.line.try(&:name)
   .vin
     =car.vin
   .color

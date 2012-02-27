@@ -2,7 +2,12 @@ DmsExt::Application.routes.draw do
 
     devise_for :users
 
-  resources :calendar
+  resources :calendar do
+    member do
+      get 'day'
+    end
+  end
+
   resources :upload
 
   resources :people do
@@ -12,7 +17,12 @@ DmsExt::Application.routes.draw do
   resources :cars
   resources :models
   resources :managers
-  resources :communications
+
+  resources :communications do
+    member do
+      get 'short'
+    end
+  end
 
   resources :contracts
 

@@ -1,0 +1,11 @@
+.communication.row{:id => communication.person.id}
+  .client.cell
+    = communication.person.try(:name)
+  .next_subject.cell
+    = communication.next_subject
+  .next_action.cell
+    = communication.next_action
+  .next_action_time.cell
+    = communication.next_action_time
+  .description.cell
+    = communication.descriptions

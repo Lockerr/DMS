@@ -1,0 +1,19 @@
+.event_calendar
+
+  - start = (Time.now - Time.now.days_to_week_start.days)
+  - for w in [0,1]
+    .days.row{:style => 'height: 160px;'}
+      - for i in  %w(0 1 2 3 4 5 6)
+        - day = start + (w.to_i*7).days + i.to_i.days
+        .day.cell{:style => 'width: 160px;', :day => day.yday}
+          = day.strftime('%d')
+
+          %br/
+          - events = @events.select{|v| v.next_action_date.yday == day.yday}
+          - for event in events
+            .event
+              *
+              = event.action
+
+
+

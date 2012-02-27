@@ -1,0 +1,16 @@
+.current_day
+  .top-left
+    .header.header
+      .client.cell
+        Клиент
+      .next_subject.cell
+        Повод
+      .next_action.cell
+        Событие
+      .next_action_time.cell
+        Время
+      .description.cell
+        Комментарий
+    - for communication in @events
+      = render :partial => 'communication_list', :locals => {:communication => communication}
+  .top-right

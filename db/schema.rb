@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120215104919) do
+ActiveRecord::Schema.define(:version => 20120221084942) do
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -53,9 +53,10 @@ ActiveRecord::Schema.define(:version => 20120215104919) do
     t.string   "model_name"
     t.string   "manager_name"
     t.integer  "gpl"
-    t.string   "real_options"
+    t.text     "real_options"
     t.boolean  "restyling",     :default => false
     t.date     "prod_date"
+    t.integer  "engine_number"
   end
 
   create_table "cars_people", :force => true do |t|
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(:version => 20120215104919) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "next_subject"
+    t.integer  "manager_id"
   end
 
   create_table "communications_orders", :force => true do |t|
@@ -143,6 +145,13 @@ ActiveRecord::Schema.define(:version => 20120215104919) do
   add_index "models_people", ["model_id"], :name => "index_models_people_on_model_id"
   add_index "models_people", ["person_id", "model_id"], :name => "index_models_people_on_person_id_and_model_id"
   add_index "models_people", ["person_id"], :name => "index_models_people_on_person_id"
+
+  create_table "opts", :force => true do |t|
+    t.string  "code"
+    t.string  "desc"
+    t.string  "pseudo_klasse"
+    t.integer "klasse_id"
+  end
 
   create_table "people", :force => true do |t|
     t.string   "name"

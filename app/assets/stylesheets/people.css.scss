@@ -85,26 +85,22 @@
 
 }
 
-
-
-
-
 *  {
  &.cell {
-display: table-cell;
-border: 1px solid lightBlue;
-padding: 2px;
-overflow: hidden;
-text-overflow: hidden;
-height: 22px;
+  display: table-cell;
+  border: 1px solid lightBlue;
+  padding: 2px;
+  overflow: hidden;
+  text-overflow: hidden;
+  height: 22px;
 }
-&.row {
-  display: table-row;
-  background: none;
-  &:hover { background: lightgray;}
-  &.selected {
-   background: lightblue;
-  }
+  &.row {
+    display: table-row;
+    background: none;
+    &:hover { background: lightgray;}
+    &.selected {
+     background: lightblue;
+    }
 }
 &.table {
   display: table;

@@ -1,10 +1,10 @@
-#PDFKit.configure do |config|
-#  config.default_options = {
-#      :page_size               => 'Letter',
-#      :margin_top              => '0.75in',
-#      :margin_right            => '0.75in',
-#      :margin_bottom           => '0.75in',
-#      :margin_left             => '0.75in',
-#
-#  }
-#end
+PDFKit.configure do |config|
+  config.default_options = {
+      :page_size               => 'A4',
+      :margin_top              => '5mm',
+      :margin_right            => '5mm',
+      :margin_bottom           => '5mm',
+      :margin_left             => '15mm',
+
+  }
+end

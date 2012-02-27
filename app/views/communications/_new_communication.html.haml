@@ -2,7 +2,7 @@
   .subject.cell
     = text_field :communication, :subject, :size => 16
   .action.cell
-    = select :communication, :action, options_for_select([["звонок", 'call'], ["встреча", 'meet'],['email', 'email'],['сайт', 'site']])
+    = select :communication, :action, options_for_select([["звонок", 'звонок'], ["встреча", 'встреча']])
   .action_date.cell
     = text_field :communication, :action_date, :size => 8, :value => Time.now.strftime('%d.%m.%y')
   .action_time.cell
@@ -10,12 +10,12 @@
   .next_action.cell
     = text_field :communication, :next_subject, :size => 8
   .next_action.cell
-    = select :communication, :next_action, options_for_select([["звонок", 'call'], ["встреча", 'meet'],['email', 'email'],['сайт', 'site']])
+    = select :communication, :next_action, options_for_select([["звонок", 'звонок'], ["встреча", 'встреча']])
   .next_action_date.cell
     = text_field :communication, :next_action_date, :size => 8
   .next_action_time.cell
     = text_field :communication, :next_action_time, :size => 8
-
-
-  .description
+  .description.cell
     = text_field :communication, :descriptions
+  .manager.cell
+    = select :communication, :manager_id, options_for_select(Manager.all.collect{|i| [i.name, i.id]}, :selected => current_user.manager.id)

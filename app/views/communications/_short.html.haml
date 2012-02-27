@@ -1,0 +1,13 @@
+.communication.row
+  .subject.cell
+    = communication.subject
+  .action.cell
+    = communication.action
+  .action_date.cell
+    = communication.action_date.strftime('%d.%m.%y') if communication.action_date
+  .action_time.cell
+    = communication.action_date.strftime('%H:%M') if communication.action_date
+  .description.cell
+    = communication.descriptions
+  .manager.cell
+    = communication.manager.name.split(/\s/)[0]

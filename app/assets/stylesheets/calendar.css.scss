@@ -1,0 +1,36 @@
+// Place all the styles related to the calendar controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-box {
+  height: 45%;
+  background: rgb(238, 238, 238);
+  position: fixed;
+  top: 0px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 100%;
+  .top-left {
+    width: 49%;
+    float: left;
+    height: 100%;
+    border-right: 1px dotted green;
+    overflow-y: auto;
+  }
+  .top-right {
+    width: 49%;
+    float: left;
+    htight: 100%;
+    overflow-y: auto;
+  }
+}
+
+.event_calendar {
+  .day.cell {
+      display: table-cell;
+      &:hover { background: lightgray;}
+    }
+  .days.row {
+    display: table-row;
+    &:hover {background: none;}
+  }
+}

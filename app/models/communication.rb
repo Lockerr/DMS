@@ -1,5 +1,6 @@
 class Communication < ActiveRecord::Base
   belongs_to :person
+  belongs_to :manager
 
   def action_time=(value)
     unless value.empty?

@@ -16,6 +16,11 @@ class CommunicationsController < ApplicationController
 
   end
 
+  def short
+    @communications  = Communication.where(:person_id => params[:id])
+    @person = @communications.first.person
+  end
+
   def update
     @comminucation = Communication.find(params[:id])
 

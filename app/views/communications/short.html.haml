@@ -1,3 +1,5 @@
+.client
+  = "#{@person.name} #{@person.phones}"
 .header.header
   .subject.cell
     Повод
@@ -7,21 +9,11 @@
     Дата
   .action_time.cell
     Время
-  .next_subject.cell
-    Следующий повод
-  .next_action.cell
-    Следующее событие
-  .next_action_date.cell
-    Дата
-  .next_action_time.cell
-    Время
   .description.cell
     Комментарий
   .manager.cell
     Менеджер
 
-- unless @communications.any?
-  Empty set
 
 - for communication in @communications
-  = render communication
+  = render :partial => 'short', :locals  => {:communication => communication}

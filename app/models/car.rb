@@ -1,4 +1,7 @@
+# encoding: utf-8
 class Car < ActiveRecord::Base
+  serialize :real_options, Array
+
   validates_presence_of :order
   validates_uniqueness_of :order
 
@@ -22,6 +25,25 @@ class Car < ActiveRecord::Base
 
   def write_logs(object=nil)
     Log.create(:model_name => 'car', :parameters => self.attributes, :object_id => ('system' if !object), :user_id => User.current_user)
+  end
+
+  def order_with_model
+    "#{order}, #{model.name}"
+  end
+
+  def codes
+    result = {}
+
+    opts = self.real_options
+    for option in opts
+      if o = self.klasse.opts.find_by_code(option)
+        result[option] = o.desc
+      else
+        result[option] = 'Опция неизвестна'
+      end
+    end
+    result
+
   end
 
 

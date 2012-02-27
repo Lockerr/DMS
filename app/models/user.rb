@@ -15,5 +15,8 @@ class User < ActiveRecord::Base
     Thread.current[:current_user] = usr
   end
 
+  def manager
+    Manager.first
+  end
 
 end

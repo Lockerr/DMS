@@ -18,5 +18,10 @@ class Person < ActiveRecord::Base
     Log.create(:model_name => 'person', :parameters => self.attributes, :object_id => self.id, :user_id => User.current_user)
   end
 
+  def short_name
+    n = name.split(/(\s|\.)/).delete_if {|i| i == '.' || i == ' '}
+
+    "#{n[0]} #{n[1][0]}. #{n[2][0]}."
+  end
 
 end

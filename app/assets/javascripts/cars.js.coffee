@@ -207,14 +207,12 @@ jQuery(document).ready ->
               $('#car_arrival').datepicker
                 numberOfMonths: 3
                 showButtonPanel: true
-                locale: 'ru'
 
         else
           target.replaceWith html.responseText
         $('#car_arrival').datepicker
           numberOfMonths: 3
           showButtonPanel: true
-          locale: 'ru'
 
         $('#car_vin').mask("********9****9999")
 

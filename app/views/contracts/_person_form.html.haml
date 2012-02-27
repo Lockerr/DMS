@@ -1,0 +1,48 @@
+.new_contract{:style => 'display: none', :id => @contract.id}
+  .errors
+  .contract_form
+
+    .car
+      %label Автомобиль
+      = collection_select(:contract, :car_id, Car.all, :id, :order_with_model, :prompt => true, :size => 30)
+    %hr/
+    .person
+      %label Клиент
+      %br/
+      = text_field :person, :name, :value => @contract.person.name
+    .person_id_series
+      Паспорт
+      %br/
+      %label серия
+      = text_field :person, :id_series, :value => @contract.person.id_series
+    .person_id_number
+      %label номер
+      = text_field :person, :id_number, :value => @contract.person.id_number
+    .person_id_dep
+      %label кем и когда выдан
+      = text_field :person, :id_dep, :value => @contract.person.id_dep
+    .person_phone
+      %label Телефон
+      = text_field :person, :phones, :value => @contract.person.phones
+    .person_address
+      %label Адрес
+      = text_field :person, :address, :value => @contract.person.address
+
+    .person_birthday
+      %label Дата рождения
+      = text_field :person, :birthday, :value => @contract.person.birthday
+
+    %hr/
+    .price
+      %label Цена
+      = text_field :contract, :price
+    .pre_pay
+      %label Предоплата
+      = text_field :contract, :prepay
+    .date
+      %label Дата
+      =text_field :contract, :date, :value =>  I18n.localize(Date.today)
+    %hr/
+    .buttons
+      = link_to 'сохранить','#',  :class => 'update_contract',:id => @contract.id
+      = link_to 'печать','#',  :class => 'print_contract',:id => @contract.id

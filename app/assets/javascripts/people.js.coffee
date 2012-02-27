@@ -1,6 +1,33 @@
 jQuery(document).ready ->
   $.datepicker.setDefaults $.datepicker.regional["ru"]
 
+  $('.print_contract').live 'click', ->
+    id = @id
+    $.ajax
+      url: 'contracts/' + id
+      type: 'PUT'
+      data: $('.contract_form').find('*').serialize()
+      complete: ->
+        window.open ("http://0.0.0.0:3000/contracts/" + id + '.pdf')
+
+  $('#calendar').click ->
+    $.ajax
+      url: '/calendar'
+      complete: (resp) ->
+        $('.mid-box').html resp.responseText
+
+        $('.day').click ->
+          $.ajax
+            url: '/calendar/' + $(this).attr('day') + '/day'
+            complete: (resp) ->
+              $('.top-box').html resp.responseText
+
+              $('.communication').click ->
+                $.ajax
+                  url: 'communications/' + @id + '/short/'
+                  complete: (resp) ->
+                    $('.top-right').html resp.responseText
+
   $('.add').click ->
     $.ajax
       url: '/people/new'
@@ -31,13 +58,46 @@ jQuery(document).ready ->
         $('.controls').empty()
         $('.controls').append ('<a href=\'#\' class=\"button call\" id=\"' + id + '\">звонок</a>')
         $('.controls').append ('<a href=\'#\' class=\"button meet\" id=\"' + id + '\">встреча</a>')
+        $('.controls').append ('<a href=\'#\' class=\"button contract\" id=\"' + id + '\">контракт</a>')
+
+        $(".button.contract").click ->
+          id = @id
+          $.ajax
+            url: 'contracts/new?person=' + id
+            complete: (html) ->
+              $('.contract_form').html html.responseText
+              $('#contract_car_id').combobox()
+
+              $(".new_contract").dialog
+                autoOpen: false
+                hide: "explode"
+                modal: true
+                width: 700
+                close: ->
+                  $(".new_contract").dialog( "destroy" )
+                  $(".new_contract").remove()
+
+              $(".new_contract").dialog "open"
+
+              $('#person_birthday').datepicker
+			          changeYear: true
+                changeMonth: true
+                yearRange: "-20:-10"
+
+
+			        $('#contract_date').datepicker
+                changeMonth: true
+                yearRange: "-20:-10"
+			          changeYear: true
+
+
 
   $('.button.meet').live 'click', ->
     $.ajax
       url: '/people/' + $('.selected')[0].id + '/communications/new'
       complete: (resp) ->
         $('.communications.table').append resp.responseText
-        $("option[value='meet']").attr('selected', 'selected')
+        $("option[value='встреча']").attr('selected', 'selected')
 
         $('#communication_action_date').datepicker
           numberOfMonths: 3
@@ -64,7 +124,7 @@ jQuery(document).ready ->
       url: '/people/' + $('.selected')[0].id + '/communications/new'
       complete: (resp) ->
         $('.communications.table').append resp.responseText
-        $("option[value='call']").attr('selected', 'selected')
+        $("option[value='звонок']").attr('selected', 'selected')
 
         $('#communication_action_date').datepicker
           numberOfMonths: 3
