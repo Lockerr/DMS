@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hash>
+  <Properties>
+    <xmlns>http://schemas.openxmlformats.org/officeDocument/2006/custom-properties</xmlns>
+    <xmlns:vt>http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes</xmlns:vt>
+    <property type="array">
+      <property>
+        <fmtid>{D5CDD505-2E9C-101B-9397-08002B2CF9AE}</fmtid>
+        <pid>2</pid>
+        <name>Клиент</name>
+        <lpwstr>Дьячук А.В.</lpwstr>
+      </property>
+      <property>
+        <fmtid>{D5CDD505-2E9C-101B-9397-08002B2CF9AE}</fmtid>
+        <pid>3</pid>
+        <name>Цена</name>
+        <lpwstr>1 500 000</lpwstr>
+      </property>
+      <property>
+        <fmtid>{D5CDD505-2E9C-101B-9397-08002B2CF9AE}</fmtid>
+        <pid>4</pid>
+        <name>Предоплата</name>
+        <lpwstr>1 500</lpwstr>
+      </property>
+      <property>
+        <fmtid>{D5CDD505-2E9C-101B-9397-08002B2CF9AE}</fmtid>
+        <pid>5</pid>
+        <name>Цена прописью</name>
+        <lpwstr>сто пицот</lpwstr>
+      </property>
+      <property>
+        <fmtid>{D5CDD505-2E9C-101B-9397-08002B2CF9AE}</fmtid>
+        <pid>6</pid>
+        <name>prepay</name>
+        <lpwstr>двести пицот</lpwstr>
+      </property>
+      <property>
+        <fmtid>{D5CDD505-2E9C-101B-9397-08002B2CF9AE}</fmtid>
+        <pid>7</pid>
+        <name>price</name>
+        <lpwstr>1 500 000</lpwstr>
+      </property>
+      <property>
+        <fmtid>{D5CDD505-2E9C-101B-9397-08002B2CF9AE}</fmtid>
+        <pid>8</pid>
+        <name>client</name>
+        <lpwstr>Глазова Анастасия Васильевна</lpwstr>
+      </property>
+    </property>
+  </Properties>
+</hash>

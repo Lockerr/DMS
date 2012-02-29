@@ -15,7 +15,9 @@ class ContractsController < ApplicationController
     end
 
     if params[:person]
-      @contract = Person.find(params[:person]).contracts.create
+      if @person = Person.find_by_id(params[:person])
+        @contract = @person.contracts.create
+      end
       render :partial => 'person_form'
     end
 
@@ -23,20 +25,9 @@ class ContractsController < ApplicationController
 
   def show
     @contract = Contract.find(params[:id])
-    PDFKit.configure do |config|
-      config.default_options = {
-          :page_size     => 'A4',
-          :margin_top    => '5mm',
-          :margin_right  => '5mm',
-          :margin_bottom => '5mm',
-          :margin_left   => '15mm',
-
-      }
-    end
-    respond_to do |format|
-      format.pdf { render :layout => 'pdf' }
-      format.html { render :layout => 'pdf'}
-    end
+    temp = @contract.prop
+    send_file(temp.to_s + "/contract.docx")
+    system "rm -r #{temp}"
   end
 
   def create
@@ -47,18 +38,15 @@ class ContractsController < ApplicationController
     @contract                  = Contract.find(params[:id])
     params[:contract][:price]  = params[:contract][:price].to_s.to_s.split(/\D/).join
     params[:contract][:prepay] = params[:contract][:prepay].to_s.to_s.split(/\D/).join
-    @person = @contract.person
-    @person.update_attributes params[:person]
+
 
     if @contract.update_attributes params[:contract]
-
+      @person = @contract.person
+      @person.update_attributes params[:person]
     end
-  end
 
-  def pdf
-    respond_to do |format|
-      format.pdf { render :layout => 'pdf' }
-    end
-  end
+    redirect_to contract_path(@contract) if params[:print]
+    #Dir.rm_r temp
 
+  end
 end

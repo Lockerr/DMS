@@ -40,6 +40,9 @@ jQuery(document).ready ->
       complete: (html) ->
         $('.contract_form').html html.responseText
         $('#contract_person_id').combobox()
+#          change: alert $('.contract_form').find('select').find('option:selected')[0].value
+
+
 
         $(".new_contract").dialog
           autoOpen: false
@@ -52,6 +55,25 @@ jQuery(document).ready ->
 
         $(".new_contract").dialog "open"
 
+        $('select#contract_person_id').change ->
+          id = $('.contract_form').find('select').find('option:selected')[0].value
+          $.ajax
+            url: 'people/' + id + '.json'
+            complete: (json) ->
+              console.log json
+              person = $.parseJSON json.responseText
+              console.log person
+              $('input#person_id_series').val(person.id_series)
+              $('input#person_id_number').val(person.id_number)
+              $('input#person_id_dep').val(person.id_dep)
+              $('input#person_phones').val(person.phones)
+              $('input#person_address').val(person.address)
+              $('input#person_birthday').val(person.birthday)
+              $('input#person_name').val(person.name)
+
+
+
+
   $('.print_contract').live 'click', ->
     id = @id
     $.ajax
@@ -59,7 +81,8 @@ jQuery(document).ready ->
       type: 'PUT'
       data: $('.contract_form').find('*').serialize()
       complete: ->
-        window.open ("http://0.0.0.0:3000/contracts/" + id + '.pdf')
+        window.open 'contracts/' + id, '_blank'
+
 
   $('.update_contract').live 'click', ->
     id = @id
@@ -84,7 +107,7 @@ jQuery(document).ready ->
       url: 'checkins/new?car=' + id
       complete: (html) ->
         $('.checkin_form').html html.responseText
-        id = $(".new_checkin")[0].id
+
         $(".new_checkin").dialog
           autoOpen: false
           hide: "explode"
@@ -94,17 +117,16 @@ jQuery(document).ready ->
            $(".new_checkin").dialog( "destroy" )
            $(".new_checkin").remove()
 
-
-
         $(".new_checkin").dialog "open"
 
-
+        id = $(".new_checkin")[0].id
         settings =
           flash_url: "/assets/swfupload.swf"
           upload_url: "upload"
+          file_size_limit: '100 MB'
           post_params:
             car: id
-          debug: false
+#          debug: true
           button_image_url: "assets/images/TestImageNoText_65x29.png"
           button_width: "100"
           button_height: "29"
@@ -115,7 +137,8 @@ jQuery(document).ready ->
           button_text_top_padding: 3
           custom_settings:
             progressTarget: "fsUploadProgress"
-            cancelButtonId: "btnCancel"
+#            cancelButtonId: "btnCancel"
+
 
           file_queued_handler : fileQueued
           file_queue_error_handler : fileQueueError

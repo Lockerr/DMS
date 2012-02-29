@@ -13,10 +13,11 @@ gem 'devise'
 gem 'haml'
 gem 'hpricot'
 gem 'paperclip'
-gem 'ru_propisju'
+gem 'ru_propisju', '2.1.1'
 gem 'russian'
 gem 'spreadsheet'
 gem 'hirb'
+gem 'xml-object'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -77,18 +77,25 @@ jQuery(document).ready ->
                   $(".new_contract").dialog( "destroy" )
                   $(".new_contract").remove()
 
-              $(".new_contract").dialog "open"
+              $(".new_contract").dialog("open")
+
 
               $('#person_birthday').datepicker
-			          changeYear: true
-                changeMonth: true
-                yearRange: "-20:-10"
+                changeYear: 'true'
+                changeMonth: 'true'
+                yearRange: '-100:-16'
 
 
-			        $('#contract_date').datepicker
+
+
+              $('#contract_date').datepicker
                 changeMonth: true
-                yearRange: "-20:-10"
-			          changeYear: true
+                changeYear: true
+
+
+
+
+
 
 
 

@@ -10,7 +10,10 @@ class PeopleController < ApplicationController
   end
 
   def show
-
+   @person = Person.find(params[:id])
+    respond_to do |format|
+      format.json { render json: @person}
+    end
   end
 
   def create

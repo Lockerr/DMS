@@ -24,12 +24,14 @@
             item: ui.item.option
 
         change: (event, ui) ->
-          unless ui.item
+          select.trigger 'change'
+          unless ui.item.value
             matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex($(this).val()) + "$", "i")
             valid = false
             select.children("option").each ->
               if $(this).text().match(matcher)
                 @selected = valid = true
+
                 false
 
             unless valid

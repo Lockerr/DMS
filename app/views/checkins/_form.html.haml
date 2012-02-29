@@ -12,11 +12,11 @@
       %label Фотографии
 
       #content
-        %form#form1{:action => "index.php", :enctype => "multipart/form-data", :method => "post"}
+        %form#form1{:action => "#", :enctype => "multipart/form-data", :method => "post"}
           #fsUploadProgress.fieldset.flash
           #divStatus 0 Файлов загружено
           %div
             %span#spanButtonPlaceHolder
-            -#%input#btnCancel{:disabled => "disabled", :onclick => "swfu.cancelQueue();", :style => "margin-left: 2px; font-size: 8pt; height: 29px;", :type => "button", :value => "Cancel All Uploads"}/
+            -#%input#btnCancel{:disabled => "disabled", :onclick => "swfu.cancelQueue();", :style => "margin-left: 2px; font-size: 8pt; height: 29px;", :type => "button", :value => "Прервать загрузку"}
     .buttons
-      = link_to 'update','#',  :class => 'update_checkin',:id => @checkin.id
+      = link_to 'сохранить','#',  :class => 'update_checkin',:id => @checkin.id

@@ -2,13 +2,41 @@
   .errors
   .contract_form
 
-    .client
-      %label Клиент
-      = collection_select(:contract, :person_id, Person.all, :id, :name_with_phone, :prompt => true, :size => 30)
     .model
       %label Модель
       = "#{@contract.car.model.name} #{@contract.car.order}"
+    %hr/
+    .client
+      %label Клиент
+      = collection_select(:contract, :person_id, Person.all, :id, :name_with_phone, :prompt => true, :size => 30)
+    %hr/
+    Паспорт:
+    %br/
 
+    .person_name
+      %label Полное имя
+      = text_field :person, :name
+    .person_id_series
+      %label серия
+      = text_field :person, :id_series
+    .person_id_number
+      %label номер
+      = text_field :person, :id_number
+    .person_id_dep
+      %label кем и когда выдан
+      = text_field :person, :id_dep
+    .person_phone
+      %label Телефон
+      = text_field :person, :phones
+    .person_address
+      %label Адрес
+      = text_field :person, :address
+
+    .person_birthday
+      %label Дата рождения
+      = text_field :person, :birthday
+
+    %hr/
     .price
       %label Цена
       = text_field :contract, :price
@@ -18,6 +46,25 @@
     .date
       %label Дата
       =text_field :contract, :date, :value =>  I18n.localize(Date.today)
+    %hr/
+    .options
+      = check_box :gifts, :tires
+      %label Шины
+      &nbsp;&nbsp;
+      = check_box :gifts, :carpets
+      %label Ковры
+      &nbsp;&nbsp;
+      = check_box :gifts, :mudguard
+      %label Брызговики
+      &nbsp;&nbsp;
+      = check_box :gifts, :tech1
+      %label ТО1
+      &nbsp;&nbsp;
+      = check_box :gifts, :tech2
+      %label ТО2
+      &nbsp;&nbsp;
+      %hr/
+
     .buttons
       = link_to 'сохранить','#',  :class => 'update_contract',:id => @contract.id
       = link_to 'печать','#',  :class => 'print_contract',:id => @contract.id

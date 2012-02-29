@@ -21,7 +21,11 @@ class Person < ActiveRecord::Base
   def short_name
     n = name.split(/(\s|\.)/).delete_if {|i| i == '.' || i == ' '}
 
-    "#{n[0]} #{n[1][0]}. #{n[2][0]}."
+    if n.count == 3
+      "#{n[0]} #{n[1][0]}. #{n[2][0]}."
+    else
+      self.name
+    end
   end
 
 end

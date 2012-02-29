@@ -8,10 +8,10 @@
     %hr/
     .person
       %label Клиент
-      %br/
+
       = text_field :person, :name, :value => @contract.person.name
     .person_id_series
-      Паспорт
+      Паспорт:
       %br/
       %label серия
       = text_field :person, :id_series, :value => @contract.person.id_series
@@ -30,7 +30,7 @@
 
     .person_birthday
       %label Дата рождения
-      = text_field :person, :birthday, :value => @contract.person.birthday
+      = text_field :person, :birthday, :value => @contract.person.birthday ? I18n.localize(@contract.person.birthday) : ""
 
     %hr/
     .price
@@ -43,6 +43,24 @@
       %label Дата
       =text_field :contract, :date, :value =>  I18n.localize(Date.today)
     %hr/
+    .options
+      = check_box :gifts, :tires
+      %label Шины
+      &nbsp;&nbsp;
+      = check_box :gifts, :carpets
+      %label Ковры
+      &nbsp;&nbsp;
+      = check_box :gifts, :mudguard
+      %label Брызговики
+      &nbsp;&nbsp;
+      = check_box :gifts, :tech1
+      %label ТО1
+      &nbsp;&nbsp;
+      = check_box :gifts, :tech2
+      %label ТО2
+      &nbsp;&nbsp;
+      %hr/
+
     .buttons
       = link_to 'сохранить','#',  :class => 'update_contract',:id => @contract.id
       = link_to 'печать','#',  :class => 'print_contract',:id => @contract.id

@@ -153,7 +153,7 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.8.0)
-    ru_propisju (2.1.0)
+    ru_propisju (2.1.1)
     ruby-debug-base19 (0.11.25)
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
@@ -202,6 +202,7 @@ GEM
     warden (1.1.0)
       rack (>= 1.0)
     will_paginate (3.0.3)
+    xml-object (0.9.93)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -228,7 +229,7 @@ DEPENDENCIES
   rails (= 3.2.1)
   rails_jq_grid
   rspec-rails
-  ru_propisju
+  ru_propisju (= 2.1.1)
   ruby-debug19
   ruby-prof
   russian
@@ -238,3 +239,4 @@ DEPENDENCIES
   turn
   uglifier
   will_paginate
+  xml-object
