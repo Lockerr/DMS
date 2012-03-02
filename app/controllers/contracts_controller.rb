@@ -41,12 +41,13 @@ class ContractsController < ApplicationController
 
 
 
-    end
+
     if @contract.update_attributes params[:contract]
       if @person = @contract.person
         @person.update_attributes params[:person]
       else
         @contract.person = Person.create params[:person]
+        @contract.save
       end
     end
 

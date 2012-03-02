@@ -82,8 +82,8 @@ jQuery(document).ready ->
 
 
         $('input#person_phones').mask("+7 *** *** ** **")
-        $('input#person_id_series').mask("** **")
-        $('input#person_id_number').mask("*** ***")
+        $('input#person_id_series').mask("****")
+        $('input#person_id_number').mask("******")
         $('input#contract_price').mask("9?9999999")
         $('input#contract_prepay').mask("9?9999999")
 
@@ -107,8 +107,8 @@ jQuery(document).ready ->
                 changeMonth: 'true'
                 yearRange: '-100:-16'
               $('input#person_phones').mask("+7 *** *** ** **")
-              $('input#person_id_series').mask("** **")
-              $('input#person_id_number').mask("*** ***")
+              $('input#person_id_series').mask("****")
+              $('input#person_id_number').mask("******")
               $('input#contract_price').mask("9?9999999")
               $('input#contract_prepay').mask("9?9999999")
 
