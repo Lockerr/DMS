@@ -7,13 +7,32 @@ show_respond = (html) ->
     modal: true
     width: 700
     close: ->
-     $(".show_respond").dialog( "destroy" )
-     $(".show_respond").clear()
+     $(".respond").dialog( "destroy" )
+     $(".respond").clear()
   $(".respond").dialog 'open'
+
+revert_date = (date) ->
+  splitted = date.split('-')
+  return splitted[2] + '.' + splitted[1] + '.' + splitted[0]
 
 
 jQuery(document).ready ->
-  $.datepicker.setDefaults $.datepicker.regional["ru"]
+
+  $('input#search_arrival_from').datepicker
+    changeYear: 'true'
+    changeMonth: 'true'
+
+  $('input#search_arrival_to').datepicker
+    changeYear: 'true'
+    changeMonth: 'true'
+
+  $('input#search_prod_date_from').datepicker
+    changeYear: 'true'
+    changeMonth: 'true'
+
+  $('input#search_prod_date_to').datepicker
+    changeYear: 'true'
+    changeMonth: 'true'
 
   $(".new_car").dialog
     autoOpen: false
@@ -54,6 +73,19 @@ jQuery(document).ready ->
             $(".new_contract").remove()
 
         $(".new_contract").dialog "open"
+        $('#contract_date').datepicker()
+
+        $('#person_birthday').datepicker
+          changeYear: 'true'
+          changeMonth: 'true'
+          yearRange: '-100:-16'
+
+
+        $('input#person_phones').mask("+7 *** *** ** **")
+        $('input#person_id_series').mask("** **")
+        $('input#person_id_number').mask("*** ***")
+        $('input#contract_price').mask("9?9999999")
+        $('input#contract_prepay').mask("9?9999999")
 
         $('select#contract_person_id').change ->
           id = $('.contract_form').find('select').find('option:selected')[0].value
@@ -68,9 +100,17 @@ jQuery(document).ready ->
               $('input#person_id_dep').val(person.id_dep)
               $('input#person_phones').val(person.phones)
               $('input#person_address').val(person.address)
-              $('input#person_birthday').val(person.birthday)
+              $('input#person_birthday').val(revert_date(person.birthday))
               $('input#person_name').val(person.name)
-
+              $('#person_birthday').datepicker()
+                changeYear: 'true'
+                changeMonth: 'true'
+                yearRange: '-100:-16'
+              $('input#person_phones').mask("+7 *** *** ** **")
+              $('input#person_id_series').mask("** **")
+              $('input#person_id_number').mask("*** ***")
+              $('input#contract_price').mask("9?9999999")
+              $('input#contract_prepay').mask("9?9999999")
 
 
 
@@ -280,6 +320,42 @@ jQuery(document).ready ->
         $('.mid-box').scrollTop(0)
       if e.keyCode is 40
         $('.mid-box').scrollTop($('.mid-box')[0].scrollHeight)
+
+
+  $("#download_state").live 'click', ->
+    $.ajax
+      url: 'upload/1/state'
+      complete: (html) ->
+        show_respond(html)
+
+        settings =
+          flash_url: "/assets/swfupload.swf"
+          upload_url: "upload/1/state"
+          file_size_limit: '100 MB'
+          assume_success_timeout: 90
+          button_image_url: "assets/images/TestImageNoText_65x29.png"
+          button_width: "100"
+          button_height: "29"
+          button_placeholder_id: "spanButtonPlaceHolder"
+          button_text: "<span class=\"theFont\">Загрузить</strong></span>"
+          button_text_style: ".theFont { font-size: 18;font-family: Lucida Grande, Lucida Sans, Arial }"
+          button_text_left_padding: 12
+          button_text_top_padding: 3
+          custom_settings:
+            progressTarget: "fsUploadProgress"
+
+          file_queued_handler : fileQueued
+          file_queue_error_handler : fileQueueError
+          file_dialog_complete_handler : fileDialogComplete
+          upload_start_handler : uploadStart
+          upload_progress_handler : uploadProgress
+          upload_error_handler : uploadError
+          upload_success_handler : uploadSuccess
+          upload_complete_handler : uploadComplete
+          queue_complete_handler : queueComplete
+
+        swfu = new SWFUpload(settings)
+
 
 
 

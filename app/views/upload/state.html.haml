@@ -1,0 +1,14 @@
+.errors
+.upload_state
+  .files
+    %label Загрузка наличия
+
+    #content
+      %form#form1{:action => "#", :enctype => "multipart/form-data", :method => "post"}
+        #fsUploadProgress.fieldset.flash
+        #divStatus
+        %div
+          %span#spanButtonPlaceHolder
+          -#%input#btnCancel{:disabled => "disabled", :onclick => "swfu.cancelQueue();", :style => "margin-left: 2px; font-size: 8pt; height: 29px;", :type => "button", :value => "Прервать загрузку"}
+  .buttons
+    = link_to 'сохранить','#',  :class => 'state'

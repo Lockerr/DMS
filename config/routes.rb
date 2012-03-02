@@ -8,7 +8,12 @@ DmsExt::Application.routes.draw do
     end
   end
 
-  resources :upload
+  resources :upload do
+    member do
+      get 'state'
+      post 'state'
+    end
+  end
 
   resources :people do
     resources :communications

@@ -1,4 +1,3 @@
--#- for car in @cars
 .car{:id => car.id}
   .id
     = car.id
@@ -26,12 +25,12 @@
     = car.published
   .state
     = car.state
-  .prod_date
-    = car.prod_date
   .arrival
-    = car.arrival
+    = car.arrival.strftime('%d.%m.%y') if car.arrival
+  .prod_date
+    = car.prod_date.strftime('%d.%m.%y') if car.prod_date
   .days_at_stock
-    = car.days_at_stock
+    = (Date.today - car.arrival).to_i if car.arrival
   .comments
     = car.comments
   .vp

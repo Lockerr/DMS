@@ -23,8 +23,8 @@
       .person Клиент
       .published Сайт
       .state Состояния
-      .prod_date ДатаЗавод
       .arrival Прибытие
+      .prod_date ДатаЗавод
       .days_at_stock На складе
       .comments Комментарий
       .vp ПТС
@@ -64,9 +64,14 @@
         = text_field :search, :state, :size => 4, :class => :filter
 
       .arrival
-        = text_field :search, :arrival, :size => 2, :class => :filter
+        = text_field :search, :arrival_from, :size => 2, :class => :filter
+        = text_field :search, :arrival_to, :size => 2, :class => :filter
+      .prod_date
+        = text_field :search, :prod_date_from, :size => 2, :class => :filter
+        = text_field :search, :prod_date_to, :size => 2, :class => :filter
+
       .days_at_stock
-        = text_field :search, :days_at_stock, :size => 2, :class => :filter
+        = text_field :search, :days_at_stock_to, :size => 2, :class => :filter
       .comments
         = text_field :search, :comments, :size => 2, :class => :filter
       .vp

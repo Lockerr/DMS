@@ -40,10 +40,16 @@ class ContractsController < ApplicationController
     params[:contract][:prepay] = params[:contract][:prepay].to_s.to_s.split(/\D/).join
 
 
-    if @contract.update_attributes params[:contract]
-      @person = @contract.person
-      @person.update_attributes params[:person]
+
     end
+    if @contract.update_attributes params[:contract]
+      if @person = @contract.person
+        @person.update_attributes params[:person]
+      else
+        @contract.person = Person.create params[:person]
+      end
+    end
+
 
     redirect_to contract_path(@contract) if params[:print]
     #Dir.rm_r temp

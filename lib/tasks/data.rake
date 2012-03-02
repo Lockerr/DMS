@@ -27,6 +27,13 @@ namespace :data do
     book = Spreadsheet.open 'tmp/export.xls'
     for ws in book.worksheets
 
+      state = 1
+      state = 0 if row[0] != 'Дата продажи а/м дилеру'
+      state = 0 if row[2] != 'Внешний номер ТранспортСредств'
+      state = 0 if row[3] != 'VIN'
+      state = 0 if row[30] != 'Название модели а/м'
+      state = 0 if row[31] != 'Цвет кузова а/м'
+      state = 0 if row[32] != 'Обивка'
 
       ws.each do |row|
         unless row[0] == 'Дата продажи а/м дилеру'
@@ -42,33 +49,24 @@ namespace :data do
 
           end
           puts opts.inspect
-
+          attributes = {
+              :order         => row[2],
+              :vin           => row[3],
+              :model         => Model.find_or_create_by_name(clear(row[30])),
+              :klasse_id     => Klasse.find_by_name(clear((row[30]).split(/\s/)[0])).id,
+              :color_id      => row[31],
+              :interior_id   => row[32],
+              :arrival       => row[39],
+              :engine_number => row[41],
+              :real_options  => opts
+          }
           if car = Car.find_by_order(row[2].to_s)
             puts opts.class
-            car.update_attributes(
-              :order => row[2],
-              :vin => row[3],
-              :model => Model.find_or_create_by_name(clear(row[30])),
-              :klasse_id => Klasse.find_by_name(clear((row[30]).split(/\s/)[0])).id,
-              :color_id => row[31],
-              :interior_id => row[32],
-              :arrival => row[39],
-              :engine_number => row[41],
-              :real_options => opts
-            )
+            car.update_attributes(attributes)
           else
             puts opts.size
-            Car.create(
-              :order => row[2],
-              :vin => row[3],
-              :model => Model.find_or_create_by_name(clear(row[30])),
-              :klasse_id => Klasse.find_by_name(clear((row[30]).split(/\s/)[0])).id,
-              :color_id => row[31],
-              :interior_id => row[32],
-              :arrival => row[39],
-              :engine_number => row[41],
-              :real_options => opts
-            )
+            Car.create(attributes)
+
             puts Car.last.real_options.size == opts.size
           end
         end

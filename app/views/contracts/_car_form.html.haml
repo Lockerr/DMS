@@ -7,44 +7,44 @@
       = "#{@contract.car.model.name} #{@contract.car.order}"
     %hr/
     .client
-      %label Клиент
+      .label Клиент
       = collection_select(:contract, :person_id, Person.all, :id, :name_with_phone, :prompt => true, :size => 30)
     %hr/
     Паспорт:
     %br/
 
     .person_name
-      %label Полное имя
+      .label Полное имя
       = text_field :person, :name
     .person_id_series
-      %label серия
+      .label серия
       = text_field :person, :id_series
     .person_id_number
-      %label номер
+      .label номер
       = text_field :person, :id_number
     .person_id_dep
-      %label кем и когда выдан
+      .label выдан
       = text_field :person, :id_dep
     .person_phone
-      %label Телефон
+      .label Телефон
       = text_field :person, :phones
     .person_address
-      %label Адрес
+      .label Адрес
       = text_field :person, :address
 
     .person_birthday
-      %label Дата рождения
+      .label Дата рождения
       = text_field :person, :birthday
 
     %hr/
     .price
-      %label Цена
+      .label Цена
       = text_field :contract, :price
     .pre_pay
-      %label Предоплата
+      .label Предоплата
       = text_field :contract, :prepay
     .date
-      %label Дата
+      .label Дата
       =text_field :contract, :date, :value =>  I18n.localize(Date.today)
     %hr/
     .options
