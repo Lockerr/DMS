@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120221084942) do
+ActiveRecord::Schema.define(:version => 20120305043403) do
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(:version => 20120221084942) do
     t.integer  "prepay"
     t.string   "contact_phone"
     t.date     "date"
+    t.string   "gifts"
   end
 
   create_table "klasses", :force => true do |t|

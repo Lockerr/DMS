@@ -1,8 +1,10 @@
+.top-menu
+  = render 'functions'
+
 .top-box
   .top-left
   .top-right
 
-= render 'functions'
 
 
 .mid-box
@@ -90,26 +92,14 @@
     .cars
       - for car in @cars
         = render car
-    .footer
-      .add
-        +
-      .edit
-        \/
-      .delete
-        X
-
-    .pager
-      .first
-      .previous
-      .picker
-        = text_field :pager, :page, :size => 2
-      .next
-      .last
-    .info
-      .pager-info
 
   .checkin_form
   = render 'from'
   .contract_form
+.bottom-box
+  .buttons
+  .controls
+    = link_to 'Очистить фильтры', '#', :id => 'clear_filters'
+
 .respond
 

@@ -45,7 +45,7 @@
       = text_field :contract, :prepay
     .date
       .label Дата
-      =text_field :contract, :date, :value =>  I18n.localize(Date.today)
+      = text_field :contract, :date, :value =>  I18n.localize(Date.today)
     %hr/
     .options
       = check_box :gifts, :tires

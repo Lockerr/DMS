@@ -18,6 +18,17 @@ revert_date = (date) ->
 
 jQuery(document).ready ->
 
+  $("input.filter").typeWatch
+    callback: ->
+      $.ajax
+        url: "cars.js"
+        data: $('.filters').find('*').serialize()
+        complete: (html) ->
+          $(".cars").html html.responseText
+    wait: 500
+    highlight: false
+    captureLength: 0
+
   $('input#search_arrival_from').datepicker
     changeYear: 'true'
     changeMonth: 'true'
@@ -116,12 +127,17 @@ jQuery(document).ready ->
 
   $('.print_contract').live 'click', ->
     id = @id
-    $.ajax
+    request = $.ajax
       url: 'contracts/' + id
       type: 'PUT'
       data: $('.contract_form').find('*').serialize()
-      complete: ->
+      success: ->
         window.open 'contracts/' + id, '_blank'
+    request.fail (xhr,satus,error) ->
+      alert "Fail!"
+      show_respond(xhr)
+
+
 
 
   $('.update_contract').live 'click', ->
@@ -213,32 +229,19 @@ jQuery(document).ready ->
     false
 
 
-  $(".filter").live "change", ->
+  $(".filter[type='checkbox']").live "change", ->
     $.ajax
       url: "cars.js"
       data: $('.filters').find('*').serialize()
       complete: (html) ->
         $(".cars").html html.responseText
 
+  $("#clear_filters").live 'click', ->
+    $(".filters input").each ->
+      @value = ""
 
-  $(".filter").typeWatch
-    callback: ->
-#      $("input:text.filters").each ->
-#      alert this.id
-#      unless this.id is ''
-#        alert this.id
-#        $('#' + @id).parent.append('a')
-#        @parent.append "<a href='#' class='clear_search' id="+ '!' +">x</a>"
-      $.ajax
-        url: "cars.js"
-        data: $('.filters').find('*').serialize()
-        complete: (html) ->
 
-          $(".cars").html html.responseText
 
-    wait: 500
-    highlight: false
-    captureLength: 0
 
   $('.car').live 'click', ->
     $(".new_checkin").remove()
@@ -247,7 +250,10 @@ jQuery(document).ready ->
       url: "cars/" + id + '/info'
       complete: (html) ->
         $('.top-left').html html.responseText
-        $('.controls').empty()
+        $('.button.contract').remove()
+        $('.button.proposal').remove()
+        $('.button.checkin').remove()
+
         $('.controls').append ('<a href=\'#\' class=\"button checkin\" id=\"' + id + '\">приемка</a>')
         $('.controls').append ('<a href=\'#\' class=\"button proposal\" id=\"' + id + '\">предложение</a>')
         $('.controls').append ('<a href=\'#\' class=\"button contract\" id=\"' + id + '\">контракт</a>')

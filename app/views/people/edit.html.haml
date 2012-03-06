@@ -1,0 +1,26 @@
+.person_form
+  .person_name
+    .label Полное имя
+    = text_field :person, :name
+  .person_id_series
+    .label серия
+    = text_field :person, :id_series
+  .person_id_number
+    .label номер
+    = text_field :person, :id_number
+  .person_id_dep
+    .label выдан
+    = text_field :person, :id_dep
+  .person_phone
+    .label Телефон
+    = text_field :person, :phones
+  .person_address
+    .label Адрес
+    = text_field :person, :address
+
+  .person_birthday
+    .label Дата рождения
+    = text_field :person, :birthday
+  .buttons
+    = link_to 'сохранить','#',  :class => 'update_person',:id => @person.id
+    = link_to 'отменить','#',  :class => 'cancel'

@@ -19,9 +19,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to 'Наличие', cars_path %>
-<%= link_to 'Клиенты', people_path %>
-<%= current_user.email if current_user %>
 <%= yield %>
 
 </body>

@@ -1,0 +1,20 @@
+- for person in @people
+  .person.row{:id => person.id}
+    .id.cell
+      = person.id
+    .name.cell
+      = person.name
+    .phones.cell
+      = person.phones
+    .email.cell
+      = person.email
+    .descriptions.cell
+      = person.descriptions
+    .package.cell
+      = person.package
+    .model_id.cell
+      -#= person.model.inspect
+    .manager_id.cell
+      = person.manager.try(:name)
+    .order_id.cell
+      = person.order_id

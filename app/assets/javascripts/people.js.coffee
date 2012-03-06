@@ -1,5 +1,31 @@
+show_respond = (html) ->
+  $('.respond').html html.responseText
+
+  $(".respond").dialog
+    autoOpen: false
+    hide: "explode"
+    modal: true
+    width: 700
+    close: ->
+      $(".respond").dialog( "destroy" )
+      $(".respond").clear()
+
+  $(".respond").dialog 'open'
+#TODO Отсортировать
 jQuery(document).ready ->
   $.datepicker.setDefaults $.datepicker.regional["ru"]
+
+  $('.filters.header input.filter').typeWatch
+    callback: ->
+      $.ajax
+        url: "people.js"
+        data: $('.filters').find('*').serialize()
+        complete: (html) ->
+          $(".people").html html.responseText
+    wait: 500
+    highlight: false
+    captureLength: 0
+
 
   $('.print_contract').live 'click', ->
     id = @id
@@ -44,9 +70,28 @@ jQuery(document).ready ->
               complete: (new_person) ->
                 $(".new_person").replaceWith new_person.responseText
 
+  $("#filters_clear").live 'click', ->
+      $(".filters input").each ->
+        @value = ""
+      $.ajax
+        url: "people.js"
+        complete: (html) ->
+          $(".people").html html.responseText
+
+  $('.person').live 'dblclick', ->
+    $.ajax
+      url: 'people/' + @id + '/edit'
+      complete: (html) ->
+        show_respond html
+
+  $('#contact_add').click ->
+    $.ajax
+      url: 'people/new'
+      complete: (html) ->
+        show_respond(html)
 
 
-  $('.person').click ->
+  $('.person').live 'click', ->
     id = @id
     element = $(this)
     $('*').removeClass('selected')
@@ -55,7 +100,10 @@ jQuery(document).ready ->
       url: 'communications/' + this.id
       complete: (resp) ->
         $('.communications').html resp.responseText
-        $('.controls').empty()
+        $('.button.call').remove()
+        $('.button.meet').remove()
+        $('.button.contract').remove()
+
         $('.controls').append ('<a href=\'#\' class=\"button call\" id=\"' + id + '\">звонок</a>')
         $('.controls').append ('<a href=\'#\' class=\"button meet\" id=\"' + id + '\">встреча</a>')
         $('.controls').append ('<a href=\'#\' class=\"button contract\" id=\"' + id + '\">контракт</a>')
@@ -79,25 +127,14 @@ jQuery(document).ready ->
 
               $(".new_contract").dialog("open")
 
-
               $('#person_birthday').datepicker
                 changeYear: 'true'
                 changeMonth: 'true'
                 yearRange: '-100:-16'
 
-
-
-
               $('#contract_date').datepicker
                 changeMonth: true
                 changeYear: true
-
-
-
-
-
-
-
 
   $('.button.meet').live 'click', ->
     $.ajax
@@ -152,6 +189,5 @@ jQuery(document).ready ->
               complete: (new_car) ->
                 $(".new_communication").replaceWith new_car.responseText
             false
-#          if e.keyCode is 27
 
 

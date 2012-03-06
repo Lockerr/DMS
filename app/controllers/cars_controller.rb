@@ -45,6 +45,8 @@ class CarsController < ApplicationController
             when 'published'
               @cars = @cars.where(:published => true) if search[key] == "1"
 
+            when 'options'
+              @cars = @cars.where("real_options LIKE ? or options LIKE ?","%#{search[key]}%","%#{search[key]}%")
             else
               @cars = @cars.where(c[key].matches "%#{search[key]}%")
           end

@@ -1,3 +1,4 @@
+#encoding: UTF-8
 class ContractsController < ApplicationController
 
   #TODO: Car can`t be sold again
@@ -35,25 +36,39 @@ class ContractsController < ApplicationController
   end
 
   def update
-    @contract                  = Contract.find(params[:id])
-    params[:contract][:price]  = params[:contract][:price].to_s.to_s.split(/\D/).join
-    params[:contract][:prepay] = params[:contract][:prepay].to_s.to_s.split(/\D/).join
+    @contract = Contract.find(params[:id])
+    params[:contract][:price] = params[:contract][:price].to_s.split(/\D/).join
+    params[:contract][:prepay] = params[:contract][:prepay].to_s.split(/\D/).join
 
-
-
+    params[:contract][:gifts] = params[:gifts]
 
     if @contract.update_attributes params[:contract]
+
       if @person = @contract.person
         @person.update_attributes params[:person]
       else
-        @contract.person = Person.create params[:person]
-        @contract.save
+
+        if @person = Person.new(params[:person])
+          if @person.save
+            @contract.person = @person
+            if @contract.save
+              temp = @contract.prop
+              send_file(temp.to_s + "/contract.docx")
+              system "rm -r #{temp}"
+            else
+              render :json => 'ошибка сохранениея контракта', :status => :unprocessable_entity
+            end
+          else
+            render :json => 'Клиент с такими паспортными данными уже существует', :status => :unprocessable_entity
+          end
+        end
       end
+
+
     end
-
-
-    redirect_to contract_path(@contract) if params[:print]
-    #Dir.rm_r temp
-
+    render :json => 'true'
   end
+
+
 end
+

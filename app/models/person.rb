@@ -6,6 +6,11 @@ class Person < ActiveRecord::Base
   has_and_belongs_to_many :models
   has_many :contracts
   has_many :proposals
+  serialize :phones
+
+  validate :id_fields
+  validates_uniqueness_of :phones
+
 
   after_save :write_logs
 
@@ -25,6 +30,14 @@ class Person < ActiveRecord::Base
       "#{n[0]} #{n[1][0]}. #{n[2][0]}."
     else
       self.name
+    end
+  end
+
+  def id_fields
+    if id_number and id_series
+      if Person.where('id_number = ? and id_series = ?', id_number, id_series)
+        errors.add(:id_number, 'Errors!')
+      end
     end
   end
 
