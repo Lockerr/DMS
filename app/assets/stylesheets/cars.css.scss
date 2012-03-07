@@ -303,25 +303,24 @@ a.progressCancel:hover {
   background-position: 0px 0px;
 }
 
-.new_car {
+.car_form {
 
-  .errors {
-    color: red;
+  .label {
+    width: 160px;
+    float: left;
+  }
+  input[type=text] {
+    width: 480px;
   }
 
-  .klasse, .model, .line {
-    float: left
+  input[type=select] {
+    width: 480px;
+  }
+  .ui-autocomplete-input {
+    width: 480px;
   }
 
-  hr {
-    width:  100%;
-    border: none
-  }
 
-  .color, .interior {
-    width: 55px;
-    float: left
-  }
 
 }
 

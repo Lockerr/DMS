@@ -1,46 +1,73 @@
-.edited_car{:id => @car.id}
-  .id
-    = @car.id
+.car_form{:id => @car.id}
   .order
+    .label Номер заказа
     = text_field :car, :order, {:size => 8}
   .klasse
-    = collection_select(:car, :klasse_id, Klasse.all, :id, :name, :prompt => true)
+    .label Класс
+    = @car.klasse.try(:name)
   .model
-    = collection_select(:car, :model_id, Model.all, :id, :name, :prompt => true)
+    .label Модель
+    = @car.model.name
   .line
+    .label Линия
     = collection_select(:car, :line_id, Line.all, :id, :name, :prompt => true)
   .vin
-    = text_field :car,  :vin, :size => 18
+    .label VIN
+    = @car.vin
   .color
-    = text_field :car,  :color_id, :size => 3
+    .label Цвет салона
+    = @car.color_id
   .interior
-    = text_field :car,  :interior_id, :size => 3
+    .label Обивка
+    = @car.interior_id
   .price
+    .label Фактическая цена
     = text_field :car,  :price, :size => 6
+  .gpl
+    .label Прайс цена
+    = text_field :car,  :gpl, :size => 6
   .options
-    = text_field :car,  :options
+    .label Опции
+    = text_field :car, :options
+  .real_options
+    = @car.real_options
   .person
+    .label Клиент
     = collection_select(:car, :person_id, Person.all, :id, :name, :prompt => true)
   .published
+    .label Сайт
     = check_box :car, :published
   .arrival
+    .label Дата прибытия
     = text_field :car,  :arrival
   .days_at_stock
-    = text_field :car,  :days_at_stock
+    .label Дней на складе
+    = (Date.today - @car.arrival).to_i if @car.arrival
   .comments
+    .label Комментарий
     = text_field :car,  :comments
   .vp
+    .label ПТС
     = text_field :car,  :vp
   .insurance
+    .label Страховка
     = text_field :car,  :insurance
   .manager
+    .label Менеджер
     = collection_select(:car, :manager_id, Manager.all, :id, :name, :prompt => true)
-
-
   .payment
+    .label Зарплата
     = collection_select(:car, :payment_id, Manager.all, :id, :name, :prompt => true)
   .car_type
+    .label б/у
     = text_field :car,  :car_type
   .run
+    .label Пробег
     = text_field :car,  :run
+
+  %hr
+
+  .buttons
+    = link_to 'отменить','#',  :class => 'car_edit_cansel',:id => @car.id
+    = link_to 'сохранить','#',  :class => 'car_update',:id => @car.id
 

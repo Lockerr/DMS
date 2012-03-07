@@ -94,12 +94,14 @@
         = render car
 
   .checkin_form
-  = render 'from'
   .contract_form
 .bottom-box
   .buttons
-  .controls
+  .controls{:style => 'float: left'}
     = link_to 'Очистить фильтры', '#', :id => 'clear_filters'
+  .buttons{:style => 'float: right'}
+    = link_to 'Загрузить', '#', :id => 'download_state'
+
 
 .respond
 

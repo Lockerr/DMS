@@ -8,7 +8,7 @@ show_respond = (html) ->
     width: 700
     close: ->
      $(".respond").dialog( "destroy" )
-     $(".respond").clear()
+
   $(".respond").dialog 'open'
 
 revert_date = (date) ->
@@ -70,7 +70,6 @@ jQuery(document).ready ->
       complete: (html) ->
         $('.contract_form').html html.responseText
         $('#contract_person_id').combobox()
-#          change: alert $('.contract_form').find('select').find('option:selected')[0].value
 
 
 
@@ -103,9 +102,7 @@ jQuery(document).ready ->
           $.ajax
             url: 'people/' + id + '.json'
             complete: (json) ->
-              console.log json
               person = $.parseJSON json.responseText
-              console.log person
               $('input#person_id_series').val(person.id_series)
               $('input#person_id_number').val(person.id_number)
               $('input#person_id_dep').val(person.id_dep)
@@ -149,11 +146,6 @@ jQuery(document).ready ->
       complete: (html)->
         show_respond(html)
 
-
-
-
-
-
   $(".button.proposal").live 'click', ->
     $(".new_proposal").dialog "open"
 
@@ -182,7 +174,6 @@ jQuery(document).ready ->
           file_size_limit: '100 MB'
           post_params:
             car: id
-#          debug: true
           button_image_url: "assets/images/TestImageNoText_65x29.png"
           button_width: "100"
           button_height: "29"
@@ -193,7 +184,6 @@ jQuery(document).ready ->
           button_text_top_padding: 3
           custom_settings:
             progressTarget: "fsUploadProgress"
-#            cancelButtonId: "btnCancel"
 
 
           file_queued_handler : fileQueued
@@ -218,9 +208,6 @@ jQuery(document).ready ->
         $('.new_checkin').dialog 'close'
         show_respond(html)
 
-
-
-
   $(".add").click ->
     $(".new_car").dialog "open"
     $('#car_model_id').combobox()
@@ -240,9 +227,6 @@ jQuery(document).ready ->
     $(".filters input").each ->
       @value = ""
 
-
-
-
   $('.car').live 'click', ->
     $(".new_checkin").remove()
     id = this.id
@@ -260,47 +244,28 @@ jQuery(document).ready ->
 
 
   $('.car').live 'dblclick',  ->
-    id = this.id
-    target = $(this)
     $.ajax
-      url: "cars/" + id + '/edit'
+      url: "cars/" + @id + '/edit'
       complete: (html) ->
-        if $('.edited_car').size() > 0
-          $.ajax
-            url: "cars/" + $('.edited_car')[0].id
+        $('.respond').html html.responseText
 
-            complete: (old) ->
-              $(".edited_car").replaceWith old.responseText
-              target.replaceWith html.responseText
-              $('#car_vin').mask("********9****9999")
-              $('#car_arrival').datepicker
-                numberOfMonths: 3
-                showButtonPanel: true
+        $('#car_person_id').combobox()
 
-        else
-          target.replaceWith html.responseText
-        $('#car_arrival').datepicker
-          numberOfMonths: 3
-          showButtonPanel: true
+        $('.car_form input#car_arrival').datepicker
+          changeYear: 'true'
+          changeMonth: 'true'
 
-        $('#car_vin').mask("********9****9999")
+        $(".respond").dialog
+          autoOpen: false
+          hide: "explode"
+          modal: true
+          width: 700
+          close: ->
+            $(".respond").dialog( "destroy" )
 
 
-  $(".edited_car").find('*').live ('keyup'), (e) ->
-    if e.keyCode is 13
-      data = $('.edited_car').find('*').serialize()
-      $.ajax
-        url: 'cars/' + $('.edited_car')[0].id
-        type: "put"
-        data: data
-        complete: (new_car) ->
-          $(".edited_car").replaceWith new_car.responseText
+        $(".respond").dialog 'open'
 
-
-  $('#car_arrival').datepicker
-    numberOfMonths: 3
-    showButtonPanel: true
-    locale: 'ru'
 
   $('.control_button#ok').click ->
     $.ajax
