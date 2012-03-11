@@ -16,7 +16,7 @@ class Contract < ActiveRecord::Base
   end
 
   def properties
-    REXML::Document.new docx.read
+    REXML::Document.new File.new(Rails.root.join('assets', 'docx_template', 'docProps', 'custom.xml'), 'r').read
   end
 
   def attrs

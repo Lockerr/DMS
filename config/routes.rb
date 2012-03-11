@@ -19,7 +19,9 @@ DmsExt::Application.routes.draw do
     resources :communications
   end
 
-  resources :cars
+  resources :cars do
+    resources :proposals
+  end
   resources :models
   resources :managers
 

@@ -1,12 +1,24 @@
 class ProposalsController < ApplicationController
 
-  def show
+  def new
+    @proposal = Car.find(params[:car_id]).proposals.new
+  end
 
+  def show
+    @proposal = Proposal.find(params[:id])
+    temp = @proposal.prop
+    send_file(temp.to_s + "/proposal.docx")
+    system "rm -r #{temp}"
   end
 
   def create
+    @proposal = Car.find(params[:car_id]).proposals.new(params[:proposal])
 
+    if @proposal.save
+      render :json => @proposal.id
+    end
   end
+
 
   def update
 

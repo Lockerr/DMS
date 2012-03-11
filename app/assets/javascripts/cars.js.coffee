@@ -11,6 +11,22 @@ show_respond = (html) ->
 
   $(".respond").dialog 'open'
 
+prepare_respond = (html) ->
+  $('.respond').html html.responseText
+
+open_respond = ->
+  $(".respond").dialog
+    autoOpen: false
+    hide: "explode"
+    modal: true
+    width: 700
+    close: ->
+      $(".respond").dialog( "destroy" )
+
+  $(".respond").dialog 'open'
+
+
+
 revert_date = (date) ->
   splitted = date.split('-')
   return splitted[2] + '.' + splitted[1] + '.' + splitted[0]
@@ -51,17 +67,8 @@ jQuery(document).ready ->
     modal: true
     width: 700
 
-
-
-  $(".new_proposal").dialog
-    autoOpen: false
-    hide: "explode"
-    modal: true
-    width: 700
   $('.clear_search').live 'click', ->
     $(".filters").find("input#search_" + this.id)[0].value = ''
-
-
 
   $(".button.contract").live 'click', ->
     id = @id
@@ -119,8 +126,6 @@ jQuery(document).ready ->
               $('input#person_id_number').mask("******")
               $('input#contract_price').mask("9?9999999")
               $('input#contract_prepay').mask("9?9999999")
-
-
 
   $('.print_contract').live 'click', ->
     id = @id
@@ -327,6 +332,26 @@ jQuery(document).ready ->
 
         swfu = new SWFUpload(settings)
 
+  $(".button.proposal").live 'click', ->
+    id = @id
+    $.ajax
+      url: '/cars/' + id + '/proposals/new'
+      complete: (html) ->
+        prepare_respond(html)
+        $('#proposal_person_id').combobox()
+        $('.print_proposal').live 'click', ->
+          request = $.ajax
+            url: 'cars/' + id + '/proposals'
+            type: 'POST'
+            data: $('.proposal_form').find('input, select').serialize()
+            success:(html) ->
+              alert (html)
+              window.open 'cars/' + id + '/proposals/' + html, '_blank'
+          request.fail (xhr,satus,error) ->
+            alert "Fail!"
+            show_respond(xhr)
+
+        open_respond()
 
 
 

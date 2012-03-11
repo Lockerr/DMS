@@ -26,64 +26,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cars/edit.html.haml">
+      <file leaf-file-name="cars.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="92" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
+            <state line="348" column="61" selection-start="10333" selection-end="10333" vertical-scroll-proportion="-10.806452">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_functions.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/application/_functions.html.haml">
+      <file leaf-file-name="proposals_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/proposals_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+            <state line="10" column="39" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cars/index.html.haml">
+      <file leaf-file-name="contracts_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/contracts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="101" selection-start="2790" selection-end="2790" vertical-scroll-proportion="0.0">
+            <state line="30" column="28" selection-start="565" selection-end="700" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="document (1).xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/docx_template/word/document (1).xml">
+      <file leaf-file-name="contract.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/contract.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="15" column="9" selection-start="264" selection-end="404" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="document.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/docx_template/word/document.xml">
+      <file leaf-file-name="proposal.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/proposal.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="78" selection-start="134" selection-end="134" vertical-scroll-proportion="0.017462166">
+            <state line="77" column="98" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.8072917">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <file leaf-file-name="document.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/proposal_template/word/document.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="566" column="62" selection-start="18005" selection-end="18005" vertical-scroll-proportion="-12.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_car.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cars/_car.html.haml">
+      <file leaf-file-name="new.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/proposals/new.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="2" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+            <state line="17" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cars.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/cars.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="305" column="25" selection-start="5853" selection-end="5853" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contracts.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/contracts.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="114" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,22 +120,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/people_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/people/_people.html.haml" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/calendar.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/commons.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/people/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/people.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/people/_new_person.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/edit_car_form.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/cars.css.scss" />
         <option value="$PROJECT_DIR$/app/views/contracts/_car_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/cars/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/application/_functions.html.haml" />
         <option value="$PROJECT_DIR$/app/views/cars/index.html.haml" />
         <option value="$PROJECT_DIR$/assets/docx_template/word/document.xml" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/cars.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/contracts.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/proposals/_proposal.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/proposals/new.html.haml" />
+        <option value="$PROJECT_DIR$/app/models/contract.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee" />
+        <option value="$PROJECT_DIR$/app/controllers/proposals_controller.rb" />
+        <option value="$PROJECT_DIR$/assets/proposal_template/word/numbering.xml" />
+        <option value="$PROJECT_DIR$/assets/proposal_template/word/document.xml" />
+        <option value="$PROJECT_DIR$/app/models/proposal.rb" />
       </list>
     </option>
   </component>
@@ -267,22 +285,8 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dms.ext" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docx_template" />
+              <option name="myItemId" value="proposal_template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,11 +304,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docx_template" />
+              <option name="myItemId" value="proposal_template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="word" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms.ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms.ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -792,19 +824,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1279" y="24" width="1922" height="1033" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.67480576" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32519424" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17967914" sideWeight="0.57935625" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18181819" sideWeight="0.67480576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18181819" sideWeight="0.6714761" order="0" side_tool="false" content_ui="combo" />
       <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-1" y="56" width="1282" height="1025" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-1" y="56" width="1282" height="1025" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -870,124 +902,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/cars.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="309" column="58" selection-start="5886" selection-end="5886" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbElement:/74780596/404a0ec8-b069-4c5f-9c6d-3416a9172efa/dms&amp;dot;ext_dev..cars_people">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbElement:/74780596/404a0ec8-b069-4c5f-9c6d-3416a9172efa/dms&amp;dot;ext_dev..cars">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbElement:/74780596/404a0ec8-b069-4c5f-9c6d-3416a9172efa/dms&amp;dot;ext_dev..assets">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.assets">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.assets</OriginalElement>
-          <nodes>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.assets</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="98.0" y="113.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/404a0ec8-b069-4c5f-9c6d-3416a9172efa">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>404a0ec8-b069-4c5f-9c6d-3416a9172efa</OriginalElement>
-          <nodes>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.managers</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.assets</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.cars</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.models</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.proposals</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.checkins</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.contracts</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.klasses</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.schema_migrations</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.lines</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.communications_orders</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.communications</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.people</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.users</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.models_people</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.cars_people</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.opts</node>
-            <node x="" y="">404a0ec8-b069-4c5f-9c6d-3416a9172efa.table:dms.ext_dev.logs</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6371541501976284" x="668.0" y="771.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbElement:/74780596/404a0ec8-b069-4c5f-9c6d-3416a9172efa/dms&amp;dot;ext_dev..logs">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbElement:/74780596/404a0ec8-b069-4c5f-9c6d-3416a9172efa/dms&amp;dot;ext_dev..checkins">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contracts/_car_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="64" selection-start="773" selection-end="773" vertical-scroll-proportion="0.22591743">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cars/_car.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="2" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cars/edit.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="92" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/_functions.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cars/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="90" column="101" selection-start="2790" selection-end="2790" vertical-scroll-proportion="0.0">
@@ -995,16 +909,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/docx_template/word/document (1).xml">
+    <entry file="file://$PROJECT_DIR$/app/views/cars/edit.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="140" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/docx_template/word/document.xml">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="78" selection-start="134" selection-end="134" vertical-scroll-proportion="0.017462166">
+        <state line="32" column="135" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contracts/_car_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="63" selection-start="94" selection-end="181" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/proposals/_proposal.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="51" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/proposal_template/word/numbering.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="68" selection-start="124" selection-end="124" vertical-scroll-proportion="0.026642984">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="348" column="61" selection-start="10333" selection-end="10333" vertical-scroll-proportion="-10.806452">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/proposals/new.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/cars.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="305" column="25" selection-start="5853" selection-end="5853" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/contracts.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="114" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/contracts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="28" selection-start="565" selection-end="700" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/proposal_template/word/document.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="566" column="62" selection-start="18005" selection-end="18005" vertical-scroll-proportion="-12.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/proposals_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="39" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/contract.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="9" selection-start="264" selection-end="404" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/proposal.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="98" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.8072917">
           <folding />
         </state>
       </provider>
