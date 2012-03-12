@@ -16,12 +16,20 @@ class Proposal < ActiveRecord::Base
 
   def attrs
     {
-            :price => self.price,
-            :person_name => self.person.name,
+            :car_price => self.price,
+            :person_name => self.person.name.split(' ')[1..2].join(' '),
             :car_model_name => self.car.model.name,
-            :color => self.car.color_id,
-            :interior => self.car.interior_id,
-            :production_year => self.car.prod_date.year,
+            :car_color_id => self.car.color_id,
+            :car_interior_id => self.car.interior_id,
+            :car_prod_year => self.car.prod_date.year,
+            :manager_name => self.manager.name.split(' ')[0..1].join(' '),
+            :car_klasse => self.car.klasse.name,
+            :manager_email => self.manager.email,
+            :manager_mobile => self.manager.mobile,
+            :car_special_price => self.special_price
+
+
+
     }
   end
 
@@ -57,7 +65,7 @@ class Proposal < ActiveRecord::Base
     for code in self.car.codes
       unless code[1] == 'Опция неизвестна'
         count = docbody.root.elements[1].elements.count
-        debugger
+
         before = docbody.root.elements["*/w:p/w:bookmarkStart[@w:id='0']"].parent
         paragraph = REXML::Element.new('w:p')
         paragraph.add_attribute 'w:rsidR', '00D71A90'
@@ -68,7 +76,8 @@ class Proposal < ActiveRecord::Base
 
 
         pPr = REXML::Element.new 'w:pPr'
-        wr = REXML::Element.new 'w:r'
+
+
 
         # lvl 1 creating w:pStyle element of w:pPr
         wpstyle = REXML::Element.new 'w:pStyle'
@@ -122,7 +131,7 @@ class Proposal < ActiveRecord::Base
 
         paragraph.add_element wr
 
-        docbody.root.elements[1].insert_before before, paragraph
+        docbody.root.elements[1].insert_after before, paragraph
       end
     end
 

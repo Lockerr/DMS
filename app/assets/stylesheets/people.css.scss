@@ -151,3 +151,24 @@
   text-shadow: 1px 1px 0px white;
   border-image: initial;
 }
+
+.new_person {
+
+  .label {
+    width: 160px;
+    float: left;
+  }
+  input[type=text] {
+    width: 480px;
+  }
+
+  input[type=select] {
+    width: 480px;
+  }
+  .ui-autocomplete-input {
+    width: 480px;
+  }
+
+
+
+}

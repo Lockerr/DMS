@@ -126,6 +126,9 @@ jQuery(document).ready ->
               $('input#person_id_number').mask("******")
               $('input#contract_price').mask("9?9999999")
               $('input#contract_prepay').mask("9?9999999")
+        $('.contract_cancel').click ->
+          $('.new_contract').dialog ('destroy')
+
 
   $('.print_contract').live 'click', ->
     id = @id
@@ -270,7 +273,8 @@ jQuery(document).ready ->
 
 
         $(".respond").dialog 'open'
-
+        $('.car_edit_cancel').click ->
+          $('.respond').dialog ('destroy')
 
   $('.control_button#ok').click ->
     $.ajax

@@ -1,17 +1,46 @@
 .new_person
-  .name
-    = text_field :person, :name
-  .phones
-    = phone_field :person, :phones
+  .first_name
+    .label Фамилия
+    = text_field :name, :first_name
+  .second_name
+    .label Имя
+    = text_field :name, :second_name
+  .third_name
+    .label Отчество
+    = text_field :name, :third_name
+  %hr/
+  .label Паспорт
+  %br/
+  .id_series
+    .label Серия
+    = text_field :person, :id_series
+  .id_number
+    .label Номер
+    = text_field :person, :id_number
+  .id_dep
+    .label Выдан
+    = text_field :person, :id_dep
+
+  .phone1
+    .label Телефон
+    = text_field :person, :phone1
+  .phone2
+    .label Телефон
+    = text_field :person, :phone2
   .email
+    .label Электронная почта
     = email_field :person, :email
+  %hr/
   .descriptions
+    .label Заметки
     = text_field :person, :descriptions
   .package
+    .label Комплектация
     = text_field :person, :package
   .model_id
+    .label Модель
     = collection_select(:person, :model_id, Model.all, :id, :name, :prompt => true)
-  .manager_id
-    = collection_select(:person, :manager_id, Manager.all, :id, :name, :prompt => true)
-  .order_id
-    = collection_select(:person, :order_id, Car.order('cars.order').all, :id, :order, :prompt => true)
+
+  .buttons
+    = link_to 'сохранить','#',  :class => 'person_create'
+    = link_to 'отменить','#',  :class => 'person_cancel'

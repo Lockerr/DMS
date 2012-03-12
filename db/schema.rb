@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120305043403) do
+ActiveRecord::Schema.define(:version => 20120311101128) do
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -129,6 +129,8 @@ ActiveRecord::Schema.define(:version => 20120305043403) do
 
   create_table "managers", :force => true do |t|
     t.string "name"
+    t.string "mobile"
+    t.string "email"
   end
 
   create_table "models", :force => true do |t|
@@ -180,8 +182,9 @@ ActiveRecord::Schema.define(:version => 20120305043403) do
     t.integer  "car_id"
     t.integer  "manager_id"
     t.integer  "price"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "special_price"
   end
 
   create_table "users", :force => true do |t|

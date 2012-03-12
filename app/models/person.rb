@@ -11,7 +11,8 @@ class Person < ActiveRecord::Base
   validate :id_fields
   validates_uniqueness_of :phones
 
-
+  attr_accessor :first_name, :second_name, :third_name
+  attr_accessor :phone1, :phone2
   after_save :write_logs
 
 

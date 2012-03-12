@@ -1,16 +1,25 @@
 .proposal_form{:id => @proposal.car.id}
+
   .model
     %label Модель
     = "#{@proposal.car.model.name}, заказ № #{@proposal.car.order}"
+
   .client
     .label Клиент
     = collection_select(:proposal, :person_id, Person.all, :id, :name_with_phone, :prompt => true, :size => 30)
+
   .price
     .label Цена
     = text_field :proposal, :price
+
+  .special_price
+    .label Спец. цена
+    = text_field :proposal, :special_price
+
   .manager
     .label Менеджер
     = collection_select(:proposal, :manager_id, Manager.all, :id, :name, :prompt => true, :size => 30)
+
   .buttons
     = link_to 'отмена','#',  :class => 'cancel_proposal'
     = link_to 'сохранить','#',  :class => 'create_proposal'
