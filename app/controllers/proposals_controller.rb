@@ -12,6 +12,8 @@ class ProposalsController < ApplicationController
   end
 
   def create
+    params[:proposal][:price].gsub!(/\,/, '.')
+    params[:proposal][:special_price].gsub!(/\,/, '.')
     @proposal = Car.find(params[:car_id]).proposals.new(params[:proposal])
 
     if @proposal.save

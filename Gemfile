@@ -1,9 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'tiny_tds'
+gem 'activerecord-sqlserver-adapter'
 gem 'pdfkit'
 gem 'mysql2'
 gem 'will_paginate'
@@ -13,7 +14,7 @@ gem 'devise'
 gem 'haml'
 gem 'hpricot'
 gem 'paperclip'
-gem 'ru_propisju', '2.1.1'
+gem 'ru_propisju', '2.1.2'
 gem 'russian'
 gem 'spreadsheet'
 gem 'hirb'

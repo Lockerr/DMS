@@ -16,10 +16,10 @@
 
     .person_name
       .label Полное имя
-      = text_field :person, :name
+      = text_field :person, :name, :value => (@contract.person.name if @contract.person)
     .person_id_series
       .label серия
-      = text_field :person, :id_series
+      = text_field :person, :id_series, :value => (@contract.person.id_series if @contract.person)
     .person_id_number
       .label номер
       = text_field :person, :id_number

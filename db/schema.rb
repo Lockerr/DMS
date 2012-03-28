@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120311101128) do
+ActiveRecord::Schema.define(:version => 20120322045717) do
+
+  create_table "acts", :force => true do |t|
+    t.integer  "car_id"
+    t.integer  "person_id"
+    t.string   "pts"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+    t.string   "car_pts"
+    t.decimal  "price",      :precision => 11, :scale => 2
+    t.decimal  "nds",        :precision => 11, :scale => 2
+  end
 
   create_table "assets", :force => true do |t|
     t.string   "data_file_name"
@@ -27,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20120311101128) do
 
   create_table "cars", :force => true do |t|
     t.string   "order"
-    t.string   "klasse_id"
+    t.integer  "klasse_id"
     t.integer  "model_id"
     t.string   "line_id"
     t.string   "color_id"
@@ -36,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20120311101128) do
     t.string   "options"
     t.integer  "person_id"
     t.string   "state"
-    t.boolean  "published",     :default => false
+    t.boolean  "published",                  :default => false
     t.date     "arrival"
     t.string   "days_at_stock"
     t.string   "comments"
@@ -54,9 +65,9 @@ ActiveRecord::Schema.define(:version => 20120311101128) do
     t.string   "manager_name"
     t.integer  "gpl"
     t.text     "real_options"
-    t.boolean  "restyling",     :default => false
+    t.boolean  "restyling",                  :default => false
     t.date     "prod_date"
-    t.integer  "engine_number"
+    t.integer  "engine_number", :limit => 8
   end
 
   create_table "cars_people", :force => true do |t|
@@ -104,6 +115,18 @@ ActiveRecord::Schema.define(:version => 20120311101128) do
     t.string   "contact_phone"
     t.date     "date"
     t.string   "gifts"
+    t.string   "number"
+  end
+
+  create_table "dkps", :force => true do |t|
+    t.integer  "car_id"
+    t.decimal  "price",       :precision => 11, :scale => 2
+    t.decimal  "payment",     :precision => 11, :scale => 2
+    t.string   "car_pts"
+    t.integer  "contract_id"
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.integer  "person_id"
   end
 
   create_table "klasses", :force => true do |t|
@@ -181,10 +204,10 @@ ActiveRecord::Schema.define(:version => 20120311101128) do
     t.integer  "person_id"
     t.integer  "car_id"
     t.integer  "manager_id"
-    t.integer  "price"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.integer  "special_price"
+    t.decimal  "price",         :precision => 15, :scale => 2
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+    t.decimal  "special_price", :precision => 15, :scale => 2
   end
 
   create_table "users", :force => true do |t|

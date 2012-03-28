@@ -51,7 +51,7 @@
           .name.cell
             =person.name
           .phones.cell
-            =person.phones
+            =person.phones.join(', ') if person.phones
           .email.cell
             = person.email
           .descriptions.cell
@@ -59,7 +59,9 @@
           .package.cell
             = person.package
           .model_id.cell
-            -#= person.model.inspect
+            - if person.models.any?
+              - for model in person.models
+                = model.name
           .manager_id.cell
             = person.manager.try(:name)
           .order_id.cell
@@ -75,8 +77,3 @@
 .top-box
   .communications.table
 .respond
-
-
-
-
-  -#s Встреча звонок письмо тест-драйв

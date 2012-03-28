@@ -5,7 +5,7 @@
     .name.cell
       = person.name
     .phones.cell
-      = person.phones
+      = person.phones.join(', ') if person.phones
     .email.cell
       = person.email
     .descriptions.cell

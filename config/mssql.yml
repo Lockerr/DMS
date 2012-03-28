@@ -1,0 +1,8 @@
+ms:
+  adapter: sqlserver
+  encoding: windows1251
+  reconnect: false
+  database: crm
+  server: 192.168.1.102
+  username: aster
+  password: 1q2w3e4r5t

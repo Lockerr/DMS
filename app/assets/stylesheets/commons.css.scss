@@ -6,7 +6,7 @@
 
 .top-box {
   height:     41%;
-  background: rgb(238, 238, 238);
+  background: white;
   position:   fixed;
   top:        4%;
   overflow:   auto;
@@ -44,7 +44,7 @@
 
 .buttons, .controls {
   width: auto;
-  float: left;
+  float: right;
   a {
     -moz-box-shadow:       inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow:    inset 0px 1px 0px 0px #ffffff;

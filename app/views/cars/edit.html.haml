@@ -60,7 +60,7 @@
     = collection_select(:car, :payment_id, Manager.all, :id, :name, :prompt => true)
   .car_type
     .label б/у
-    = text_field :car,  :car_type
+    = check_box :car,  :car_type
   .run
     .label Пробег
     = text_field :car,  :run

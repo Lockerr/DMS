@@ -1,1 +1,25 @@
-= render @objects
+- for object in @objects
+  .object.row
+    = render object
+
+- for log in @car.logs
+  - log.parameters.delete_if { |k,v| k == 'order'}
+  - for param in log.parameters.keys
+    .object.row
+      .date.cell
+        = log.created_at.strftime('%d.%m.%y')
+      .who.cell
+        = log.user.try(:email)
+      .key.cell
+        = t(param)
+      .was.cell
+        - if log.parameters[param][0] == '' or log.parameters[param][0] == nil
+          = '----'
+        - else
+          = log.parameters[param][0]
+          -#.to_s.match(/(true|t|yes|y|1)$/i) != nil
+
+      .now.cell
+        = log.parameters[param][1]
+
+

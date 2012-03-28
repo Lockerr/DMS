@@ -1,26 +1,52 @@
 .person_form
-  .person_name
-    .label Полное имя
-    = text_field :person, :name
-  .person_id_series
-    .label серия
+  .first_name
+    .label Фамилия
+    = text_field :name, :first_name, :value => @person.first_name
+  .second_name
+    .label Имя
+    = text_field :name, :second_name, :value => @person.second_name
+  .third_name
+    .label Отчество
+    = text_field :name, :third_name, :value => @person.third_name
+  %hr/
+  .label Паспорт
+  %br/
+  .id_series
+    .label Серия
     = text_field :person, :id_series
-  .person_id_number
-    .label номер
+  .id_number
+    .label Номер
     = text_field :person, :id_number
-  .person_id_dep
-    .label выдан
+  .id_dep
+    .label Выдан
     = text_field :person, :id_dep
   .person_phone
-    .label Телефон
-    = text_field :person, :phones
-  .person_address
-    .label Адрес
-    = text_field :person, :address
 
-  .person_birthday
-    .label Дата рождения
-    = text_field :person, :birthday
+    - if @person.phones.any?
+      - for phone in @person.phones
+        .label Телефон
+        %input{:id=> "person_phone", :name=> "person[phones][#{@person.phones.index(phone)}]",:type =>"text", :value => phone}
+        = link_to('+','#', :class => 'add_phone') if @person.phones.index(phone) == 0
+        %br/
+    - else
+      .label Телефон
+      %input{:id=> "person_phone", :name=> "person[phones][0]",:type =>"text", :value => phone}
+      = link_to('+','#', :class => 'add_phone')
+  .email
+    .label e-mail
+    = email_field :person, :email
+  %hr/
+  .descriptions
+    .label Заметки
+    = text_field :person, :descriptions
+  .package
+    .label Комплектация
+    = text_field :person, :package
+  .model_id
+    .label Модель
+    = collection_select(:person, :model_id, Model.all, :id, :name, :prompt => true)
+    -#= link_to '+','#', :class => 'add_model'
+  %br/
   .buttons
     = link_to 'сохранить','#',  :class => 'update_person',:id => @person.id
     = link_to 'отменить','#',  :class => 'cancel'

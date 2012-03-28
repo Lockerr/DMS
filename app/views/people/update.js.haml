@@ -1,0 +1,9 @@
+#error_explanation
+  - unless @person.errors.empty?
+    - for key in @person.errors.messages.keys
+      - if key == :name
+        = "Пожалуйста заполните хотя бы одно поле ФИО"
+      - else
+        = "#{t(key)} #{@person.errors.messages[key][0]}"
+
+      %br/

@@ -1,3 +1,4 @@
+#error_explanation
 .new_person
   .first_name
     .label Фамилия
@@ -20,15 +21,13 @@
   .id_dep
     .label Выдан
     = text_field :person, :id_dep
+  .phone
+    .label Телефон
+    %input{:id=> "person_phone", :name=> "person[phones][1]",:type =>"text"}
+      = link_to '+','#', :class => 'add_phone'
 
-  .phone1
-    .label Телефон
-    = text_field :person, :phone1
-  .phone2
-    .label Телефон
-    = text_field :person, :phone2
   .email
-    .label Электронная почта
+    .label e-mail
     = email_field :person, :email
   %hr/
   .descriptions
@@ -40,7 +39,8 @@
   .model_id
     .label Модель
     = collection_select(:person, :model_id, Model.all, :id, :name, :prompt => true)
-
+    -#= link_to '+','#', :class => 'add_model'
+  %br/
   .buttons
     = link_to 'сохранить','#',  :class => 'person_create'
     = link_to 'отменить','#',  :class => 'person_cancel'

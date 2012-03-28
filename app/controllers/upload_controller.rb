@@ -17,18 +17,22 @@ class UploadController < ApplicationController
   def clear(value)
     if value
       value.gsub!(/(Blue)(EFFICIENCY)/, '')
-      value.gsub!(/(Особая серия)/, 'OC')
+      value.gsub!(/(Особая серия)/, '')
       value.gsub!(/(Внедорожник)/, '')
       value.gsub!(/(Седан)/, '')
-      value.gsub!(/(Особая)/, 'ОС')
+      value.gsub!(/(Особая)/, '')
+      value.gsub!(/Cерия/, '')
       value.gsub!(/(Mercedes\-Benz)/, '')
+      value.gsub!(/\+COMAND/, '')
+      value.gsub!(/\+Comand/, '')
       value.gsub!(/(\t)/, ' ')
       value.gsub!(/(\s)/, ' ')
       value.gsub!(/(\ \ )/, ' ')
       value.gsub!(/(\s\s)/, ' ')
       value.gsub!(/(^\s)/, '')
       value.gsub!(/(\w)(\d\d\d)/, '\1 \2')
-      value.gsub!(/(Coupe)/, 'Купе')
+      value.gsub!(/(Купе)/, 'Coupe')
+      value.gsub!(/\(длинная база\)/, 'Long')
       value
     end
 

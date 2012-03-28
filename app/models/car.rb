@@ -4,7 +4,7 @@ class Car < ActiveRecord::Base
 
   validates_presence_of :order
   validates_uniqueness_of :order
-
+  has_many :logs, :foreign_key => :object_id, :conditions => ['model_name = ?','car']
   belongs_to :model
   belongs_to :manager
   belongs_to :payment, :class_name => "Manager", :foreign_key => :payment_id
@@ -14,8 +14,12 @@ class Car < ActiveRecord::Base
   has_many :proposals
   has_one :contract
   has_many :checkins
+  has_many :acts
+  has_many :dkps
 
-  after_save :write_logs
+  #before_save :write_logs
+  before_update :write_logs
+
 
   default_scope includes(:manager, :model, :person, :klasse, :line, :payment, :contract)
 
@@ -24,7 +28,9 @@ class Car < ActiveRecord::Base
 
 
   def write_logs(object=nil)
-    Log.create(:model_name => 'car', :parameters => self.attributes, :object_id => ('system' if !object), :user_id => User.current_user)
+    if self.changes.any?
+      Log.create(:model_name => 'car', :parameters => self.changes, :object_id => self.id, :user_id => User.current_user)
+    end
   end
 
   def order_with_model

@@ -8,6 +8,7 @@ show_respond = (html) ->
     width: 700
     close: ->
      $(".respond").dialog( "destroy" )
+     $(".respond").empty()
 
   $(".respond").dialog 'open'
 
@@ -22,6 +23,7 @@ open_respond = ->
     width: 700
     close: ->
       $(".respond").dialog( "destroy" )
+      $(".respond").empty()
 
   $(".respond").dialog 'open'
 
@@ -34,7 +36,7 @@ revert_date = (date) ->
 
 jQuery(document).ready ->
 
-  $("input.filter").typeWatch
+  $('.filters input[type=text]').typeWatch
     callback: ->
       $.ajax
         url: "cars.js"
@@ -126,6 +128,7 @@ jQuery(document).ready ->
               $('input#person_id_number').mask("******")
               $('input#contract_price').mask("9?9999999")
               $('input#contract_prepay').mask("9?9999999")
+
         $('.contract_cancel').click ->
           $('.new_contract').dialog ('destroy')
 
@@ -156,6 +159,8 @@ jQuery(document).ready ->
 
   $(".button.proposal").live 'click', ->
     $(".new_proposal").dialog "open"
+
+
 
   $(".button.checkin").live 'click', ->
     id = @id
@@ -206,6 +211,11 @@ jQuery(document).ready ->
 
         swfu = new SWFUpload(settings)
 
+  $('.cancel').live 'click', ->
+    $('.new_checkin').dialog('destroy')
+    $('.respond').dialog('destroy')
+
+
   $('.update_checkin').live 'click', ->
     id = this.id
     $.ajax
@@ -234,6 +244,11 @@ jQuery(document).ready ->
   $("#clear_filters").live 'click', ->
     $(".filters input").each ->
       @value = ""
+    $.ajax
+      url: "cars.js"
+      data: $('.filters').find('*').serialize()
+      complete: (html) ->
+        $(".cars").html html.responseText
 
   $('.car').live 'click', ->
     $(".new_checkin").remove()
@@ -245,15 +260,21 @@ jQuery(document).ready ->
         $('.button.contract').remove()
         $('.button.proposal').remove()
         $('.button.checkin').remove()
+        $('.button.act').remove()
+        $('.button.dkp').remove()
+
 
         $('.controls').append ('<a href=\'#\' class=\"button checkin\" id=\"' + id + '\">приемка</a>')
         $('.controls').append ('<a href=\'#\' class=\"button proposal\" id=\"' + id + '\">предложение</a>')
-        $('.controls').append ('<a href=\'#\' class=\"button contract\" id=\"' + id + '\">контракт</a>')
+        $('.controls').append ('<a href=\'#\' class=\"button contract\" id=\"' + id + '\">договор</a>')
+        $('.controls').append ('<a href=\'#\' class=\"button act\" id=\"' + id + '\">акт</a>')
+        $('.controls').append ('<a href=\'#\' class=\"button dkp\" id=\"' + id + '\">договор ГАИ</a>')
 
 
   $('.car').live 'dblclick',  ->
+    id = @id
     $.ajax
-      url: "cars/" + @id + '/edit'
+      url: "cars/" + id+ '/edit'
       complete: (html) ->
         $('.respond').html html.responseText
 
@@ -275,6 +296,13 @@ jQuery(document).ready ->
         $(".respond").dialog 'open'
         $('.car_edit_cancel').click ->
           $('.respond').dialog ('destroy')
+        $('.car_update').click ->
+          $.ajax
+            url: 'cars/' + id
+            type: 'PUT'
+            data: $('.car_form').find('*').serialize()
+            complete: ->
+              $('.respond').dialog("destroy")
 
   $('.control_button#ok').click ->
     $.ajax
@@ -357,6 +385,62 @@ jQuery(document).ready ->
 
         open_respond()
 
+  $(".button.act").live 'click', ->
+    id = @id
+    $.ajax
+      url: '/cars/' + id + '/acts/new'
+      complete: (html) ->
+        prepare_respond(html)
+        $('#act_person_id').combobox()
+        $('.print_act').live 'click', ->
+          request = $.ajax
+            url: 'cars/' + id + '/acts'
+            type: 'POST'
+            data: $('.act_form').find('input, select').serialize()
+            success:(html) ->
+              alert (html)
+              window.open 'cars/' + id + '/acts/' + html, '_blank'
+          request.fail (xhr,satus,error) ->
+            show_respond(xhr)
 
+        open_respond()
+
+  $(".button.dkp").live 'click', ->
+    id = @id
+    $.ajax
+      url: '/cars/' + id + '/dkps/new'
+      complete: (html) ->
+        prepare_respond(html)
+        $('#dkp_person_id').combobox()
+        $('.print_dkp').live 'click', ->
+          request = $.ajax
+            url: 'cars/' + id + '/dkps'
+            type: 'POST'
+            data: $('.dkp_form').find('input, select').serialize()
+            success:(html) ->
+              alert (html)
+              window.open 'cars/' + id + '/dkps/' + html, '_blank'
+          request.fail (xhr,satus,error) ->
+            show_respond(xhr)
+
+        open_respond()
+
+  $('#calendar').click ->
+      $.ajax
+        url: '/calendar'
+        complete: (resp) ->
+          $('.mid-box').html resp.responseText
+
+          $('.day').click ->
+            $.ajax
+              url: '/calendar/' + $(this).attr('day') + '/day'
+              complete: (resp) ->
+                $('.top-box').html resp.responseText
+
+                $('.communication').click ->
+                  $.ajax
+                    url: 'communications/' + @id + '/short/'
+                    complete: (resp) ->
+                      $('.top-right').html resp.responseText
 
 

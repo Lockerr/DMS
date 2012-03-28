@@ -11,7 +11,8 @@ class ContractsController < ApplicationController
 
   def new
     if params[:car]
-      @contract = Car.find(params[:car]).contract = Contract.create(:car_id => params[:car])
+      Car.find(params[:car]).contract = Contract.find_or_create_by_car_id(params[:car])
+      @contract = Car.find(params[:car]).contract
       render :partial => 'car_form'
     end
 
@@ -28,7 +29,7 @@ class ContractsController < ApplicationController
     @contract = Contract.find(params[:id])
     temp = @contract.prop
     send_file(temp.to_s + "/contract.docx")
-    system "rm -r #{temp}"
+    #system "rm -r #{temp}"
   end
 
   def create
@@ -39,12 +40,17 @@ class ContractsController < ApplicationController
     @contract = Contract.find(params[:id])
     params[:contract][:price] = params[:contract][:price].to_s.split(/\D/).join
     params[:contract][:prepay] = params[:contract][:prepay].to_s.split(/\D/).join
-
+    params[:contract][:number] = Time.now.year.to_s[2..3] + '/' + @contract.car.order.to_s[7..10]
     params[:contract][:gifts] = params[:gifts]
 
     if @contract.update_attributes params[:contract]
 
       if @person = @contract.person
+        if @person.phones.any?
+          params[:person][:phones] = @person.phones
+        else
+          params[:person][:phones] = [params[:person][:phones]]
+        end
         @person.update_attributes params[:person]
       else
 

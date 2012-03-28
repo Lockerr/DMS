@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#error_explanation {
+  color: red;
+}
+
 .people_table {
 
 
@@ -152,7 +156,7 @@
   border-image: initial;
 }
 
-.new_person {
+.new_person, .person_form {
 
   .label {
     width: 160px;
@@ -167,6 +171,9 @@
   }
   .ui-autocomplete-input {
     width: 480px;
+  }
+  input#person_phone {
+    width: 144px;
   }
 
 

@@ -21,6 +21,6 @@
     = collection_select(:proposal, :manager_id, Manager.all, :id, :name, :prompt => true, :size => 30)
 
   .buttons
-    = link_to 'отмена','#',  :class => 'cancel_proposal'
-    = link_to 'сохранить','#',  :class => 'create_proposal'
     = link_to 'печать','#',  :class => 'print_proposal', :id => @proposal.id
+    = link_to 'сохранить','#',  :class => 'create_proposal'
+    = link_to 'отмена','#',  :class => 'cancel_proposal'

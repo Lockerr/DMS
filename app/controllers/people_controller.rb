@@ -28,6 +28,7 @@ class PeopleController < ApplicationController
 
   def edit
     @person = Person.find(params[:id])
+    render :layout => false
   end
 
   def show
@@ -38,7 +39,8 @@ class PeopleController < ApplicationController
   end
 
   def create
-
+    params[:person][:name] = "#{params[:name][:first_name]} #{params[:name][:second_name]} #{params[:name][:third_name]}"
+    params[:person][:phones] = params[:person][:phones].values
 
     @person = Person.new(params[:person])
 
@@ -46,8 +48,7 @@ class PeopleController < ApplicationController
       if @person.save
         format.html
       else
-        raise @person.errors.inspect
-        format.json { render json: @person.errors, status: :unprocessable_entity }
+        format.js
       end
     end
 
@@ -57,11 +58,20 @@ class PeopleController < ApplicationController
   end
 
   def update
+    params[:person][:name] = "#{params[:name][:first_name]} #{params[:name][:second_name]} #{params[:name][:third_name]}"
+    params[:person][:phones] = params[:person][:phones].values
     @person = Person.find(params[:id])
-
-    if @person.update_attributes params[:person]
-      render json: @person
+    if params[:person][:model_id]
+      @person.models.find_or_create_by_id(params[:person][:model_id])
     end
+    respond_to do |f|
+      if @person.update_attributes params[:person]
+        f.js {render inline: 'Ok'}
+      else
+        f.js
+      end
+    end
+
   end
 
 end

@@ -20,3 +20,4 @@
             -#%input#btnCancel{:disabled => "disabled", :onclick => "swfu.cancelQueue();", :style => "margin-left: 2px; font-size: 8pt; height: 29px;", :type => "button", :value => "Прервать загрузку"}
     .buttons
       = link_to 'сохранить','#',  :class => 'update_checkin',:id => @checkin.id
+      = link_to 'отменить','#',  :class => 'cancel',:id => @checkin.id

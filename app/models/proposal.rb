@@ -16,7 +16,7 @@ class Proposal < ActiveRecord::Base
 
   def attrs
     {
-            :car_price => self.price,
+            :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(self.price, :unit => '', :separator => ',', :delimiter => "'"),
             :person_name => self.person.name.split(' ')[1..2].join(' '),
             :car_model_name => self.car.model.name,
             :car_color_id => self.car.color_id,
@@ -26,7 +26,7 @@ class Proposal < ActiveRecord::Base
             :car_klasse => self.car.klasse.name,
             :manager_email => self.manager.email,
             :manager_mobile => self.manager.mobile,
-            :car_special_price => self.special_price
+            :car_special_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(self.special_price, :unit => '', :separator => ',', :delimiter => "'")
 
 
 
@@ -44,8 +44,10 @@ class Proposal < ActiveRecord::Base
     counter = 2
 
     #attrs = self.attrs
+    docbody = self.body
 
     for key in attrs.keys
+
       element = REXML::Element.new('property')
       element.add_attribute 'fmtid', '{D5CDD505-2E9C-101B-9397-08002B2CF9AE}'
       element.add_attribute 'pid', counter
@@ -59,9 +61,10 @@ class Proposal < ActiveRecord::Base
       doc.root.add_element element
 
       counter += 1
+
     end
 
-    docbody = self.body
+
     for code in self.car.codes
       unless code[1] == 'Опция неизвестна'
         count = docbody.root.elements[1].elements.count
@@ -98,8 +101,8 @@ class Proposal < ActiveRecord::Base
         pPr.add_element wnumpr
 
         wrfonts = REXML::Element.new 'w:rFonts'
-        wrfonts.add_element 'w:ascii', 'Corporate S'
-        wrfonts.add_element 'w:hAnsi', 'Corporate S'
+        wrfonts.add_element 'w:ascii', 'CorporateS'
+        wrfonts.add_element 'w:hAnsi', 'CorporateS'
 
         wsz = REXML::Element.new 'w:sz'
         wsz.add_attribute 'w:val', '22'

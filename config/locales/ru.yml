@@ -1,4 +1,10 @@
 ru:
+  name: Имя
+  id_number: Паспорт с такими серией и номером
+  price: Цена
+  car_type: б/у
+  true: Да
+  false: Нет
   date:
     abbr_day_names:
     - Вс

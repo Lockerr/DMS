@@ -1,0 +1,25 @@
+.act_form{:id => @act.car.id}
+
+  .model
+    %label Модель
+    = "#{@act.car.model.name}, заказ № #{@act.car.order}"
+
+  .client
+    .label Клиент
+    = collection_select(:act, :person_id, Person.all, :id, :name_with_phone, :prompt => true, :size => 30)
+
+  .price
+    .label Цена
+    = text_field :act, :price
+
+  .ts
+    .label ПТС
+    = text_field :act, :car_pts
+  .nds
+    .label НДС
+    = text_field :act, :nds
+
+  .buttons
+    = link_to 'печать','#',  :class => 'print_act', :id => @act.id
+    = link_to 'сохранить','#',  :class => 'create_act'
+    = link_to 'отмена','#',  :class => 'cancel'

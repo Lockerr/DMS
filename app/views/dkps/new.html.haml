@@ -1,0 +1,22 @@
+.dkp_form{:id => @dkp.car.id}
+
+  .model
+    %label Модель
+    = "#{@dkp.car.model.name}, заказ № #{@dkp.car.order}"
+
+  .client
+    .label Клиент
+    = collection_select(:dkp, :person_id, Person.all, :id, :name_with_phone, :prompt => true, :size => 30)
+
+  .price
+    .label Цена
+    = text_field :dkp, :price
+
+  .ts
+    .label ПТС
+    = text_field :dkp, :car_pts
+
+  .buttons
+    = link_to 'печать','#',  :class => 'print_dkp', :id => @dkp.id
+    = link_to 'сохранить','#',  :class => 'create_dkp'
+    = link_to 'отмена','#',  :class => 'cancel'
