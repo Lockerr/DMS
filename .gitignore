@@ -5,7 +5,7 @@ tmp/
 .sass-cache/
 test
 *.swp
-.idea/*.xml
+.idea/
 config/database.yml
 *~
 *.cache
