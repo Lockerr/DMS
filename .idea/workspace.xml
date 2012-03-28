@@ -2,127 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="373aa698-0975-4802-9bb6-4016433853ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/_rels/.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/word/_rels/document.xml.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/_rels/.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/word/_rels/document.xml.rels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/acts.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/acts.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/acts_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/dkps_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/acts_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/act.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/dkp.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/acts/_act.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/acts/_form.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/acts/new.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dkps/_dkp.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dkps/_form.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dkps/new.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/people/_update.js.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/people/create.js.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/people/update.js.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/[Content_Types].xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/docProps/app.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/docProps/core.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/docProps/custom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/word/document.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/word/fontTable.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/word/settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/word/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/word/theme/theme1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/act_template/word/webSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/[Content_Types].xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/docProps/app.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/docProps/core.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/word/document.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/word/fontTable.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/word/settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/word/styles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/word/theme/theme1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/contract_kp_template/word/webSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/mssql.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120313094906_change_car_klasse_id.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120313103604_change_engine_number_in_cars.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120319091332_change_proposal_price.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120320104159_create_acts.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120321105146_add_fields_to_acts.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/controllers/acts_controller_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/helpers/acts_helper_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/act_spec.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/act_template/word/numbering.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/assets/docx_template/word/document (1).xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/docx_template/word/document__.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/assets/proposal_template/word/_rels/footer4.xml.rels" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/assets/proposal_template/word/_rels/header4.xml.rels" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/proposal_template/word/document_.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/assets/proposal_template/word/footer3.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/assets/proposal_template/word/footer4.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/assets/proposal_template/word/header3.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/assets/proposal_template/word/header4.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dms.ext.iml" afterPath="$PROJECT_DIR$/.idea/dms.ext.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/_rels/document.xml.rels" afterPath="$PROJECT_DIR$/assets/proposal_template/word/_rels/document.xml.rels" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/people.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/people.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/commons.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/commons.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/people.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/people.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/contracts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contracts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/people_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/people_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/proposals_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/proposals_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/upload_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/upload_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/car.rb" afterPath="$PROJECT_DIR$/app/models/car.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contract.rb" afterPath="$PROJECT_DIR$/app/models/contract.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/log.rb" afterPath="$PROJECT_DIR$/app/models/log.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/model.rb" afterPath="$PROJECT_DIR$/app/models/model.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/person.rb" afterPath="$PROJECT_DIR$/app/models/person.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/proposal.rb" afterPath="$PROJECT_DIR$/app/models/proposal.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cars/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/cars/edit.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cars/info.html.haml" afterPath="$PROJECT_DIR$/app/views/cars/info.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/checkins/_checkin.html.haml" afterPath="$PROJECT_DIR$/app/views/checkins/_checkin.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/checkins/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/checkins/_form.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contracts/_car_form.html.haml" afterPath="$PROJECT_DIR$/app/views/contracts/_car_form.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contracts/_contract.html.haml" afterPath="$PROJECT_DIR$/app/views/contracts/_contract.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/cars.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/cars.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/_new_person.html.haml" afterPath="$PROJECT_DIR$/app/views/people/_new_person.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/_people.html.haml" afterPath="$PROJECT_DIR$/app/views/people/_people.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/people/edit.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/index.html.haml" afterPath="$PROJECT_DIR$/app/views/people/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/proposals/_proposal.html.haml" afterPath="$PROJECT_DIR$/app/views/proposals/_proposal.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/proposals/new.html.haml" afterPath="$PROJECT_DIR$/app/views/proposals/new.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/customXml/itemProps1.xml" afterPath="$PROJECT_DIR$/assets/docx_template/customXml/itemProps1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/docProps/app.xml" afterPath="$PROJECT_DIR$/assets/docx_template/docProps/app.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/docProps/core.xml" afterPath="$PROJECT_DIR$/assets/docx_template/docProps/core.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/docProps/custom.xml" afterPath="$PROJECT_DIR$/assets/docx_template/docProps/custom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/document.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/document.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/endnotes.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/endnotes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/fontTable.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/fontTable.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/footer1.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/footer1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/footer2.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/footer2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/footnotes.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/footnotes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/header1.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/header1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/settings.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/docx_template/word/styles.xml" afterPath="$PROJECT_DIR$/assets/docx_template/word/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/[Content_Types].xml" afterPath="$PROJECT_DIR$/assets/proposal_template/[Content_Types].xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/docProps/app.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/docProps/app.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/docProps/core.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/docProps/core.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/docProps/custom.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/docProps/custom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/document.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/document.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/endnotes.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/endnotes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/fontTable.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/fontTable.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/footer1.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/footer1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/footer2.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/footer2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/footnotes.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/footnotes.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/header1.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/header1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/header2.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/header2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/proposal_template/word/settings.xml" afterPath="$PROJECT_DIR$/assets/proposal_template/word/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/cars.ru.yml" afterPath="$PROJECT_DIR$/config/locales/cars.ru.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/ru.yml" afterPath="$PROJECT_DIR$/config/locales/ru.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/act.rb" afterPath="$PROJECT_DIR$/app/models/act.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/act_template/word/document.xml" afterPath="$PROJECT_DIR$/assets/act_template/word/document.xml" />
     </list>
     <ignored path="dms.ext.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,26 +39,43 @@
     <favorites_list name="dms.ext" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="contract.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/contract.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="62" selection-start="4828" selection-end="4828" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="act.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/act.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.59772295">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.30775255">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="contract.rb" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/models/contract.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="41" column="46" selection-start="1621" selection-end="1644" vertical-scroll-proportion="0.37937742">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="act.rb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/act.rb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="20" column="26" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="document.xml" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/assets/act_template/word/document.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="995" column="18" selection-start="27320" selection-end="27320" vertical-scroll-proportion="0.46583852">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -189,8 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/acts_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/cars.js.coffee" />
         <option value="$PROJECT_DIR$/app/models/dkp.rb" />
         <option value="$PROJECT_DIR$/app/views/contracts/_car_form.html.haml" />
         <option value="$PROJECT_DIR$/config/mssql.yml" />
@@ -205,6 +111,8 @@
         <option value="$PROJECT_DIR$/assets/docx_template/word/document.xml" />
         <option value="$PROJECT_DIR$/assets/docx_template/word/footer2.xml" />
         <option value="$PROJECT_DIR$/app/models/contract.rb" />
+        <option value="$PROJECT_DIR$/app/models/act.rb" />
+        <option value="$PROJECT_DIR$/assets/act_template/word/document.xml" />
       </list>
     </option>
   </component>
@@ -369,6 +277,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms.ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="act_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms.ext" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="act_template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="word" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1045,11 +993,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="67" selection-start="275" selection-end="275" vertical-scroll-proportion="0.44820717" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contracts/_car_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="55" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0" />
@@ -1123,14 +1066,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/contract.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="62" selection-start="4828" selection-end="4828" vertical-scroll-proportion="0.0">
+        <state line="41" column="46" selection-start="1621" selection-end="1644" vertical-scroll-proportion="0.37937742">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/act.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.59772295">
+        <state line="20" column="26" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/act_template/word/document.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="995" column="18" selection-start="27320" selection-end="27320" vertical-scroll-proportion="0.46583852">
           <folding />
         </state>
       </provider>
