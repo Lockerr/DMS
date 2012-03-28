@@ -6,7 +6,7 @@ tmp/
 test
 *.swp
 .DS_Store
-.idea/
+.idea/*.*
 config/database.yml
 config/*.sphinx.conf
 config/s3_credentials.yml
