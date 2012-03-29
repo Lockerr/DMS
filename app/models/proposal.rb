@@ -14,13 +14,10 @@ class Proposal < ActiveRecord::Base
     REXML::Document.new file.read
   end
 
-  def footer1
-    REXML::Document.new File.new(Rails.root.join('assets', 'docx_template', 'word', 'footer1.xml'), 'r').read
+  def header
+    REXML::Document.new File.new(Rails.root.join('assets', 'proposal_template', 'word', 'header2.xml'), 'r').read
   end
 
-  def footer2
-    REXML::Document.new File.new(Rails.root.join('assets', 'docx_template', 'word', 'footer2.xml'), 'r').read
-  end
 
 
   def attrs
@@ -55,7 +52,7 @@ class Proposal < ActiveRecord::Base
     #attrs = self.attrs
     docbody = self.body
 
-    keys = attrs.keys
+    keys = self.attrs.keys
 
     for key in keys
       element = REXML::Element.new('property')
@@ -69,28 +66,23 @@ class Proposal < ActiveRecord::Base
       element.add_element ne
 
       doc.root.add_element element
-      Rails.logger.info key.inspect
 
       counter += 1
     end
 
+    keys.delete :manager_mobile
+    keys.delete :manager_name
+    keys.delete :manager_email
 
     for key in keys
-      docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  #{key.to_s}  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
+      Rails.logger.info key.inspect
+
+        docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  #{key.to_s}  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
     end
-    #
-    #docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name_2  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
-    #
-    footer_1 = footer1
-    #footer_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
-    #
-    footer_2 = footer2
-    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
-    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  birthday  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:birthday].to_s || ' ')
-    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  address  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:address].to_s || ' ')
-    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  p_id  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:p_id].to_s || ' ')
-    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  phones  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:phones].to_s || ' ')
-    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
+    header_1 = header
+    header_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  manager_mobile  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:manager_mobile].to_s || ' ')
+    header_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  manager_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:manager_name].to_s || ' ')
+    header_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  manager_email  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:manager_email].to_s || ' ')
 
 
     for code in self.car.codes
@@ -184,12 +176,8 @@ class Proposal < ActiveRecord::Base
     file.write docbody.to_s
     file.close
 
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
-    file.write footer_1.to_s
-    file.close
-
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w')
-    file.write footer_2.to_s
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'header2.xml'), 'w')
+    file.write header_1.to_s
     file.close
 
     system("cd #{temp} && zip -r proposal.docx .")
