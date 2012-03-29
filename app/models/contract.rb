@@ -28,6 +28,22 @@ class Contract < ActiveRecord::Base
     REXML::Document.new File.new(Rails.root.join('assets', 'docx_template', 'word', 'footer2.xml'), 'r').read
   end
 
+  def price_kop
+    if self.price.to_s.split('.').size == 2
+      kopejki = self.price.to_s.split('.')[1]
+      propis = RuPropisju.kopeek(kopejki.to_i)
+      if kopejki.to_i < 10
+        propis = '0' + propis
+      end
+
+    else
+      propis = '00 копеек'
+    end
+    if propis.to_i == 0
+      propis = '00 копеек'
+    end
+    propis
+  end
 
   def attrs
     {
@@ -48,7 +64,8 @@ class Contract < ActiveRecord::Base
             :color => self.car.color_id,
             :interior => self.car.interior_id,
             :production_year => self.car.prod_date.year,
-            :gifts => self.gifts
+            :gifts => self.gifts,
+            :kop => self.price_kop
 
     }
   end
@@ -168,7 +185,11 @@ class Contract < ActiveRecord::Base
         wt = REXML::Element.new 'w:t'
         wt.add_text I18n.t("#{key}")
 
+        wrfonts = REXML::Element.new 'w:rFonts'
+        wrfonts.add_attribute 'w:ascii', 'CorporateS'
+        wrfonts.add_attribute 'w:hAnsi', 'CorporateS'
 
+        wrPr.add_element wrfonts
         wrPr.add_element wsz
         wrPr.add_element wszCs
 

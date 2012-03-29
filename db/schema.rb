@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120322045717) do
+ActiveRecord::Schema.define(:version => 20120329093240) do
 
   create_table "acts", :force => true do |t|
     t.integer  "car_id"
@@ -108,9 +108,9 @@ ActiveRecord::Schema.define(:version => 20120322045717) do
     t.integer  "person_id"
     t.integer  "car_id"
     t.integer  "manager_id"
-    t.integer  "price"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.decimal  "price",         :precision => 11, :scale => 2
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
     t.integer  "prepay"
     t.string   "contact_phone"
     t.date     "date"

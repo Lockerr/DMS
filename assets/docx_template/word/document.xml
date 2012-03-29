@@ -627,9 +627,11 @@
       <w:r w:rsidR="006D464D" w:rsidRPr="00254ACB">
         <w:t xml:space="preserve">) рублей </w:t>
       </w:r>
-      <w:r w:rsidR="002E01ED" w:rsidRPr="00254ACB">
-        <w:t>00 копеек</w:t>
-      </w:r>
+      <w:fldSimple w:instr=" DOCPROPERTY  kop  \* MERGEFORMAT ">
+        <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
+          <w:t xml:space="preserve"></w:t>
+        </w:r>
+      </w:fldSimple>
       <w:r w:rsidR="00973DB8" w:rsidRPr="00254ACB">
         <w:t xml:space="preserve"> </w:t>
       </w:r>
