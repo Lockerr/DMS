@@ -112,9 +112,9 @@ class Contract < ActiveRecord::Base
         paragraph = REXML::Element.new('w:p')
         paragraph.add_attribute 'w:rsidR', '000D076D'
         paragraph.add_attribute 'w:rsidRDefault', '000D076D'
-        paragraph.add_attribute 'w:rsidP', "000D076D"
+        paragraph.add_attribute 'w:rsidP', "00100AA3"
+        paragraph.add_attribute 'w:rsidRPr', '00254ACB'
 
-        pPr = REXML::Element.new 'w:pPr'
         wr = REXML::Element.new 'w:r'
 
         wsz = REXML::Element.new 'w:sz'
@@ -129,21 +129,16 @@ class Contract < ActiveRecord::Base
         wt.add_text code[1]
 
         wrfonts = REXML::Element.new 'w:rFonts'
-        wrfonts.add_element 'w:ascii', 'CorporateS'
-        wrfonts.add_element 'w:hAnsi', 'CorporateS'
+        wrfonts.add_attribute 'w:ascii', 'CorporateS'
+        wrfonts.add_attribute 'w:hAnsi', 'CorporateS'
 
         wrPr.add_element wrfonts
-
-        pPr.add_element wrPr
-
-
         wrPr.add_element wsz
         wrPr.add_element wszCs
 
-
         wr.add_element wrPr
         wr.add_element wt
-        paragraph.add_element pPr
+
         paragraph.add_element wr
 
         docbody.root.elements[1].insert_before before, paragraph
