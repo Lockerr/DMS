@@ -14,9 +14,18 @@ class Proposal < ActiveRecord::Base
     REXML::Document.new file.read
   end
 
+  def footer1
+    REXML::Document.new File.new(Rails.root.join('assets', 'docx_template', 'word', 'footer1.xml'), 'r').read
+  end
+
+  def footer2
+    REXML::Document.new File.new(Rails.root.join('assets', 'docx_template', 'word', 'footer2.xml'), 'r').read
+  end
+
+
   def attrs
     {
-            :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(self.price, :unit => '', :separator => ',', :delimiter => "'"),
+            :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(self.price, :unit => '', :separator => ',', :delimiter => " "),
             :person_name => self.person.name.split(' ')[1..2].join(' '),
             :car_model_name => self.car.model.name,
             :car_color_id => self.car.color_id,
@@ -26,7 +35,7 @@ class Proposal < ActiveRecord::Base
             :car_klasse => self.car.klasse.name,
             :manager_email => self.manager.email,
             :manager_mobile => self.manager.mobile,
-            :car_special_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(self.special_price, :unit => '', :separator => ',', :delimiter => "'")
+            :car_special_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(self.special_price, :unit => '', :separator => ',', :delimiter => " ")
 
 
 
@@ -46,8 +55,9 @@ class Proposal < ActiveRecord::Base
     #attrs = self.attrs
     docbody = self.body
 
-    for key in attrs.keys
+    keys = attrs.keys
 
+    for key in keys
       element = REXML::Element.new('property')
       element.add_attribute 'fmtid', '{D5CDD505-2E9C-101B-9397-08002B2CF9AE}'
       element.add_attribute 'pid', counter
@@ -59,10 +69,28 @@ class Proposal < ActiveRecord::Base
       element.add_element ne
 
       doc.root.add_element element
+      Rails.logger.info key.inspect
 
       counter += 1
-
     end
+
+
+    for key in keys
+      docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  #{key.to_s}  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
+    end
+    #
+    #docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name_2  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
+    #
+    footer_1 = footer1
+    #footer_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
+    #
+    footer_2 = footer2
+    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
+    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  birthday  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:birthday].to_s || ' ')
+    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  address  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:address].to_s || ' ')
+    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  p_id  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:p_id].to_s || ' ')
+    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  phones  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:phones].to_s || ' ')
+    #footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
 
 
     for code in self.car.codes
@@ -101,8 +129,8 @@ class Proposal < ActiveRecord::Base
         pPr.add_element wnumpr
 
         wrfonts = REXML::Element.new 'w:rFonts'
-        wrfonts.add_element 'w:ascii', 'CorporateS'
-        wrfonts.add_element 'w:hAnsi', 'CorporateS'
+        wrfonts.add_attribute 'w:ascii', 'CorporateS'
+        wrfonts.add_attribute 'w:hAnsi', 'CorporateS'
 
         wsz = REXML::Element.new 'w:sz'
         wsz.add_attribute 'w:val', '22'
@@ -145,6 +173,8 @@ class Proposal < ActiveRecord::Base
     source = Rails.root.join('assets', 'proposal_template')
 
     system("cp -r #{source}/. #{temp}  ")
+    system "rm Rails.root.join('tmp', temp, 'word', 'footer1.xml')"
+    system "rm Rails.root.join('tmp', temp, 'word', 'footer2.xml')"
 
     file = File.new Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w'
     file.write doc.to_s
@@ -152,6 +182,14 @@ class Proposal < ActiveRecord::Base
 
     file = File.new Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w'
     file.write docbody.to_s
+    file.close
+
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
+    file.write footer_1.to_s
+    file.close
+
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w')
+    file.write footer_2.to_s
     file.close
 
     system("cd #{temp} && zip -r proposal.docx .")

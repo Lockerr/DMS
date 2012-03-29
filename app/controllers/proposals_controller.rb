@@ -8,7 +8,7 @@ class ProposalsController < ApplicationController
     @proposal = Proposal.find(params[:id])
     temp = @proposal.prop
     send_file(temp.to_s + "/proposal.docx")
-    system "rm -r #{temp}"
+    #system "rm -r #{temp}"
   end
 
   def create
