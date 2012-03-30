@@ -8,7 +8,7 @@ class Order
   end
 
   def select
-    result = self.client.execute('select * from [orders]')
+    result = self.client.execute('select * from [orders]').to_a
   end
 
 

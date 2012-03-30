@@ -113,7 +113,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pdfkit (0.5.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -130,7 +129,6 @@ GEM
       activesupport (= 3.2.2)
       bundler (~> 1.0)
       railties (= 3.2.2)
-    rails_jq_grid (0.0.3)
     railties (3.2.2)
       actionpack (= 3.2.2)
       activesupport (= 3.2.2)
@@ -186,6 +184,7 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    state_machine (1.1.2)
     term-ansicolor (1.0.7)
     thor (0.14.6)
     tilt (1.3.3)
@@ -202,7 +201,6 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
-    will_paginate (3.0.3)
     xml-object (0.9.93)
     xpath (0.1.4)
       nokogiri (~> 1.3)
@@ -227,9 +225,7 @@ DEPENDENCIES
   launchy
   mysql2
   paperclip
-  pdfkit
   rails (= 3.2.2)
-  rails_jq_grid
   rspec-rails
   ru_propisju (= 2.1.2)
   ruby-debug19
@@ -237,9 +233,9 @@ DEPENDENCIES
   russian
   sass-rails
   spreadsheet
+  state_machine
   timecop
   tiny_tds
   turn
   uglifier
-  will_paginate
   xml-object

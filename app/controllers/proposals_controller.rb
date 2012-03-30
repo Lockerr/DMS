@@ -1,7 +1,12 @@
 class ProposalsController < ApplicationController
 
   def new
-    @proposal = Car.find(params[:car_id]).proposals.new
+    @car = Car.find(params[:car_id])
+    if @car.can_be_proposed?
+      @proposal = @car.proposals.new
+    else
+      render :inline => "Машина не может быть предложена. #{t(@car.state)}"
+    end
   end
 
   def show

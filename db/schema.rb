@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120329093240) do
+ActiveRecord::Schema.define(:version => 20120330061936) do
 
   create_table "acts", :force => true do |t|
     t.integer  "car_id"
@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(:version => 20120329093240) do
     t.boolean  "restyling",                  :default => false
     t.date     "prod_date"
     t.integer  "engine_number", :limit => 8
+    t.boolean  "used",                       :default => false
+    t.boolean  "owner",                      :default => true
   end
 
   create_table "cars_people", :force => true do |t|

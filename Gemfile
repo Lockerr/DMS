@@ -5,10 +5,7 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
-gem 'pdfkit'
 gem 'mysql2'
-gem 'will_paginate'
-gem 'rails_jq_grid'
 gem 'arel'
 gem 'devise'
 gem 'haml'
@@ -19,6 +16,7 @@ gem 'russian'
 gem 'spreadsheet'
 gem 'hirb'
 gem 'xml-object'
+gem 'state_machine'
 
 # Gems used only for assets and not required
 # in production environments by default.
