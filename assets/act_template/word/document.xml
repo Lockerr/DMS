@@ -292,7 +292,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>Дьячук Антон Витальевич</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
       <w:r>
@@ -392,23 +392,7 @@
             <w:bCs/>
             <w:lang w:val="en-US"/>
           </w:rPr>
-          <w:t>C</w:t>
-        </w:r>
-        <w:r w:rsidR="0018668D" w:rsidRPr="002A64BB">
-          <w:rPr>
-            <w:b/>
-            <w:bCs/>
-            <w:lang w:val="en-US"/>
-          </w:rPr>
-          <w:t xml:space="preserve"> 300 4</w:t>
-        </w:r>
-        <w:r w:rsidR="0018668D" w:rsidRPr="0018668D">
-          <w:rPr>
-            <w:b/>
-            <w:bCs/>
-            <w:lang w:val="en-US"/>
-          </w:rPr>
-          <w:t>MATIC</w:t>
+          <w:t></w:t>
         </w:r>
         <w:r w:rsidR="0018668D" w:rsidRPr="002A64BB">
           <w:rPr>
@@ -442,13 +426,18 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>WDD2040801A577803</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
       <w:r w:rsidR="00A121DA">
         <w:t xml:space="preserve"> </w:t>
       </w:r>
+    </w:p>
+    <w:p w:rsidR="0002468A" w:rsidRPr="00574292" w:rsidRDefault="0002468A" w:rsidP="0002468A">
       <w:r>
+        <w:pPr>
+          <w:jc w:val="both"/>
+        </w:pPr>
         <w:t xml:space="preserve">Год выпуска: </w:t>
       </w:r>
       <w:fldSimple w:instr=" DOCPROPERTY  car_prod_year  \* MERGEFORMAT ">
@@ -457,11 +446,16 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>2011</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
+    </w:p>
+    <w:p w:rsidR="0002468A" w:rsidRPr="00574292" w:rsidRDefault="0002468A" w:rsidP="0002468A">
       <w:r>
-        <w:t xml:space="preserve"> Двигатель: </w:t>
+        <w:pPr>
+          <w:jc w:val="both"/>
+        </w:pPr>
+        <w:t xml:space="preserve">Двигатель: </w:t>
       </w:r>
       <w:fldSimple w:instr=" DOCPROPERTY  car_engine_number  \* MERGEFORMAT ">
         <w:r w:rsidR="0018668D" w:rsidRPr="0018668D">
@@ -469,7 +463,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>2011</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
     </w:p>
@@ -486,7 +480,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>ОТСУТСТВУЕТ</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
       <w:r>
@@ -498,7 +492,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>WDD2040801A577803</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
     </w:p>
@@ -607,7 +601,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>2011</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
       <w:r w:rsidRPr="00A84A03">
@@ -622,14 +616,29 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>цена буквами</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
       <w:r w:rsidRPr="005F3EEA">
         <w:rPr>
           <w:b/>
         </w:rPr>
-        <w:t>) рублей 00 копеек,</w:t>
+        <w:t>) рублей</w:t>
+      </w:r>
+      <w:fldSimple w:instr=" DOCPROPERTY  kop  \* MERGEFORMAT ">
+        <w:r w:rsidR="0018668D" w:rsidRPr="0018668D">
+          <w:rPr>
+            <w:b/>
+            <w:bCs/>
+          </w:rPr>
+          <w:t></w:t>
+        </w:r>
+      </w:fldSimple>
+      <w:r w:rsidRPr="005F3EEA">
+        <w:rPr>
+          <w:b/>
+        </w:rPr>
+        <w:t>,</w:t>
       </w:r>
       <w:r w:rsidRPr="005F3EEA">
         <w:t xml:space="preserve"> в том числе НДС </w:t>
@@ -640,7 +649,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>НДС</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
       <w:r w:rsidR="006F02DC" w:rsidRPr="00A84A03">
@@ -654,19 +663,19 @@
       </w:r>
       <w:proofErr w:type="gramEnd"/>
     </w:p>
-    <w:p w:rsidR="0002468A" w:rsidRDefault="0002468A" w:rsidP="0002468A">
-      <w:pPr>
-        <w:jc w:val="both"/>
-      </w:pPr>
-    </w:p>
-    <w:p w:rsidR="0002468A" w:rsidRDefault="0002468A" w:rsidP="0002468A">
-      <w:pPr>
-        <w:tabs>
-          <w:tab w:val="left" w:pos="1080"/>
-        </w:tabs>
-        <w:ind w:firstLine="709"/>
-        <w:jc w:val="both"/>
-      </w:pPr>
+  <w:p w:rsidR="0002468A" w:rsidRDefault="0002468A" w:rsidP="0002468A">
+    <w:pPr>
+      <w:jc w:val="both"/>
+    </w:pPr>
+  </w:p>
+  <w:p w:rsidR="0002468A" w:rsidRDefault="0002468A" w:rsidP="0002468A">
+    <w:pPr>
+      <w:tabs>
+        <w:tab w:val="left" w:pos="1080"/>
+      </w:tabs>
+      <w:ind w:firstLine="709"/>
+      <w:jc w:val="both"/>
+    </w:pPr>
       <w:r>
         <w:t>2.</w:t>
       </w:r>
@@ -889,7 +898,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>Дьячук Антон Витальевич</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
     </w:p>
@@ -911,7 +920,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>20</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
       <w:r w:rsidRPr="00B33C52">
@@ -940,7 +949,7 @@
             <w:b/>
             <w:bCs/>
           </w:rPr>
-          <w:t>Челябинск, Танкистов 150-Г</w:t>
+          <w:t></w:t>
         </w:r>
       </w:fldSimple>
     </w:p>
