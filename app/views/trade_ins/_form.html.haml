@@ -1,0 +1,24 @@
+.errors
+.tradein_form{:id => @tradein.id}
+  .damage
+    %label Цена
+    = text_field :tradein, :price
+  .comments
+    %label Примечание
+    %br/
+    = text_area :tradein, :desc, :rows => 5
+
+  .files
+    %label Фотографии
+
+
+    #content
+      %form#form1{:action => "#", :enctype => "multipart/form-data", :method => "post"}
+        #fsUploadProgress.fieldset.flash
+        #divStatus 0 Файлов загружено
+        %div
+          %span#spanButtonPlaceHolder
+          -#%input#btnCancel{:disabled => "disabled", :onclick => "swfu.cancelQueue();", :style => "margin-left: 2px; font-size: 8pt; height: 29px;", :type => "button", :value => "Прервать загрузку"}
+  .buttons
+    = link_to 'сохранить','#',  :class => 'update_tradein',:id => @tradein.id
+    = link_to 'отменить','#',  :class => 'cancel',:id => @tradein.id

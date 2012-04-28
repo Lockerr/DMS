@@ -11,11 +11,11 @@ class Car < ActiveRecord::Base
   belongs_to :person
   belongs_to :klasse
   belongs_to :line
-  has_many :proposals
+  has_one :proposal
   has_one :contract
   has_many :checkins
-  has_many :acts
-  has_many :dkps
+  has_one :act
+  has_one :dkp
 
   before_update :write_logs
 
@@ -59,7 +59,6 @@ class Car < ActiveRecord::Base
       Rails.logger.error "vehicle #{car} failed to transition on #{transition.event}"
     end
 
-
     event :arrived do
       transition :ordered => :on_checkin
     end
@@ -67,7 +66,6 @@ class Car < ActiveRecord::Base
     event :checkin do
       transition all => :pending
     end
-
 
     event :propose do
       transition :pending => :proposed
@@ -81,23 +79,9 @@ class Car < ActiveRecord::Base
       transition :sold => :transmitted
     end
 
-    state :pending do
+    state all - [:sold, :transmitted] do
       def can_be_sold?
-        true
-      end
-
-      def can_be_proposed?
-        true
-      end
-    end
-
-    state :proposed, :ordered do
-      def can_be_sold?
-        true
-      end
-
-      def can_be_proposed?
-        true
+       true
       end
     end
 
@@ -112,10 +96,6 @@ class Car < ActiveRecord::Base
     end
 
     state :reserved do
-      def can_be_sold?
-        true
-      end
-
       def can_be_proposed?
         false
       end

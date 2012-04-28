@@ -1,5 +1,7 @@
 DmsExt::Application.routes.draw do
 
+  resource :trade_ins
+
   devise_for :users
 
   resources :calendar do
@@ -20,9 +22,11 @@ DmsExt::Application.routes.draw do
   end
 
   resources :cars do
-    resources :proposals
-    resources :acts
-    resources :dkps
+    resource :contract
+    resource :act
+    resource :dkp
+    resource :ckp
+    resource :proposal
   end
 
   resources :models
@@ -34,7 +38,7 @@ DmsExt::Application.routes.draw do
     end
   end
 
-  resources :contracts
+  resources :contracts, :belongs_to => :car
   resources :proposals
   resources :checkins
   resources :acts

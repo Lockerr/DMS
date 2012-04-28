@@ -5,7 +5,7 @@ class CarsController < ApplicationController
 
     if params[:search]
       search = params[:search].delete_if { |key, value| value.empty? }
-      c      = Car.arel_table
+      c = Car.arel_table
       #raise c['model_id']
 
 
@@ -46,7 +46,7 @@ class CarsController < ApplicationController
               @cars = @cars.where(:published => true) if search[key] == "1"
 
             when 'options'
-              @cars = @cars.where("real_options LIKE ? or options LIKE ?","%#{search[key]}%","%#{search[key]}%")
+              @cars = @cars.where("real_options LIKE ? or options LIKE ?", "%#{search[key]}%", "%#{search[key]}%")
             else
               @cars = @cars.where(c[key].matches "%#{search[key]}%")
           end
@@ -58,18 +58,17 @@ class CarsController < ApplicationController
       if params[:search][:arrival_from] and params[:search][:arrival_to]
         @cars = @cars.where('arrival between ? and ?', Time.parse(params[:search][:arrival_from]) + 6.hours, Time.parse(params[:search][:arrival_to]) + 6.hours)
       elsif params[:search][:arrival_from]
-        @cars = @cars.where('arrival > ?', Time.parse(params[:search][:arrival_from]) + 6.hours )
+        @cars = @cars.where('arrival > ?', Time.parse(params[:search][:arrival_from]) + 6.hours)
       elsif params[:search][:arrival_to]
         @cars = @cars.where('arrival < ?', Time.parse(params[:search][:arrival_to]) + 6.hours)
       end
       if params[:search][:prod_date_from] and params[:search][:prod_date_to]
         @cars = @cars.where('prod_date between ? and ?', Time.parse(params[:search][:prod_date_from]) + 6.hours, Time.parse(params[:search][:prod_date_to]) + 6.hours)
       elsif params[:search][:prod_date_from]
-        @cars = @cars.where('prod_date > ?', Time.parse(params[:search][:prod_date_from]) + 6.hours )
+        @cars = @cars.where('prod_date > ?', Time.parse(params[:search][:prod_date_from]) + 6.hours)
       elsif params[:search][:prod_date_to]
         @cars = @cars.where('prod_date < ?', Time.parse(params[:search][:prod_date_to]) + 6.hours)
       end
-
 
 
     end
@@ -100,7 +99,7 @@ class CarsController < ApplicationController
   end
 
   def info
-    @car     = Car.find(params[:id])
+    @car = Car.find(params[:id])
     @objects = []
     @objects += @car.proposals
     @objects.compact!
@@ -123,8 +122,14 @@ class CarsController < ApplicationController
       if @car.update_attributes(params[:car])
         format.html { render :layout => false }
       else
-        raise @car.errors.inspect
-        format.json { render json: @car.errors, status: :unprocessable_entity }
+
+        format.json {
+          render :json => {
+                  :error => @car.errors,
+                  :status => :unprocessable_entity,
+                  :cars => Car.limit(2)
+          }
+        }
       end
     end
 
@@ -133,36 +138,6 @@ class CarsController < ApplicationController
   def edit
     @car = Car.find(params[:id])
     render :layout => false
-  end
-
-  def create
-
-    @car = Car.new(params[:car])
-
-
-    if params[:new][:model_name] != ''
-      @car.model_id = Model.find_or_create_by_name(params[:new][:model_name]).id
-    end
-
-    if params[:new][:line_name]
-      @car.line_id = Line.find_or_create_by_name(params[:new][:line_name]).id
-    end
-
-    if params[:new][:person_name]
-      @car.line_id = Person.find_or_create_by_name(params[:new][:person_name]).id
-    end
-
-
-    respond_to do |format|
-      if @car.save
-        format.html { redirect_to cars_path, notice: 'Car was successfully created.' }
-        format.json { render json: @car, status: :created, location: @car }
-      else
-        #raise @car.errors.inspect
-        format.json { render json: @car.errors, status: :unprocessable_entity, errors: @car.errors.messages }
-      end
-    end
-
   end
 
   def destroy

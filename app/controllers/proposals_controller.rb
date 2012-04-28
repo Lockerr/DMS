@@ -1,3 +1,4 @@
+# encoding: utf-8
 class ProposalsController < ApplicationController
 
   def new
@@ -10,7 +11,9 @@ class ProposalsController < ApplicationController
   end
 
   def show
-    @proposal = Proposal.find(params[:id])
+    @proposal = Car.find(params[:car_id]).build_proposal
+    @proposal.person = Person.find(params[:client_id])
+    @proposal.manager = Manager.find(params[:manager_id])
     temp = @proposal.prop
     send_file(temp.to_s + "/proposal.docx")
     #system "rm -r #{temp}"

@@ -188,10 +188,10 @@ jQuery(document).ready ->
           post_params:
             car: id
           button_image_url: "assets/images/TestImageNoText_65x29.png"
-          button_width: "100"
+          button_width: "130"
           button_height: "29"
           button_placeholder_id: "spanButtonPlaceHolder"
-          button_text: "<span class=\"theFont\">Загрузить</strong></span>"
+          button_text: "<span class=\"theFont\">загрузить</strong></span>"
           button_text_style: ".theFont { font-size: 18;font-family: Lucida Grande, Lucida Sans, Arial }"
           button_text_left_padding: 12
           button_text_top_padding: 3
@@ -210,6 +210,45 @@ jQuery(document).ready ->
           queue_complete_handler : queueComplete
 
         swfu = new SWFUpload(settings)
+
+  $(".buttons a#tradein").live 'click', ->
+    id = @id
+    $.ajax
+      url: 'trade_ins/new'
+      complete: (html) ->
+        prepare_respond(html)
+
+        settings =
+          flash_url: "/assets/swfupload.swf"
+          upload_url: "upload"
+          file_size_limit: '100 MB'
+          button_width: "130"
+          button_height: "29"
+          button_placeholder_id: "spanButtonPlaceHolder"
+          button_text: "<span class=\"theFont\">загрузить</strong></span>"
+          button_text_style: ".theFont { font-size: 18;font-family: Lucida Grande, Lucida Sans, Arial }"
+          button_text_left_padding: 12
+          button_text_top_padding: 3
+          custom_settings:
+            progressTarget: "fsUploadProgress"
+          post_params:
+            tradein: id
+
+
+          file_queued_handler : fileQueued
+          file_queue_error_handler : fileQueueError
+          file_dialog_complete_handler : fileDialogComplete
+          upload_start_handler : uploadStart
+          upload_progress_handler : uploadProgress
+          upload_error_handler : uploadError
+          upload_success_handler : uploadSuccess
+          upload_complete_handler : uploadComplete
+          queue_complete_handler : queueComplete
+
+        swfu = new SWFUpload(settings)
+
+        open_respond(html)
+
 
   $('.cancel').live 'click', ->
     $('.new_checkin').dialog('destroy')

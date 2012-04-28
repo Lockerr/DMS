@@ -26,7 +26,8 @@ class ContractsController < ApplicationController
   end
 
   def show
-    @contract = Contract.find(params[:id])
+    @contract = Car.find(params[:car_id]).build_contract
+    @contract.person = Person.find(params[:client_id])
     temp = @contract.prop
     send_file(temp.to_s + "/contract.docx")
     #system "rm -r #{temp}"

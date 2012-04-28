@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120330061936) do
+ActiveRecord::Schema.define(:version => 20120402052601) do
 
   create_table "acts", :force => true do |t|
     t.integer  "car_id"
@@ -181,6 +181,23 @@ ActiveRecord::Schema.define(:version => 20120330061936) do
     t.integer "klasse_id"
   end
 
+  create_table "orders", :force => true do |t|
+    t.string   "source_id"
+    t.string   "number"
+    t.string   "problem"
+    t.string   "solution"
+    t.string   "master"
+    t.string   "dispatcher"
+    t.string   "sum"
+    t.datetime "opened"
+    t.datetime "closed"
+    t.datetime "gone"
+    t.integer  "call_result"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "people", :force => true do |t|
     t.string   "name"
     t.string   "phones"
@@ -210,6 +227,15 @@ ActiveRecord::Schema.define(:version => 20120330061936) do
     t.datetime "created_at",                                   :null => false
     t.datetime "updated_at",                                   :null => false
     t.decimal  "special_price", :precision => 15, :scale => 2
+  end
+
+  create_table "trade_ins", :force => true do |t|
+    t.integer  "price"
+    t.boolean  "owner"
+    t.integer  "person_id"
+    t.text     "desc"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

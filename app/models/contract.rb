@@ -49,7 +49,7 @@ class Contract < ActiveRecord::Base
     {
             :price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(self.price, :unit => '', :separator => ',', :delimiter => " "),
             :price_w => RuPropisju.amount_in_words(self.price, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
-            :number => number,
+            :number => Time.now.year.to_s[2..3] + '/' + car.order.to_s[7..10],
             :top_date => I18n.localize(Time.now, :format => '%d %B %Y г.'),
             :person_name => self.person.name,
             :car_model_name => self.car.model.name,
@@ -105,6 +105,7 @@ class Contract < ActiveRecord::Base
     keys.delete :gifts
 
     for key in keys
+      Rails.logger.info key
       docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  #{key.to_s}  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
     end
 
@@ -161,44 +162,45 @@ class Contract < ActiveRecord::Base
         docbody.root.elements[1].insert_before before, paragraph
       end
     end
+    if gifts
+      self.gifts.each do |key, value|
+        unless value.to_s == "0"
+          count = docbody.root.elements[1].elements.count
+          before = docbody.root.elements[1].elements[count]
+          paragraph = REXML::Element.new('w:p')
+          paragraph.add_attribute 'w:rsidR', '000D076D'
+          paragraph.add_attribute 'w:rsidRDefault', '000D076D'
+          paragraph.add_attribute 'w:rsidP', "000D076D"
 
-    self.gifts.each do |key, value|
-      unless value.to_s == "0"
-        count = docbody.root.elements[1].elements.count
-        before = docbody.root.elements[1].elements[count]
-        paragraph = REXML::Element.new('w:p')
-        paragraph.add_attribute 'w:rsidR', '000D076D'
-        paragraph.add_attribute 'w:rsidRDefault', '000D076D'
-        paragraph.add_attribute 'w:rsidP', "000D076D"
+          pPr = REXML::Element.new 'w:pPr'
+          wr = REXML::Element.new 'w:r'
 
-        pPr = REXML::Element.new 'w:pPr'
-        wr = REXML::Element.new 'w:r'
+          wsz = REXML::Element.new 'w:sz'
+          wsz.add_attribute 'w:val', '20'
 
-        wsz = REXML::Element.new 'w:sz'
-        wsz.add_attribute 'w:val', '20'
+          wszCs = REXML::Element.new 'w:szCs'
+          wszCs.add_attribute 'w:val', '20'
 
-        wszCs = REXML::Element.new 'w:szCs'
-        wszCs.add_attribute 'w:val', '20'
+          wrPr = REXML::Element.new 'w:rPr'
 
-        wrPr = REXML::Element.new 'w:rPr'
+          wt = REXML::Element.new 'w:t'
+          wt.add_text I18n.t("#{key}")
 
-        wt = REXML::Element.new 'w:t'
-        wt.add_text I18n.t("#{key}")
+          wrfonts = REXML::Element.new 'w:rFonts'
+          wrfonts.add_attribute 'w:ascii', 'CorporateS'
+          wrfonts.add_attribute 'w:hAnsi', 'CorporateS'
 
-        wrfonts = REXML::Element.new 'w:rFonts'
-        wrfonts.add_attribute 'w:ascii', 'CorporateS'
-        wrfonts.add_attribute 'w:hAnsi', 'CorporateS'
+          wrPr.add_element wrfonts
+          wrPr.add_element wsz
+          wrPr.add_element wszCs
 
-        wrPr.add_element wrfonts
-        wrPr.add_element wsz
-        wrPr.add_element wszCs
+          wr.add_element wrPr
+          wr.add_element wt
 
-        wr.add_element wrPr
-        wr.add_element wt
+          paragraph.add_element wr
 
-        paragraph.add_element wr
-
-        docbody.root.elements[1].insert_before before, paragraph
+          docbody.root.elements[1].insert_before before, paragraph
+        end
       end
     end
 

@@ -22,7 +22,10 @@ class ActsController < ApplicationController
   end
 
   def show
-    @act = Act.find(params[:id])
+    @act = Car.find(params[:car_id]).build_act
+    @act.person = Person.find(params[:client_id])
+    @act.price = params[:price]
+
     temp = @act.prop
     send_file(temp.to_s + "/act.docx")
     system "rm -r #{temp}"

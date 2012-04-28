@@ -53,10 +53,6 @@ class Act < ActiveRecord::Base
             :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(price, :unit => '', :separator => ',', :delimiter => " "),
             :car_price_w => RuPropisju.amount_in_words(price, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
             :car_nds => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(price * 18.0 / 118.0, :unit => '', :separator => ',', :delimiter => " "),
-            #:car_color_id => car.color_id,
-            #:car_interior_id => car.interior_id,
-
-            #:car_klasse => car.klasse.name
 
 
     }

@@ -15,7 +15,8 @@ class DkpsController < ApplicationController
   end
 
   def show
-    @dkp = Dkp.find(params[:id])
+    @dkp = Car.find(params[:car_id]).build_dkp
+    @dkp.person = Person.find(params[:client_id])
     temp = @dkp.prop
     send_file(temp.to_s + "/dkp.docx")
     system "rm -r #{temp}"
