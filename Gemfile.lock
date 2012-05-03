@@ -233,6 +233,7 @@ DEPENDENCIES
   ruby-prof
   russian
   sass-rails
+  selenium-webdriver
   spreadsheet
   state_machine
   timecop
