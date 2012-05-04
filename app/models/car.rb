@@ -59,10 +59,19 @@ class Car < ActiveRecord::Base
     end
 
     begin
-
+      driver.switch_to.default_content
     rescue
-      puts 'clickfail'
+      puts 'fail to default'
     end
+
+
+    begin
+      driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
+    rescue
+      puts 'fail to isolated'
+    end
+
+    driver.find_element(:id => 'urBtnCntTxt').click
 
 
     driver
