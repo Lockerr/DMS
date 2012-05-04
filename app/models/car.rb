@@ -26,13 +26,20 @@ class Car < ActiveRecord::Base
 
   def mbr
     require "selenium-webdriver"
-
-    driver = Selenium::WebDriver.for :firefox
-    driver.navigate.to "https://portal.mercedes-benz.ru/irj/portal"
-
+    begin
+      driver = Selenium::WebDriver.for :firefox
+      driver.navigate.to "https://portal.mercedes-benz.ru/irj/portal"
+    rescue
+      puts 'fail to start selenium'
+    end
+    begin
     driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
     driver.find_element(:id, 'logonpassfield').send_keys '1q2w3e$R'
     driver.find_element(:class => 'urBtnStdNew').click
+    rescue
+      puts 'fails to login'
+    end
+
     begin
       frame = driver.find_element(:id => 'ivuFrm_page0ivu1')
       driver.switch_to.frame frame
@@ -46,8 +53,9 @@ class Car < ActiveRecord::Base
     rescue
       puts 'fail to find SITreeText'
     end
+
     begin
-      driver.find_element(:class_name => "SItreeText")[1].click
+      driver.find_elements(:class_name => "SItreeText")[1].click
     rescue
       puts 'clickfail'
     end
