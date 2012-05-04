@@ -19,6 +19,8 @@ gem 'xml-object'
 gem 'state_machine'
 gem 'addressable'
 gem "selenium-webdriver"
+gem 'webrat'
+gem 'watir-webdriver'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

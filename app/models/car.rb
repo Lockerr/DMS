@@ -23,6 +23,45 @@ class Car < ActiveRecord::Base
 
   self.include_root_in_json = false
 
+
+  def mbr
+    require "selenium-webdriver"
+
+    driver = Selenium::WebDriver.for :firefox
+    driver.navigate.to "https://portal.mercedes-benz.ru/irj/portal"
+
+    driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
+    driver.find_element(:id, 'logonpassfield').send_keys '1q2w3e$R'
+    driver.find_element(:class => 'urBtnStdNew').click
+    begin
+      frame = driver.find_element(:id => 'ivuFrm_page0ivu1')
+      driver.switch_to.frame frame
+    rescue
+      puts 'fail to find iframe'
+    end
+
+    begin
+      wait = Selenium::WebDriver::Wait.new(:timeout => 10) # seconds
+      wait.until { driver.find_element(:class_name => "SItreeText") }
+    rescue
+      puts 'fail to find SITreeText'
+    end
+    begin
+      driver.find_element(:class_name => "SItreeText")[1].click
+    rescue
+      puts 'clickfail'
+    end
+
+
+
+
+
+
+
+    driver
+  end
+
+
   def write_logs(object=nil)
     if self.changes.any?
       Log.create(:model_name => 'car', :parameters => self.changes, :object_id => self.id, :user_id => User.current_user)

@@ -209,4 +209,12 @@ namespace :data do
     #
 
   end
+  def qwe
+    browser = Watir::Browser.new :firefox
+    browser.goto 'https://portal.mercedes-benz.ru/'
+    browser.text_field(:id => 'logonuidfield').set 'd5aansha'
+    browser.text_field(:id => 'logonpassfield').set '1q2w3e$R'
+    browser.element(:class => 'urBtnStdNew').click
+    browser.div(:id=>"some_div").exists? sleep 1
+  end
 end
