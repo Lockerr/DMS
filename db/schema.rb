@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120402052601) do
+ActiveRecord::Schema.define(:version => 20120531063545) do
 
   create_table "acts", :force => true do |t|
     t.integer  "car_id"
@@ -110,14 +110,14 @@ ActiveRecord::Schema.define(:version => 20120402052601) do
     t.integer  "person_id"
     t.integer  "car_id"
     t.integer  "manager_id"
-    t.decimal  "price",         :precision => 11, :scale => 2
-    t.datetime "created_at",                                   :null => false
-    t.datetime "updated_at",                                   :null => false
+    t.decimal  "price",      :precision => 11, :scale => 2
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.integer  "prepay"
-    t.string   "contact_phone"
     t.date     "date"
     t.string   "gifts"
     t.string   "number"
+    t.integer  "do_id"
   end
 
   create_table "dkps", :force => true do |t|

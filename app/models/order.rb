@@ -38,7 +38,7 @@ class Order < ActiveRecord::Base
         order.problem = r['problem']
         order.solution = r['solution']
 
-        car = Car.find_or_create_by_vin
+        #car = Car.find_or_create_by_vin
 
         person = Person.new
       else
