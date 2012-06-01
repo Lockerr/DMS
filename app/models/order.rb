@@ -30,15 +30,13 @@ class Order < ActiveRecord::Base
               "VIN"               => nil
       }
 
-      if order = Order.find_by_source_id r['id']
+      if order = Order.find_by_source_id(r['id'])
 
         order = Order.new
         order.source_id = r['id']
         order.number = r['order_num']
         order.problem = r['problem']
         order.solution = r['solution']
-
-        #car = Car.find_or_create_by_vin
 
         person = Person.new
       else
