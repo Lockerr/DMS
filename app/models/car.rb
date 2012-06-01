@@ -106,42 +106,43 @@ class Car < ActiveRecord::Base
 
   end
 
-  def parse_cars(file)
+  def self.parse_cars(file)
     book = Hpricot.parse file.read
     counter = book.search('//tr').count
     puts counter
     (1..counter).each do |i|
       row = []
       if book.search('//tr')[i]
-        row[2] = book.search('//tr')[i].search('//td')[2].inner_text
-        row[3] = book.search('//tr')[i].search('//td')[3].inner_text
-        row[9] = book.search('//tr')[i].search('//td')[9].inner_text
-        row[30] = book.search('//tr')[i].search('//td')[30].inner_text
+        row = book.search('//tr')[i].search('//td')
         row[31] = book.search('//tr')[i].search('//td')[31].inner_text
         row[32] = book.search('//tr')[i].search('//td')[32].inner_text
-        row[39] = book.search('//tr')[i].search('//td')[39].inner_text
-        row[41] = book.search('//tr')[i].search('//td')[41].inner_text
-        row[34] = book.search('//tr')[i].search('//td')[34].inner_text
-        row[33] = book.search('//tr')[i].search('//td')[33].inner_text
+        row[33] = book.search('//tr')[i].search('//td')[32].inner_text
+        row[34] = book.search('//tr')[i].search('//td')[32].inner_text
 
         opts = []
-        row[34] ? opts += row[33].split('.') + row[34].split('.') : opts += row[33].split('.') if row[34]
+        opts += row[31].split('.')
+        opts += row[32].split('.')
+        opts += row[33].split('.')
+        opts += row[34].split('.')
+
+        (row[4].inner_text).split(/\s/)[0] == 'C200' ? klasse = "C" : klasse = (row[4].inner_text).split(/\s/)[0]
 
         attributes =
                 {
-                        :order => row[2],
-                        :vin => row[3],
-                        :model => Model.find_or_create_by_name(clear(row[30])),
-                        :klasse_id => Klasse.find_by_name(clear((row[30]).split(/\s/)[0])).id,
-                        :color_id => row[31],
-                        :interior_id => row[32],
-                        :arrival => row[39],
-                        :engine_number => row[41],
+                        :order => row[0].inner_text,
+                        :vin => book.search('//tr')[i].search('//td')[1].inner_text,
+                        :model => Model.find_or_create_by_name(row[30].inner_text),
+                        :klasse_id => Klasse.find_by_name(klasse).id,
+                        :color_id => row[29].inner_text,
+                        :interior_id => row[30].inner_text,
+                        :arrival => row[18].inner_text,
+                        :engine_number => row[2].inner_text,
                         :real_options => opts,
-                        :prod_date => row[9]
+                        :prod_date => row[10].inner_text
+
                 }
 
-        if car = Car.find_by_order(row[2].to_s)
+        if car = Car.find_by_order(row[0].inner_text.to_s)
           car.update_attributes(attributes)
         else
           Car.create(attributes)
