@@ -77,6 +77,7 @@ class Car < ActiveRecord::Base
         driver.find_element(:id => 'ivuFrm_page0ivu1')
         driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
         driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
+        driver.find_elements(:class => 'urBtnCntTxt')
         driver.find_elements(:class => 'urBtnCntTxt')[1].click
       }
     rescue
