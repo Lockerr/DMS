@@ -27,7 +27,7 @@ class Car < ActiveRecord::Base
   def mbr
     require "selenium-webdriver"
     profile = Selenium::WebDriver::Firefox::Profile.new
-    profile['browser.download.dir'] = "/home/anton/tmp/webdriver-downloads"
+    profile['browser.download.dir'] = "/home/user/tmp/mbr/down/"
     profile['browser.download.folderList'] = 2
     profile['browser.helperApps.neverAsk.saveToDisk'] = "application/vnd.ms-excel"
 
@@ -97,8 +97,9 @@ class Car < ActiveRecord::Base
       driver.find_element(:id => 'WD0139')
       driver.find_element(:id => 'WD0139').click
     }
-    Dir.chdir("/home/anton/tmp/webdriver-downloads")
-    file = File.new "/home/anton/tmp/webdriver-downloads/#{Dir.glob('*.xls')[-1]}"
+    Dir.chdir("/home/user/tmp/mbr/down/")
+    file = File.new "/home/user/tmp/mbr/down/#{Dir.glob('*.xls')[-1]}", 'r'
+    puts file.inspect
     parse_cars(file)
 
   end
@@ -106,7 +107,7 @@ class Car < ActiveRecord::Base
   def parse_cars(file)
     book = Hpricot.parse file.read
     counter = book.search('//tr').count
-puts counter
+    puts counter
     (1..counter).each do |i|
       row = []
       if book.search('//tr')[i]
