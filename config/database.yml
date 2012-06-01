@@ -35,11 +35,11 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: dms.ext_prod
-  pool: 5
+  database: h116
   username: root
-  password:
+  password: UhdpXtHs
   socket: /var/run/mysqld/mysqld.sock
+
 
 cucumber:
   <<: *test
