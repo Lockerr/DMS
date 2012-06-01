@@ -24,7 +24,7 @@ class Car < ActiveRecord::Base
   self.include_root_in_json = false
 
 
-  def mbr
+  def self.mbr
     require "selenium-webdriver"
     profile = Selenium::WebDriver::Firefox::Profile.new
     profile['browser.download.dir'] = "/home/user/tmp/mbr/down/"

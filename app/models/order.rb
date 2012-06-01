@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
   belongs_to :person
   belongs_to :car
 
-  def slef.store
+  def self.store
     client = TinyTds::Client.new(:host => '192.168.1.102', :username => 'aster', :password => '1q2w3e4r5t')
     result = self.client.execute('select * from [orders]').to_a
     for r in result
