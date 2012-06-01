@@ -69,8 +69,9 @@ class Car < ActiveRecord::Base
 
     driver.switch_to.default_content
     puts 'switching back'
-    wait = Selenium::WebDriver::Wait.new(:timeout => 15) # seconds
+    wait = Selenium::WebDriver::Wait.new(:timeout => 40) # seconds
     begin
+      puts 'begin click'
       wait.until {
 
         driver.find_element(:id => 'ivuFrm_page0ivu1')
@@ -79,6 +80,7 @@ class Car < ActiveRecord::Base
         driver.find_elements(:class => 'urBtnCntTxt')[1].click
       }
     rescue
+      puts 'rescure'
       driver.switch_to.default_content
       driver.find_element(:id => 'ivuFrm_page0ivu1')
       driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
@@ -86,7 +88,7 @@ class Car < ActiveRecord::Base
       driver.find_elements(:class => 'urBtnCntTxt')[1].click
     end
 
-    wait = Selenium::WebDriver::Wait.new(:timeout => 50) # seconds
+    wait = Selenium::WebDriver::Wait.new(:timeout => 150) # seconds
     wait.until {
       puts 'export true'
       driver.find_element(:id => 'WD0138')
