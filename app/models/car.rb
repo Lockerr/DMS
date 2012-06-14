@@ -43,7 +43,7 @@ class Car < ActiveRecord::Base
     end
     begin
       driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
-      driver.find_element(:id, 'logonpassfield').send_keys '%T$R3e2w1q'
+      driver.find_element(:id, 'logonpassfield').send_keys '1q2w3e$R%T'
       driver.find_element(:class => 'urBtnStdNew').click
       puts 'loging ok'
     rescue
@@ -79,14 +79,16 @@ class Car < ActiveRecord::Base
         driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
         driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
         driver.find_elements(:class => 'urBtnCntTxt')
-        driver.find_elements(:class => 'urBtnCntTxt')[1].click
       }
+      driver.find_elements(:class => 'urBtnCntTxt')[1].click
+
     rescue
       puts 'rescure'
       driver.switch_to.default_content
       driver.find_element(:id => 'ivuFrm_page0ivu1')
       driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
       driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
+      driver.find_elements(:class => 'urBtnCntTxt')
       driver.find_elements(:class => 'urBtnCntTxt')[1].click
     end
 
