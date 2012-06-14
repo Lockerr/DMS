@@ -26,14 +26,9 @@ class ContractsController < ApplicationController
   end
 
   def show
-    @contract = Car.find(params[:car_id]).build_contract
-    @contract.person = Person.find(params[:client_id])
-    @contract.price = params[:contract][:price].to_s.split(/\D/).join
-    @contract.prepay = params[:contract][:prepay].to_s.split(/\D/).join
-    @contract.number = Time.now.year.to_s[2..3] + '/' + @contract.car.order.to_s[7..10]
     temp = @contract.prop
-    send_file(temp.to_s + "/contract.docx")
-    #system "rm -r #{temp}"
+    #send_file(temp.to_s + "/contract.docx")
+
   end
 
   def create

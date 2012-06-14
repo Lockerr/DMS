@@ -11,7 +11,72 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120531063545) do
+ActiveRecord::Schema.define(:version => 20120605053118) do
+
+  create_table "1_clients", :force => true do |t|
+    t.string   "fio",           :limit => 100, :default => "",  :null => false
+    t.text     "comment",                                       :null => false
+    t.string   "phone1",        :limit => 50,  :default => "",  :null => false
+    t.string   "phone2",        :limit => 50,  :default => "",  :null => false
+    t.string   "phone3",        :limit => 50,  :default => "",  :null => false
+    t.string   "phone4",        :limit => 50,  :default => "",  :null => false
+    t.date     "date",                                          :null => false
+    t.string   "adress",        :limit => 200, :default => "",  :null => false
+    t.date     "birthday",                                      :null => false
+    t.string   "brand",         :limit => 50,  :default => "",  :null => false
+    t.string   "manager",       :limit => 100, :default => "",  :null => false
+    t.string   "model",         :limit => 160, :default => "0", :null => false
+    t.integer  "icon",                                          :null => false
+    t.string   "creditmanager", :limit => 100,                  :null => false
+    t.datetime "zv",                                            :null => false
+    t.datetime "vz",                                            :null => false
+    t.datetime "tst",                                           :null => false
+    t.datetime "dg",                                            :null => false
+    t.datetime "vd",                                            :null => false
+    t.datetime "out",                                           :null => false
+    t.integer  "icon2",                        :default => 0,   :null => false
+    t.string   "vin",           :limit => 50,                   :null => false
+    t.integer  "cost",                                          :null => false
+    t.string   "status",        :limit => 50,                   :null => false
+    t.string   "commercial",    :limit => 50,                   :null => false
+    t.string   "tmp",           :limit => 50,                   :null => false
+    t.integer  "order"
+    t.date     "contract_date"
+    t.integer  "id_series"
+    t.integer  "id_number"
+    t.string   "id_dep"
+    t.date     "id_issued"
+    t.string   "gifts"
+    t.integer  "prepay"
+  end
+
+  add_index "1_clients", ["brand"], :name => "brand"
+  add_index "1_clients", ["creditmanager"], :name => "creditmanager"
+  add_index "1_clients", ["dg"], :name => "dg"
+  add_index "1_clients", ["fio", "phone1", "phone2", "phone3", "phone4", "birthday"], :name => "fio"
+  add_index "1_clients", ["fio"], :name => "fio_2"
+  add_index "1_clients", ["icon"], :name => "icon"
+  add_index "1_clients", ["icon2"], :name => "icon2"
+  add_index "1_clients", ["id", "dg", "brand"], :name => "dg_index"
+  add_index "1_clients", ["id", "out", "brand"], :name => "out_index"
+  add_index "1_clients", ["id", "tst", "brand"], :name => "tst_index"
+  add_index "1_clients", ["id", "vd", "brand"], :name => "vd_index"
+  add_index "1_clients", ["id", "vz", "brand"], :name => "vz_index"
+  add_index "1_clients", ["id", "zv", "brand"], :name => "zv_index"
+  add_index "1_clients", ["manager"], :name => "manager"
+  add_index "1_clients", ["model"], :name => "model"
+  add_index "1_clients", ["out"], :name => "out"
+  add_index "1_clients", ["phone1"], :name => "phone1"
+  add_index "1_clients", ["phone2"], :name => "phone2"
+  add_index "1_clients", ["phone3"], :name => "phone3"
+  add_index "1_clients", ["phone4"], :name => "phone4"
+  add_index "1_clients", ["tmp"], :name => "tmp"
+  add_index "1_clients", ["tst"], :name => "tst"
+  add_index "1_clients", ["vd"], :name => "vd"
+  add_index "1_clients", ["vin", "cost", "status", "commercial"], :name => "vin"
+  add_index "1_clients", ["vin"], :name => "vin_2"
+  add_index "1_clients", ["vz"], :name => "vz"
+  add_index "1_clients", ["zv"], :name => "zv"
 
   create_table "acts", :force => true do |t|
     t.integer  "car_id"
@@ -83,6 +148,11 @@ ActiveRecord::Schema.define(:version => 20120531063545) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "comments"
+  end
+
+  create_table "clients", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "communications", :force => true do |t|

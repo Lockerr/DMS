@@ -16,6 +16,7 @@ class Car < ActiveRecord::Base
   has_many :checkins
   has_one :act
   has_one :dkp
+  belongs_to :client
 
   before_update :write_logs
 
