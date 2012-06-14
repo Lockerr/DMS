@@ -76,20 +76,21 @@ class Car < ActiveRecord::Base
       puts 'wait unitl ivuFrm_page0ivu1'
       wait.until {
         driver.find_element(:id => 'ivuFrm_page0ivu1')
-      }
-      puts 'wait unitl switch to ivuFrm_page0ivu1'
-      wait.until {
-        driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
+        puts 'wait unitl switch to ivuFrm_page0ivu1'
+        wait.until {
+          driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
+          puts 'wait unitl switch to isolated'
+          wait.until {
+            driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
+            puts 'wait for button'
+            wait.unitl {
+              driver.find_elements(:class => 'urBtnCntTxt')
+              driver.find_elements(:class => 'urBtnCntTxt')[1].click
+            }
+          }
         }
-      puts 'wait unitl switch to isolated'
-      wait.until {
-        driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
       }
-      puts 'wait for button'
-      wait.unitl {
-        driver.find_elements(:class => 'urBtnCntTxt')
-        driver.find_elements(:class => 'urBtnCntTxt')[1].click
-      }
+
 
     rescue
       puts 'rescure'
