@@ -89,8 +89,10 @@ class Car < ActiveRecord::Base
       wait.unitl {
         driver.find_elements(:class => 'urBtnCntTxt')
       }
+      wait.until {
+        driver.find_elements(:class => 'urBtnCntTxt')[1].click
 
-      driver.find_elements(:class => 'urBtnCntTxt')[1].click
+      }
 
     rescue
       puts 'rescure'
