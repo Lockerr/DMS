@@ -1,5 +1,6 @@
 #encoding: utf-8
 class Client < ActiveRecord::Base
+  alias_attribute :contract_date, :date_contract
 
   set_table_name '1_clients'
   has_one :car, :foreign_key => :order, :primary_key => :vin
