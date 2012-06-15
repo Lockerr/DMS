@@ -45,11 +45,12 @@ gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+
   #gem 'quiet_assets', git: 'git@github.com:AgilionApps/quiet_assets.git'
 end
 
 group :test do
+  gem 'cucumber-rails'
   gem 'ruby-prof'
   gem 'capybara'
   gem 'database_cleaner'
