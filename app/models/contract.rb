@@ -1,8 +1,8 @@
 # encoding: utf-8
-class Contract < ActiveRecord::Base
-  belongs_to :client
+class Contract #< ActiveRecord::Base
+  #belongs_to :client
 
-  serialize :gifts
+  #serialize :gifts
 
   def validate_attrs
     errors = {}
