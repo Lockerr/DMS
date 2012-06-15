@@ -4,43 +4,18 @@ class Contract < ActiveRecord::Base
 
   serialize :gifts
 
-  def generate
-    result = []
+  def validate_attrs
 
-    case type
-      when 1 then
-        result.push 'docx_template'
-      else
-        result['errors'] = {doctype => 'Неизвестный тип документа'}
-    end
   end
 
-
-  def price_kop
-    if client.price.to_s.split('.').size == 2
-      kopejki = self.price.to_s.split('.')[1]
-      propis = RuPropisju.kopeek(kopejki.to_i)
-      if kopejki.to_i < 10
-        propis = '0' + propis
-      end
-
-    else
-      propis = '00 копеек'
-    end
-    if propis.to_i == 0
-      propis = '00 копеек'
-    end
-    propis
-  end
-
-  def attrs
+  def attrs(client)
     {
             :price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.cost, :unit => '', :separator => ',', :delimiter => " "),
             :price_w => RuPropisju.amount_in_words(client.cost, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
-            :number => Time.now.year.to_s[2..3] + '/' + client.order.to_s[7..10],
-            :top_date => I18n.localize(client.contract_date, :format => '%d %B %Y г.'),
-            :person_name => client.name,
-            :car_model_name => cleint.car.model.name,
+            :number => Time.now.year.to_s[2..3] + '/' + client.car.order.to_s[7..10],
+            :top_date => I18n.localize(client.contract_date || DateTime.now, :format => '%d %B %Y г.'),
+            :person_name => client.fio,
+            :car_model_name => client.car.model.name,
             :prepay => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.prepay, :unit => '', :separator => ',', :delimiter => " "),
             :prepay_w => RuPropisju.amount_in_words(client.prepay, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
             :s_name => client.short_name,

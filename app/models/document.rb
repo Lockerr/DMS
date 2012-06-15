@@ -3,21 +3,22 @@ class Document
 
   attr_accessor :object, :client, :errors
 
+
   def initialize
-    @errors = []
+    @errors = {}
   end
 
-  def generate
+  def validate
     if object
-      self.send(object.class.name.downcase)
+     errors.delete 'object' if errors['object']
     else
-      errors.push 'object' => 'не определен'
+      errors['object'] = 'не определен'
     end
 
     if client
-      true
+      errors.delete 'client' if errors['client']
     else
-      errors.push   'client' => 'не определен'
+      errors['client'] = 'не определен'
     end
 
     if errors.empty?
@@ -28,14 +29,15 @@ class Document
   end
 
   def skeleton
-
-    doc = object.properties(doctype)
-
+    validate
+    return errors unless errors.empty?
+    doc = properties
+    #self.send(object.class.name.downcase)
     true while doc.root.delete_element "//property"
 
     counter = 2
 
-    keys = object.attrs.keys
+    keys = object.attrs(client).keys
 
     for key in keys
       element = REXML::Element.new('property')
@@ -57,7 +59,7 @@ class Document
 
 
   def contract
-    docbody = object.body(doctype)
+    docbody = body
 
 
     keys = object.attrs.keys
@@ -194,19 +196,19 @@ class Document
   end
 
   def body
-    REXML::Document.new File.new(Rails.root.join('assets', doctype, 'word', 'document.xml'), 'r').read
+    REXML::Document.new File.new(Rails.root.join('assets', object.class.name.downcase, 'word', 'document.xml'), 'r').read
   end
 
   def properties
-    REXML::Document.new File.new(Rails.root.join('assets', doctype, 'docProps', 'custom.xml'), 'r').read
+    REXML::Document.new File.new(Rails.root.join('assets', object.class.name.downcase, 'docProps', 'custom.xml'), 'r').read
   end
 
   def footer1
-    REXML::Document.new File.new(Rails.root.join('assets', doctype, 'word', 'footer1.xml'), 'r').read
+    REXML::Document.new File.new(Rails.root.join('assets', object.class.name.downcase, 'word', 'footer1.xml'), 'r').read
   end
 
   def footer2
-    REXML::Document.new File.new(Rails.root.join('assets', doctype, 'word', 'footer2.xml'), 'r').read
+    REXML::Document.new File.new(Rails.root.join('assets', object.class.name.downcase, 'word', 'footer2.xml'), 'r').read
   end
 
 end
