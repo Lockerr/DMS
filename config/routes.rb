@@ -47,4 +47,6 @@ DmsExt::Application.routes.draw do
   root :to => 'cars#index'
 
   match 'cars/:id/info' => 'cars#info'
+  match 'makedoc' => 'contracts#index'
+
 end

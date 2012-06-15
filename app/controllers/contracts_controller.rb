@@ -6,7 +6,9 @@ class ContractsController < ApplicationController
   #TODO: Can`t send be shown to client
 
   def index
-
+    doc = Document.new
+    doc.object = Contract.new
+    doc.client = Client.find(params[:client_id])
   end
 
   def new
