@@ -28,7 +28,7 @@ class Contract #< ActiveRecord::Base
             :color => client.car.color_id,
             :interior => client.car.interior_id,
             :production_year => client.car.prod_date.year,
-            :gifts => client.gifts,
+            #:gifts => client.gifts,
             :kop => client.price_kop
 
     }
