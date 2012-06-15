@@ -37,7 +37,7 @@ class Document
 
     counter = 2
 
-    keys = object.attrs(client).keys
+    keys = attrs.keys
 
     for key in keys
       element = REXML::Element.new('property')
@@ -58,11 +58,11 @@ class Document
   end
 
 
-  def contract
+  def generate
     docbody = body
 
 
-    keys = object.attrs.keys
+    keys = attrs.keys
     keys.delete :s_name
     keys.delete :gifts
 
@@ -113,55 +113,57 @@ class Document
       end
     end
 
-    if gifts
-      object.gifts.each do |key, value|
-        unless value.to_s == "0"
-          count = docbody.root.elements[1].elements.count
-          before = docbody.root.elements[1].elements[count]
-          paragraph = REXML::Element.new('w:p')
-          paragraph.add_attribute 'w:rsidR', '000D076D'
-          paragraph.add_attribute 'w:rsidRDefault', '000D076D'
-          paragraph.add_attribute 'w:rsidP', "000D076D"
-
-          pPr = REXML::Element.new 'w:pPr'
-          wr = REXML::Element.new 'w:r'
-
-          wrPr = REXML::Element.new 'w:rPr'
-
-          wt = REXML::Element.new 'w:t'
-          wt.add_text I18n.t("#{key}")
-
-          wrPr.add_element wrfonts
-          wrPr.add_element wsz
-          wrPr.add_element wszcs
-
-          wr.add_element wrPr
-          wr.add_element wt
-
-          paragraph.add_element wr
-
-          docbody.root.elements[1].insert_before before, paragraph
-        end
-      end
-    end
+    #if gifts
+    #  object.gifts.each do |key, value|
+    #    unless value.to_s == "0"
+    #      count = docbody.root.elements[1].elements.count
+    #      before = docbody.root.elements[1].elements[count]
+    #      paragraph = REXML::Element.new('w:p')
+    #      paragraph.add_attribute 'w:rsidR', '000D076D'
+    #      paragraph.add_attribute 'w:rsidRDefault', '000D076D'
+    #      paragraph.add_attribute 'w:rsidP', "000D076D"
+    #
+    #      pPr = REXML::Element.new 'w:pPr'
+    #      wr = REXML::Element.new 'w:r'
+    #
+    #      wrPr = REXML::Element.new 'w:rPr'
+    #
+    #      wt = REXML::Element.new 'w:t'
+    #      wt.add_text I18n.t("#{key}")
+    #
+    #      wrPr.add_element wrfonts
+    #      wrPr.add_element wsz
+    #      wrPr.add_element wszcs
+    #
+    #      wr.add_element wrPr
+    #      wr.add_element wt
+    #
+    #      paragraph.add_element wr
+    #
+    #      docbody.root.elements[1].insert_before before, paragraph
+    #    end
+    #  end
+    #end
 
     temp = Rails.root.join 'tmp', Time.now.to_i.to_s
 
     Dir.mkdir temp
 
-    source = Rails.root.join('assets', 'docx_template')
+    source = Rails.root.join('assets', object.class.name.downcase)
 
     system("cp -r #{source}/. #{temp}  ")
 
-    system "rm Rails.root.join('tmp', temp, 'word', 'footer1.xml')"
-    system "rm Rails.root.join('tmp', temp, 'word', 'footer2.xml')"
+    system "rm #{Rails.root.join('tmp', temp, 'word', 'footer1.xml')}"
+    system "rm #{Rails.root.join('tmp', temp, 'word', 'footer2.xml')}"
 
-    File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w').write(skeleton).close
-    File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w').write(docbody.to_s).close
-    File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w').write(footer_1.to_s).close
-    File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w').write(footer_2.to_s).close
+    File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w').write(skeleton)
+    File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w').write(docbody.to_s)
+    File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w').write(footer_1.to_s)
+    File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w').write(footer_2.to_s)
 
-    system("cd #{temp} && zip -r договор.docx .")
+    Dir.mkdir "/var/www/fpk/upload/files/clients/#{client.id}/" unless Dir.exists? "/var/www/fpk/upload/files/clients/#{client.id}/"
+
+    system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/договор.docx -r  .")
 
     temp
   end
@@ -211,4 +213,7 @@ class Document
     REXML::Document.new File.new(Rails.root.join('assets', object.class.name.downcase, 'word', 'footer2.xml'), 'r').read
   end
 
+  def attrs
+    object.attrs(client)
+  end
 end

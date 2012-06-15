@@ -5,7 +5,8 @@ class Contract < ActiveRecord::Base
   serialize :gifts
 
   def validate_attrs
-
+    errors = {}
+    errors['birthday'] = 'пустое значение'
   end
 
   def attrs(client)
@@ -21,8 +22,8 @@ class Contract < ActiveRecord::Base
             :s_name => client.short_name,
             :birthday => client.birthday.strftime('%d.%m.%Y г.'),
             :address => client.adress,
-            :p_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{person.id_number} #{person.id_dep}",
-            :phones => client.phones.join(', '),
+            :p_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
+            :phones => client.phone1,
             :vin => client.car.vin,
             :color => client.car.color_id,
             :interior => client.car.interior_id,
