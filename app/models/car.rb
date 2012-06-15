@@ -18,9 +18,9 @@ class Car < ActiveRecord::Base
   has_one :dkp
   belongs_to :client
 
-  before_update :write_logs
+  #before_update :write_logs
 
-  default_scope includes(:manager, :model, :person, :klasse, :line, :payment, :contract)
+  #default_scope includes(:manager, :model, :person, :klasse, :line, :payment, :contract)
 
   self.include_root_in_json = false
 
@@ -73,13 +73,13 @@ class Car < ActiveRecord::Base
     wait = Selenium::WebDriver::Wait.new(:timeout => 40) # seconds
     begin
       puts 'begin click'
-      driver.manage.timeouts.implicit_wait = 10 # seconds
-      driver.find_element(:id => 'ivuFrm_page0ivu1')
-      driver.manage.timeouts.implicit_wait = 10 # seconds
+      wait.until {
+        puts 'wait for ivuFrm_page0ivu1'
+        driver.find_element(:id => 'ivuFrm_page0ivu1')
+      }
+      puts 'find  ivuFrm_page0ivu1'
       driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
-      driver.manage.timeouts.implicit_wait = 10 # seconds
-      driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-      driver.manage.timeouts.implicit_wait = 10 # seconds
+      driver.switch_to.frame driver.find_element(:id => 'isolatedWorkAreaForm')
       driver.find_elements(:class => 'urBtnCntTxt')[1].click
 
 
