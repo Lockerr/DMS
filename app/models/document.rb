@@ -189,6 +189,7 @@ class Document
       temp
     rescue
       errors['errors'] = 'что-то не так ' + Time.now
+      false
     end
 
   end
