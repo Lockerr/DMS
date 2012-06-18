@@ -150,13 +150,21 @@ class Car < ActiveRecord::Base
         opts += row[33].split('.')
         opts += row[34].split('.')
 
-        (row[4].inner_text).split(/\s/)[0] == 'C200' ? klasse = "C" : klasse = (row[4].inner_text).split(/\s/)[0]
+        if (row[4].inner_text).split(/\s/)[0] == 'C200'
+            modelname = row[4].inner_text.gsub('C200', 'C 200')
+            klasse = "C"
+        else
+            modelname = row[4].inner_text
+            klasse = (row[4].inner_text).split(/\s/)[0]
+        end
+
+
 
         attributes =
                 {
                         :order => row[0].inner_text,
                         :vin => book.search('//tr')[i].search('//td')[1].inner_text,
-                        :model => Model.find_or_create_by_name(row[30].inner_text),
+                        :model => Model.find_or_create_by_name(row[4].inner_text),
                         :klasse_id => Klasse.find_by_name(klasse).id,
                         :color_id => row[29].inner_text,
                         :interior_id => row[30].inner_text,

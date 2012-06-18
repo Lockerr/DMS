@@ -9,6 +9,11 @@ class ContractsController < ApplicationController
     doc = Document.new
     doc.object = Contract.new
     doc.client = Client.find(params[:client_id])
+    if doc.generate
+      render :json => {:document => 'ok'}
+    else
+      render :json => {:errors => doc.errors}
+    end
   end
 
   def new

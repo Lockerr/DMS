@@ -10,7 +10,7 @@ class Document
 
   def validate
     if object
-     errors.delete 'object' if errors['object']
+      errors.delete 'object' if errors['object']
     else
       errors['object'] = 'не определен'
     end
@@ -86,31 +86,33 @@ class Document
 
 
     for code in client.car.codes
+      count = docbody.root.elements[1].elements.count
+      before = docbody.root.elements[1].elements[count]
+      paragraph = wp
+
+
+      wr = REXML::Element.new 'w:r'
+
+      wrPr = REXML::Element.new 'w:rPr'
+
+      wrPr.add_element wrfonts
+      wrPr.add_element wsz
+      wrPr.add_element wszcs
+
+      wr.add_element wrPr
+
+      wt = REXML::Element.new 'w:t'
       unless code[1] == 'Опция неизвестна'
-        count = docbody.root.elements[1].elements.count
-        before = docbody.root.elements[1].elements[count]
-        paragraph = wp
-
-
-        wr = REXML::Element.new 'w:r'
-
-        wrPr = REXML::Element.new 'w:rPr'
-
-        wrPr.add_element wrfonts
-        wrPr.add_element wsz
-        wrPr.add_element wszcs
-
-        wr.add_element wrPr
-
-        wt = REXML::Element.new 'w:t'
         wt.add_text code[1]
-
-        wr.add_element wt
-
-        paragraph.add_element wr
-
-        docbody.root.elements[1].insert_before before, paragraph
+      else
+        wt.add_text "#{code[0] - code[1]}"
       end
+
+      wr.add_element wt
+
+      paragraph.add_element wr
+
+      docbody.root.elements[1].insert_before before, paragraph
     end
 
     #if gifts
