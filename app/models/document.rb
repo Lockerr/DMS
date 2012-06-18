@@ -105,7 +105,7 @@ class Document
       unless code[1] == 'Опция неизвестна'
         wt.add_text code[1]
       else
-        wt.add_text "#{code[0] - code[1]}"
+        wt.add_text "#{code[0]} - #{code[1]}"
       end
 
       wr.add_element wt
