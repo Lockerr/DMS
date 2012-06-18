@@ -8,7 +8,7 @@ class ContractsController < ApplicationController
   def index
     doc = Document.new
     doc.object = Contract.new
-    doc.client = Client.find(params[:client_id])
+    doc.client = Client.find_by_id(params[:client_id])
     if doc.generate
       render :json => {:document => 'ok'}
     else

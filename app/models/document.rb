@@ -17,15 +17,25 @@ class Document
 
     if client
       errors.delete 'client' if errors['client']
+      if client.car
+        errors.delete 'car' if errors['car']
+      else
+        errors['car'] = 'нет такого автомобиля' if client['order'] || client['vin']
+        errors['car'] = 'автомобиль не задан' unless (client['order'] || client['vin'])
+      end
     else
       errors['client'] = 'не определен'
     end
+
+
 
     if errors.empty?
       puts 'no errors'
     else
       errors.inspect
     end
+
+
   end
 
   def skeleton
