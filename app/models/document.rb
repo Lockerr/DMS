@@ -156,10 +156,14 @@ class Document
     system "rm #{Rails.root.join('tmp', temp, 'word', 'footer1.xml')}"
     system "rm #{Rails.root.join('tmp', temp, 'word', 'footer2.xml')}"
 
-    File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w').write(skeleton).close
-    File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w').write(docbody.to_s).close
-    File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w').write(footer_1.to_s).close
-    File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w').write(footer_2.to_s).close
+    file = File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w').write(skeleton)
+    file.close
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w').write(docbody.to_s)
+    file.close
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w').write(footer_1.to_s)
+    file.close
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w').write(footer_2.to_s)
+    file.close
 
     Dir.mkdir "/var/www/fpk/upload/files/clients/#{client.id}/" unless Dir.exists? "/var/www/fpk/upload/files/clients/#{client.id}/"
 
