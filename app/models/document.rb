@@ -28,7 +28,6 @@ class Document
     end
 
 
-
     if errors.empty?
       puts 'no errors'
     else
@@ -69,124 +68,129 @@ class Document
 
 
   def generate
-    docbody = body
+    begin
+      docbody = body
 
 
-    keys = attrs.keys
-    keys.delete :s_name
-    keys.delete :gifts
+      keys = attrs.keys
+      keys.delete :s_name
+      keys.delete :gifts
 
-    for key in keys
-      puts key
-      docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY #{key.to_s} \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
-    end
-
-    docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY person_name_2 \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
-
-    footer_1 = footer1
-    footer_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
-
-    footer_2 = footer2
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  birthday  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:birthday].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  address  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:address].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  p_id  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:p_id].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  phones  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:phones].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
-
-
-    for code in client.car.codes
-      count = docbody.root.elements[1].elements.count
-      before = docbody.root.elements[1].elements[count]
-      paragraph = wp
-
-
-      wr = REXML::Element.new 'w:r'
-
-      wrPr = REXML::Element.new 'w:rPr'
-
-      wrPr.add_element wrfonts
-      wrPr.add_element wsz
-      wrPr.add_element wszcs
-
-      wr.add_element wrPr
-
-      wt = REXML::Element.new 'w:t'
-      unless code[1] == 'Опция неизвестна'
-        wt.add_text code[1]
-      else
-        wt.add_text "#{code[0]} - #{code[1]}"
+      for key in keys
+        puts key
+        docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY #{key.to_s} \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
       end
 
-      wr.add_element wt
+      docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY person_name_2 \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
 
-      paragraph.add_element wr
+      footer_1 = footer1
+      footer_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
 
-      docbody.root.elements[1].insert_before before, paragraph
+      footer_2 = footer2
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  birthday  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:birthday].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  address  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:address].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  p_id  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:p_id].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  phones  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:phones].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
+
+
+      for code in client.car.codes
+        count = docbody.root.elements[1].elements.count
+        before = docbody.root.elements[1].elements[count]
+        paragraph = wp
+
+
+        wr = REXML::Element.new 'w:r'
+
+        wrPr = REXML::Element.new 'w:rPr'
+
+        wrPr.add_element wrfonts
+        wrPr.add_element wsz
+        wrPr.add_element wszcs
+
+        wr.add_element wrPr
+
+        wt = REXML::Element.new 'w:t'
+        unless code[1] == 'Опция неизвестна'
+          wt.add_text code[1]
+        else
+          wt.add_text "#{code[0]} - #{code[1]}"
+        end
+
+        wr.add_element wt
+
+        paragraph.add_element wr
+
+        docbody.root.elements[1].insert_before before, paragraph
+      end
+
+      #if gifts
+      #  object.gifts.each do |key, value|
+      #    unless value.to_s == "0"
+      #      count = docbody.root.elements[1].elements.count
+      #      before = docbody.root.elements[1].elements[count]
+      #      paragraph = REXML::Element.new('w:p')
+      #      paragraph.add_attribute 'w:rsidR', '000D076D'
+      #      paragraph.add_attribute 'w:rsidRDefault', '000D076D'
+      #      paragraph.add_attribute 'w:rsidP', "000D076D"
+      #
+      #      pPr = REXML::Element.new 'w:pPr'
+      #      wr = REXML::Element.new 'w:r'
+      #
+      #      wrPr = REXML::Element.new 'w:rPr'
+      #
+      #      wt = REXML::Element.new 'w:t'
+      #      wt.add_text I18n.t("#{key}")
+      #
+      #      wrPr.add_element wrfonts
+      #      wrPr.add_element wsz
+      #      wrPr.add_element wszcs
+      #
+      #      wr.add_element wrPr
+      #      wr.add_element wt
+      #
+      #      paragraph.add_element wr
+      #
+      #      docbody.root.elements[1].insert_before before, paragraph
+      #    end
+      #  end
+      #end
+
+      temp = Rails.root.join 'tmp', Time.now.to_i.to_s
+
+      Dir.mkdir temp
+
+      source = Rails.root.join('assets', object.class.name.downcase)
+
+      system("cp -r #{source}/. #{temp}  ")
+
+      system "rm #{Rails.root.join('tmp', temp, 'word', 'footer1.xml')}"
+      system "rm #{Rails.root.join('tmp', temp, 'word', 'footer2.xml')}"
+
+      file = File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w')
+      puts "sekeleton #{file.write(skeleton)}"
+      file.close
+      file = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w')
+      puts "document #{file.write(docbody.to_s)}"
+      file.close
+      file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
+      puts "footer1 #{file.write(footer_1.to_s)}"
+      file.close
+      file = File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w')
+      puts "footer 2 #{file.write(footer_2.to_s)}"
+
+      file.close
+
+      Dir.mkdir "/var/www/fpk/upload/files/clients/#{client.id}/" unless Dir.exists? "/var/www/fpk/upload/files/clients/#{client.id}/"
+
+      system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/договор.docx -r  .")
+
+      temp
+    rescue
+      errors['errors'] = 'что-то не так ' + Time.now
     end
 
-    #if gifts
-    #  object.gifts.each do |key, value|
-    #    unless value.to_s == "0"
-    #      count = docbody.root.elements[1].elements.count
-    #      before = docbody.root.elements[1].elements[count]
-    #      paragraph = REXML::Element.new('w:p')
-    #      paragraph.add_attribute 'w:rsidR', '000D076D'
-    #      paragraph.add_attribute 'w:rsidRDefault', '000D076D'
-    #      paragraph.add_attribute 'w:rsidP', "000D076D"
-    #
-    #      pPr = REXML::Element.new 'w:pPr'
-    #      wr = REXML::Element.new 'w:r'
-    #
-    #      wrPr = REXML::Element.new 'w:rPr'
-    #
-    #      wt = REXML::Element.new 'w:t'
-    #      wt.add_text I18n.t("#{key}")
-    #
-    #      wrPr.add_element wrfonts
-    #      wrPr.add_element wsz
-    #      wrPr.add_element wszcs
-    #
-    #      wr.add_element wrPr
-    #      wr.add_element wt
-    #
-    #      paragraph.add_element wr
-    #
-    #      docbody.root.elements[1].insert_before before, paragraph
-    #    end
-    #  end
-    #end
-
-    temp = Rails.root.join 'tmp', Time.now.to_i.to_s
-
-    Dir.mkdir temp
-
-    source = Rails.root.join('assets', object.class.name.downcase)
-
-    system("cp -r #{source}/. #{temp}  ")
-
-    system "rm #{Rails.root.join('tmp', temp, 'word', 'footer1.xml')}"
-    system "rm #{Rails.root.join('tmp', temp, 'word', 'footer2.xml')}"
-
-    file = File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w')
-    puts "sekeleton #{file.write(skeleton)}"
-    file.close
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w')
-    puts "document #{file.write(docbody.to_s)}"
-    file.close
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
-    puts "footer1 #{file.write(footer_1.to_s)}"
-    file.close
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w')
-    puts "footer 2 #{file.write(footer_2.to_s)}"
-
-    file.close
-
-    Dir.mkdir "/var/www/fpk/upload/files/clients/#{client.id}/" unless Dir.exists? "/var/www/fpk/upload/files/clients/#{client.id}/"
-
-    system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/договор.docx -r  .")
-
-    temp
   end
 
   def wrfonts
