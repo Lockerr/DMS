@@ -95,7 +95,14 @@ namespace :data do
 
 
   task :import => :environment do
-
+    result = []
+    for car in Car.select([:klasse_id, :real_options])
+      car.real_options.each do |code|
+        puts code
+        result.push "#{car.klasse.name} \t #{code} \t Оция неизвестна" if Opt.where(:klasse_id => car.klasse_id, :code => code.to_s).empty?
+      end
+    end
+    result.uniq!
     #"0 0152433239"
     #"1 C"
     #"2 C 180 CGI"

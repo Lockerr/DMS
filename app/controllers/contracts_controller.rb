@@ -9,6 +9,8 @@ class ContractsController < ApplicationController
     doc = Document.new
     doc.object = Contract.new
     doc.client = Client.find_by_id(params[:client_id])
+    response.headers['Access-Control-Allow-Origin'] = '*'
+
     if doc.generate
       render :json => {:document => 'ok'}
     else
