@@ -1,5 +1,5 @@
 #encoding: utf-8
-class Act < ActiveRecord::Base
+class Act# < ActiveRecord::Base
   belongs_to :car
   belongs_to :person
 
@@ -29,7 +29,7 @@ class Act < ActiveRecord::Base
     propis
   end
 
-  def attrs
+  def attrs(client)
     {
             :contract_kp_number => car.contract ? car.contract.number : '!!!!! НЕТ НОМЕРА !!!!!',
             :contract_kp_date => car.contract ? car.contract.date : '!!!!! НЕТ ДАТЫ !!!!!',

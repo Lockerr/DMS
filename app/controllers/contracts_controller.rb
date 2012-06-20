@@ -7,8 +7,17 @@ class ContractsController < ApplicationController
 
   def index
     doc = Document.new
+    case params[:doc_ctype]
+      when 1 then
+        doc.object = Contract.new
+      when 2 then
+        doc.object = Act.new
+      else
+        doc.errors['not_working'] = 'в разработке'
+    end
     doc.object = Contract.new
     doc.client = Client.find_by_id(params[:client_id])
+
     response.headers['Access-Control-Allow-Origin'] = '*'
 
     if doc.generate
@@ -85,4 +94,3 @@ class ContractsController < ApplicationController
 
 
 end
-
