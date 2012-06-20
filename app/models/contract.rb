@@ -17,6 +17,7 @@ class Contract #< ActiveRecord::Base
             :top_date => I18n.localize(client.contract_date || DateTime.now, :format => '%d %B %Y г.'),
             :person_name => client.fio,
             :car_model_name => client.car.model.name,
+            :car_model_name_2 => client.car.model.name,
             :prepay => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.prepay, :unit => '', :separator => ',', :delimiter => " "),
             :prepay_w => RuPropisju.amount_in_words(client.prepay, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
             :s_name => client.short_name,

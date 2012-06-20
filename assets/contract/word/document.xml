@@ -4345,7 +4345,7 @@
         </w:rPr>
         <w:t xml:space="preserve">на автомобиль Мерседес-Бенц </w:t>
       </w:r>
-      <w:fldSimple w:instr=" DOCPROPERTY  car_model_name  \* MERGEFORMAT ">
+      <w:fldSimple w:instr=" DOCPROPERTY  car_model_name_2  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
           <w:rPr>
             <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
