@@ -47,6 +47,7 @@
     <w:r>
       <w:rPr>
         <w:i/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:iCs/>
         <w:sz w:val="20"/>
       </w:rPr>
@@ -59,6 +60,7 @@
       <w:r>
         <w:rPr>
           <w:i/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:iCs/>
           <w:sz w:val="20"/>
         </w:rPr>
@@ -69,6 +71,7 @@
       <w:rPr>
         <w:i/>
         <w:iCs/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:sz w:val="20"/>
       </w:rPr>
       <w:t>. Челябинск, ул. Горелова, 12</w:t>
@@ -78,6 +81,7 @@
     <w:pPr>
       <w:rPr>
         <w:i/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:iCs/>
         <w:sz w:val="20"/>
       </w:rPr>
@@ -85,6 +89,7 @@
     <w:r>
       <w:rPr>
         <w:i/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:iCs/>
         <w:sz w:val="20"/>
       </w:rPr>
@@ -102,6 +107,7 @@
     <w:r>
       <w:rPr>
         <w:i/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:iCs/>
         <w:sz w:val="20"/>
       </w:rPr>
@@ -120,6 +126,7 @@
       <w:rPr>
         <w:i/>
         <w:iCs/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:sz w:val="20"/>
       </w:rPr>
       <w:t>К/с 30101810700000000602, БИК 047501602</w:t>
@@ -172,6 +179,7 @@
       <w:rPr>
         <w:i/>
         <w:iCs/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -181,6 +189,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -201,6 +210,7 @@
     <w:r w:rsidRPr="004A6D87">
       <w:rPr>
         <w:i/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:iCs/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
@@ -211,6 +221,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -231,6 +242,7 @@
     <w:r w:rsidRPr="004A6D87">
       <w:rPr>
         <w:i/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:iCs/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
@@ -241,6 +253,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -253,6 +266,7 @@
     <w:r w:rsidRPr="004A6D87">
       <w:rPr>
         <w:i/>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:iCs/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
@@ -263,6 +277,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -290,6 +305,7 @@
     </w:pPr>
     <w:r w:rsidRPr="005D01BC">
       <w:rPr>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -297,6 +313,7 @@
     </w:r>
     <w:r>
       <w:rPr>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -320,6 +337,7 @@
     </w:r>
     <w:r>
       <w:rPr>
+        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -328,6 +346,7 @@
     <w:fldSimple w:instr=" DOCPROPERTY  s_name  \* MERGEFORMAT ">
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
