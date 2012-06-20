@@ -7,10 +7,10 @@ class ContractsController < ApplicationController
 
   def index
     doc = Document.new
-    case params[:doc_ctype]
-      when "1" then
+    case params[:doc_type]
+      when 1 then
         doc.object = Contract.new
-      when "2" then
+      when 2 then
         doc.object = Act.new
       else
         doc.errors['not_working'] = 'в разработке'
