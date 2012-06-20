@@ -1,7 +1,7 @@
 #encoding: utf-8
 class Act# < ActiveRecord::Base
-  belongs_to :car
-  belongs_to :person
+  #belongs_to :car
+  #belongs_to :person
 
   def properties
     REXML::Document.new File.new(Rails.root.join('assets', 'act_template', 'docProps', 'custom.xml'), 'r').read
