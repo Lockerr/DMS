@@ -68,7 +68,7 @@ class Document
 
 
   def generate
-    begin
+    #begin
       docbody = body
 
 
@@ -78,10 +78,10 @@ class Document
 
       for key in keys
         puts key
-        docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY #{key.to_s} \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
+        docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  #{key.to_s}  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
       end
 
-      docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY person_name_2 \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
+      docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name_2  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
 
       footer_1 = footer1
       footer_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
@@ -187,10 +187,10 @@ class Document
       system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/договор.docx -r  .")
 
       temp
-    rescue
+    #rescue
       errors['errors'] = 'что-то не так ' + "#{Time.now.to_s} #{client} #{object} #{errors.inspect}"
-      false
-    end
+      #false
+    #end
 
   end
 
