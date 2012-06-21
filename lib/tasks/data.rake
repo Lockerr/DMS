@@ -224,4 +224,9 @@ namespace :data do
     browser.element(:class => 'urBtnStdNew').click
     browser.div(:id=>"some_div").exists? sleep 1
   end
+
+  def omg_codes
+    Code.create(:klasse_id => 'A', :code => 'b', :desc => 'c')
+
+  end
 end
