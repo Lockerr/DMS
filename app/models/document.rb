@@ -192,7 +192,7 @@ class Document
 
       temp
     #rescue
-      errors['errors'] = 'что-то не так ' + "#{Time.now.to_s} #{client} #{object} #{errors.inspect}"
+    #  errors['errors'] = 'что-то не так ' + "#{Time.now.to_s} #{client} #{object} #{errors.inspect}"
       #false
     #end
 
