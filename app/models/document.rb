@@ -71,7 +71,7 @@ class Document
 
   def generate
     validate
-    return errors unless errors.empty?
+    return nil unless errors.empty?
       docbody = body
 
 
