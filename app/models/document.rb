@@ -70,6 +70,7 @@ class Document
 
 
   def generate
+    validate
     return errors unless errors.empty?
       docbody = body
 
