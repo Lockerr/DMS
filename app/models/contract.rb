@@ -1,13 +1,6 @@
 # encoding: utf-8
 class Contract #< ActiveRecord::Base
-  #belongs_to :client
 
-  #serialize :gifts
-
-  def validate_attrs
-    errors = {}
-    errors['birthday'] = 'пустое значение'
-  end
 
   def attrs(client)
     {
@@ -32,9 +25,8 @@ class Contract #< ActiveRecord::Base
             #:gifts => client.gifts,
             :kop => client.price_kop
 
-    }
+      } if client.valid?
   end
-
 
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120605053118) do
+ActiveRecord::Schema.define(:version => 20120621045112) do
 
   create_table "1_clients", :force => true do |t|
     t.string   "fio",           :limit => 100, :default => "",  :null => false
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120605053118) do
     t.date     "id_issued"
     t.string   "gifts"
     t.integer  "prepay"
+    t.integer  "cause",         :limit => 1
   end
 
   add_index "1_clients", ["brand"], :name => "brand"

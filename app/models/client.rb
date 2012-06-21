@@ -1,10 +1,19 @@
 #encoding: utf-8
 class Client < ActiveRecord::Base
-  alias_attribute :contract_date, :date_contract
-  alias_attribute :birthday, :clientbirthday
-  alias_attribute :id_series, :pas1
-  alias_attribute :id_number, :pas2
-  alias_attribute :id_dep, :pas3
+  #alias_attribute :contract_date, :date_contract
+  #alias_attribute :birthday, :clientbirthday
+  #alias_attribute :id_series, :pas1
+  #alias_attribute :id_number, :pas2
+  #alias_attribute :id_dep, :pas3
+
+  with_options :if => "cause == 1" do |client|
+    client.validates :prepay, :cost, :birthday, :phone1, :contract_date, :order, :presence => 'true'
+    client.validates_format_of :order, :with => /(d+)/
+    client.validates_presence_of :id_series, :id_number, :id_dep
+    client.validates_format_of :id_series, :id_number, :with => /[\d\s]/
+    client.validates_presence_of :fio
+    client.validates_associated :car
+  end
 
   set_table_name '1_clients'
   has_one :car, :foreign_key => :order, :primary_key => :vin

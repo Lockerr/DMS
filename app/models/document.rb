@@ -3,7 +3,6 @@ class Document
 
   attr_accessor :object, :client, :errors
 
-
   def initialize
     @errors = {}
   end
@@ -11,22 +10,25 @@ class Document
   def validate
     if object
       errors.delete 'object' if errors['object']
+      cause = case object.class.name.downcase
+        when 'contract' then '1'
+      end
     else
       errors['object'] = 'не определен'
     end
 
     if client
       errors.delete 'client' if errors['client']
-      if client.car
-        errors.delete 'car' if errors['car']
-      else
-        errors['car'] = 'нет такого автомобиля' if client['order'] || client['vin']
-        errors['car'] = 'автомобиль не задан' unless (client['order'] || client['vin'])
+
+      client.update_attribute :cause, cause if cause
+
+      unless client.valid?
+        errors['client'] = client.errors.messages
+
       end
     else
       errors['client'] = 'не определен'
     end
-
 
     if errors.empty?
       puts 'no errors'
@@ -68,7 +70,7 @@ class Document
 
 
   def generate
-    #begin
+    return errors unless errors.empty?
       docbody = body
 
 
