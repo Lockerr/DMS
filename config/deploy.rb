@@ -25,7 +25,7 @@ namespace :deploy do
   end
 
   task :restart do
-    run "if [ -f #{deploy_to}shared/pids/server.pid ]; then kill -9 `cat #{deploy_to}shared/pids/server.pid` && cd #{deploy_to}current && /home/user/.rvm/rubies/ruby-1.9.2-p320/bin/ruby script/rails s -p 3001 -e production -d; else cd #{deploy_to}/current && /home/user/.rvm/rubies/ruby-1.9.2-p320/bin/ruby script/rails s -p 3001 -e production -d; fi"
+    run "if [ -f #{deploy_to}shared/pids/server.pid ]; then kill -9 `cat #{deploy_to}shared/pids/server.pid` && cd #{deploy_to}current && bundle exec rails s -p 3001 -e production -d; else cd #{deploy_to}/current && bundle exec rails s -p 3001 -e production -d; fi"
   end
 end
 
