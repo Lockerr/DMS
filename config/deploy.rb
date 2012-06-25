@@ -1,13 +1,15 @@
 set :application, "crm"
 set :repository,  "ssh://anton@192.168.1.71/work/dms/"
-set :domain, '192.168.1.98'
+set :domain, 'user:192.168.1.98'
 set :user, 'user'
 set :password, 'ktghfpjhbq'
+set :deploy_to => '/home/dms'
 
 set :deploy_via, :remote_cache
+
 set :scm, :git
 set :scm_passphrase, 'werwerw'
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+
 
 role :web, domain
 role :app, domain
