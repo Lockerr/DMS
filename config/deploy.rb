@@ -3,13 +3,13 @@ set :repository,  "ssh://anton@192.168.1.71/work/dms/"
 set :domain, 'user:192.168.1.98'
 set :user, 'user'
 set :password, 'ktghfpjhbq'
-set :deploy_to => '/home/dms'
+set :deploy_to, '/home/dms'
 
 set :deploy_via, :remote_cache
 
 set :scm, :git
 set :scm_passphrase, 'werwerw'
-set :use_sudo => false
+set :use_sudo, false
 
 role :web, domain
 role :app, domain
