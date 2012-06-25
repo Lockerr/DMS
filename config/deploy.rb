@@ -1,5 +1,5 @@
 set :application, "crm"
-set :repository,  "ssh://192.168.1.71/home/anton/work/dms/"
+set :repository,  "svn+ssh://192.168.1.71/home/anton/work/dms/"
 set :domain, 'user@192.168.1.98'
 set :password, 'ktghfpjhbq'
 set :deploy_to, '/home/user/dms/'
