@@ -15,7 +15,7 @@ if Rails.env == 'production'
 
     end
 
-    def scheduler.handle_exception(job, exception)
+    def task_scheduler.handle_exception(job, exception)
       puts "job #{job.job_id} caught exception '#{exception}'"
     end
 
