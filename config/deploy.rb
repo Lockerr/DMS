@@ -21,11 +21,11 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 
 namespace :deploy do
   task :start do
-    run 'rails s -p 3001 -e production -d'
+    run 'bundle exec rails s -p 3001 -e production -d'
   end
 
   task :restart do
-    run "if [ -f #{deploy_to}/shared/pids/server.pid ]; then kill -USR2 `cat #{deploy_to}/shared/pids/server.pid`; else cd #{deploy_to}/current && rails s -p 3001 -d -e production; fi"
+    run "if [ -f #{deploy_to}/shared/pids/server.pid ]; then kill -9 `cat #{deploy_to}/shared/pids/server.pid`; else cd #{deploy_to}/current && bundle exec rails s -p 3001 -d -e production; fi"
   end
 end
 
