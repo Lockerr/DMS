@@ -14,7 +14,7 @@ class Client < ActiveRecord::Base
     client.validates_associated :car
   end
 
-  with_option :if => 'cause == 5' do |client|
+  with_options :if => 'cause == 5' do |client|
     client.validates_presence_of :fio, :manager, :trade_in_price, :trade_in_desc
     client.validates_associated :used_car
 
