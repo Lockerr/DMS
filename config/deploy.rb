@@ -4,7 +4,7 @@ set :domain, 'user@192.168.1.98'
 set :password, 'ktghfpjhbq'
 set :deploy_to, '/home/user/dms/'
 
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 
 set :scm, :git
 set :scm_passphrase, 'werwerw'
