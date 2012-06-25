@@ -1,6 +1,6 @@
 set :application, "crm"
 set :repository,  "ssh://anton@192.168.1.71/work/dms/"
-set :server, '192.168.1.98'
+set :domain, '192.168.1.98'
 set :user, 'user'
 set :password, 'ktghfpjhbq'
 
@@ -9,10 +9,9 @@ set :scm, :git
 set :scm_passphrase, 'werwerw'
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, :server
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+role :web, domain
+role :app, domain
+role :db,  domain, :primary => true # This is where Rails migrations will run
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
