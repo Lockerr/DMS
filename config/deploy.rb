@@ -19,15 +19,15 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-#namespace :deploy do
-#  task :start do
-#    run 'rails s -p 3001 -e production -d'
-#  end
-#
-#  task :restart do
-#    run 'if [ -f '
-#  end
-#end
+namespace :deploy do
+  task :start do
+    run 'rails s -p 3001 -e production -d'
+  end
+
+  task :restart do
+    run "if [ -f #{depoy_to}/shared/pids/server.pid ]; then kill -USR2 `cat #{depoy_to}/shared/pids/server.pid` && rm -f #{depoy_to}/shared/pids/server.pid ; else cd #{depoy_to}/current && rails s -p 3001 -d -e production; fi"
+  end
+end
 
 
 # If you are using Passenger mod_rails uncomment this:
