@@ -22,6 +22,7 @@ gem "selenium-webdriver"
 gem 'webrat'
 gem 'watir-webdriver'
 gem 'rvm-capistrano'
+gem 'rufus-scheduler'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

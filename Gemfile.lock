@@ -180,6 +180,8 @@ GEM
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
     rubyzip (0.9.6.1)
+    rufus-scheduler (2.0.14)
+      tzinfo (>= 0.3.23)
     russian (0.6.0)
       i18n (>= 0.5.0)
     rvm-capistrano (1.2.2)
@@ -253,6 +255,7 @@ DEPENDENCIES
   ru_propisju (= 2.1.2)
   ruby-debug19
   ruby-prof
+  rufus-scheduler
   russian
   rvm-capistrano
   sass-rails

@@ -20,7 +20,7 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
-
+after 'update_code', 'bundle install'
 namespace :deploy do
   task :start do
     run 'bundle exec rails s -p 3001 -e production -d'
