@@ -3,6 +3,8 @@ class Document
 
   attr_accessor :object, :client, :errors
 
+
+
   def initialize
     @errors = {}
   end

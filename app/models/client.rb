@@ -8,14 +8,21 @@ class Client < ActiveRecord::Base
 
   with_options :if => "cause == 1" do |client|
     client.validates :prepay, :cost, :birthday, :phone1, :contract_date, :vin , :presence => 'true'
-    #client.validates_format_of :order, :with => /(d+)/
     client.validates_presence_of :id_series, :id_number, :id_dep
     client.validates_format_of :id_series, :id_number, :with => /[\d\s]/
     client.validates_presence_of :fio
     client.validates_associated :car
   end
 
+  with_option :if => 'cause == 5' do |client|
+    client.validates_presence_of :fio, :manager, :trade_in_price, :trade_in_desc
+    client.validates_associated :used_car
+
+  end
+
   set_table_name '1_clients'
+
+  has_one :used_car, :class_name => Car, :foreign_key => :used_vin, :primary_key => :used_vin
   has_one :car, :foreign_key => :order, :primary_key => :vin
 
   def price_kop

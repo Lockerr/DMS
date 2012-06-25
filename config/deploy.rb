@@ -1,10 +1,13 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+set :application, "crm"
+set :repository,  "ssh://anton@192.168.1.71/work/dms/"
+ser :server, '192.168.1.98'
+set :user, :user
+set :password, 'ktghfpjhbq'
 
-set :scm, :subversion
+set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
+role :web, :server
 role :app, "your app-server here"                          # This may be the same as your `Web` server
 role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
 role :db,  "your slave db-server here"
