@@ -9,7 +9,7 @@ set :deploy_via, :remote_cache
 
 set :scm, :git
 set :scm_passphrase, 'werwerw'
-
+set :use_sudo => false
 
 role :web, domain
 role :app, domain
