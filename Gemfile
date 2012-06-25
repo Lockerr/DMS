@@ -2,12 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.2'
 
-# Bundle edge Rails instead:
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
 gem 'mysql2'
 gem 'arel'
-gem 'devise'
 gem 'haml'
 gem 'hpricot'
 gem 'paperclip'
@@ -21,10 +19,8 @@ gem 'addressable'
 gem "selenium-webdriver"
 gem 'webrat'
 gem 'watir-webdriver'
-gem 'rvm-capistrano'
 gem 'rufus-scheduler'
-# Gems used only for assets and not required
-# in production environments by default.
+
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
@@ -32,19 +28,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
 gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :development do
+  gem 'rvm-capistrano'
+end
 group :development, :test do
   gem 'rspec-rails'
 
