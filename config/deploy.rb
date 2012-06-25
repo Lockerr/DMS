@@ -25,7 +25,7 @@ namespace :deploy do
   end
 
   task :restart do
-    run "if [ -f #{depoy_to}/shared/pids/server.pid ]; then kill -USR2 `cat #{depoy_to}/shared/pids/server.pid` && rm -f #{depoy_to}/shared/pids/server.pid ; else cd #{depoy_to}/current && rails s -p 3001 -d -e production; fi"
+    run "if [ -f #{depoy_to}/shared/pids/server.pid ]; then kill -USR2 `cat #{depoy_to}/shared/pids/server.pid`; else cd #{depoy_to}/current && rails s -p 3001 -d -e production; fi"
   end
 end
 
