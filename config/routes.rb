@@ -2,8 +2,6 @@ DmsExt::Application.routes.draw do
 
   resource :trade_ins
 
-  devise_for :users
-
   resources :calendar do
     member do
       get 'day'
