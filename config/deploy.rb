@@ -7,8 +7,8 @@ set :deploy_to, '/home/user/dms/'
 set :deploy_via, :remote_cache
 
 set :scm, :git
-set :scm_passphrase, 'werwerw'
-set :scm_password, 'werwerw'
+#set :scm_passphrase, 'werwerw'
+#set :scm_password, 'werwerw'
 set :scm_user, 'anton'
 set :use_sudo, true
 
