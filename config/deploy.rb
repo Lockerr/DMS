@@ -1,15 +1,16 @@
 set :application, "crm"
-set :repository,  "ssh://anton@192.168.1.71/work/dms/"
+set :repository,  "ssh://192.168.1.71/home/anton/work/dms/"
 set :domain, 'user@192.168.1.98'
-set :user, 'user'
 set :password, 'ktghfpjhbq'
-set :deploy_to, '/home/user/dms/.git'
+set :deploy_to, '/home/user/dms/'
 
 set :deploy_via, :remote_cache
 
 set :scm, :git
 set :scm_passphrase, 'werwerw'
-set :use_sudo, false
+set :scm_password, 'werwerw'
+set :scm_user, 'anton'
+set :use_sudo, true
 
 role :web, domain
 role :app, domain
