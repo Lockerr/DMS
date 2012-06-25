@@ -39,9 +39,11 @@ class Order < ActiveRecord::Base
         order.number = r['order_num']
         order.problem = r['problem']
         order.solution = r['solution']
-
+        if order.save
+          Rail.logger.info 'order created ' + order.id.to_s
+        end
       else
-        raise 'error'
+        Rails.logger.info 'order skipped'
 
       end
 
