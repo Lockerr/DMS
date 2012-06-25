@@ -5,11 +5,18 @@ if Rails.env == 'production'
 
     task_scheduler.in('1s') do
       Rails.logger.info 'Sheduler initiated'
+      puts '1'
     end
 
-    task_scheduler.every('1m') do
+    task_scheduler.every('10s') do
+      Rails.logger.info 'storing orders'
       Order.strore
+      Rails.logger.info 'orders stored'
 
+    end
+
+    def scheduler.handle_exception(job, exception)
+      puts "job #{job.job_id} caught exception '#{exception}'"
     end
 
   end
