@@ -8,12 +8,12 @@ if Rails.env == 'production'
       puts '1'
     end
 
-    task_scheduler.cron('*/1 * * * *') do
-      Rails.logger.info 'storing orders'
-      Order.strore
-      Rails.logger.info 'orders stored'
-
-    end
+    #task_scheduler.cron('*/1 * * * *') do
+    #  Rails.logger.info 'storing orders'
+    #  Order.store
+    #  Rails.logger.info 'orders stored'
+    #
+    #end
 
     def task_scheduler.handle_exception(job, exception)
       puts "job #{job.job_id} caught exception '#{exception}'"

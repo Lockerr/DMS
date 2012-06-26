@@ -46,16 +46,35 @@ class Order < ActiveRecord::Base
         order.problem = r['problem']
         order.solution = r['solution']
         order.dispatcher = r['dispatcher']
-        order.sum = r['sum']
+        order.sum = r['order_sum']
+        order.opened = Time.parse r['order_open'] if r['order_open'].scan(/\d/).size == 8
+        order.closed = Time.parse r['order_close'] if r['order_close'].scan(/\d/).size == 8
+        order.gone = Time.parse r['car_gone'] if  r['order_close'].scan(/\d/).size == 8
+        order.vin = r['VIN']
+        order.call_result = r['call_result']
+        order.description = r['description']
+        order.master = r['master']
+        order.save
 
-        if order.save
-          Rails.logger.info 'order created ' + order.id.to_s
-        end
       else
+
         order.source_id = r['id'].to_i
         order.number = r['order_num']
         order.problem = r['problem']
         order.solution = r['solution']
+        order.number = r['order_num']
+        order.problem = r['problem']
+        order.solution = r['solution']
+        order.dispatcher = r['dispatcher']
+        order.sum = r['order_sum']
+        order.opened = Time.parse r['order_open'] if r['order_open'].scan(/\d/).size == 8
+        order.closed = Time.parse r['order_close'] if r['order_close'].scan(/\d/).size == 8
+        order.gone = Time.parse r['car_gone'] if  r['order_close'].scan(/\d/).size == 8
+        order.vin = r['VIN']
+        order.call_result = r['call_result']
+        order.description = r['description']
+        order.master = r['master']
+        order.save
 
       end
 
