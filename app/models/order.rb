@@ -54,6 +54,7 @@ class Order < ActiveRecord::Base
         order.call_result = r['call_result']
         order.description = r['description']
         order.master = r['master']
+        order.modelname = r['car_name']
         order.save
 
       else
@@ -74,6 +75,7 @@ class Order < ActiveRecord::Base
         order.call_result = r['call_result']
         order.description = r['description']
         order.master = r['master']
+        order.modelname = r['car_name']
         order.save
 
       end
