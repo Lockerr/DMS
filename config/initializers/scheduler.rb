@@ -8,7 +8,7 @@ if Rails.env == 'production'
       puts '1'
     end
 
-    task_scheduler.in('1s') do
+    task_scheduler.cron('*/1 * * * *') do
       Rails.logger.info 'storing orders'
       Order.strore
       Rails.logger.info 'orders stored'
