@@ -11,7 +11,7 @@ class Client < ActiveRecord::Base
     client.validates_presence_of :id_series, :id_number, :id_dep
     client.validates_format_of :id_series, :id_number, :with => /[\d\s]/
     client.validates_presence_of :fio
-    client.validates_associated :car
+    client.validates_associated :car, :presence => true
   end
 
   with_options :if => 'cause == 5' do |client|
