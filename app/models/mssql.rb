@@ -6,7 +6,7 @@ class Mssql
 
 
   def save
-    self.pass_when= pass_when.strftime('%y / %m / %d')
+    self.pass_when = self.pass_when.strftime('%y / %m / %d')
     query = []
     [:firstname, :lastname, :dadname, :pass_num, :pass_ser, :pass_whom, :pass_when, :address, :birth].each do |i|
       query.push self.send(i)
