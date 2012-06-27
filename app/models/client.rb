@@ -56,7 +56,7 @@ class Client < ActiveRecord::Base
     new_client.ordernum = '' # ?
     new_client.price = cost
     new_client.prepaid = prepay
-    new_client.dog_num = Time.now.year.to_s[2..3] + '/' + client.car.order.to_s[7..10] if car
+    new_client.dog_num = Time.now.year.to_s[2..3] + '/' + car.order.to_s[7..10] if car
     new_client.dog_date = Date.today.strftime('%Y / %m / %d')
     new_client.save
   end
