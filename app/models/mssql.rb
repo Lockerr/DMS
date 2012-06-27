@@ -20,7 +20,7 @@ class Mssql
     result = client.execute("INSERT INTO\
       [contragents] ([firstname],[lastname], [dadname],[pass_num],[pass_ser],[pass_whom],[pass_when],[address],[birth])\
       VALUES\
- (#{query.join})")
+ (#{query.join(',')})")
     puts result.to_a.inspect
   end
 
