@@ -11,35 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120626104324) do
+ActiveRecord::Schema.define(:version => 20120626111307) do
 
   create_table "1_clients", :force => true do |t|
-    t.string   "fio",           :limit => 100, :default => "",  :null => false
-    t.text     "comment",                                       :null => false
-    t.string   "phone1",        :limit => 50,  :default => "",  :null => false
-    t.string   "phone2",        :limit => 50,  :default => "",  :null => false
-    t.string   "phone3",        :limit => 50,  :default => "",  :null => false
-    t.string   "phone4",        :limit => 50,  :default => "",  :null => false
-    t.date     "date",                                          :null => false
-    t.string   "adress",        :limit => 200, :default => "",  :null => false
-    t.date     "birthday",                                      :null => false
-    t.string   "brand",         :limit => 50,  :default => "",  :null => false
-    t.string   "manager",       :limit => 100, :default => "",  :null => false
-    t.string   "model",         :limit => 160, :default => "0", :null => false
-    t.integer  "icon",                                          :null => false
-    t.string   "creditmanager", :limit => 100,                  :null => false
-    t.datetime "zv",                                            :null => false
-    t.datetime "vz",                                            :null => false
-    t.datetime "tst",                                           :null => false
-    t.datetime "dg",                                            :null => false
-    t.datetime "vd",                                            :null => false
-    t.datetime "out",                                           :null => false
-    t.integer  "icon2",                        :default => 0,   :null => false
-    t.string   "vin",           :limit => 50,                   :null => false
-    t.integer  "cost",                                          :null => false
-    t.string   "status",        :limit => 50,                   :null => false
-    t.string   "commercial",    :limit => 50,                   :null => false
-    t.string   "tmp",           :limit => 50,                   :null => false
+    t.string   "fio",            :limit => 100, :default => "",  :null => false
+    t.text     "comment",                                        :null => false
+    t.string   "phone1",         :limit => 50,  :default => "",  :null => false
+    t.string   "phone2",         :limit => 50,  :default => "",  :null => false
+    t.string   "phone3",         :limit => 50,  :default => "",  :null => false
+    t.string   "phone4",         :limit => 50,  :default => "",  :null => false
+    t.date     "date",                                           :null => false
+    t.string   "adress",         :limit => 200, :default => "",  :null => false
+    t.date     "birthday",                                       :null => false
+    t.string   "brand",          :limit => 50,  :default => "",  :null => false
+    t.string   "manager",        :limit => 100, :default => "",  :null => false
+    t.string   "model",          :limit => 160, :default => "0", :null => false
+    t.integer  "icon",                                           :null => false
+    t.string   "creditmanager",  :limit => 100,                  :null => false
+    t.datetime "zv",                                             :null => false
+    t.datetime "vz",                                             :null => false
+    t.datetime "tst",                                            :null => false
+    t.datetime "dg",                                             :null => false
+    t.datetime "vd",                                             :null => false
+    t.datetime "out",                                            :null => false
+    t.integer  "icon2",                         :default => 0,   :null => false
+    t.string   "vin",            :limit => 50,                   :null => false
+    t.integer  "cost",                                           :null => false
+    t.string   "status",         :limit => 50,                   :null => false
+    t.string   "commercial",     :limit => 50,                   :null => false
+    t.string   "tmp",            :limit => 50,                   :null => false
     t.integer  "order"
     t.date     "contract_date"
     t.integer  "id_series"
@@ -48,7 +48,10 @@ ActiveRecord::Schema.define(:version => 20120626104324) do
     t.date     "id_issued"
     t.string   "gifts"
     t.integer  "prepay"
-    t.integer  "cause",         :limit => 1
+    t.integer  "cause",          :limit => 1
+    t.integer  "trade_in_price"
+    t.text     "trade_in_desc"
+    t.string   "used_vin"
   end
 
   add_index "1_clients", ["brand"], :name => "brand"
@@ -136,11 +139,20 @@ ActiveRecord::Schema.define(:version => 20120626104324) do
     t.integer  "engine_number", :limit => 8
     t.boolean  "used",                       :default => false
     t.boolean  "owner",                      :default => true
+    t.string   "used_vin"
   end
 
   create_table "cars_people", :force => true do |t|
     t.integer "person_id"
     t.integer "car_id"
+  end
+
+  create_table "chat", :force => true do |t|
+    t.string   "user",        :limit => 70,   :null => false
+    t.string   "msg",         :limit => 1200, :null => false
+    t.string   "touser",      :limit => 100,  :null => false
+    t.datetime "messagedate",                 :null => false
+    t.datetime "readed",                      :null => false
   end
 
   create_table "checkins", :force => true do |t|

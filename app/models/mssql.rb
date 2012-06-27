@@ -9,8 +9,10 @@ class Mssql
     self.pass_when= pass_when.strftime('%y / %m / %d')
     query = []
     [:firstname, :lastname, :dadname, :pass_num, :pass_ser, :pass_whom, :pass_when, :address, :birth].each do |i|
-      self.send(i)
+      query.push self.send(i)
     end
+
+    query = query.collect {|i| i.encode('cp1251')}
 
 
     client = TinyTds::Client.new(:host => '192.168.1.102', :username => 'aster', :password => '1q2w3e4r5t')

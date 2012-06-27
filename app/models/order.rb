@@ -55,7 +55,25 @@ class Order < ActiveRecord::Base
         order.description = r['description']
         order.master = r['master']
         order.modelname = r['car_name']
-        order.save
+        if order.save
+
+          car = Car.new
+          car.used_vin = order.vin
+          car.modelname = order.modelname
+
+          #client = Client.where(:phone => order.phone).first
+          #if client
+          #  client.used_car = car
+          #else
+          #  client = Client.new
+          #  client.phone1 = Order.phone
+          #  client.fio = order
+          #
+          #
+          #end
+
+
+        end
 
       else
 
