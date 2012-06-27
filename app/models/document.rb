@@ -42,14 +42,14 @@ class Document
   end
 
   def add_client
-    client = Client.find 29114
+    #client = Client.find 29114
     new_client = Mssql.new
     new_client.firstname = client.fio.split(/\s/)[0]
     new_client.lastname = client.fio.split(/\s/)[0]
     new_client.dadname = client.fio.split(/\s/)[0]
     new_client.pass_num = client.pas1.gsub(/\s/, '').to_i
     new_client.pass_ser = client.pas2.gsub(/\s/, '').to_i
-    new_client.pass_whom = client.pas3.gsub
+    new_client.pass_whom = client.pas3
     new_client.pass_when = client.pas4
     new_client.address = client.adress
     new_client.birth = client.birthday
