@@ -26,9 +26,9 @@ class Mssql
 
     for key in keys
       if keys.index(key) != 0
-        query_keys += ",[#{value}]"
+        query_keys += ",[#{key}]"
       else
-        query_keys += "[#{value}]"
+        query_keys += "[#{key}]"
       end
     end
     Rails.logger.info "INSERT INTO [contragents]\n (#{query_keys})\n VALUES\n (#{query_string})"
