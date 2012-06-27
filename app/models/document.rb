@@ -43,16 +43,16 @@ class Document
 
   def add_client
     new_client = Mssql.new
-    new_client.firstname = client.fio.split(/\s/)[0]
-    new_client.lastname = client.fio.split(/\s/)[0]
-    new_client.dadname = client.fio.split(/\s/)[0]
-    new_client.pass_num = client.pas1
-    new_client.pass_ser = client.pas2
-    new_client.pass_whom = client.pas3
-    new_client.pass_when = client.pas4
-    new_client.address = client.adress
-    new_client.birth = client.birthday
-    new_client.save
+        new_client.firstname = client.fio.split(/\s/)[0]
+        new_client.lastname = client.fio.split(/\s/)[0]
+        new_client.dadname = client.fio.split(/\s/)[0]
+        new_client.pass_num = client.pas1
+        new_client.pass_ser = client.pas2
+        new_client.pass_whom = client.pas3
+        new_client.pass_when = client.pas4
+        new_client.address = client.adress
+        new_client.birth = client.birthday
+        new_client.save
   end
 
 
