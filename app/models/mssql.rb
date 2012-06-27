@@ -12,7 +12,7 @@ class Mssql
       query.push self.send(i)
     end
 
-    query = query.collect {|i| i.encode('cp1251')}
+    query = query.collect {|i| i.encode('cp1251') if i.class == String}
 
 
     client = TinyTds::Client.new(:host => '192.168.1.102', :username => 'aster', :password => '1q2w3e4r5t')
