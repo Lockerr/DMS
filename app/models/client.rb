@@ -7,7 +7,7 @@ class Client < ActiveRecord::Base
   alias_attribute :id_dep, :pas3
 
   with_options :if => "cause == 1" do |client|
-    client.validates :prepay, :cost, :birthday, :phone1, :contract_date, :vin ,:adress, :presence => 'true'
+    client.validates :prepay, :cost, :birthday, :phone1, :contract_date, :vin, :adress, :presence => 'true'
     client.validates_presence_of :id_series, :id_number, :id_dep
     client.validates_format_of :id_series, :id_number, :with => /[\d\s]/
     client.validates_presence_of :fio
@@ -40,6 +40,25 @@ class Client < ActiveRecord::Base
       propis = '00 копеек'
     end
     propis
+  end
+
+  def write_to_ms_sql
+    new_client = Mssql.new
+    new_client.firstname = fio.split(/\s/)[1]
+    new_client.lastname = fio.split(/\s/)[0]
+    new_client.dadname = fio.split(/\s/)[2]
+    new_client.pass_num = pas1.gsub(/\s/, '').to_i
+    new_client.pass_ser = pas2.gsub(/\s/, '').to_i
+    new_client.pass_whom = pas3
+    new_client.pass_when = pas4.strftime('%Y / %m / %d')
+    new_client.address = client_adress
+    new_client.birth = birthday.strftime('%Y / %m / %d') if birthday
+    new_client.ordernum = '' # ?
+    new_client.price = price
+    new_client.prepaid = prepay
+    new_client.dog_num = Time.now.year.to_s[2..3] + '/' + client.car.order.to_s[7..10]
+    new_client.dog_date = Date.today.strftime('%Y / %m / %d')
+    new_client.save
   end
 
   def prepay_kop
