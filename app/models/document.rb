@@ -42,6 +42,7 @@ class Document
   end
 
   def add_client
+    client = Client.find 29114
     new_client = Mssql.new
     new_client.firstname = client.fio.split(/\s/)[0]
     new_client.lastname = client.fio.split(/\s/)[0]
