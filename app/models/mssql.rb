@@ -22,7 +22,7 @@ class Mssql
     end
 
     query_string = query_string.encode('cp1251')
-    Rails.logger.info query_string
+    puts query_string
 
     for key in keys
       if keys.index(key) != 0
@@ -31,7 +31,8 @@ class Mssql
         query_keys += "[#{key}]"
       end
     end
-    Rails.logger.info "INSERT INTO [contragents]\n (#{query_keys})\n VALUES\n (#{query_string})"
+    puts query_keys
+    puts  "INSERT INTO [contragents]\n (#{query_keys})\n VALUES\n (#{query_string})"
 
     client = TinyTds::Client.new(:host => '192.168.1.102', :username => 'aster', :password => '1q2w3e4r5t')
     result = client.execute("INSERT INTO [contragents] (#{query_keys}) VALUES (#{query_string})")
