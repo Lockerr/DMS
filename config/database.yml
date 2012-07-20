@@ -37,7 +37,7 @@ production:
   reconnect: false
   database: h116
   username: root
-  password: UhdpXtHs
+  password: 
   socket: /var/run/mysqld/mysqld.sock
 
 

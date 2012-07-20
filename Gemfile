@@ -33,6 +33,7 @@ gem 'ruby-debug19', :require => 'ruby-debug'
 group :development do
   gem 'rvm-capistrano'
 end
+
 group :development, :test do
   gem 'rspec-rails'
 

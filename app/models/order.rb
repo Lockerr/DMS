@@ -3,6 +3,10 @@ class Order < ActiveRecord::Base
   belongs_to :person
   belongs_to :car
 
+  def self.last
+    client = TinyTds::Client.new(:host => '192.168.1.102', :username => 'aster', :password => '1q2w3e4r5t')
+    result = client.execute('select * from [orders] order id desc limit 1').to_a
+  end
 
   def self.store
     client = TinyTds::Client.new(:host => '192.168.1.102', :username => 'aster', :password => '1q2w3e4r5t')
@@ -55,6 +59,7 @@ class Order < ActiveRecord::Base
         order.description = r['description']
         order.master = r['master']
         order.modelname = r['car_name']
+
         if order.save
 
           car = Car.new
@@ -66,8 +71,9 @@ class Order < ActiveRecord::Base
           #  client.used_car = car
           #else
           #  client = Client.new
-          #  client.phone1 = Order.phone
+          #  client.phone1 = order.phone
           #  client.fio = order
+          #  Chat.create(:user => -1, :msg => "new trade_in client #{client_id}", :to_user => -1)
           #
           #
           #end
@@ -97,12 +103,6 @@ class Order < ActiveRecord::Base
         order.save
 
       end
-
-
     end
-
-
   end
-
-
 end
