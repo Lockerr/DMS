@@ -272,27 +272,27 @@ class Car < ActiveRecord::Base
 end
 
 
-profile = Selenium::WebDriver::Firefox::Profile.new
-profile['browser.download.dir'] = "/home/user/tmp/mbr/down/"
-profile['browser.download.folderList'] = 2
-profile['browser.helperApps.neverAsk.saveToDisk'] = "application/vnd.ms-excel"
-
-
-driver = Selenium::WebDriver.for :firefox, :profile => profile
-
-driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
-driver.find_element(:id, 'logonpassfield').send_keys 'Ktghfpjhbq1!'
-driver.find_element(:class => 'urBtnStdNew').click
-
-
-
-
-wait = Selenium::WebDriver::Wait.new(:timeout => 5) # seconds
-driver.switch_to.default_content
-driver.find_element(:id => 'ivuFrm_page0ivu1')
-driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
-driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-
-
-
-wait.until {driver.find_element(:id => 'WD011C')}
+#profile = Selenium::WebDriver::Firefox::Profile.new
+#profile['browser.download.dir'] = "/home/user/tmp/mbr/down/"
+#profile['browser.download.folderList'] = 2
+#profile['browser.helperApps.neverAsk.saveToDisk'] = "application/vnd.ms-excel"
+#
+#
+#driver = Selenium::WebDriver.for :firefox, :profile => profile
+#
+#driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
+#driver.find_element(:id, 'logonpassfield').send_keys 'Ktghfpjhbq1!'
+#driver.find_element(:class => 'urBtnStdNew').click
+#
+#
+#
+#
+#wait = Selenium::WebDriver::Wait.new(:timeout => 5) # seconds
+#driver.switch_to.default_content
+#driver.find_element(:id => 'ivuFrm_page0ivu1')
+#driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
+#driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
+#
+#
+#
+#wait.until {driver.find_element(:id => 'WD011C')}
