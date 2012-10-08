@@ -3,7 +3,7 @@ set :repository,  "ssh://anton@192.168.1.71/home/anton/work/dms/"
 set :domain, 'user@192.168.1.98'
 set :password, 'ktghfpjhbq'
 set :deploy_to, '/home/user/dms/'
-set :rvm_ruby_string, 'ruby-1.9.2-p320@r322'
+set :rvm_ruby_string, 'r328'
 require "rvm/capistrano"
 
 set :deploy_via, :copy
