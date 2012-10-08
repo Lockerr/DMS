@@ -24,99 +24,83 @@ class Car < ActiveRecord::Base
 
   self.include_root_in_json = false
 
-
   def self.mbr
     require "selenium-webdriver"
     profile = Selenium::WebDriver::Firefox::Profile.new
-    profile['browser.download.dir'] = "/home/user/tmp/mbr/down/"
+    profile['browser.download.dir'] = "/home/anton/tmp/mbr/down/"
     profile['browser.download.folderList'] = 2
     profile['browser.helperApps.neverAsk.saveToDisk'] = "application/vnd.ms-excel"
 
-
     driver = Selenium::WebDriver.for :firefox, :profile => profile
     puts 'start crawling'
-    begin
-
-      driver.navigate.to "https://portal.mercedes-benz.ru/irj/portal"
-    rescue
-      puts 'fail to start selenium'
-    end
-    begin
-      driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
-      driver.find_element(:id, 'logonpassfield').send_keys 'Ktghfpjhbq1!'
-      driver.find_element(:class => 'urBtnStdNew').click
-      puts 'loging ok'
-    rescue
-      puts 'fails to login'
-    end
+    driver.navigate.to "https://portal.mercedes-benz.ru/irj/portal"
+    driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
+    driver.find_element(:id, 'logonpassfield').send_keys 'Q@w3e4r5'
+    driver.find_element(:class => 'urBtnStdNew').click
+    puts 'loging ok'
     puts 'start switching to iframe'
-    begin
-      frame = driver.find_element(:id => 'ivuFrm_page0ivu1')
-      driver.switch_to.frame frame
-    rescue
-      puts 'fail to find iframe'
-    end
-    puts 'start SITRI'
-    begin
-      wait = Selenium::WebDriver::Wait.new(:timeout => 15) # seconds
-      wait.until {
-        driver.find_element(:class_name => "SItreeText")
-        driver.find_elements(:class_name => "SItreeText")[1].click
-      }
 
-    rescue
-      puts 'fail to find SITreeText'
-    end
+    frame = driver.find_element(:id => 'ivuFrm_page0ivu1')
+    driver.switch_to.frame frame
+    puts 'start SITRI'
+    
+    wait = Selenium::WebDriver::Wait.new(:timeout => 20) # seconds
+    wait.until {
+      driver.find_element(:class_name => "SItreeText")
+      driver.find_elements(:class_name => "SItreeText")[1].click
+    }
 
     driver.switch_to.default_content
+
     puts 'switching back'
-    wait = Selenium::WebDriver::Wait.new(:timeout => 40) # seconds
-    begin
-      puts 'begin click'
-      wait.until {
-        puts 'wait for ivuFrm_page0ivu1'
-        driver.find_element(:id => 'ivuFrm_page0ivu1')
-      }
-      puts 'find  ivuFrm_page0ivu1'
-      driver.switch_to.default_content
-      driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
-      driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-      driver.find_elements(:class => 'urBtnCntTxt')[1].click
+    
 
-
-
-
-      #
-      #puts 'wait unitl ivuFrm_page0ivu1'
-      #wait.until {
-      #
-      #  puts 'wait unitl switch to ivuFrm_page0ivu1'
-      #  wait.until {
-      #
-      #    puts 'wait unitl switch to isolated'
-      #    wait.until {
-      #      driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-      #      puts 'wait for button'
-      #      wait.unitl {
-      #        driver.find_elements(:class => 'urBtnCntTxt')
-      #        driver.find_elements(:class => 'urBtnCntTxt')[1].click
-      #      }
-      #    }
-      #  }
-      #}
-
-
-    rescue
-      puts 'rescure'
-      driver.switch_to.default_content
+    puts 'begin click'
+    puts 'wait for ivuFrm_page0ivu1'
+    wait.until {
+      puts 'waiting'
       driver.find_element(:id => 'ivuFrm_page0ivu1')
-      driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
-      driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-      driver.find_elements(:class => 'urBtnCntTxt')
-      driver.find_elements(:class => 'urBtnCntTxt')[1].click
-    end
+    }
+    puts 'end waiting'
+    puts driver.find_element(:id => 'ivuFrm_page0ivu1')
+      
+    driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
+    
+    wait.until {
+      driver.find_element(:id => 'isolatedWorkArea') 
+    }
+    driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
+      
 
-    wait = Selenium::WebDriver::Wait.new(:timeout => 150) # seconds
+    
+    puts 'waiting for button'
+
+    begin
+      elements = wait.until {
+        driver.find_element(:class => 'urBtnCnt')
+      }
+    rescue
+      
+      begin
+        elements = wait.until {
+          driver.find_elements(:class => 'urBtnCnt')
+        }
+      rescue
+        puts 'fails waiting'    
+      end
+
+      puts 'fails waiting'    
+    end
+    puts 'end waiting'
+    
+    driver.switch_to.default_content
+    driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
+    driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
+
+    puts driver.find_element(:class => 'urBtnCnt').inspect
+    
+    driver.find_element(:class => 'urBtnCnt').click
+
     wait.until {
       puts 'export true'
       driver.find_element(:id => 'WD0138')
@@ -127,11 +111,12 @@ class Car < ActiveRecord::Base
       driver.find_element(:id => 'WD0139')
       driver.find_element(:id => 'WD0139').click
     }
-    Dir.chdir("/home/user/tmp/mbr/down/")
-    file = File.new "/home/user/tmp/mbr/down/#{Dir.glob('*.xls')[-1]}", 'r'
+    
+    Dir.chdir("/home/anton/tmp/mbr/down")
+    file = File.new "/home/anton/tmp/mbr/down/#{Dir.glob('*.xls')[-1]}", 'r'
     puts file.inspect
     parse_cars(file)
-
+    driver.close
   end
 
   def self.parse_cars(file)
@@ -156,6 +141,12 @@ class Car < ActiveRecord::Base
         if (row[4].inner_text).split(/\s/)[0] == 'C200'
             modelname = row[4].inner_text.gsub('C200', 'C 200')
             klasse = "C"
+        elsif (row[4].inner_text).split(/\s/)[0] == 'C250'
+            modelname = row[4].inner_text.gsub('C250', 'C 250')
+            klasse = "C"
+        elsif (row[4].inner_text).split(/\s/)[0] == 'MERCEDES-BENZ'
+          klasse = 'V'
+          modelname = 'VIANO'
         else
             modelname = row[4].inner_text
             klasse = (row[4].inner_text).split(/\s/)[0]

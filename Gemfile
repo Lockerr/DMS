@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.8'
 
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
@@ -28,7 +28,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'ruby-debug19', :require => false
 
 group :development do
   gem 'rvm-capistrano'

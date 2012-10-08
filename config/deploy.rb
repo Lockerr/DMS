@@ -23,7 +23,7 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 after 'update_code', 'bundle install'
 namespace :deploy do
   task :start do
-    run 'cd #{deploy_to}current && bundle exec rails s -p 3001 -e production -d'
+    run "cd #{deploy_to}current && bundle exec rails s -p 3001 -e production -d"
   end
 
   task :restart do
