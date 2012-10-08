@@ -8,11 +8,10 @@ if Rails.env == 'production'
       puts '1'
     end
 
-    task_scheduler.cron('*/1 * * * *') do
-      Rails.logger.info 'storing orders'
+    task_scheduler.cron('0 0-6 * * *') do
+      Rails.logger.info 'Starting mbr parse'
       Car.mbr
-      Rails.logger.info 'orders stored'
-    
+      Rails.logger.info 'Ending mbr parse'
     end
 
     def task_scheduler.handle_exception(job, exception)
@@ -24,3 +23,4 @@ if Rails.env == 'production'
 
   end
 end
+
