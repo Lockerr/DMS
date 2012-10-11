@@ -54,7 +54,7 @@ class Car < ActiveRecord::Base
 
     puts 'switching back'
     
-
+    
     puts 'begin click'
     puts 'wait for ivuFrm_page0ivu1'
     wait.until {
@@ -107,6 +107,7 @@ class Car < ActiveRecord::Base
       driver.find_element(:id => 'WD0138').click
     }
     wait.until {
+      Rails.logger.info 'exporting'
       puts 'export to xcel true'
       driver.find_element(:id => 'WD0139')
       driver.find_element(:id => 'WD0139').click

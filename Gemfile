@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+gem 'devise'
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
 gem 'mysql2'
@@ -20,6 +21,9 @@ gem "selenium-webdriver"
 gem 'webrat'
 gem 'watir-webdriver'
 gem 'rufus-scheduler'
+gem 'twitter-bootstrap-rails'
+gem 'quiet_assets'
+gem 'thin'
 
 group :assets do
   gem 'sass-rails'

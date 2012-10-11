@@ -90,8 +90,7 @@
         = text_field :search, :run, :size => 2, :class => :filter
 
     .cars
-      - for car in @cars
-        = render car
+      = render @cars
 
   .checkin_form
   .contract_form

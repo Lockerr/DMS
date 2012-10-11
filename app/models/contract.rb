@@ -1,5 +1,5 @@
 # encoding: utf-8
-class Contract #< ActiveRecord::Base
+class Contract < ActiveRecord::Base
 
 
   def attrs(client)

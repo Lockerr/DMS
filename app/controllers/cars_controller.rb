@@ -78,6 +78,8 @@ class CarsController < ApplicationController
     else
       @cars = @cars.with_state :pending
     end
+    
+    @cars = @cars.includes([:model, :klasse])
 
     respond_to do |format|
       format.html
@@ -101,7 +103,7 @@ class CarsController < ApplicationController
   def info
     @car = Car.find(params[:id])
     @objects = []
-    @objects += @car.proposals
+    @objects.push @car.proposal
     @objects.compact!
     @objects.sort! { |x, y| x.updated_at <=> y.updated_at }
     @objects.push @car.manager if @car.manager

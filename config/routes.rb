@@ -1,5 +1,7 @@
 DmsExt::Application.routes.draw do
 
+  devise_for :users
+
   resource :trade_ins
 
   resources :calendar do
