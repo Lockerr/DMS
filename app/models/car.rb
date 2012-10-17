@@ -187,14 +187,13 @@ class Car < ActiveRecord::Base
     end
   end
   def write_options
-    codes.each do |key, value|
-      unless value == 'Опция неизвестна'
-        m = MbclubOptions.where(:cars_orderno => order, :opt_id => key).first() || MbclubOptions.new
-        m.cars_orderno = order
-        m.opt_id = key
-        m.opt_name = value
-        m.opt_cost = 0
-        m.save
+    ActiveRecord::Base.transaction do
+      codes.each do |key, value|
+        unless value == 'Опция неизвестна'
+          transaction do 
+            MOption.find_or_create_by_cars_orderno_and_opt_id(order, key, :opt_name => value, :opt_cost => 0)          
+          end
+        end
       end
     end
   end
