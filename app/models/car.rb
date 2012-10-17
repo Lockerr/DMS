@@ -186,6 +186,18 @@ class Car < ActiveRecord::Base
       Log.create(:model_name => 'car', :parameters => self.changes, :object_id => self.id, :user_id => User.current_user)
     end
   end
+  def write_options
+    codes.each do |key, value|
+      unless value == 'Опция неизвестна'
+        m = MbclubOptions.where(:cars_orderno => order, :opt_id => key).first() || MbclubOptions.new
+        m.cars_orderno = order
+        m.opt_id = key
+        m.opt_name = value
+        m.opt_cost = 0
+        m.save
+      end
+    end
+  end
 
   def order_with_model
     "#{order}, #{model.name}"

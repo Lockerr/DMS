@@ -40,6 +40,14 @@ production:
   password: 
   socket: /var/run/mysqld/mysqld.sock
 
+mbclub:
+  adapter: mysql2
+  encoding: utf8
+  database: mbclub74
+  server: mbclub74.ru
+  username: lynx
+  password: lyna123
+
 
 cucumber:
   <<: *test
