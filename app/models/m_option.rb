@@ -21,12 +21,7 @@ class MOption < ActiveRecord::Base
       for car in Car.all
         car.codes.each do |key, value|
           unless value == 'Опция неизвестна'
-            m = MOption.where(:cars_orderno => car.order, :opt_id => key).first() || MOption.new
-            m.cars_orderno = car.order
-            m.opt_id = key
-            m.opt_name = value
-            m.opt_cost = 0
-            m.save
+              MOption.find_or_create_by_cars_orderno_and_opt_id(car.order, key, :opt_name => value, :opt_cost => 0)          
           end
         end
       end
