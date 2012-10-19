@@ -29,7 +29,7 @@ class Car < ActiveRecord::Base
     profile = Selenium::WebDriver::Firefox::Profile.new
     profile['browser.download.dir'] = Rails.root.join('tmp').to_s
     
-    puts profile['browser.download.dir']
+    
 
     profile['browser.download.folderList'] = 2
     profile['browser.helperApps.neverAsk.saveToDisk'] = "application/vnd.ms-excel"
