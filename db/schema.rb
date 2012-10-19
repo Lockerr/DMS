@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011073206) do
+ActiveRecord::Schema.define(:version => 20121018112547) do
 
   create_table "1_clients", :force => true do |t|
     t.string   "fio",            :limit => 100, :default => "",  :null => false
@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(:version => 20121011073206) do
     t.string   "line_id"
     t.string   "color_id"
     t.string   "interior_id"
-    t.integer  "price"
+    t.float    "price"
     t.string   "options"
     t.integer  "person_id"
     t.string   "state"
@@ -241,10 +241,20 @@ ActiveRecord::Schema.define(:version => 20121011073206) do
     t.datetime "updated_at"
   end
 
+  create_table "m_cars", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "managers", :force => true do |t|
     t.string "name"
     t.string "mobile"
     t.string "email"
+  end
+
+  create_table "mbclub_options", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "models", :force => true do |t|

@@ -24,6 +24,7 @@ gem 'rufus-scheduler'
 gem 'twitter-bootstrap-rails'
 gem 'quiet_assets'
 gem 'thin'
+gem 'safe_attributes'
 
 group :assets do
   gem 'sass-rails'
