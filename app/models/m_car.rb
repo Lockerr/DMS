@@ -26,5 +26,8 @@ def class_name
   self[:class]
 end
 
+def car
+  Car.find_by_order(ordernum)
+end
 
 end

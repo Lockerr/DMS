@@ -18,170 +18,68 @@ class Car < ActiveRecord::Base
   has_one :dkp
   belongs_to :client
 
-  #before_update :write_logs
+  after_create :check_for_mbclub_presence
+  after_update :check_for_mbclub_presence
 
-  #default_scope includes(:manager, :model, :person, :klasse, :line, :payment, :contract)
+
+
 
   self.include_root_in_json = false
 
-  def self.mbr
-    require "selenium-webdriver"
-    profile = Selenium::WebDriver::Firefox::Profile.new
-    profile['browser.download.dir'] = '/home/user/tmp/mbr'
-    
-    
+  def check_for_mbclub_presence
 
-    profile['browser.download.folderList'] = 2
-    profile['browser.helperApps.neverAsk.saveToDisk'] = "application/vnd.ms-excel"
+  end  
 
-    driver = Selenium::WebDriver.for :firefox, :profile => profile
-    puts 'start crawling'
-    driver.navigate.to "https://portal.mercedes-benz.ru/irj/portal"
-    driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
-    driver.find_element(:id, 'logonpassfield').send_keys 'Q@w3e4r5'
-    driver.find_element(:class => 'urBtnStdNew').click
-    puts 'loging ok'
-    puts 'start switching to iframe'
+  def update_at_mbclub
 
-    frame = driver.find_element(:id => 'ivuFrm_page0ivu1')
-    driver.switch_to.frame frame
-    puts 'start SITRI'
-    
-    wait = Selenium::WebDriver::Wait.new(:timeout => 20) # seconds
-    wait.until {
-      driver.find_element(:class_name => "SItreeText")
-      driver.find_elements(:class_name => "SItreeText")[1].click
-    }
-
-    driver.switch_to.default_content
-
-    puts 'switching back'
-    
-    
-    puts 'begin click'
-    puts 'wait for ivuFrm_page0ivu1'
-    wait.until {
-      puts 'waiting'
-      driver.find_element(:id => 'ivuFrm_page0ivu1')
-    }
-    puts 'end waiting'
-    puts driver.find_element(:id => 'ivuFrm_page0ivu1')
-      
-    driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
-    
-    wait.until {
-      driver.find_element(:id => 'isolatedWorkArea') 
-    }
-    driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-      
-
-    
-    puts 'waiting for button'
-
-    begin
-      elements = wait.until {
-        driver.find_element(:class => 'urBtnCnt')
-      }
-    rescue
-      
-      begin
-        elements = wait.until {
-          driver.find_elements(:class => 'urBtnCnt')
-        }
-      rescue
-        puts 'fails waiting'    
-      end
-
-      puts 'fails waiting'    
-    end
-    puts 'end waiting'
-    
-    driver.switch_to.default_content
-    driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
-    driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-
-    puts driver.find_element(:class => 'urBtnCnt').inspect
-    
-    driver.find_element(:class => 'urBtnCnt').click
-
-    wait.until {
-      puts 'export true'
-      driver.find_element(:id => 'WD0138')
-      driver.find_element(:id => 'WD0138').click
-    }
-    wait.until {
-      Rails.logger.info 'exporting'
-      puts 'export to xcel true'
-      driver.find_element(:id => 'WD0139')
-      driver.find_element(:id => 'WD0139').click
-    }
-    sleep 5
-    
-    Dir.chdir('/home/user/tmp/mbr')
-    file = File.new ('/home/user/tmp/mbr' + Dir.glob('*.xls')[0].to_s), 'r'
-    puts file.inspect
-    Car.parse_cars(file)
-    driver.close
   end
 
-  def self.parse_cars(file)
-    book = Hpricot.parse file.read
-    counter = book.search('//tr').count
-    puts counter
-    (1..counter).each do |i|
-      row = []
-      if book.search('//tr')[i]
-        row = book.search('//tr')[i].search('//td')
-        row[31] = book.search('//tr')[i].search('//td')[31].inner_text
-        row[32] = book.search('//tr')[i].search('//td')[32].inner_text
-        row[33] = book.search('//tr')[i].search('//td')[32].inner_text
-        row[34] = book.search('//tr')[i].search('//td')[32].inner_text
-
-        opts = []
-        opts += row[31].split('.')
-        opts += row[32].split('.')
-        opts += row[33].split('.')
-        opts += row[34].split('.')
-
-        if (row[4].inner_text).split(/\s/)[0] == 'C200'
-            modelname = row[4].inner_text.gsub('C200', 'C 200')
-            klasse = "C"
-        elsif (row[4].inner_text).split(/\s/)[0] == 'C250'
-            modelname = row[4].inner_text.gsub('C250', 'C 250')
-            klasse = "C"
-        elsif (row[4].inner_text).split(/\s/)[0] == 'MERCEDES-BENZ'
-          klasse = 'V'
-          modelname = 'VIANO'
-        else
-            modelname = row[4].inner_text
-            klasse = (row[4].inner_text).split(/\s/)[0]
-        end
-
-
-
-        attributes =
-                {
-                        :order => row[0].inner_text,
-                        :vin => book.search('//tr')[i].search('//td')[1].inner_text,
-                        :model => Model.find_or_create_by_name(row[4].inner_text),
-                        :klasse_id => Klasse.find_by_name(klasse).id,
-                        :color_id => row[29].inner_text,
-                        :interior_id => row[30].inner_text,
-                        :arrival => row[18].inner_text,
-                        :engine_number => row[2].inner_text,
-                        :real_options => opts,
-                        :prod_date => row[10].inner_text
-
-                }
-
-        if car = Car.find_by_order(row[0].inner_text.to_s)
-          car.update_attributes(attributes)
-        else
-          Car.create(attributes)
-        end
-      end
-
+  def put_to_mbclub
+    unless car.presence_at_mbclub?
+      prepare_for_mbclub.save 
+      write_options
     end
+  end
+
+  def self.put_all_cars_to_mbclub
+    Car.all.each do |car|
+      unless car.presence_at_mbclub?
+        car.prepare_for_mbclub.save 
+        car.write_options
+      end
+    end
+  end
+
+
+
+  def prepare_to_update_at_mbclub
+
+  end
+
+  def prepare_for_mbclub
+    attributes = {
+      :ordernum => order,
+      :vin => vin,
+      :name => model.name,
+      :class_name => klasse.name,
+      :end_cost => price,
+      :model => (/(\d+)/.match(model.name)).to_a[0],
+      :sold => 1
+    }
+    mcar = MCar.new
+    mcar.attributes = attributes
+    mcar.attributes.except('id').each do |k,v|
+      mcar[k] = 0 unless v
+    end
+    mcar
+  end
+
+  def presence_at_mbclub?
+    MCar.find_by_ordernum(order) ? true : false
+  end
+ 
+  def update_at_mbclub
+    true
   end
 
   def write_logs(object=nil)
@@ -189,6 +87,7 @@ class Car < ActiveRecord::Base
       Log.create(:model_name => 'car', :parameters => self.changes, :object_id => self.id, :user_id => User.current_user)
     end
   end
+  
   def write_options
     ActiveRecord::Base.transaction do
       codes.each do |key, value|
