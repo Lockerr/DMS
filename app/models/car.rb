@@ -118,7 +118,7 @@ class Car < ActiveRecord::Base
     sleep 5
     
     Dir.chdir('/home/user/tmp/mbr')
-    file = File.new ('/home/user/tmp/mbr' + Dir.glob('*.xls')[0].to_s)), 'r'
+    file = File.new ('/home/user/tmp/mbr' + Dir.glob('*.xls')[0].to_s), 'r'
     puts file.inspect
     Car.parse_cars(file)
     driver.close
