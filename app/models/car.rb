@@ -28,6 +28,9 @@ class Car < ActiveRecord::Base
     require "selenium-webdriver"
     profile = Selenium::WebDriver::Firefox::Profile.new
     profile['browser.download.dir'] = Rails.root.join('tmp').to_s
+    
+    puts profile['browser.download.dir']
+
     profile['browser.download.folderList'] = 2
     profile['browser.helperApps.neverAsk.saveToDisk'] = "application/vnd.ms-excel"
 
@@ -115,9 +118,9 @@ class Car < ActiveRecord::Base
     sleep 5
     
     Dir.chdir(Rails.root.join('tmp'))
-    file = File.new Rails.root.join('tmp','mbr', Dir.glob('*.xls')[-1]).to_s, 'r'
+    file = File.new Rails.root.join('tmp', Dir.glob('*.xls')[0].to_s).to_s, 'r'
     puts file.inspect
-    parse_cars(file)
+    Car.parse_cars(file)
     driver.close
   end
 
