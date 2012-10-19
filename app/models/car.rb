@@ -27,7 +27,7 @@ class Car < ActiveRecord::Base
   def self.mbr
     require "selenium-webdriver"
     profile = Selenium::WebDriver::Firefox::Profile.new
-    profile['browser.download.dir'] = Rails.root.join('tmp').to_s
+    profile['browser.download.dir'] = '/home/user/tmp/mbr'
     
     
 
@@ -117,8 +117,8 @@ class Car < ActiveRecord::Base
     }
     sleep 5
     
-    Dir.chdir(Rails.root.join('tmp'))
-    file = File.new Rails.root.join('tmp', Dir.glob('*.xls')[0].to_s).to_s, 'r'
+    Dir.chdir('/home/user/tmp/mbr')
+    file = File.new ('/home/user/tmp/mbr' + Dir.glob('*.xls')[0].to_s)), 'r'
     puts file.inspect
     Car.parse_cars(file)
     driver.close
