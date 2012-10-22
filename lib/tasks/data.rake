@@ -10,36 +10,15 @@ namespace :data do
     published = []
     book.worksheets[0].each do |row|
       if row[12] == '+'
-        # if car = Car.find_by_order(row[1])
-        #   car.price = row[8].to_f
-        #   car.published = true
-        #   puts "car  - #{car.order} - #{row[12].inspect} = #{row[12] == '+' ? true : false}"
-
-        #   car.state = row[11]
-        #   # puts attributes = {:price => row[8].to_f, :state => row[11], :published => (row[12] == '+' ? true : false)}
-        #   car.save
-        #   car.reload
-       
-        #   if mcar = MCar.find_by_ordernum(row[1])
-        #     mcar.end_cost = row[8].to_f
-        #     mcar.sold = 0
-        #     mcar.place = row[11]
-        #     mcar.save
-
-        #   end
-        # end
         if mcar = MCar.find_by_ordernum(row[1])
           attributes = {}
           attributes[:end_cost] = row[8].to_f
           attributes[:place] = row[11]
           mcar.update_attributes attributes
         elsif car = Car.find_by_order(row[1])
+          puts car.inspect
           car.put_to_mbclub          
         end
-
-          
-
-        
         published.push row[1]
       end
     end

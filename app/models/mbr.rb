@@ -1,6 +1,35 @@
 #encoding: utf-8
 class Mbr
 
+  def self.nal
+    
+    file = Rails.root.join('nal.xls')
+    book = Spreadsheet.open file
+    puts 'opend' if book
+    MCar.update_all :sold => 1
+    Car.update_all :published => false
+    published = []
+    
+    book.worksheets[0].each do |row|
+      if row[12] == '+'
+        if mcar = MCar.find_by_ordernum(row[1])
+          attributes = {}
+          attributes[:end_cost] = row[8].to_f
+          attributes[:place] = row[11]
+          mcar.update_attributes attributes
+        elsif car = Car.find_by_order(row[1])
+          puts car.inspect
+          car.put_to_mbclub          
+        end
+        published.push row[1]
+      end
+    end
+    
+    puts published.inspect
+    MCar.where(:ordernum => published).update_all :sold => 0
+  end
+
+
   def self.load_from_mbr
     require "selenium-webdriver"
     profile = Selenium::WebDriver::Firefox::Profile.new
