@@ -35,7 +35,7 @@ class Car < ActiveRecord::Base
   end
 
   def put_to_mbclub
-    unless car.presence_at_mbclub?
+    unless presence_at_mbclub?
       prepare_for_mbclub.save 
       write_options
     end
@@ -52,9 +52,7 @@ class Car < ActiveRecord::Base
 
 
 
-  def prepare_to_update_at_mbclub
 
-  end
 
   def prepare_for_mbclub
     attributes = {
