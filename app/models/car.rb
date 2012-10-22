@@ -87,14 +87,8 @@ class Car < ActiveRecord::Base
   end
   
   def write_options
-    ActiveRecord::Base.transaction do
-      codes.each do |key, value|
-        unless value == 'Опция неизвестна'
-          transaction do 
-            MOption.find_or_create_by_cars_orderno_and_opt_id(order, key, :opt_name => value, :opt_cost => 0)          
-          end
-        end
-      end
+    codes.each do |key, value|
+      MOption.find_or_create_by_cars_orderno_and_opt_id(order, key, :opt_name => value, :opt_cost => 0)          
     end
   end
 
@@ -103,19 +97,7 @@ class Car < ActiveRecord::Base
   end
 
   def codes
-    # result = {}
-
-    # opts = self.real_options
-    # for option in opts
-    #   if o = self.klasse.opts.find_by_code(option)
-    #     result[option] = o.desc
-    #   else
-    #     result[option] = 'Опция неизвестна'
-    #   end
-    # end
-    # result
     Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
-
   end
 
   state_machine :state, :initial => :ordered do
