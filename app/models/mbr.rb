@@ -1,5 +1,9 @@
 #encoding: utf-8
 class Mbr
+  def self.analyze(num)
+    puts 'exist in cars' if Car.find(:order => num)
+    puts 'exist in mbclub' if MCar.find(:ordernum => num)
+  end
 
   def self.nal
     
