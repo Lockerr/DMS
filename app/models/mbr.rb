@@ -26,6 +26,7 @@ class Mbr
     end
     
     puts published.inspect
+    Car.where(:order => published).update_all :published => true
     MCar.where(:ordernum => published).update_all :sold => 0
   end
 
