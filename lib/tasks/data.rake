@@ -39,7 +39,7 @@ namespace :data do
 
           
 
-        end
+        
         published.push row[1]
       end
     end

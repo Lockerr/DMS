@@ -103,17 +103,18 @@ class Car < ActiveRecord::Base
   end
 
   def codes
-    result = {}
+    # result = {}
 
-    opts = self.real_options
-    for option in opts
-      if o = self.klasse.opts.find_by_code(option)
-        result[option] = o.desc
-      else
-        result[option] = 'Опция неизвестна'
-      end
-    end
-    result
+    # opts = self.real_options
+    # for option in opts
+    #   if o = self.klasse.opts.find_by_code(option)
+    #     result[option] = o.desc
+    #   else
+    #     result[option] = 'Опция неизвестна'
+    #   end
+    # end
+    # result
+    Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
 
   end
 
