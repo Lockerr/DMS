@@ -7,7 +7,7 @@ class Client < ActiveRecord::Base
   alias_attribute :id_dep, :pas3
 
   with_options :if => "cause == 1" do |client|
-    client.validates :prepay, :cost, :clientbirthday, :phone1, :contract_date, :vin, :adress, :presence => 'true'
+    client.validates :prepay, :cost, :clientbirthday, :phone1, :contract_date, :vin, :client_adress, :presence => 'true'
     client.validates_presence_of :id_series, :id_number, :id_dep
     client.validates_format_of :id_series, :id_number, :with => /[\d\s]+/
     client.validates_presence_of :fio
