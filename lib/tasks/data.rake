@@ -33,6 +33,12 @@ namespace :data do
           attributes[:end_cost] = row[8].to_f
           attributes[:place] = row[11]
           mcar.update_attributes attributes
+        elsif car = Car.find_by_order(row[1])
+          car.put_to_mbclub          
+        end
+
+          
+
         end
         published.push row[1]
       end
