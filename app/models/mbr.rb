@@ -1,8 +1,15 @@
 #encoding: utf-8
 class Mbr
   def self.analyze(num)
-    puts 'exist in cars' if Car.find(:order => num)
-    puts 'exist in mbclub' if MCar.find(:ordernum => num)
+    if car = Car.where(:order => num)
+      print 'exist in cars' 
+      print 'and published' if car.published
+    end
+    
+    if car = MCar.where(:ordernum => num)
+      print 'exist in mbclub' 
+      prind ' and published' if car.sold == 0
+    end
   end
 
   def self.nal
