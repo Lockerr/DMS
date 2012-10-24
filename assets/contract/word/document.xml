@@ -4277,7 +4277,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>Год выпуска</w:t>
+        <w:t xml:space="preserve">VIN </w:t>
       </w:r>
       <w:fldSimple w:instr=" DOCPROPERTY  vin  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
