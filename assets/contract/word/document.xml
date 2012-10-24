@@ -32,7 +32,6 @@
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:b/>
           <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -370,8 +369,9 @@
         <w:t>.</w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
-        <w:t xml:space="preserve"> Продавец передает, а Покупатель оплачивает и приобретает в собственность транспортное средство марки «Мерседес-Бенц» модели</w:t>
+        <w:t xml:space="preserve"> Продавец передает, а Покупатель оплачивает и приобретает в собственность транспортное средство марки «Мерседес-Бенц» модели </w:t>
       </w:r>
+
 
       <w:fldSimple w:instr=" DOCPROPERTY  car_model_name  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
