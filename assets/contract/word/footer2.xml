@@ -159,8 +159,10 @@
     <w:fldSimple w:instr=" DOCPROPERTY  person_name  \* MERGEFORMAT ">
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
+          <w:iCs/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>Дьячук Антон Витальевич</w:t>
       </w:r>
