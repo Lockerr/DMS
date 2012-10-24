@@ -41,6 +41,12 @@
       </w:r>
       <w:fldSimple w:instr=" DOCPROPERTY  number  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
+          <w:rPr>
+            <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+            <w:color w:val="000000"/>
+            <w:sz w:val="20"/>
+            <w:szCs w:val="20"/>
+          </w:rPr>
           <w:t>НЕ УКАЗАНА (ОШИБКА) </w:t>
         </w:r>
       </w:fldSimple>
