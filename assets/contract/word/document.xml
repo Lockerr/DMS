@@ -4110,37 +4110,7 @@
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:lastRenderedPageBreak/>
-        <w:t xml:space="preserve">Приложение </w:t>
-      </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:b/>
-          <w:bCs/>
-          <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>№</w:t>
-      </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:b/>
-          <w:bCs/>
-          <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> 1 к Договору </w:t>
-      </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:b/>
-          <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>№</w:t>
+        <w:t xml:space="preserve">Приложение №1 1 к Договору №</w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
