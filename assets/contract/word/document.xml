@@ -4271,6 +4271,14 @@
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>Год выпуска</w:t>
+      </w:r>
       <w:fldSimple w:instr=" DOCPROPERTY  vin  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
           <w:rPr>
