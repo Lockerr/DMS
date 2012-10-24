@@ -4470,6 +4470,16 @@
           <w:t>НЕ ЗАПОЛНЕН(Ошибка)</w:t>
         </w:r>
       </w:fldSimple>
+
+      <w:r w:rsidR="00BD0997" w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+
       <w:fldSimple w:instr=" DOCPROPERTY  color_name  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
           <w:rPr>
@@ -4510,6 +4520,16 @@
           <w:t>НЕ УКАЗАН (Ошибка) </w:t>
         </w:r>
       </w:fldSimple>
+      
+      <w:r w:rsidR="00BD0997" w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+
       <w:fldSimple w:instr=" DOCPROPERTY  interior_name  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
           <w:rPr>
