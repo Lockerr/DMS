@@ -20,7 +20,7 @@ class Contract # < ActiveRecord::Base
             :phones => client.phone1,
             :vin => client.car.vin,
             :color => client.car.color_id,            
-            :interior => client.car.interior_id,
+            :interior => (if interior = Interior.find(client.car.interior_id) ? "#{interior.code} #{interior.desc}" : nil),
             :production_year => client.car.prod_date.year,
             #:gifts => client.gifts,
             :kop => client.price_kop
