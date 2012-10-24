@@ -245,24 +245,8 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">, в лице </w:t>
-      </w:r>
-      <w:r w:rsidR="005D2AEA" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>г</w:t>
-      </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve">енерального директора </w:t>
-      </w:r>
+        <w:t xml:space="preserve">, в лице генерального директора</w:t>
+      </w:r>      
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
@@ -303,16 +287,9 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve"> с одной стороны </w:t>
+        <w:t xml:space="preserve"> с одной стороны и</w:t>
       </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>и</w:t>
-      </w:r>
+      
     </w:p>
     <w:p w:rsidR="000D076D" w:rsidRPr="00254ACB" w:rsidRDefault="007F4BF4" w:rsidP="003B7F00">
       <w:pPr>
