@@ -326,32 +326,8 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>именуем</w:t>
-      </w:r>
-      <w:r w:rsidR="00D06EC1" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>ый (ая)</w:t>
-      </w:r>
-      <w:r w:rsidR="005D2AEA" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> </w:t>
-      </w:r>
-      <w:r w:rsidR="000D076D" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve">в дальнейшем </w:t>
-      </w:r>
+        <w:t>именуемый (ая) в дальнейшем</w:t>
+      </w:r>            
       <w:r w:rsidR="000D076D" w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
@@ -375,24 +351,8 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve"> с другой стороны,</w:t>
-      </w:r>
-      <w:r w:rsidR="003B7F00" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> </w:t>
-      </w:r>
-      <w:r w:rsidR="000D076D" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>именуемые в дальнейшем «Стороны», заключили настоящий Договор о нижеследующем:</w:t>
-      </w:r>
+        <w:t xml:space="preserve"> с другой стороны, именуемые в дальнейшем «Стороны», заключили настоящий Договор о нижеследующем:</w:t>
+      </w:r>      
     </w:p>
     <w:p w:rsidR="000D076D" w:rsidRPr="00254ACB" w:rsidRDefault="000D076D" w:rsidP="00D33783">
       <w:pPr>
@@ -419,25 +379,15 @@
         <w:t>.</w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
-        <w:t xml:space="preserve"> Продавец </w:t>
+        <w:t xml:space="preserve"> Продавец передает, а Покупатель оплачивает и приобретает в собственность транспортное средство марки «Мерседес-Бенц» модели</w:t>
       </w:r>
-      <w:r w:rsidR="00D850B6" w:rsidRPr="00254ACB">
-        <w:t>передает</w:t>
-      </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:t>, а Покупатель</w:t>
-      </w:r>
-      <w:r w:rsidR="00486663" w:rsidRPr="00254ACB">
-        <w:t xml:space="preserve"> оплачивает и </w:t>
-      </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:t xml:space="preserve">приобретает в собственность транспортное средство марки «Мерседес-Бенц» модели </w:t>
-      </w:r>
+
       <w:fldSimple w:instr=" DOCPROPERTY  car_model_name  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
-          <w:t></w:t>
+          <w:t>НЕ УКАЗАНА (ОШИБКА) </w:t>
         </w:r>
       </w:fldSimple>
+      
       <w:r w:rsidR="000A3457" w:rsidRPr="00254ACB">
         <w:t xml:space="preserve"> </w:t>
       </w:r>

@@ -19,7 +19,7 @@ class Contract # < ActiveRecord::Base
             :p_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
             :phones => client.phone1,
             :vin => client.car.vin,
-            :color => client.car.color_id,
+            :color => client.car.color_id,            
             :interior => client.car.interior_id,
             :production_year => client.car.prod_date.year,
             #:gifts => client.gifts,
