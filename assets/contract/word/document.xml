@@ -4467,33 +4467,19 @@
             <w:sz w:val="20"/>
             <w:szCs w:val="20"/>
           </w:rPr>
-          <w:t>197</w:t>
+          <w:t>НЕ ЗАПОЛНЕН(Ошибка)</w:t>
         </w:r>
       </w:fldSimple>
-      <w:r w:rsidR="001E1629" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> Окраска металлик «Черный</w:t>
-      </w:r>
-      <w:r w:rsidR="00EA0A8E" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> космос</w:t>
-      </w:r>
-      <w:r w:rsidR="001E1629" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>»</w:t>
-      </w:r>
+      <w:fldSimple w:instr=" DOCPROPERTY  color_name  \* MERGEFORMAT ">
+        <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
+          <w:rPr>
+            <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+            <w:sz w:val="20"/>
+            <w:szCs w:val="20"/>
+          </w:rPr>
+          <w:t>НЕ УКАЗАН(Ошибка)</w:t>
+        </w:r>
+      </w:fldSimple>      
     </w:p>
     <w:p w:rsidR="001E1629" w:rsidRPr="00254ACB" w:rsidRDefault="001E1629" w:rsidP="001E1629">
       <w:pPr>
@@ -4521,42 +4507,19 @@
             <w:sz w:val="20"/>
             <w:szCs w:val="20"/>
           </w:rPr>
-          <w:t>514</w:t>
+          <w:t>НЕ УКАЗАН (Ошибка) </w:t>
         </w:r>
       </w:fldSimple>
-      <w:r w:rsidR="00445E78" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve">Отделка салона: ткань / искусственная кожа </w:t>
-      </w:r>
-      <w:r w:rsidR="001E1629" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-          <w:lang w:val="en-US"/>
-        </w:rPr>
-        <w:t>ARTICO</w:t>
-      </w:r>
-      <w:r w:rsidR="001E1629" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> черная</w:t>
-      </w:r>
+      <w:fldSimple w:instr=" DOCPROPERTY  interior_name  \* MERGEFORMAT ">
+        <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
+          <w:rPr>
+            <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+            <w:sz w:val="20"/>
+            <w:szCs w:val="20"/>
+          </w:rPr>
+          <w:t>НЕ УКАЗАН (Ошибка) </w:t>
+        </w:r>
+      </w:fldSimple>      
     </w:p>
     <w:p w:rsidR="000D076D" w:rsidRPr="00254ACB" w:rsidRDefault="000D076D" w:rsidP="000D076D">
       <w:pPr>
