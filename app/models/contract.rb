@@ -23,7 +23,7 @@ class Contract # < ActiveRecord::Base
             :interior => client.car.interior_id,
             :interior_name => (
                 if interior = Interior.find_by_code(client.car.interior_id)
-                    "#{interior.code} #{interior.desc}" 
+                    interior.desc
                 else 
                     "ОШИБКА (НЕТ КОДА)"
                 end
