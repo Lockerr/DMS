@@ -21,7 +21,7 @@ class Contract # < ActiveRecord::Base
             :vin => client.car.vin,
             :color => client.car.color_id,            
             :interior => client.car.interior_id,
-            :interior_name => (if interior = Interior.find(client.car.interior_id) ? "#{interior.code} #{interior.desc}" : "ОШИБКА (НЕТ КОДА)"),
+            :interior_name => (interior = Interior.find(client.car.interior_id) ? "#{interior.code} #{interior.desc}" : "ОШИБКА (НЕТ КОДА)"),
             :production_year => client.car.prod_date.year,
             #:gifts => client.gifts,
             :kop => client.price_kop
