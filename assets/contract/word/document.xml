@@ -27,16 +27,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">Договор </w:t>
-      </w:r>
-      <w:r w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:b/>
-          <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>№</w:t>
+        <w:t xml:space="preserve">Договор №</w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
@@ -50,13 +41,6 @@
       </w:r>
       <w:fldSimple w:instr=" DOCPROPERTY  number  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
-          <w:rPr>
-            <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-            <w:b/>
-            <w:color w:val="000000"/>
-            <w:sz w:val="20"/>
-            <w:szCs w:val="20"/>
-          </w:rPr>
           <w:t>12/197</w:t>
         </w:r>
       </w:fldSimple>
