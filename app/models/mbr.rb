@@ -131,11 +131,8 @@ class Mbr
       row = []
       if book.search('//tr')[i]
         row = book.search('//tr')[i].search('//td')
-        row[31] = book.search('//tr')[i].search('//td')[31].inner_text
-        
-
-        opts = []
-        opts += row[31].split('.')
+        row[31] = book.search('//tr')[i].search('//td')[31].inner_text        
+        opts = row[31].split('.')
         
         if (row[4].inner_text).split(/\s/)[0] == 'C200'
             modelname = row[4].inner_text.gsub('C200', 'C 200')
@@ -151,7 +148,12 @@ class Mbr
             klasse = (row[4].inner_text).split(/\s/)[0]
         end
 
-
+        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        
         attributes =
                 {
                         :order => row[0].inner_text,
