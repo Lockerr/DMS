@@ -181,22 +181,10 @@ class Document
     file.close
     ################ DOC
     
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.pre.xml'), 'w')
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w')
     puts "document #{file.write(docbody.to_s)}"
     file.close
-    
-    newfile = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w')
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.pre.xml'), 'r')
-    
-    file.readlines.each do |line|
-      line.gsub!(/\&apos\;/, "'")
-      newfile.puts line
-    end
-    
-      
-    file.close
-    newfile.close
-    File.delete Rails.root.join('tmp', temp, 'word', 'document.pre.xml')
+
     ############ DOC
     file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
     puts "footer1 #{file.write(footer_1.to_s)}"

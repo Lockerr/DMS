@@ -21,7 +21,7 @@ class Contract # < ActiveRecord::Base
             :vin => client.car.vin,
             :color => client.car.color_id,            
             :interior => client.car.interior_id,
-            :interior_name => client.car.interior,
+            :interior_name => client.car.interior.gsub(/'/,''),
             :color_name => client.car.color,
             :production_year => client.car.prod_date.year,
             #:gifts => client.gifts,
