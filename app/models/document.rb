@@ -181,6 +181,11 @@ class Document
     file.close
     file = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w')
     puts "document #{file.write(docbody.to_s)}"
+    
+    file.readlines.each { |line|
+      line.gsub!(/\&apos\;/, "'")
+    }
+      
     file.close
     file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
     puts "footer1 #{file.write(footer_1.to_s)}"
