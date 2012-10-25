@@ -18,11 +18,14 @@ class Car < ActiveRecord::Base
   has_one :dkp
   belongs_to :client
 
+
   after_create :check_for_mbclub_presence
   after_update :check_for_mbclub_presence
 
 
-
+  def interior
+    Interior.find_by_code(interior_id)
+  end
 
   self.include_root_in_json = false
 
