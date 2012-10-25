@@ -4383,7 +4383,7 @@
             <w:sz w:val="20"/>
             <w:szCs w:val="20"/>
           </w:rPr>
-          <w:t>НЕ УКАЗАН(Ошибка)</w:t>
+          <w:t xml:space="preserve">НЕ УКАЗАН(Ошибка)</w:t>
         </w:r>
       </w:fldSimple>      
     </w:p>
@@ -4433,7 +4433,7 @@
             <w:sz w:val="20"/>
             <w:szCs w:val="20"/>
           </w:rPr>
-          <w:t>НЕ УКАЗАН (Ошибка) </w:t>
+          <w:t xml:space="preserve">НЕ УКАЗАН (Ошибка) </w:t>
         </w:r>
       </w:fldSimple>      
     </w:p>

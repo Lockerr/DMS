@@ -1,0 +1,21 @@
+%h1 Listing opts
+%table.table.table-condensed.table-striped
+  %tr
+    %th Klasse
+    %th Code
+    %th Desc
+    %th Pseudo klasse
+    %th
+    %th
+    %th
+  - @opts.each do |opt|
+    %tr
+      %td= opt.klasse.name
+      %td= opt.code
+      %td= opt.desc
+      %td= opt.pseudo_klasse
+      %td= link_to 'Show', opt
+      %td= link_to 'Edit', edit_opt_path(opt)
+      %td= link_to 'Destroy', opt, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Opt', new_opt_path

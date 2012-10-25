@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %b Code:
+  = @opt.code
+%p
+  %b Desc:
+  = @opt.desc
+%p
+  %b Pseudo klasse:
+  = @opt.pseudo_klasse
+%p
+  %b Klasse:
+  = @opt.klasse_id
+= link_to 'Edit', edit_opt_path(@opt)
+|
+\#{link_to 'Back', opts_path}

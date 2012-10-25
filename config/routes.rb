@@ -1,5 +1,7 @@
 DmsExt::Application.routes.draw do
 
+  resources :opts
+
   match 'manage' => 'manage#index'
   
   resources :interiors
