@@ -24,9 +24,20 @@ class Car < ActiveRecord::Base
 
 
   def interior
-    Interior.find_by_code(interior_id)
+    if interior = Interior.find_by_code(interior_id)
+      interior.desc
+    else
+      "ОШИБКА (НЕТ КОДА)"
+    end    
   end
-
+  def color
+    if color = Color.find_by_code(color_id)
+      color.desc
+    else
+      "ОШИБКА (НЕТ КОДА)"
+    end    
+  end
+  
   self.include_root_in_json = false
 
   def check_for_mbclub_presence
