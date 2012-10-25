@@ -5,3 +5,20 @@
  *= require_self
  *= require_tree .
 */
+/*.container {
+  background: #CCC;
+  min-height: 100%;
+  _height:    100%;
+}
+
+.main {
+  padding-top: 50px;
+}
+
+.header {
+  background:    #36F;
+  height:        50px;
+  margin-bottom: -50px;
+  position:      relative;
+}
+*/
