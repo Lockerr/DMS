@@ -179,14 +179,24 @@ class Document
     file = File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w')
     puts "sekeleton #{file.write(skeleton)}"
     file.close
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w')
-    puts "document #{file.write(docbody.to_s)}"
+    ################ DOC
     
-    file.readlines.each { |line|
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.pre.xml'), 'w')
+    puts "document #{file.write(docbody.to_s)}"
+    file.close
+    
+    newfile = File.new(Rails.root.join('tmp', temp, 'word', 'document.xml'), 'w')
+    file = File.new(Rails.root.join('tmp', temp, 'word', 'document.pre.xml'), 'r')
+    
+    file.readlines.each do |line|
       line.gsub!(/\&apos\;/, "'")
-    }
+    end
+    newfile.write file
       
     file.close
+    newfile.close
+    File.delete Rails.root.join('tmp', temp, 'word', 'document.pre.xml')
+    ############ DOC
     file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
     puts "footer1 #{file.write(footer_1.to_s)}"
     file.close
