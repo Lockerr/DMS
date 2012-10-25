@@ -190,8 +190,9 @@ class Document
     
     file.readlines.each do |line|
       line.gsub!(/\&apos\;/, "'")
+      newfile.puts line
     end
-    newfile.write file
+    
       
     file.close
     newfile.close
