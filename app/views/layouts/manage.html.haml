@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    = stylesheet_link_tag 'bootstrap_and_overrides'
+    = javascript_include_tag 'application'
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %ul.nav
+            %li
+              =link_to 'interior', interiors_path
+            %li
+              = link_to 'cars', cars_path
+            %li
+              = link_to 'colors', colors_path
+
+
+    .container
+      = yield

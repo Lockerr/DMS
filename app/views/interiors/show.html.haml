@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Desc:
+  = @interior.desc
+%p
+  %b Code:
+  = @interior.code
+%p
+  %b Klasse:
+  = @interior.klasse_id
+= link_to 'Edit', edit_interior_path(@interior)
+|
+\#{link_to 'Back', interiors_path}

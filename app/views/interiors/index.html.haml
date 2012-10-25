@@ -1,0 +1,26 @@
+%h1 Интерьеры
+= link_to 'New Interior', new_interior_path, :class => 'btn'
+
+%table.table.table-condensed
+  %tr
+    %th Klasse
+    %th Code
+    %th Desc
+    %th
+    %th
+    %th
+  - @interiors.each do |interior|
+    %tr
+      %td= interior.klasse.name
+      %td= interior.code
+      %td= interior.desc
+      %td
+        %a.btn.btn-small{:href => edit_interior_path(interior)}
+          %i.icon-edit
+        
+        
+        
+        %a.btn.btn-small.btn-error{:href => interior_path(interior), :method => :delete, data: { confirm: 'Are you sure?' }}
+          %i.icon-trash
+%br/
+= link_to 'New Interior', new_interior_path, :class => 'btn'

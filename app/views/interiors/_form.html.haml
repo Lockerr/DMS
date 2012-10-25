@@ -1,0 +1,23 @@
+= form_for(@interior) do |f|
+  - if @interior.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@interior.errors.count, "error")
+        prohibited this interior from being saved:
+      %ul
+        - @interior.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :desc
+    %br/
+    = f.text_field :desc
+  .field
+    = f.label :code
+    %br/
+    = f.text_field :code
+  .field
+    = f.label :klasse_id
+    %br/
+    = f.number_field :klasse_id
+  .actions
+    = f.submit

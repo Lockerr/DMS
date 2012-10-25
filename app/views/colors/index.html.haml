@@ -1,0 +1,21 @@
+%h1 Цвета
+= link_to 'New Color', new_color_path, :class => 'btn'
+%table.table.table-condensed
+  %tr
+    %th Code
+    %th Desc
+    %th Color
+    %th
+    %th
+    %th
+  - @colors.each do |color|
+    %tr
+      %td= color.code
+      %td= color.desc
+      %td= color.color
+      %td
+        = link_to 'Show', color, :class => 'btn'
+        = link_to 'Edit', edit_color_path(color), :class => 'btn'
+        = link_to 'Destroy', color, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn'
+%br/
+= link_to 'New Color', new_color_path, :class => 'btn'

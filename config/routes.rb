@@ -1,5 +1,10 @@
 DmsExt::Application.routes.draw do
 
+  match 'manage' => 'manage#index'
+  
+  resources :interiors
+  resources :colors
+
   devise_for :users
 
   resource :trade_ins

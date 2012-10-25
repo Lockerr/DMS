@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Code:
+  = @color.code
+%p
+  %b Desc:
+  = @color.desc
+%p
+  %b Color:
+  = @color.color
+= link_to 'Edit', edit_color_path(@color)
+|
+\#{link_to 'Back', colors_path}
