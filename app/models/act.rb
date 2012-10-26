@@ -37,7 +37,7 @@ class Act# < ActiveRecord::Base
             :person_name => client.fio,
             :person_name_2 => client.fio,
             :person_birthday => client.clientbirthday.strftime('%d.%m.%Y'),
-            :person_address => client.adress,
+            :person_address => client.client_adress,
             :person_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
             :person_s_name => client.short_name,
             :kop => price_kop(client.cost),

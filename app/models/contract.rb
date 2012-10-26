@@ -15,7 +15,7 @@ class Contract # < ActiveRecord::Base
             :prepay_w => RuPropisju.amount_in_words(client.prepay, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
             :s_name => client.short_name,
             :birthday => client.clientbirthday.strftime('%d.%m.%Y г.'),
-            :address => client.adress,
+            :address => client.client_adress,
             :p_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
             :phones => client.phone1,
             :vin => client.car.vin,
