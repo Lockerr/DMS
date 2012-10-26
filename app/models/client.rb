@@ -1,10 +1,11 @@
 #encoding: utf-8
 class Client < ActiveRecord::Base
   alias_attribute :contract_date, :date_contract
-  alias_attribute :birthday, :clientbirthday
+  # alias_attribute :birthday, :clientbirthday
   alias_attribute :id_series, :pas1
   alias_attribute :id_number, :pas2
   alias_attribute :id_dep, :pas3
+
 
   with_options :if => "cause == 1" do |client|
     client.validates :prepay, :cost, :clientbirthday, :phone1, :contract_date, :vin, :client_adress, :presence => 'true'
@@ -51,7 +52,7 @@ class Client < ActiveRecord::Base
     new_client.pass_whom = pas3
     new_client.pass_when = pas4.strftime('%Y / %m / %d') if pas4
     new_client.address = client_adress
-    new_client.birth = birthday.strftime('%Y / %m / %d') if birthday
+    new_client.birth = clientbirthday.strftime('%Y / %m / %d') if clientbirthday
     new_client.ordernum = '' # ?
     new_client.price = cost
     new_client.prepaid = prepay

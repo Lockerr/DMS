@@ -25,6 +25,8 @@ gem 'twitter-bootstrap-rails'
 gem 'quiet_assets'
 gem 'thin'
 gem 'safe_attributes'
+gem 'will_paginate'
+
 
 group :assets do
   gem 'sass-rails'

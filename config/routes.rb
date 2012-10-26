@@ -4,6 +4,7 @@ DmsExt::Application.routes.draw do
 
   match 'manage' => 'manage#index'
   
+  resources :clients
   resources :interiors
   resources :colors
 

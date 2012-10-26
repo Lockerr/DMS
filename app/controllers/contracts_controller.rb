@@ -4,7 +4,7 @@ class ContractsController < ApplicationController
   #TODO: Car can`t be sold again
   #TODO: Can`t show car to client
   #TODO: Can`t send be shown to client
-
+  
   def index
     doc = Document.new
     case params[:doc_type]
@@ -15,7 +15,7 @@ class ContractsController < ApplicationController
       else
         doc.errors['not_working'] = 'в разработке'
     end
-    doc.object = Contract.new
+    
     doc.client = Client.find_by_id(params[:client_id])
 
     response.headers['Access-Control-Allow-Origin'] = '*'

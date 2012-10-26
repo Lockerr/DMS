@@ -1,0 +1,126 @@
+%h1 Listing clients
+= will_paginate @posts
+%table.table-condenced.table.table-striped
+  %tr
+    %th
+    %th Fio
+    %th Comment
+    %th Phone1
+    / %th Phone2
+    / %th Phone3
+    / %th Phone4
+    %th Date
+    %th Adress
+    
+    %th Brand
+    %th Manager
+    %th Model
+    / %th Icon
+    / %th Creditmanager
+    / %th Zv
+    / %th Vz
+    / %th Tst
+    / %th Dg
+    / %th Vd
+    %th Out
+    / %th Icon2
+    %th Vin
+    %th Cost
+    %th Status
+    / %th Commercial
+    %th Tmp
+    
+    %th Phone11
+    / %th Phone22
+    / %th Phone33
+    / %th Phone44
+    %th Email
+    %th
+      Pas1
+      %br/
+      Pas2
+      %br/
+      Pas3
+    %th Clientbirthday
+    %th Prepay
+    %th Date contract
+    %th 
+      Carpets
+      Mudguard
+      Tech 1
+      Tech 2
+      Tires
+    %th Pas4
+    %th Client adress
+    %th Cause
+    / %th Trade in price
+    / %th Trade in desc
+    / %th Used vin
+    
+    
+  - @clients.each do |client|
+    - client.cause = 1
+    %tr{:class => ('info' if client.valid?)}
+      %td
+        = link_to 'Show', client
+        = link_to 'Edit', edit_client_path(client)
+        = link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' }
+        = link_to 'Договор', makedoc_path(:client_id => client.id, :doc_type => 1)
+        = link_to 'Акт', makedoc_path(:client_id => client.id, :doc_type => 2)
+        
+
+      %td= client.fio
+      %td= client.comment
+      %td= client.phone1
+      / %td= client.phone2
+      / %td= client.phone3
+      / %td= client.phone4
+      %td= client.date
+      %td= client.adress
+      
+      %td= client.brand
+      %td= client.manager
+      %td= client.car.model.name if client.car
+      / %td= client.icon
+      / %td= client.creditmanager
+      / %td= client.zv
+      / %td= client.vz
+      / %td= client.tst
+      / %td= client.dg
+      / %td= client.vd
+      %td= client.out
+      / %td= client.icon2
+      %td= client.vin
+      %td= client.cost
+      %td= client.status
+      / %td= client.commercial
+      %td= client.tmp
+    
+      %td= client.phone11
+      / %td= client.phone22
+      / %td= client.phone33
+      / %td= client.phone44
+      %td= client.email
+      %td
+        = client.pas1
+        = client.pas2
+        = client.pas3
+      %td= client.clientbirthday
+      %td= client.prepay
+      %td= client.date_contract
+      %td
+        = client.carpets
+        = client.mudguard
+        = client.tech_1
+        = client.tech_2
+        = client.tires
+      %td= client.pas4
+      %td= client.client_adress
+      %td= client.cause
+      / %td= client.trade_in_price
+      / %td= client.trade_in_desc
+      / %td= client.used_vin
+
+%br/
+= will_paginate @posts
+= link_to 'New Client', new_client_path

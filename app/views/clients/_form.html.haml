@@ -1,0 +1,177 @@
+= form_for(@client) do |f|
+  - if @client.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@client.errors.count, "error")
+        prohibited this client from being saved:
+      %ul
+        - @client.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :fio
+    %br/
+    = f.text_field :fio
+
+  .field
+    = f.label :phone1
+    %br/
+    = f.text_field :phone1
+  .field
+    = f.label :phone2
+    %br/
+    = f.text_field :phone2
+  .field
+    = f.label :phone3
+    %br/
+    = f.text_field :phone3
+  .field
+    = f.label :phone4
+    %br/
+    = f.text_field :phone4
+  .field
+    = f.label :date
+    %br/
+    = f.date_select :date
+  .field
+    = f.label :adress
+    %br/
+    = f.text_field :adress
+
+  .field
+    = f.label :brand
+    %br/
+    = f.text_field :brand
+  .field
+    = f.label :manager
+    %br/
+    = f.text_field :manager
+  .field
+    = f.label :model
+    %br/
+    = f.text_field :model
+  .field
+    = f.label :icon
+    %br/
+    = f.number_field :icon
+  .field
+    = f.label :out
+    %br/
+    = f.datetime_select :out
+  .field
+    = f.label :icon2
+    %br/
+    = f.number_field :icon2
+  .field
+    = f.label :vin
+    %br/
+    = f.text_field :vin
+  .field
+    = f.label :cost
+    %br/
+    = f.number_field :cost
+  .field
+    = f.label :status
+    %br/
+    = f.text_field :status
+  .field
+    = f.label :commercial
+    %br/
+    = f.text_field :commercial
+  .field
+    = f.label :tmp
+    %br/
+    = f.text_field :tmp
+  .field
+    = f.label :files
+    %br/
+    = f.number_field :files
+  .field
+    = f.label :phone11
+    %br/
+    = f.text_field :phone11
+  .field
+    = f.label :phone22
+    %br/
+    = f.text_field :phone22
+  .field
+    = f.label :phone33
+    %br/
+    = f.text_field :phone33
+  .field
+    = f.label :phone44
+    %br/
+    = f.text_field :phone44
+  .field
+    = f.label :email
+    %br/
+    = f.text_field :email
+  .field
+    = f.label :pas1
+    %br/
+    = f.text_field :pas1
+  .field
+    = f.label :pas2
+    %br/
+    = f.text_field :pas2
+  .field
+    = f.label :pas3
+    %br/
+    = f.text_field :pas3
+  .field
+    = f.label :clientbirthday
+    %br/
+    = f.date_select :clientbirthday
+  .field
+    = f.label :prepay
+    %br/
+    = f.text_field :prepay
+  .field
+    = f.label :date_contract
+    %br/
+    = f.date_select :date_contract
+  .field
+    = f.label :carpets
+    %br/
+    = f.check_box :carpets
+  .field
+    = f.label :mudguard
+    %br/
+    = f.check_box :mudguard
+  .field
+    = f.label :tech_1
+    %br/
+    = f.check_box :tech_1
+  .field
+    = f.label :tech_2
+    %br/
+    = f.check_box :tech_2
+  .field
+    = f.label :tires
+    %br/
+    = f.check_box :tires
+  .field
+    = f.label :pas4
+    %br/
+    = f.date_select :pas4
+  .field
+    = f.label :client_adress
+    %br/
+    = f.text_field :client_adress
+  .field
+    = f.label :cause
+    %br/
+    = f.number_field :cause
+  .field
+    = f.label :trade_in_price
+    %br/
+    = f.number_field :trade_in_price
+  .field
+    = f.label :trade_in_desc
+    %br/
+    = f.text_area :trade_in_desc
+  .field
+    = f.label :used_vin
+    %br/
+    = f.text_field :used_vin
+  .actions
+    = f.submit

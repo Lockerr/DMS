@@ -12,9 +12,9 @@ class Act# < ActiveRecord::Base
     REXML::Document.new file.read
   end
 
-  def price_kop
-    if self.price.to_s.split('.').size == 2
-      kopejki = self.price.to_s.split('.')[1]
+  def price_kop(price)
+    if price.to_s.split('.').size == 2
+      kopejki = price.to_s.split('.')[1]
       propis = RuPropisju.kopeek(kopejki.to_i)
       if kopejki.to_i < 10
         propis = '0' + propis
@@ -31,28 +31,29 @@ class Act# < ActiveRecord::Base
 
   def attrs(client)
     {
-            :contract_kp_number => car.contract ? car.contract.number : '!!!!! НЕТ НОМЕРА !!!!!',
-            :contract_kp_date => car.contract ? car.contract.date : '!!!!! НЕТ ДАТЫ !!!!!',
+            :contract_kp_number => I18n.localize(client.contract_date || DateTime.now, :format => '%d %B %Y г.'),
+            :contract_kp_date => Time.now.year.to_s[2..3] + '/' + client.car.order.to_s[7..10],
 
-            :person_name => person.name,
-            :person_name_2 => person.name,
-            :person_birthday => person.birthday.strftime('%d.%m.%Y'),
-            :person_address => person.address,
-            :person_id => "#{person.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{person.id_number} #{person.id_dep}",
-            :person_s_name => self.person.short_name,
-            :kop => price_kop,
-            :car_model_name => car.model.name,
-            :car_vin => car.vin,
-            :car_prod_year => car.prod_date.year,
-            :car_engine_number => car.engine_number,
-            :car_pts => car_pts,
+            :person_name => client.fio,
+            :person_name_2 => client.fio,
+            :person_birthday => client.clientbirthday.strftime('%d.%m.%Y'),
+            :person_address => client.adress,
+            :person_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
+            :person_s_name => client.short_name,
+            :kop => price_kop(client.cost),
+            :car_model_name => client.car.model.name,
+            :car_vin => client.car.vin,
+            :car_prod_year => client.car.prod_date.year,
+            :car_engine_number => client.car.engine_number,
+            # :car_pts => client.car_pts,
+            :car_pts => 'ПТС (ОШИБКА)',
 
-            :chasis_vin => car.klasse.name == 'G' ? car.vin : 'ОТСУТСТВУЕТ',
-            :body_vin => car.klasse.name == 'G' ? 'ОТСУТСТВУЕТ' : car.vin,
+            :chasis_vin => client.car.klasse.name == 'G' ? client.car.vin : 'ОТСУТСТВУЕТ',
+            :body_vin => client.car.klasse.name == 'G' ? 'ОТСУТСТВУЕТ' : client.car.vin,
 
-            :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(price, :unit => '', :separator => ',', :delimiter => " "),
-            :car_price_w => RuPropisju.amount_in_words(price, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
-            :car_nds => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(price * 18.0 / 118.0, :unit => '', :separator => ',', :delimiter => " "),
+            :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.cost, :unit => '', :separator => ',', :delimiter => " "),
+            :car_price_w => RuPropisju.amount_in_words(client.cost, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
+            :car_nds => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.cost * 18.0 / 118.0, :unit => '', :separator => ',', :delimiter => " "),
 
 
     }

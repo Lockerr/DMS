@@ -14,6 +14,8 @@ class Document
       cause = case object.class.name.downcase
         when 'contract' then
           '1'
+        when 'act' then
+          '2'
       end
     else
       errors['object'] = 'не определен'
@@ -48,7 +50,7 @@ class Document
     client.write_to_ms_sql
 
     doc = properties
-    #self.send(object.class.name.downcase)
+    
     true while doc.root.delete_element "//property"
 
     counter = 2
@@ -85,52 +87,60 @@ class Document
     keys.delete :gifts
 
     for key in keys
+      Rails.logger.info key
       docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  #{key.to_s}  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[key].to_s || ' ')
     end
+    
+    
 
     docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name_2  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
-    docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  car_model_name_2  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:car_model_name].to_s || ' ')
 
-    footer_1 = footer1
-    footer_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
+    if object.class.to_s.downcase == 'contract'
+      docbody.root.elements["*/w:p/w:fldSimple[@w:instr=' DOCPROPERTY  car_model_name_2  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:car_model_name].to_s || ' ')
 
-    footer_2 = footer2
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  birthday  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:birthday].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  address  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:address].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  p_id  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:p_id].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  phones  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:phones].to_s || ' ')
-    footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
+      footer_1 = footer1
+      footer_1.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
 
-
-    for code in client.car.codes
-      count = docbody.root.elements[1].elements.count
-      before = docbody.root.elements[1].elements[count]
-      paragraph = wp
+      footer_2 = footer2
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  person_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:person_name].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  birthday  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:birthday].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  address  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:address].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  p_id  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:p_id].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  phones  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:phones].to_s || ' ')
+      footer_2.root.elements["//w:p/w:fldSimple[@w:instr=' DOCPROPERTY  s_name  \\* MERGEFORMAT ']"].elements['w:r'].elements['w:t'].text = (attrs[:s_name].to_s || ' ')
+    end
 
 
-      wr = REXML::Element.new 'w:r'
+    if object.class.to_s.downcase == 'contract'
+      for code in client.car.codes
+        count = docbody.root.elements[1].elements.count
+        before = docbody.root.elements[1].elements[count]
+        paragraph = wp
 
-      wrPr = REXML::Element.new 'w:rPr'
 
-      wrPr.add_element wrfonts
-      wrPr.add_element wsz
-      wrPr.add_element wszcs
+        wr = REXML::Element.new 'w:r'
 
-      wr.add_element wrPr
+        wrPr = REXML::Element.new 'w:rPr'
 
-      wt = REXML::Element.new 'w:t'
-      unless code[1] == 'Опция неизвестна'
-        wt.add_text "#{code[0]}  #{code[1]}"
-      else
-        wt.add_text "#{code[0]}  #{code[1]}"
+        wrPr.add_element wrfonts
+        wrPr.add_element wsz
+        wrPr.add_element wszcs
+
+        wr.add_element wrPr
+
+        wt = REXML::Element.new 'w:t'
+        unless code[1] == 'Опция неизвестна'
+          wt.add_text "#{code[0]}  #{code[1]}"
+        else
+          wt.add_text "#{code[0]}  #{code[1]}"
+        end
+
+        wr.add_element wt
+
+        paragraph.add_element wr
+
+        docbody.root.elements[1].insert_before before, paragraph
       end
-
-      wr.add_element wt
-
-      paragraph.add_element wr
-
-      docbody.root.elements[1].insert_before before, paragraph
     end
 
     #if gifts
@@ -176,6 +186,7 @@ class Document
     system "rm #{Rails.root.join('tmp', temp, 'word', 'footer1.xml')}"
     system "rm #{Rails.root.join('tmp', temp, 'word', 'footer2.xml')}"
 
+
     file = File.new(Rails.root.join('tmp', temp, 'docProps', 'custom.xml'), 'w')
     puts "sekeleton #{file.write(skeleton)}"
     file.close
@@ -186,25 +197,33 @@ class Document
     file.close
 
     ############ DOC
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
-    puts "footer1 #{file.write(footer_1.to_s)}"
-    file.close
-    file = File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w')
-    puts "footer 2 #{file.write(footer_2.to_s)}"
+    if object.class.to_s.downcase == 'contract'
+      file = File.new(Rails.root.join('tmp', temp, 'word', 'footer1.xml'), 'w')
+      puts "footer1 #{file.write(footer_1.to_s)}"
+      file.close
+      file = File.new(Rails.root.join('tmp', temp, 'word', 'footer2.xml'), 'w')
+      puts "footer 2 #{file.write(footer_2.to_s)}"
+      file.close
+    end
 
-    file.close
+    
 
     Dir.mkdir "/var/www/fpk/upload/files/clients/#{client.id}/" unless Dir.exists? "/var/www/fpk/upload/files/clients/#{client.id}/"
-
-    system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/договор.docx -r  .")
-
+    doc_filename_name = case object.class.to_s.downcase
+      when 'contract' then 'Договор'
+      when 'act' then 'Акт'
+    end
+    
+    system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/#{doc_filename_name}.docx -r  .")
     temp
-    #rescue
-    #  errors['errors'] = 'что-то не так ' + "#{Time.now.to_s} #{client} #{object} #{errors.inspect}"
-    #false
-    #end
+    
 
   end
+
+  def write_files(docbody)
+    
+  end
+
 
   def wrfonts
     element = REXML::Element.new 'w:rFonts'

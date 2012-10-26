@@ -14,7 +14,7 @@ class Contract # < ActiveRecord::Base
             :prepay => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.prepay, :unit => '', :separator => ',', :delimiter => " "),
             :prepay_w => RuPropisju.amount_in_words(client.prepay, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
             :s_name => client.short_name,
-            :birthday => client.birthday.strftime('%d.%m.%Y г.'),
+            :birthday => client.clientbirthday.strftime('%d.%m.%Y г.'),
             :address => client.adress,
             :p_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
             :phones => client.phone1,
