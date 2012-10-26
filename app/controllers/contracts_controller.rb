@@ -21,6 +21,9 @@ class ContractsController < ApplicationController
     response.headers['Access-Control-Allow-Origin'] = '*'
 
     if doc.generate
+      doc = Document.new
+      doc.object = Act.new
+      doc.generate
       render :json => {:document => 'ok'}
     else
       render :json => {:errors => doc.errors}
