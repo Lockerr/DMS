@@ -129,12 +129,8 @@ class Document
         wr.add_element wrPr
 
         wt = REXML::Element.new 'w:t'
-        unless code[1] == 'Опция неизвестна'
-          wt.add_text "#{code[0]}  #{code[1]}"
-        else
-          wt.add_text "#{code[0]}  #{code[1]}"
-        end
-
+        wt.add_text "#{code[0]}  #{code[1]}"
+        
         wr.add_element wt
 
         paragraph.add_element wr
