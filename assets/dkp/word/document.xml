@@ -291,7 +291,7 @@
           <w:b/>
           <w:iCs/>
         </w:rPr>
-        <w:t>.,</w:t>
+        <w:t> ,</w:t>
       </w:r>
     </w:p>
     <w:p w:rsidR="008E2C58" w:rsidRPr="002411DD" w:rsidRDefault="008E2C58" w:rsidP="008E2C58">
@@ -550,7 +550,7 @@
           <w:b/>
           <w:bCs/>
         </w:rPr>
-        <w:t>БЕЛЫЙ</w:t>
+        <w:t> ОШИБКА ( ЦВЕТ ) </w:t>
       </w:r>
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="002411DD">
@@ -666,7 +666,7 @@
         <w:rPr>
           <w:b/>
         </w:rPr>
-        <w:t>) рублей</w:t>
+        <w:t xml:space="preserve">) рублей </w:t>
       </w:r>
       <w:r w:rsidR="008E2C58" w:rsidRPr="002411DD">
         <w:rPr>
@@ -729,7 +729,7 @@
         <w:rPr>
           <w:b/>
         </w:rPr>
-        <w:t> рублей</w:t>
+        <w:t xml:space="preserve"> рублей </w:t>
       </w:r>
       <w:r w:rsidR="008E2C58" w:rsidRPr="002411DD">
         <w:rPr>
