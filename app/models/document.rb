@@ -212,17 +212,14 @@ class Document
     doc_filename_name = case object.class.to_s.downcase
       when 'contract' then 'Договор'
       when 'act' then 'Акт'
-      when 'dkp' then 'Договор(купли-продажи)'
+      when 'dkp' then 'ДоговорКП'
     end
     
+    Rails.logger.info "zip /var/www/fpk/upload/files/clients/#{client.id}/#{doc_filename_name}.docx -r "
     system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/#{doc_filename_name}.docx -r  .")
     temp
     
 
-  end
-
-  def write_files(docbody)
-    
   end
 
 

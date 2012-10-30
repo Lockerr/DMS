@@ -21,14 +21,16 @@ class ContractsController < ApplicationController
     response.headers['Access-Control-Allow-Origin'] = '*'
 
     if doc.generate
-      doc = Document.new
+      
       doc.object = Act.new
-      doc.client = Client.find_by_id(params[:client_id])
+      
       doc.generate
-      doc = Document.new
+
+      
       doc.object = Dkp.new
-      doc.client = Client.find_by_id(params[:client_id])
+      
       doc.generate 
+
       render :json => {:document => 'ok'}
     else
       render :json => {:errors => doc.errors}
