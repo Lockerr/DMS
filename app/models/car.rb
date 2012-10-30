@@ -30,6 +30,7 @@ class Car < ActiveRecord::Base
       "ОШИБКА (НЕТ КОДА)"
     end    
   end
+  
   def color
     if color = Color.find_by_code(color_id)
       color.desc
@@ -38,6 +39,13 @@ class Car < ActiveRecord::Base
     end    
   end
   
+  def color_fact
+    if color = Color.find_by_code(color_id)
+      color.color
+    else
+      "ОШИБКА (НЕТ КОДА)"
+    end    
+  end
   self.include_root_in_json = false
 
   def check_for_mbclub_presence
