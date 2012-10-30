@@ -1,11 +1,11 @@
 #encoding: utf-8
 class Dkp# < ActiveRecord::Base
-  belongs_to :car
-  belongs_to :person
+  # belongs_to :car
+  # belongs_to :person
 
-  def price_kop
-    if self.price.to_s.split('.').size == 2
-      kopejki = self.price.to_s.split('.')[1]
+  def price_kop(price)
+    if price.to_s.split('.').size == 2
+      kopejki = price.to_s.split('.')[1]
       propis = RuPropisju.kopeek(kopejki.to_i)
       if kopejki.to_i < 10
         propis = '0' + propis
@@ -34,24 +34,24 @@ class Dkp# < ActiveRecord::Base
 
     {
 
-            :person_name => person.name,
-            :person_birthday => person.birthday.strftime('%d.%m.%Y'),
-            :person_address => person.address,
-            :person_id => "#{person.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{person.id_number} #{person.id_dep}",
+            :person_name => client.fio,
+            :person_birthday => client.clientbirthday.strftime('%d.%m.%Y'),
+            :person_address => client.adress,
+            :person_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
 
             :kop => price_kop,
             :kop2 => price_kop,
-            :car_model_name => car.model.name,
-            :car_vin => car.vin,
-            :car_prod_year => car.prod_date.year,
-            :car_engine_number => car.engine_number,
-            :car_pts => car_pts,
-            :chasis_vin => car.klasse.name == 'G' ? car.vin : 'ОТСУТСТВУЕТ',
-            :body_vin => car.klasse.name == 'G' ? 'ОТСУТСТВУЕТ' : car.vin,
+            :car_model_name => cleitn.car.model.name,
+            :car_vin => client.car.vin,
+            :car_prod_year => client.car.prod_date.year,
+            :car_engine_number => client.car.engine_number,
+            :car_pts => 'ПТС (ОШИБКА)',
+            :chasis_vin => client.car.klasse.name == 'G' ? car.vin : 'ОТСУТСТВУЕТ',
+            :body_vin => client.car.klasse.name == 'G' ? 'ОТСУТСТВУЕТ' : car.vin,
 
-            :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(price, :unit => '', :separator => ',', :delimiter => " "),
-            :car_price_w => RuPropisju.amount_in_words(price, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
-            :car_price_w_2 => RuPropisju.amount_in_words(price, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s
+            :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.cost, :unit => '', :separator => ',', :delimiter => " "),
+            :car_price_w => RuPropisju.amount_in_words(client.cost, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
+            :car_price_w_2 => RuPropisju.amount_in_words(client.cost, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s
             #:car_color_id => car.color_id,
             #:car_interior_id => car.interior_id,
             #:car_klasse => car.klasse.name
