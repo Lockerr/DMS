@@ -48,7 +48,7 @@ class Dkp# < ActiveRecord::Base
             :car_pts => 'ПТС (ОШИБКА)',
             :chasis_vin => client.car.klasse.name == 'G' ? client.car.vin : 'ОТСУТСТВУЕТ',
             :body_vin => client.car.klasse.name == 'G' ? 'ОТСУТСТВУЕТ' : client.car.vin,
-
+            :car_color => client.car.color_fact,
             :car_price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.cost, :unit => '', :separator => ',', :delimiter => " "),
             :car_price_w => RuPropisju.amount_in_words(client.cost, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
             :car_price_w_2 => RuPropisju.amount_in_words(client.cost, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s

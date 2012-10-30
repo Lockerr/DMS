@@ -545,13 +545,15 @@
         <w:t xml:space="preserve">Цвет: </w:t>
       </w:r>
       <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="002411DD">
-        <w:rPr>
-          <w:b/>
-          <w:bCs/>
-        </w:rPr>
-        <w:t> ОШИБКА ( ЦВЕТ ) </w:t>
-      </w:r>
+      <w:fldSimple w:instr=" DOCPROPERTY  car_color  \* MERGEFORMAT ">
+        <w:r w:rsidR="0018668D" w:rsidRPr="0018668D">
+          <w:rPr>
+            <w:b/>
+            <w:bCs/>
+          </w:rPr>
+          <w:t> ОШИБКА (ЦВЕТ)</w:t>
+        </w:r>
+      </w:fldSimple>
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="002411DD">
         <w:rPr>
