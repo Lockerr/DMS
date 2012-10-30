@@ -212,7 +212,7 @@ class Document
     doc_filename_name = case object.class.to_s.downcase
       when 'contract' then 'Договор'
       when 'act' then 'Акт'
-      when 'dkp' then 'Договор купли-продажи'
+      when 'dkp' then 'Договор(купли-продажи)'
     end
     
     system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/#{doc_filename_name}.docx -r  .")
