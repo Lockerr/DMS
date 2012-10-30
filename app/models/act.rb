@@ -31,7 +31,7 @@ class Act# < ActiveRecord::Base
 
   def attrs(client)
     {
-            :contract_kp_number => I18n.localize(client.contract_date || DateTime.now, :format => '%d %B %Y г.'),
+            :contract_kp_number => Time.now.year.to_s[2..3] + client.car.order.to_s[2..-1],
             :contract_kp_date => Time.now.year.to_s[2..3] + '/' + client.car.order.to_s[7..10],
 
             :person_name => client.fio,
@@ -45,7 +45,7 @@ class Act# < ActiveRecord::Base
             :car_vin => client.car.vin,
             :car_prod_year => client.car.prod_date.year,
             :car_engine_number => client.car.engine_number,
-            # :car_pts => client.car_pts,
+            
             :car_pts => 'ПТС (ОШИБКА)',
 
             :chasis_vin => client.car.klasse.name == 'G' ? client.car.vin : 'ОТСУТСТВУЕТ',

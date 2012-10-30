@@ -217,6 +217,7 @@ class Document
     
     Rails.logger.info "zip /var/www/fpk/upload/files/clients/#{client.id}/#{doc_filename_name}.docx -r "
     system("cd #{temp} && zip /var/www/fpk/upload/files/clients/#{client.id}/#{doc_filename_name}.docx -r  .")
+    system("rm -rf #{temp}")
     temp
     
 

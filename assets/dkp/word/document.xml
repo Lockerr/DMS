@@ -21,18 +21,15 @@
         </w:rPr>
         <w:t xml:space="preserve">ДОГОВОР № </w:t>
       </w:r>
-      <w:r w:rsidRPr="008E2C58">
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t>1</w:t>
-      </w:r>
-      <w:r w:rsidRPr="002411DD">
-        <w:rPr>
-          <w:b/>
-        </w:rPr>
-        <w:t>152433327</w:t>
-      </w:r>
+      <w:fldSimple w:instr=" DOCPROPERTY  doc_number  \* MERGEFORMAT ">
+        <w:r w:rsidR="0018668D" w:rsidRPr="0018668D">
+          <w:rPr>
+            <w:b/>
+            <w:bCs/>
+          </w:rPr>
+          <w:t></w:t>
+        </w:r>
+      </w:fldSimple>      
     </w:p>
     <w:p w:rsidR="008E2C58" w:rsidRPr="008E2C58" w:rsidRDefault="008E2C58" w:rsidP="008E2C58">
       <w:pPr>
