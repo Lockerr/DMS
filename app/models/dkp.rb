@@ -1,5 +1,5 @@
 #encoding: utf-8
-class Dkp < ActiveRecord::Base
+class Dkp# < ActiveRecord::Base
   belongs_to :car
   belongs_to :person
 

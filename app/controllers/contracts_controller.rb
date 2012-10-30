@@ -25,6 +25,10 @@ class ContractsController < ApplicationController
       doc.object = Act.new
       doc.client = Client.find_by_id(params[:client_id])
       doc.generate
+      doc = Document.new
+      doc.object = Dkp.new
+      doc.client = Client.find_by_id(params[:client_id])
+      doc.generate 
       render :json => {:document => 'ok'}
     else
       render :json => {:errors => doc.errors}

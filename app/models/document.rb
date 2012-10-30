@@ -16,6 +16,8 @@ class Document
           '1'
         when 'act' then
           '2'
+        when 'dkp' then
+          '3'
       end
     else
       errors['object'] = 'не определен'
