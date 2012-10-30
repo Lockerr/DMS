@@ -30,7 +30,7 @@ class Dkp# < ActiveRecord::Base
     REXML::Document.new file.read
   end
 
-  def attrs
+  def attrs(client)
 
     {
 
