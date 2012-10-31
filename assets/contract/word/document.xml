@@ -130,14 +130,7 @@
         </w:rPr>
         <w:t xml:space="preserve">  </w:t>
       </w:r>
-      <w:r w:rsidR="00735E9A" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve">  </w:t>
-      </w:r>
+      
       <w:r w:rsidR="006800E5" w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
@@ -235,7 +228,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">, в лице генерального директора</w:t>
+        <w:t xml:space="preserve">, в лице руководителя отдела продаж</w:t>
       </w:r>      
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
@@ -244,7 +237,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>Вердыша Вячеслава Викторовича</w:t>
+        <w:t>Пегеева Кирилла Валерьевича</w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
@@ -252,7 +245,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">, действующего на основании Устава, именуемое в дальнейшем </w:t>
+        <w:t xml:space="preserve">, действующего на основании доверенности б/н от 29.12.2011 г., именуемое в дальнейшем </w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>

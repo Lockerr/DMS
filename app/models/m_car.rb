@@ -18,16 +18,34 @@ class MCar < ActiveRecord::Base
   
   end
 
-def class_name= value
-  self[:class] = value
-end
+  def class_name= value
+    self[:class] = value
+  end
 
-def class_name
-  self[:class]
-end
+  def class_name
+    self[:class]
+  end
 
-def car
-  Car.find_by_order(ordernum)
-end
+  def car
+    Car.find_by_order(ordernum)
+  end
+
+  def add_picture(picture)
+    pictures = pics.scan(/".*?"/).map{|i| i.gsub(/\"/, '')}
+    pics = "a:#{pictures.size}:{"
+    pictures += picture
+
+    for picture in pictures
+      pics += "i:#{pictures.index(picture)};s:#{picture.size}:\"#{picture}\";"
+    end
+    
+    pics += "}"    
+  end
+
+  def remove_picture
+
+  end
+
+
 
 end

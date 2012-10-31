@@ -164,7 +164,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>Дьячук Антон Витальевич</w:t>
+        <w:t> ОШИБКА (Нет имени покупателя) </w:t>
       </w:r>
     </w:fldSimple>
   </w:p>
@@ -260,7 +260,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">7505 914913 УВД  </w:t>
+        <w:t xml:space="preserve"> ОШИБКА (Нет паспортных данных) </w:t>
       </w:r>
     </w:fldSimple>
   </w:p>
@@ -284,7 +284,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>+7 908 815 51 07</w:t>
+        <w:t> Ошибка (Нет телефона)</w:t>
       </w:r>
     </w:fldSimple>
   </w:p>
@@ -319,7 +319,7 @@
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
-      <w:t>Вердыш В.В./</w:t>
+      <w:t>Пегеев К.В./</w:t>
     </w:r>
     <w:r w:rsidRPr="005D01BC">
       <w:rPr>
@@ -352,7 +352,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>Дьячук А. В.</w:t>
+        <w:t> ОШИБКА</w:t>
       </w:r>
     </w:fldSimple>
     <w:r>
