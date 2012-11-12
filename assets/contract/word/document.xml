@@ -228,7 +228,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">, в лице руководителя отдела продаж</w:t>
+        <w:t xml:space="preserve">, в лице руководителя отдела продаж </w:t>
       </w:r>      
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
@@ -270,7 +270,7 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve"> с одной стороны и</w:t>
+        <w:t xml:space="preserve"> с одной стороны и </w:t>
       </w:r>
       
     </w:p>

@@ -14,6 +14,10 @@ if Rails.env == 'production'
       Rails.logger.info 'Ending mbr parse'
     end
 
+    task_scheduler.cron('0 0-6 * * *') do
+      Mbr.nal
+    end
+
     def task_scheduler.handle_exception(job, exception)
       puts "job #{job.job_id} caught exception '#{exception}'"
       Rails.logger.info "job #{job.job_id} caught exception '#{exception}'"

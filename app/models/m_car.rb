@@ -1,6 +1,8 @@
+#encoding: utf-8
 class MCar < ActiveRecord::Base
   
   
+
   establish_connection(
     :adapter => 'mysql2',
     :encoding => 'utf8',
@@ -12,6 +14,11 @@ class MCar < ActiveRecord::Base
     )
   set_table_name 'mbclub74.cars'
   
+  scope :unsold, where(:sold => 0)
+  scope :a, where(:class => 'A')
+  scope :c, where(:class => 'C')
+  scope :b, where(:class => 'B')
+
   bad_attribute_names :class
 
   def write_options
@@ -42,10 +49,53 @@ class MCar < ActiveRecord::Base
     pics += "}"    
   end
 
-  def remove_picture
+  def validate_codes
+      collection = []
 
+      collection.push color.to_s if color != 0 and color
+      collection.push inter.to_s if inter != '0' and inter
+
+      wrong = MOption.where(:cars_orderno => ordernum, :opt_id => collection)
+      code = wrong.group(:opt_id).map(&:opt_id).uniq.first
+      puts ordernum
+      puts code
+      puts color
+      puts inter
+
+      wrong.destroy_all
+      
+      klasse = Klasse.find_by_name class_name
+
+      if interior = Interior.where(:klasse_id => klasse).find_by_code(inter)
+        interior_description = interior.desc
+      else
+        interior_description = 'Позвоните нам!'
+      end
+
+      if _color = Color.find_by_code(color)
+        color_description = _color.desc
+      else
+        color_description = 'Позвоните нам!'
+      end
+      
+
+      __interior = MOption.new(:cars_orderno => ordernum, :opt_id => inter, :opt_name => interior_description, :opt_cost => 0)
+      __color = MOption.new(:cars_orderno => ordernum, :opt_id => color, :opt_name => color_description, :opt_cost => 0)
+      if klasse
+        if _option = klasse.opts.where(:code => code).first
+          __option = MOption.new(:cars_orderno => ordernum, :opt_id => code, :opt_name => _option.desc, :opt_cost => 0)
+        end
+      end
+      puts '=========================================================================================================================================================================='
+      puts ordernum
+      puts __interior.inspect
+      puts __color.inspect
+      puts __option.inspect
+      puts '----------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
+      __option.save if __option
+      __color.save
+      __interior.save
+
+    
   end
-
-
-
 end

@@ -23,6 +23,7 @@ class Car < ActiveRecord::Base
   after_update :check_for_mbclub_presence
 
 
+
   def interior
     if interior = Interior.find_by_code(interior_id)
       interior.desc
@@ -72,10 +73,6 @@ class Car < ActiveRecord::Base
     end
   end
 
-
-
-
-
   def prepare_for_mbclub
     attributes = {
       :ordernum => order,
@@ -122,60 +119,60 @@ class Car < ActiveRecord::Base
     Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
   end
 
-  state_machine :state, :initial => :ordered do
+  # state_machine :state, :initial => :ordered do
 
-    def initialize
-      @client = person
-      super()
-    end
+  #   def initialize
+  #     @client = person
+  #     super()
+  #   end
 
-    after_failure do |car, transition|
-      Rails.logger.error "vehicle #{car} failed to transition on #{transition.event}"
-    end
+  #   after_failure do |car, transition|
+  #     Rails.logger.error "vehicle #{car} failed to transition on #{transition.event}"
+  #   end
 
-    event :arrived do
-      transition :ordered => :on_checkin
-    end
+  #   event :arrived do
+  #     transition :ordered => :on_checkin
+  #   end
 
-    event :checkin do
-      transition all => :pending
-    end
+  #   event :checkin do
+  #     transition all => :pending
+  #   end
 
-    event :propose do
-      transition :pending => :proposed
-    end
+  #   event :propose do
+  #     transition :pending => :proposed
+  #   end
 
-    event :sell do
-      transition all => :sold
-    end
+  #   event :sell do
+  #     transition all => :sold
+  #   end
 
-    event :transmit do
-      transition :sold => :transmitted
-    end
+  #   event :transmit do
+  #     transition :sold => :transmitted
+  #   end
 
-    state all - [:sold, :transmitted] do
-      def can_be_sold?
-        true
-      end
-    end
+  #   state all - [:sold, :transmitted] do
+  #     def can_be_sold?
+  #       true
+  #     end
+  #   end
 
-    state :sold, :transmitted do
-      def can_be_sold?
-        false
-      end
+  #   state :sold, :transmitted do
+  #     def can_be_sold?
+  #       false
+  #     end
 
-      def can_be_proposed?
-        false
-      end
-    end
+  #     def can_be_proposed?
+  #       false
+  #     end
+  #   end
 
-    state :reserved do
-      def can_be_proposed?
-        false
-      end
-    end
+  #   state :reserved do
+  #     def can_be_proposed?
+  #       false
+  #     end
+  #   end
 
-  end
+  # end
 
 
 end

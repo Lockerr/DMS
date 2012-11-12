@@ -1,12 +1,12 @@
 #encoding: utf-8
 class Mbr
   def self.analyze(num)
-    if car = Car.where(:order => num)
+    if car = Car.where(:order => num).first
       print 'exist in cars' 
       print 'and published' if car.published
     end
     
-    if car = MCar.where(:ordernum => num)
+    if car = MCar.find_by_ordernum(num)
       print 'exist in mbclub' 
       prind ' and published' if car.sold == 0
     end
@@ -14,8 +14,10 @@ class Mbr
 
   def self.nal
     
-    file = Rails.root.join('nal.xls')
+    file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
+    
     book = Spreadsheet.open file
+    
     puts 'opend' if book
     MCar.update_all :sold => 1
     Car.update_all :published => false
@@ -27,6 +29,9 @@ class Mbr
           attributes = {}
           attributes[:end_cost] = row[8].to_f
           attributes[:place] = row[11]
+          attributes[:color] = row[6].to_s.gsub('.0', '')
+
+          attributes[:inter] = row[7].to_s.gsub('.0','')
           mcar.update_attributes attributes
         elsif car = Car.find_by_order(row[1])
           puts car.inspect
@@ -40,6 +45,37 @@ class Mbr
     Car.where(:order => published).update_all :published => true
     MCar.where(:ordernum => published).update_all :sold => 0
   end
+
+
+  def self.anal(index)
+    
+    file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
+    book = Spreadsheet.open file
+    puts 'opend' if book
+    published = []
+
+    book.worksheets[0].each do |row|
+      if row[12] == '+'
+        puts row[index].to_f
+        
+      end
+    end    
+    
+  end
+
+  def self.update_cost
+    file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
+    book = Spreadsheet.open file
+    puts 'opend' if book
+    published = []
+
+    book.worksheets[0].each do |row|
+      if row[12] == '+'
+        MCar.where(:ordernum => row[1]).update_all(:end_cost => row[8].to_f)        
+      end
+    end    
+  end
+
 
 
   def self.load_from_mbr
