@@ -309,25 +309,8 @@
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>именуемый (ая) в дальнейшем</w:t>
+        <w:t>именуемый (ая) в дальнейшем «Покупатель»,</w:t>
       </w:r>            
-      <w:r w:rsidR="000D076D" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:b/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>«Покупатель»</w:t>
-      </w:r>
-      <w:r w:rsidR="000D076D" w:rsidRPr="00254ACB">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>,</w:t>
-      </w:r>
       <w:r w:rsidR="005D2AEA" w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
@@ -1057,6 +1040,49 @@
         </w:rPr>
         <w:t>.</w:t>
       </w:r>
+    </w:p>
+    <w:p w:rsidR="000D076D" w:rsidRPr="00254ACB" w:rsidRDefault="000D076D" w:rsidP="000D076D">
+      <w:pPr>
+        <w:jc w:val="both"/>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>3.1.</w:t>
+      </w:r>
+      <w:r w:rsidR="00A179D0" w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>3</w:t>
+      </w:r>
+      <w:r w:rsidR="00D73E75" w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>.</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve">В случае если оплата по настоящему договору будет произведена за Покупателя третьими лицами, Покупатель обязан до момента получения автомобиля предоставить Продавцу заявление от своего имени о зачислении поступивших в адрес Продавца денежных средств в счет оплаты по настоящем договору, а также сопроводительное письмо от лица, осуществившего платеж за Покупателя с указанием назначения платежа, суммы и даты платежа.</w:t>
+      </w:r>
+      
     </w:p>
     <w:p w:rsidR="000D076D" w:rsidRPr="00254ACB" w:rsidRDefault="000D076D" w:rsidP="000D076D">
       <w:pPr>
