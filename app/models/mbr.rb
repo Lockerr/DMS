@@ -14,7 +14,7 @@ class Mbr
 
   def self.nal
     
-    file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
+    file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
     
     book = Spreadsheet.open file
     

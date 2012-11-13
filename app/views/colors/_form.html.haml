@@ -1,4 +1,4 @@
-= form_for(@color) do |f|
+= form_for(@color, :html => {:class => 'form form-horizontal'}) do |f|
   - if @color.errors.any?
     #error_explanation
       %h2
@@ -7,17 +7,22 @@
       %ul
         - @color.errors.full_messages.each do |msg|
           %li= msg
-  .field
-    = f.label :code
-    %br/
-    = f.text_field :code
-  .field
-    = f.label :desc
-    %br/
-    = f.text_field :desc
-  .field
-    = f.label :color
-    %br/
-    = f.text_field :color
-  .actions
-    = f.submit
+  .control-group
+    = f.label :code, :class => 'control-label'
+    .controls  
+      = f.text_field :code
+  .control-group
+    = f.label :desc, :class => 'control-label'
+    .controls  
+      = f.text_field :desc
+  .control-group
+    = f.label :color, :class => 'control-label'
+    .controls  
+      = f.text_field :color
+  .control-group
+    = f.label :metallic, :class => 'control-label'
+    .controls  
+      = f.check_box :metallic
+  .control-group
+    .controls
+      = f.submit

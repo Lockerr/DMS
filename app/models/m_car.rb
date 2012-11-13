@@ -1,7 +1,8 @@
 #encoding: utf-8
 class MCar < ActiveRecord::Base
   
-  
+  after_create :validate_codes
+  after_update :validate_codes
 
   establish_connection(
     :adapter => 'mysql2',
@@ -18,6 +19,9 @@ class MCar < ActiveRecord::Base
   scope :a, where(:class => 'A')
   scope :c, where(:class => 'C')
   scope :b, where(:class => 'B')
+  scope :e, where(:class => 'E')
+  scope :v, where(:class => 'V')
+  
 
   bad_attribute_names :class
 
