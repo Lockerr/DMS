@@ -116,7 +116,7 @@ class Document
 
 
     if object.class.to_s.downcase == 'contract'
-      for code in client.car.codes
+      for code in client.car.codes.sort
         count = docbody.root.elements[1].elements.count
         before = docbody.root.elements[1].elements[count]
         paragraph = wp

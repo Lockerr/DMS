@@ -4142,7 +4142,7 @@
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
       </w:r>
-      <w:fldSimple w:instr=" DOCPROPERTY  number  \* MERGEFORMAT ">
+      <w:fldSimple w:instr=" DOCPROPERTY  number_2  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
           <w:rPr>
             <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
@@ -4174,7 +4174,7 @@
         </w:rPr>
         <w:t xml:space="preserve">от </w:t>
       </w:r>
-      <w:fldSimple w:instr=" DOCPROPERTY  top_date  \* MERGEFORMAT ">
+      <w:fldSimple w:instr=" DOCPROPERTY  top_date_2  \* MERGEFORMAT ">
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
           <w:rPr>
             <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
