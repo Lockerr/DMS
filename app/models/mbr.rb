@@ -49,7 +49,7 @@ class Mbr
 
   def self.anal(index)
     
-    file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
+    file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
     book = Spreadsheet.open file
     puts 'opend' if book
     published = []
@@ -64,7 +64,7 @@ class Mbr
   end
 
   def self.update_cost
-    file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
+    file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
     book = Spreadsheet.open file
     puts 'opend' if book
     published = []
