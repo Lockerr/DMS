@@ -4103,7 +4103,7 @@
           <w:footerReference w:type="default" r:id="rId9"/>
           <w:footerReference w:type="first" r:id="rId10"/>
           <w:pgSz w:w="11906" w:h="16838" w:code="9"/>
-          <w:pgMar w:top="567" w:right="567" w:bottom="567" w:left="1134" w:header="284" w:footer="567" w:gutter="0"/>
+          <w:pgMar w:top="667" w:right="567" w:bottom="567" w:left="1134" w:header="284" w:footer="567" w:gutter="0"/>
           <w:cols w:space="708"/>
           <w:docGrid w:linePitch="360"/>
         </w:sectPr>
@@ -4506,7 +4506,7 @@
     </w:p>
     <w:sectPr w:rsidR="002C01C9" w:rsidRPr="00254ACB" w:rsidSect="00445E78">
       <w:pgSz w:w="11906" w:h="16838" w:code="9"/>
-      <w:pgMar w:top="567" w:right="567" w:bottom="567" w:left="1134" w:header="284" w:footer="567" w:gutter="0"/>
+      <w:pgMar w:top="667" w:right="567" w:bottom="567" w:left="1134" w:header="284" w:footer="567" w:gutter="0"/>
       <w:cols w:space="708"/>
       <w:titlePg/>
       <w:docGrid w:linePitch="360"/>
