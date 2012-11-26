@@ -30,7 +30,6 @@ class Mbr
           attributes[:end_cost] = row[8].to_f
           attributes[:place] = row[11]
           attributes[:color] = row[6].to_s.gsub('.0', '')
-
           attributes[:inter] = row[7].to_s.gsub('.0','')
           mcar.update_attributes attributes
         elsif car = Car.find_by_order(row[1])
@@ -185,6 +184,23 @@ class Mbr
             klasse = (row[4].inner_text).split(/\s/)[0]
         end
 
+        state = case row[6]
+        when 'Отгружен дилеру' then '1_Отгружен дилеру'
+        when 'Автовоз сформирован' then '2_Автовоз сформирован'
+        when 'Отгружен на свободный склад (Москва)' then '3_Отгружен на свободный склад (Москва)'
+        when 'Счёт-фактура выставлена' then '4_Счёт-фактура выставлена'
+        when 'Отпуск материала выполнен' then '5_Отпуск материала выполнен'
+        when 'Прибыл на склад' then '6_Прибыл на склад'
+        when 'Отгружен из Палдиски' then '7_Отгружен из Палдиски'
+        when 'Автовоз сформирован (в Москву)' then '8_Автовоз сформирован (в Москву)'
+        when 'Прибыл в порт назначения' then '9_Прибыл в порт назначения'
+        when 'Доставка в Палдиски' then '10_Доставка в Палдиски'
+        when 'А/м создан' then '11_А/м создан'
+        else '12_статус не известен'
+        end
+
+
+
         puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
         puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
         puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
@@ -193,6 +209,7 @@ class Mbr
         
         attributes =
                 {
+                        :state => state,
                         :order => row[0].inner_text,
                         :vin => book.search('//tr')[i].search('//td')[1].inner_text,
                         :model => Model.find_or_create_by_name(row[4].inner_text.gsub(/"Особая с/,'').gsub(/Особая/,'')
