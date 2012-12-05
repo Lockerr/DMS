@@ -8,11 +8,11 @@ if Rails.env == 'production'
       puts '1'
     end
 
-    task_scheduler.cron('0 0-6 * * *') do
-      Rails.logger.info 'Starting mbr parse'
-      Car.mbr
-      Rails.logger.info 'Ending mbr parse'
-    end
+    # task_scheduler.cron('0 0-6 * * *') do
+    #   Rails.logger.info 'Starting mbr parse'
+    #   Car.mbr
+    #   Rails.logger.info 'Ending mbr parse'
+    # end
 
     task_scheduler.cron('0 0-6 * * *') do
       Mbr.nal
