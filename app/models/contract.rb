@@ -18,7 +18,7 @@ class Contract # < ActiveRecord::Base
             :s_name => client.short_name,
             :birthday => client.clientbirthday.strftime('%d.%m.%Y г.'),
             :address => client.client_adress,
-            :p_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep}",
+            :p_id => "#{client.id_series.to_s.gsub(/(\d\d)(\d\d)/, '\1 \2')} #{client.id_number} #{client.id_dep} #{client.pas4.strftime('%d.%m.%Y') if client.pas4}",
             :phones => client.phone1,
             :vin => client.car.vin,
             :color => client.car.color_id,            
