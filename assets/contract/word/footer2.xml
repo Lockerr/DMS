@@ -77,61 +77,153 @@
       <w:t>. Челябинск, ул. Горелова, 12</w:t>
     </w:r>
   </w:p>
-  <w:p w:rsidR="00445E78" w:rsidRDefault="00445E78" w:rsidP="00445E78">
-    <w:pPr>
-      <w:rPr>
-        <w:i/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-        <w:iCs/>
-        <w:sz w:val="20"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:i/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-        <w:iCs/>
-        <w:sz w:val="20"/>
-      </w:rPr>
-      <w:t>ИНН 7449023616 / КПП 744901001</w:t>
-    </w:r>
-  </w:p>
-  <w:p w:rsidR="00445E78" w:rsidRDefault="00445E78" w:rsidP="00445E78">
-    <w:pPr>
-      <w:rPr>
-        <w:i/>
-        <w:iCs/>
-        <w:sz w:val="20"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:i/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-        <w:iCs/>
-        <w:sz w:val="20"/>
-      </w:rPr>
-      <w:t>Р/с 40702810272020102062 в Челябинском отделении N 8597 г. Челябинск</w:t>
-    </w:r>
-  </w:p>
-  <w:p w:rsidR="00445E78" w:rsidRDefault="00445E78" w:rsidP="00445E78">
-    <w:pPr>
-      <w:rPr>
-        <w:i/>
-        <w:iCs/>
-        <w:sz w:val="20"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:i/>
-        <w:iCs/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-        <w:sz w:val="20"/>
-      </w:rPr>
-      <w:t>К/с 30101810700000000602, БИК 047501602</w:t>
-    </w:r>
-  </w:p>
+    <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>ИНН 7449023616 / КПП 744901001</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="0077008E" w:rsidRPr="00254ACB" w:rsidRDefault="0077008E" w:rsidP="0077008E">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>Р/с 40702810272020102062 в Челябинском отделении N 8597 г. Челябинск</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>К/с 30101810700000000602, БИК 047501602</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>Р/с 40702810685080000681 в филиале ОАО "УРАЛСИБ" г. Челябинск</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>К/с 30101810300000000976, БИК 047501976</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>Р/с 40702810590000016431 в ОАО "ЧЕЛЯБИНВЕСТБАНК" г. Челябинск</w:t>
+      </w:r>
+    </w:p>
+    <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r w:rsidRPr="00254ACB">
+        <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:i/>
+          <w:iCs/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>К/с 30101810400000000779, БИК 047501779</w:t>
+      </w:r>
+    </w:p>
   <w:p w:rsidR="00445E78" w:rsidRDefault="00445E78" w:rsidP="00445E78">
     <w:pPr>
       <w:pStyle w:val="a4"/>
