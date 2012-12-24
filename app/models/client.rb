@@ -53,11 +53,11 @@ class Client < ActiveRecord::Base
     new_client.pass_when = pas4.strftime('%Y / %m / %d') if pas4
     new_client.address = adress
     new_client.birth = clientbirthday.strftime('%Y / %m / %d') if clientbirthday
-    new_client.ordernum = '' # ?
+    new_client.ordernum = vin
     new_client.price = cost
     new_client.prepaid = prepay
-    new_client.dog_num = Time.now.year.to_s[2..3] + '/' + car.order.to_s[7..10] if car
-    new_client.dog_date = Date.today.strftime('%Y / %m / %d')
+    new_client.dog_num = dg.year.to_s[2..3] + '/' + car.order.to_s[7..10] if car
+    new_client.dog_date = dg.strftime('%Y / %m / %d')
     new_client.client_id = id    
     new_client
   end
