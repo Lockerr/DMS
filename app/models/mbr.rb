@@ -90,7 +90,10 @@ class Mbr
     driver.navigate.to "https://portal.mercedes-benz.ru/irj/portal"
     driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
     # driver.find_element(:id, 'logonpassfield').send_keys 'Q@w3e4r5'
-    driver.find_element(:id, 'logonpassfield').send_keys 'Kfgfnf%$321'
+    # driver.find_element(:id, 'logonpassfield').send_keys 'Kfgfnf%$321'
+    driver.find_element(:id, 'logonpassfield').send_keys 'Lmzxer%12354'
+
+    
     driver.find_element(:class => 'urBtnStdNew').click
 
     puts 'loging ok'

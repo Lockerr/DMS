@@ -42,7 +42,7 @@ class Client < ActiveRecord::Base
     propis
   end
 
-  def write_to_ms_sql
+  def prepare_client_for_mssql
     new_client = Mssql.new
     new_client.firstname = fio.split(/\s/)[1]
     new_client.lastname = fio.split(/\s/)[0]
@@ -51,14 +51,31 @@ class Client < ActiveRecord::Base
     new_client.pass_ser = pas2.gsub(/\s/, '').to_i
     new_client.pass_whom = pas3
     new_client.pass_when = pas4.strftime('%Y / %m / %d') if pas4
-    new_client.address = client_adress
+    new_client.address = adress
     new_client.birth = clientbirthday.strftime('%Y / %m / %d') if clientbirthday
     new_client.ordernum = '' # ?
     new_client.price = cost
     new_client.prepaid = prepay
     new_client.dog_num = Time.now.year.to_s[2..3] + '/' + car.order.to_s[7..10] if car
     new_client.dog_date = Date.today.strftime('%Y / %m / %d')
-    new_client.save
+    new_client.client_id = id    
+    new_client
+  end
+
+  def exist_in_mssql?
+    prepare_client_for_mssql.exist?
+  end
+
+  def write_to_ms_sql
+    if id = prepare_client_for_mssql.exist?
+      mssql = prepare_client_for_mssql
+      mssql.updated = 1
+      mssql.update(id)
+    else
+      mssql = prepare_client_for_mssql
+      mssql.updated = 0
+      mssql.save      
+    end
   end
 
   def prepay_kop
