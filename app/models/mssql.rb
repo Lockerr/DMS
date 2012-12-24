@@ -67,7 +67,7 @@ class Mssql
       end
       query
 
-    }.join(', ')
+    }.join(', ').encode('cp1251')
     
     client = TinyTds::Client.new(:host => '192.168.1.102', :username => 'aster', :password => '1q2w3e4r5t')
     result = client.execute("update [contragents] SET #{query} where id = #{id}" ).to_a
