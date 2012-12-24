@@ -19,8 +19,6 @@ class Mbr
     book = Spreadsheet.open file
     
     puts 'opend' if book
-    MCar.update_all :sold => 1
-    Car.update_all :published => false
     published = []
     
     book.worksheets[0].each do |row|
@@ -41,6 +39,8 @@ class Mbr
     end
     
     puts published.inspect
+    MCar.update_all :sold => 1
+    Car.update_all :published => false
     Car.where(:order => published).update_all :published => true
     MCar.where(:ordernum => published).update_all :sold => 0
   end
@@ -212,8 +212,6 @@ class Mbr
                         :vin => book.search('//tr')[i].search('//td')[1].inner_text,
                         :model => Model.find_or_create_by_name(row[4].inner_text.gsub(/"Особая с/,'').gsub(/Особая/,'')
                           .gsub(/BlueEFFICIENCY/,'')
-                          .gsub(/BlueEFFICIENCY/,'')
-                          .gsub(/Седан/,'')
                           .gsub(/MERCEDES-BENZ/, '')
                           .gsub(/Внедорожник/, '')
                           .gsub(/4MATIC/, '')
