@@ -51,7 +51,7 @@ class Client < ActiveRecord::Base
     new_client.pass_ser = pas2.gsub(/\s/, '').to_i
     new_client.pass_whom = pas3
     new_client.pass_when = pas4.strftime('%Y / %m / %d') if pas4
-    new_client.address = adress
+    new_client.address = client_adress
     new_client.birth = clientbirthday.strftime('%Y / %m / %d') if clientbirthday
     new_client.ordernum = vin
     new_client.price = cost
