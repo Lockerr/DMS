@@ -3,6 +3,13 @@ class Contract # < ActiveRecord::Base
 
 
   def attrs(client)
+    if client.car.klasse.name == 'C'
+        cedan = ' седан'
+    elsif client.car.klasse.name == 'B'
+        cedan = ' седан'
+    else
+        cedan = ''
+    end
     {
             :price => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.cost, :unit => '', :separator => ',', :delimiter => " "),
             :price_w => RuPropisju.amount_in_words(client.cost, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
@@ -11,8 +18,8 @@ class Contract # < ActiveRecord::Base
             :top_date => I18n.localize(client.contract_date || DateTime.now, :format => '%d %B %Y г.'),
             :top_date_2 => I18n.localize(client.contract_date || DateTime.now, :format => '%d %B %Y г.'),
             :person_name => client.fio,
-            :car_model_name => client.car.model.name + ' седан',
-            :car_model_name_2 => client.car.model.name + ' седан',
+            :car_model_name => "#{client.car.model.name}#{cedan}",
+            :car_model_name_2 => "#{client.car.model.name}#{cedan}",
             :prepay => Object.new.extend(ActionView::Helpers::NumberHelper).number_to_currency(client.prepay, :unit => '', :separator => ',', :delimiter => " "),
             :prepay_w => RuPropisju.amount_in_words(client.prepay, :rur).split(/\ /)[0..-2].join(' ').mb_chars.capitalize.to_s,
             :s_name => client.short_name,
