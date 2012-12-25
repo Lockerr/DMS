@@ -5,7 +5,7 @@ class Contract # < ActiveRecord::Base
   def attrs(client)
     if client.car.klasse.name == 'C'
         cedan = ' седан'
-    elsif client.car.klasse.name == 'B'
+    elsif client.car.klasse.name == 'E'
         cedan = ' седан'
     else
         cedan = ''
