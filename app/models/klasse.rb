@@ -7,4 +7,14 @@ class Klasse < ActiveRecord::Base
     MCar.where(:class => name)
   end
 
+  def cedan
+    if client.car.klasse.name == 'C'
+        ' седан'
+    elsif client.car.klasse.name == 'E'
+        ' седан'
+    else
+        nil
+    end
+  end
+
 end

@@ -38,7 +38,7 @@ class Mbr
       end
     end
     
-    puts published.inspect
+    # puts published.inspect
 
     MCar.update_all :sold => 1
     Car.update_all :published => false
@@ -201,11 +201,11 @@ class Mbr
         end
 
 
-        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
+        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
         
         attributes =
                 {
