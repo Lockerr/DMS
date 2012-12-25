@@ -212,7 +212,9 @@ class Mbr
                         :state => state,
                         :order => row[0].inner_text,
                         :vin => book.search('//tr')[i].search('//td')[1].inner_text,
-                        :model => Model.find_or_create_by_name(row[4].inner_text.gsub(/"Особая с/,'').gsub(/Особая/,'')
+                        :model => Model.find_or_create_by_name(row[4].inner_text
+                          .gsub(/"Особая с/,'')
+                          .gsub(/Особая/,'')
                           .gsub(/BlueEFFICIENCY/,'')
                           .gsub(/BlueEFFICIENCY/,'')
                           .gsub(/Седан/,'')
@@ -223,6 +225,8 @@ class Mbr
                           .gsub(/ $/,'')
                           .gsub(/^ /,'')
                           .gsub(/  /,' ')
+                          .gsub('ОС','')
+                          .gsub(/\s+$/,'')
 
                           ),
                         :klasse_id => Klasse.find_by_name(klasse).id,
