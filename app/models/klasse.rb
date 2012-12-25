@@ -9,9 +9,9 @@ class Klasse < ActiveRecord::Base
   end
 
   def cedan
-    if client.car.klasse.name == 'C'
+    if name == 'C'
         ' седан'
-    elsif client.car.klasse.name == 'E'
+    elsif name == 'E'
         ' седан'
     else
         nil
