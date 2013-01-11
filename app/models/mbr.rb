@@ -30,7 +30,7 @@ class Mbr
           attributes[:color] = row[6].to_s.gsub('.0', '')
           attributes[:inter] = row[7].to_s.gsub('.0','')
           mcar.update_attributes attributes
-          Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
+          # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
 
         elsif car = Car.find_by_order(row[1])
           puts car.inspect
