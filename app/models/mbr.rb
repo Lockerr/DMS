@@ -12,44 +12,44 @@ class Mbr
     end
   end
 
+  # def self.nal
+    
+  #   file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
+    
+  #   book = Spreadsheet.open file
+    
+  #   puts 'opend' if book
+  #   published = []
+    
+  #   book.worksheets[0].each do |row|
+  #     if row[12] == '+'
+  #       if mcar = MCar.find_by_ordernum(row[1])
+  #         attributes = {}
+  #         # attributes[:end_cost] = row[8].to_f
+  #         attributes[:place] = row[11]
+  #         attributes[:color] = row[6].to_s.gsub('.0', '')
+  #         attributes[:inter] = row[7].to_s.gsub('.0','')
+  #         mcar.update_attributes attributes
+  #         # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
+
+  #       elsif car = Car.find_by_order(row[1])
+  #         puts car.inspect
+  #         car.put_to_mbclub          
+  #       end
+  #       published.push row[1]
+  #     end
+  #   end
+    
+  #   # puts published.inspect
+
+  #   MCar.update_all :sold => 1
+  #   Car.update_all :published => false
+
+  #   Car.where(:order => published).update_all :published => true
+  #   MCar.where(:ordernum => published).update_all :sold => 0
+  # end
+
   def self.nal
-    
-    file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
-    
-    book = Spreadsheet.open file
-    
-    puts 'opend' if book
-    published = []
-    
-    book.worksheets[0].each do |row|
-      if row[12] == '+'
-        if mcar = MCar.find_by_ordernum(row[1])
-          attributes = {}
-          # attributes[:end_cost] = row[8].to_f
-          attributes[:place] = row[11]
-          attributes[:color] = row[6].to_s.gsub('.0', '')
-          attributes[:inter] = row[7].to_s.gsub('.0','')
-          mcar.update_attributes attributes
-          # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
-
-        elsif car = Car.find_by_order(row[1])
-          puts car.inspect
-          car.put_to_mbclub          
-        end
-        published.push row[1]
-      end
-    end
-    
-    # puts published.inspect
-
-    MCar.update_all :sold => 1
-    Car.update_all :published => false
-
-    Car.where(:order => published).update_all :published => true
-    MCar.where(:ordernum => published).update_all :sold => 0
-  end
-
-  def self.nal_test
     
     # file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
     source = '/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
