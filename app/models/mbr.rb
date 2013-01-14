@@ -70,6 +70,7 @@ class Mbr
       if book.cell(row, 13) == '+'
         puts book.cell(row, 13)
         puts "#{book.cell(row,2)} - #{book.cell(row,12)} - #{book.cell(row,7)} - #{book.cell(row,8)}"
+        Rails.logger.info "#{book.cell(row,2)} - #{book.cell(row,12)} - #{book.cell(row,7)} - #{book.cell(row,8)}"
 
         if mcar = MCar.find_by_ordernum(book.cell(row,2))
           attributes = {}
