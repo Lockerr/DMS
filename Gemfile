@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+gem 'rubyXL'
+
+gem 'roo'
 gem 'devise'
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'

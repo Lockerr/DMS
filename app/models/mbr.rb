@@ -49,6 +49,85 @@ class Mbr
     MCar.where(:ordernum => published).update_all :sold => 0
   end
 
+  def self.nal_test
+    
+    # file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
+    source = '/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
+    file = Rails.root.join('tmp', 'file.xlsx')
+    FileUtils.cp source, file
+
+    # book = RubyXL::Parser.parse file.to_s
+    book = Excelx.new(file.to_s)
+
+    
+    puts 'opend' if book
+    Rails.logger.info 'opend' if book
+    published = []
+
+    book.default_sheet = book.sheets[0]
+
+    1.upto(book.last_row) do |row|
+      if book.cell(row, 13) == '+'
+        puts book.cell(row, 13)
+        puts "#{book.cell(row,2)} - #{book.cell(row,12)} - #{book.cell(row,7)} - #{book.cell(row,8)}"
+
+        if mcar = MCar.find_by_ordernum(book.cell(row,2))
+          attributes = {}
+          # attributes[:end_cost] = row[8].to_f
+          attributes[:place] = book.cell(row,12)
+          attributes[:color] = book.cell(row,7).to_s.gsub('.0', '')
+          attributes[:inter] = book.cell(row,8).to_s.gsub('.0','')
+          mcar.update_attributes attributes
+          # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
+
+        elsif car = Car.find_by_order(book.cell(row,2))
+          puts car.inspect
+          car.put_to_mbclub          
+        end
+
+        published.push book.cell(row,2)
+
+
+      end
+    end
+
+    MCar.update_all :sold => 1
+    Car.update_all :published => false
+
+    Car.where(:order => published).update_all :published => true
+    MCar.where(:ordernum => published).update_all :sold => 0
+
+  end
+    
+  #   book.worksheets[0].each do |row|
+  #     puts row[12]
+  #     # if row[12] == '+'
+  #     #   if mcar = MCar.find_by_ordernum(row[1])
+  #     #     attributes = {}
+  #     #     # attributes[:end_cost] = row[8].to_f
+  #     #     attributes[:place] = row[11]
+  #     #     attributes[:color] = row[6].to_s.gsub('.0', '')
+  #     #     attributes[:inter] = row[7].to_s.gsub('.0','')
+  #     #     mcar.update_attributes attributes
+  #     #     # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
+
+  #     #   elsif car = Car.find_by_order(row[1])
+  #     #     puts car.inspect
+  #     #     car.put_to_mbclub          
+  #     #   end
+  #     #   published.push row[1]
+  #     # end
+  #   end
+    
+  #   # puts published.inspect
+
+    # MCar.update_all :sold => 1
+    # Car.update_all :published => false
+
+    # Car.where(:order => published).update_all :published => true
+    # MCar.where(:ordernum => published).update_all :sold => 0
+  # end
+
 
   def self.anal(index)
     
