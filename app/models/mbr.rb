@@ -14,7 +14,7 @@ class Mbr
 
   def self.nal
     
-    file = File.new('/home/user/shared/!Отдел продаж/Журналы/nalichie.xls', 'r')
+    file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
     
     book = Spreadsheet.open file
     
@@ -25,7 +25,7 @@ class Mbr
       if row[12] == '+'
         if mcar = MCar.find_by_ordernum(row[1])
           attributes = {}
-          attributes[:end_cost] = row[8].to_f
+          # attributes[:end_cost] = row[8].to_f
           attributes[:place] = row[11]
           attributes[:color] = row[6].to_s.gsub('.0', '')
           attributes[:inter] = row[7].to_s.gsub('.0','')
