@@ -121,9 +121,11 @@ class Car < ActiveRecord::Base
     Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
   end
 
-  
+  def decode_vin
+    
+  end
 
-
+   
 end
 
 
