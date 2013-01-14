@@ -52,7 +52,7 @@ class Mbr
   def self.nal
     
     # file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
-    source = '/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
+    source = '/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
     file = Rails.root.join('tmp', 'file.xlsx')
     FileUtils.cp source, file
 
