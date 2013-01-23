@@ -176,7 +176,9 @@ class Mbr
     driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
     # driver.find_element(:id, 'logonpassfield').send_keys 'Q@w3e4r5'
     # driver.find_element(:id, 'logonpassfield').send_keys 'Kfgfnf%$321'
-    driver.find_element(:id, 'logonpassfield').send_keys 'Lmzxer%12354'
+    driver.find_element(:id, 'logonpassfield').send_keys 'Selenium123$'
+    
+    
 
     
     driver.find_element(:class => 'urBtnStdNew').click
