@@ -222,17 +222,21 @@ class Mbr
 
     driver.find_element(:class => 'urBtnCnt').click
 
-    wait.until { driver.find_element(:id => 'WD0139') }
-    driver.find_element(:id => 'WD0139').click
+    # wait.until { driver.find_element(:id => 'WD0139') }
+    # driver.find_element(:id => 'WD0139').click
     puts 'export true'
     
     sleep 5
     
-    wait.until { driver.find_element(:id => 'WD013B-r') }
+    wait.until { driver.find_element(:id => 'WD0147') }
     
     sleep 1    
-    driver.find_element(:id => 'WD013B-r').click
+    driver.find_element(:id => 'WD0147').click
     sleep 1
+    # driver.find_element(:id => 'WD0149-r').click
+    sleep 5
+    driver.find_element(:id => 'WD0149').click
+    sleep 5
     driver.find_element(:id => 'WD0139').click
     sleep 1
     driver.find_element(:id => 'WD013B').click
@@ -241,7 +245,7 @@ class Mbr
     sleep 1
     driver.find_element(:id => 'WD013A').click
     
-    sleep 15
+    sleep 10
     
     driver.close
   end

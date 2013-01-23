@@ -6,7 +6,7 @@ if Rails.env == 'production'
     task_scheduler.in('1s') do
       Rails.logger.info 'Sheduler initiated'
       puts '1'
-      Mbr.nal
+      # Mbr.nal
     end
 
     # task_scheduler.cron('0 0-6 * * *') do
