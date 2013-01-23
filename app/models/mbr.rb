@@ -78,6 +78,7 @@ class Mbr
           attributes[:place] = book.cell(row,12)
           attributes[:color] = book.cell(row,7).to_s.gsub('.0', '')
           attributes[:inter] = book.cell(row,8).to_s.gsub('.0','')
+          attributes[:end_cost] = book.cell(row,9).to_f
           mcar.update_attributes attributes
           # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
 
