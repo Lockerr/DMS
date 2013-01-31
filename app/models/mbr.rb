@@ -5,61 +5,25 @@ class Mbr
       print 'exist in cars' 
       print 'and published' if car.published
     end
-    
+
     if car = MCar.find_by_ordernum(num)
       print 'exist in mbclub' 
       prind ' and published' if car.sold == 0
     end
   end
 
-  # def self.nal
-    
-  #   file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
-    
-  #   book = Spreadsheet.open file
-    
-  #   puts 'opend' if book
-  #   published = []
-    
-  #   book.worksheets[0].each do |row|
-  #     if row[12] == '+'
-  #       if mcar = MCar.find_by_ordernum(row[1])
-  #         attributes = {}
-  #         # attributes[:end_cost] = row[8].to_f
-  #         attributes[:place] = row[11]
-  #         attributes[:color] = row[6].to_s.gsub('.0', '')
-  #         attributes[:inter] = row[7].to_s.gsub('.0','')
-  #         mcar.update_attributes attributes
-  #         # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
-
-  #       elsif car = Car.find_by_order(row[1])
-  #         puts car.inspect
-  #         car.put_to_mbclub          
-  #       end
-  #       published.push row[1]
-  #     end
-  #   end
-    
-  #   # puts published.inspect
-
-  #   MCar.update_all :sold => 1
-  #   Car.update_all :published => false
-
-  #   Car.where(:order => published).update_all :published => true
-  #   MCar.where(:ordernum => published).update_all :sold => 0
-  # end
+  def self.set_presence
+  end
 
   def self.nal
-    
-    # file = File.new('/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx', 'r')
     source = '/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
     file = Rails.root.join('tmp', 'file.xlsx')
     FileUtils.cp source, file
 
-    # book = RubyXL::Parser.parse file.to_s
+
     book = Excelx.new(file.to_s)
 
-    
+
     puts 'opend' if book
     Rails.logger.info 'opend' if book
     published = []
@@ -74,7 +38,6 @@ class Mbr
 
         if mcar = MCar.find_by_ordernum(book.cell(row,2))
           attributes = {}
-          # attributes[:end_cost] = row[8].to_f
           attributes[:place] = book.cell(row,12)
           attributes[:color] = book.cell(row,7).to_s.gsub('.0', '')
           attributes[:inter] = book.cell(row,8).to_s.gsub('.0','')
@@ -84,7 +47,7 @@ class Mbr
 
         elsif car = Car.find_by_order(book.cell(row,2))
           puts car.inspect
-          car.put_to_mbclub          
+          car.put_to_mbclub
         end
 
         published.push book.cell(row,2)
@@ -100,35 +63,7 @@ class Mbr
     MCar.where(:ordernum => published).update_all :sold => 0
 
   end
-    
-  #   book.worksheets[0].each do |row|
-  #     puts row[12]
-  #     # if row[12] == '+'
-  #     #   if mcar = MCar.find_by_ordernum(row[1])
-  #     #     attributes = {}
-  #     #     # attributes[:end_cost] = row[8].to_f
-  #     #     attributes[:place] = row[11]
-  #     #     attributes[:color] = row[6].to_s.gsub('.0', '')
-  #     #     attributes[:inter] = row[7].to_s.gsub('.0','')
-  #     #     mcar.update_attributes attributes
-  #     #     # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
 
-  #     #   elsif car = Car.find_by_order(row[1])
-  #     #     puts car.inspect
-  #     #     car.put_to_mbclub          
-  #     #   end
-  #     #   published.push row[1]
-  #     # end
-  #   end
-    
-  #   # puts published.inspect
-
-    # MCar.update_all :sold => 1
-    # Car.update_all :published => false
-
-    # Car.where(:order => published).update_all :published => true
-    # MCar.where(:ordernum => published).update_all :sold => 0
-  # end
 
 
   def self.anal(index)
@@ -246,7 +181,6 @@ class Mbr
     driver.find_element(:id => 'WD013A').click
     
     sleep 10
-    
     driver.close
   end
 
@@ -261,9 +195,9 @@ class Mbr
       row = []
       if book.search('//tr')[i]
         row = book.search('//tr')[i].search('//td')
-        row[31] = book.search('//tr')[i].search('//td')[31].inner_text        
+        row[31] = book.search('//tr')[i].search('//td')[31].inner_text
         opts = row[31].split('.')
-        
+
         if (row[4].inner_text).split(/\s/)[0] == 'C200'
             modelname = row[4].inner_text.gsub('C200', 'C 200')
             klasse = "C"
@@ -289,15 +223,7 @@ class Mbr
           else '3_статус не известен'
         end
 
-
-        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        # puts "====== #{row[29].inner_text} = #{row[30].inner_text}"
-        
         attributes =
-                {
                         :state => state,
                         :order => row[0].inner_text,
                         :vin => book.search('//tr')[i].search('//td')[1].inner_text,

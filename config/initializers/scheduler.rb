@@ -15,8 +15,10 @@ if Rails.env == 'production'
     #   Rails.logger.info 'Ending mbr parse'
     # end
 
-    task_scheduler.cron('0 0-6 * * *') do
+    task_scheduler.every('1h') do
+      Rails.logger 'starting nal parsing'
       Mbr.nal
+      Rails.logger 'nal parsing over'
     end
 
     def task_scheduler.handle_exception(job, exception)
