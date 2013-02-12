@@ -157,18 +157,12 @@ class Mbr
 
     driver.find_element(:class => 'urBtnCnt').click
 
-    # wait.until { driver.find_element(:id => 'WD0139') }
-    # driver.find_element(:id => 'WD0139').click
     puts 'export true'
-    
     sleep 5
-    
     wait.until { driver.find_element(:id => 'WD0147') }
-    
-    sleep 1    
-    driver.find_element(:id => 'WD0147').click
+
     sleep 1
-    # driver.find_element(:id => 'WD0149-r').click
+    driver.find_element(:id => 'WD0147').click
     sleep 5
     driver.find_element(:id => 'WD0149').click
     sleep 5
@@ -179,7 +173,7 @@ class Mbr
     driver.find_element(:id => 'WD0139').click
     sleep 1
     driver.find_element(:id => 'WD013A').click
-    
+
     sleep 10
     driver.close
   end
@@ -223,14 +217,13 @@ class Mbr
           else '3_статус не известен'
         end
 
-        attributes =
+        attributes = {
                         :state => state,
                         :order => row[0].inner_text,
                         :vin => book.search('//tr')[i].search('//td')[1].inner_text,
                         :model => Model.find_or_create_by_name(row[4].inner_text
                           .gsub(/"Особая с/,'')
                           .gsub(/Особая/,'')
-                          .gsub(/BlueEFFICIENCY/,'')
                           .gsub(/BlueEFFICIENCY/,'')
                           .gsub(/Седан/,'')
                           .gsub(/MERCEDES-BENZ/, '')
