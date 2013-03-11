@@ -43,7 +43,10 @@ class Mbr
           attributes[:inter] = book.cell(row,8).to_s.gsub('.0','')
           attributes[:end_cost] = book.cell(row,9).to_f
           mcar.update_attributes attributes
-          Car.find_by_order(row[1]).update_attributes :price, book.cell(row,9).to_f
+
+          if car = Car.find_by_order(book.cell(row,1)
+            car.update_attributes :gpl, book.cell(row,9).to_f
+          end
 
         elsif car = Car.find_by_order(book.cell(row,2))
           puts car.inspect

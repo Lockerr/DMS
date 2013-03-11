@@ -51,14 +51,6 @@ class Car < ActiveRecord::Base
   end
   self.include_root_in_json = false
 
-  def check_for_mbclub_presence
-
-  end  
-
-  def update_at_mbclub
-
-  end
-
   def put_to_mbclub
     unless presence_at_mbclub?
       prepare_for_mbclub.save 
@@ -121,11 +113,7 @@ class Car < ActiveRecord::Base
     Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
   end
 
-  def decode_vin
-    
-  end
-
-   
+  
 end
 
 
