@@ -44,7 +44,7 @@ class Mbr
           attributes[:end_cost] = book.cell(row,9).to_f
           mcar.update_attributes attributes
 
-          if car = Car.find_by_order(book.cell(row,1)
+          if car = Car.find_by_order(book.cell(row,1))
             car.update_attributes :gpl, book.cell(row,9).to_f
           end
 
