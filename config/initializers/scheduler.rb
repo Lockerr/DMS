@@ -3,11 +3,11 @@ if Rails.env == 'production'
   unless self.private_methods.include? 'irb_binding'
     task_scheduler = Rufus::Scheduler.start_new
 
-    task_scheduler.in('1s') do
-      Rails.logger.info 'Sheduler initiated'
-      puts '1'
-      Mbr.nal
-    end
+    # task_scheduler.in('1s') do
+    #   Rails.logger.info 'Sheduler initiated'
+    #   puts '1'
+    #   Mbr.nal
+    # end
 
     # task_scheduler.cron('0 0-6 * * *') do
     #   Rails.logger.info 'Starting mbr parse'
