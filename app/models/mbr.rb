@@ -15,8 +15,33 @@ class Mbr
   def self.set_presence
   end
 
+  def self.update_price
+    source = '/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
+    file = Rails.root.join('tmp', 'file.xlsx')
+    FileUtils.cp source, file
+
+
+    book = Excelx.new(file.to_s)
+
+
+    puts 'opend' if book
+    Rails.logger.info 'opend' if book
+    published = []
+
+    book.default_sheet = book.sheets[0]
+
+    1.upto(book.last_row) do |row|
+      if book.cell(row, 13) == '+'
+        if car = Car.find_by_order(book.cell(row,2))
+          car.update_attributes gpl: book.cell(row,9).to_f
+        end
+      end
+    end
+  end
+
   def self.nal
     source = '/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
+
     file = Rails.root.join('tmp', 'file.xlsx')
     FileUtils.cp source, file
 
@@ -44,8 +69,8 @@ class Mbr
           attributes[:end_cost] = book.cell(row,9).to_f
           mcar.update_attributes attributes
 
-          if car = Car.find_by_order(book.cell(row,1))
-            car.update_attributes :gpl, book.cell(row,9).to_f
+          if car = Car.find_by_order(book.cell(row,2))
+            car.update_attributes gpl: book.cell(row,9).to_f
           end
 
         elsif car = Car.find_by_order(book.cell(row,2))

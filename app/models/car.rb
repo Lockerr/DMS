@@ -19,8 +19,8 @@ class Car < ActiveRecord::Base
   belongs_to :client
 
 
-  after_create :check_for_mbclub_presence
-  after_update :check_for_mbclub_presence
+  # after_create :check_for_mbclub_presence
+  # after_update :check_for_mbclub_presence
 
 
 
@@ -112,8 +112,6 @@ class Car < ActiveRecord::Base
   def codes
     Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
   end
-
-  
 end
 
 
