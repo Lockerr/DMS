@@ -16,9 +16,9 @@ if Rails.env == 'production'
     # end
 
     task_scheduler.every('1h') do
-      Rails.logger 'starting nal parsing'
+      Rails.logger.info 'starting nal parsing'
       Mbr.nal
-      Rails.logger 'nal parsing over'
+      Rails.logger.info 'nal parsing over'
     end
 
     def task_scheduler.handle_exception(job, exception)

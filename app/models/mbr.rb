@@ -43,7 +43,7 @@ class Mbr
           attributes[:inter] = book.cell(row,8).to_s.gsub('.0','')
           attributes[:end_cost] = book.cell(row,9).to_f
           mcar.update_attributes attributes
-          # Car.find_by_order(row[1]).update_attributes :price, row[8].to_f
+          Car.find_by_order(row[1]).update_attributes :price, book.cell(row,9).to_f
 
         elsif car = Car.find_by_order(book.cell(row,2))
           puts car.inspect
@@ -93,6 +93,11 @@ class Mbr
         MCar.where(:ordernum => row[1]).update_all(:end_cost => row[8].to_f)        
       end
     end    
+  end
+
+  def self.get_cars_by_class
+    file = File.new('/home/user/shared/!Отдел продаж/Журналы/Nalichie.xls', 'r')
+
   end
 
 
