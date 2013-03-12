@@ -14,9 +14,43 @@ class Mbr
 
   def self.set_presence
   end
+  
+  def self.source
+    if Rails.env.development?
+      '/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
+    else
+      '/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
+    end
+  end
+
+  def self.check_nal_by_order(order_number)
+    file = Rails.root.join('tmp', 'file.xlsx')
+    FileUtils.cp source, file
+
+
+    book = Excelx.new(file.to_s)
+
+    result = nil
+
+    puts 'opend' if book
+    Rails.logger.info 'opend' if book
+    published = []
+
+    book.default_sheet = book.sheets[0]
+
+    1.upto(book.last_row) do |row|
+      if book.cell(row,2) == order_number
+        result = book.row(row)
+      end
+      puts row
+    end
+    result
+  end
+
 
   def self.update_price
-    source = '/home/anton/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
+    source
+    
     file = Rails.root.join('tmp', 'file.xlsx')
     FileUtils.cp source, file
 
