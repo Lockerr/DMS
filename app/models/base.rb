@@ -21,7 +21,8 @@ class Base
 
   def login
     driver.find_element(:id, 'logonuidfield').send_keys 'd5aansha'
-    driver.find_element(:id, 'logonpassfield').send_keys 'Selenium123$'
+    pwds = %w(Selenium123$ Hidra123$)
+    driver.find_element(:id, 'logonpassfield').send_keys 'Hidra123$'
     if driver.find_element(:class => 'urBtnStdNew').click
       puts 'login - ok'
     end
