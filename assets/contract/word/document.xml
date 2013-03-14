@@ -2246,40 +2246,7 @@
           <w:szCs w:val="20"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         </w:rPr>
-        <w:t xml:space="preserve">7.1. Общий гарантийный срок для легковых и внедорожных автомобилей «Мерседес-Бенц» составляет 2 (два) года. Этот срок действует без ограничения пробега </w:t>
-      </w:r>
-      <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>с даты</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> первой регистрации Автомобиля в органах ГИБДД</w:t>
-      </w:r>
-      <w:r w:rsidRPr="00FB054A">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>с 03.08.2012г.</w:t>
+        <w:t xml:space="preserve">7.1. Общий гарантийный срок для легковых и внедорожных автомобилей «Мерседес-Бенц» составляет 2 (два) года. Этот срок действует без ограничения пробега с даты  первой регистрации Автомобиля в органах ГИБДД с 03.08.2012г.</w:t>
       </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
@@ -2411,7 +2378,7 @@
         <w:tabs>
           <w:tab w:val="left" w:pos="567"/>
         </w:tabs>
-        <w:ind w:hanging="720"/>
+        <w:ind w:left="284" w:firstLine="0"/>
         <w:jc w:val="both"/>
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
@@ -2454,31 +2421,9 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>использования для д</w:t>
+        <w:t>использования для до- / переоборудования Автомобиля чужеродных деталей, не являющихся оригинальными, или неподходящих для данного Автомобиля. </w:t>
       </w:r>
       <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>о-</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> </w:t>
-      </w:r>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>/ переоборудования Автомобиля чужеродных деталей, не являющихся оригинальными, или неподходящих для данного Автомобиля. </w:t>
-      </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
       <w:pPr>
@@ -2499,23 +2444,7 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">установки деталей после несанкционированной разборки и ремонта деталей, узлов и агрегатов, включая, </w:t>
-      </w:r>
-      <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>но</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> не ограничиваясь этим: изменения программного обеспечения, заводских настроек, параметров электронных блоков управления;</w:t>
+        <w:t xml:space="preserve">установки деталей после несанкционированной разборки и ремонта деталей, узлов и агрегатов, включая, но не ограничиваясь этим: изменения программного обеспечения, заводских настроек, параметров электронных блоков управления;</w:t>
       </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
@@ -2771,14 +2700,7 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>использования Автомобилей не по обычному назначению, например, с целью проведения испытаний и тестов, автомобильных спортивных соревнований, обучения водителей или иных мер </w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>оприятий, связанных с обучением;</w:t>
+        <w:t>использования Автомобилей не по обычному назначению, например, с целью проведения испытаний и тестов, автомобильных спортивных соревнований, обучения водителей или иных мер оприятий, связанных с обучением;</w:t>
       </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
