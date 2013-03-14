@@ -14,7 +14,6 @@
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -23,7 +22,6 @@
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -32,7 +30,6 @@
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -42,7 +39,6 @@
         <w:r w:rsidR="00254ACB" w:rsidRPr="00254ACB">
           <w:rPr>
             <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-            <w:color w:val="000000"/>
             <w:sz w:val="20"/>
             <w:szCs w:val="20"/>
           </w:rPr>
@@ -1281,7 +1277,6 @@
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -1290,7 +1285,6 @@
       <w:r w:rsidR="00F57171" w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -1299,7 +1293,6 @@
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -1308,7 +1301,6 @@
       <w:r w:rsidR="00D04EBC" w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2360,24 +2352,9 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">7.4. Гарантийные обязательства не распространяются на дефекты и повреждения, возникшие </w:t>
+        <w:t xml:space="preserve">7.4. Гарантийные обязательства не распространяются на дефекты и повреждения, возникшие вследствие:</w:t>
       </w:r>
       <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>вследствие</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>:</w:t>
-      </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
       <w:pPr>
@@ -2389,62 +2366,16 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>д</w:t>
-      </w:r>
-      <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:color w:val="000000"/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>о-</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r>
-        <w:rPr>
-          <w:color w:val="000000"/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> </w:t>
-      </w:r>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:color w:val="000000"/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve">/ пере- оборудования Автомобиля без санкции компании </w:t>
-      </w:r>
-      <w:proofErr w:type="spellStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:color w:val="000000"/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>Даймлер</w:t>
-      </w:r>
-      <w:proofErr w:type="spellEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:color w:val="000000"/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>. А именно:</w:t>
+        <w:t>до- / пере- оборудования Автомобиля без санкции компании Даймлер . А именно:</w:t>
       </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
@@ -2459,14 +2390,12 @@
         <w:ind w:left="284" w:firstLine="0"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2485,14 +2414,12 @@
         <w:ind w:hanging="720"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2500,7 +2427,6 @@
       </w:r>
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2519,14 +2445,12 @@
         <w:ind w:hanging="720"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2535,7 +2459,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2544,7 +2467,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2552,7 +2474,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2569,14 +2490,12 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2585,7 +2504,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2594,7 +2512,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2611,14 +2528,12 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2634,14 +2549,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2657,14 +2570,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2680,14 +2591,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2703,14 +2612,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2718,7 +2625,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2734,14 +2640,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2749,7 +2653,6 @@
       </w:r>
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2757,7 +2660,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2776,14 +2678,12 @@
         <w:ind w:left="284" w:firstLine="0"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2792,7 +2692,6 @@
       <w:proofErr w:type="spellStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2801,7 +2700,6 @@
       <w:proofErr w:type="spellEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2809,7 +2707,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2828,7 +2725,6 @@
         <w:ind w:left="284" w:firstLine="0"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2836,7 +2732,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2845,7 +2740,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2853,7 +2747,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2869,14 +2762,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2884,7 +2775,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2896,14 +2786,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2912,7 +2800,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2920,7 +2807,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2932,14 +2818,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2947,7 +2831,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2955,7 +2838,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2963,7 +2845,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2971,7 +2852,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2980,7 +2860,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2989,7 +2868,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2997,7 +2875,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3005,7 +2882,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3013,7 +2889,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3025,14 +2900,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3040,7 +2913,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3048,7 +2920,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3056,7 +2927,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3064,7 +2934,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3072,7 +2941,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3080,7 +2948,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3089,7 +2956,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3098,7 +2964,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3113,14 +2978,12 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3128,7 +2991,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3136,7 +2998,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3144,7 +3005,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3161,14 +3021,12 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3177,7 +3035,6 @@
       <w:proofErr w:type="spellStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3186,7 +3043,6 @@
       <w:proofErr w:type="spellEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3194,7 +3050,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3217,7 +3072,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3226,7 +3080,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3235,7 +3088,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3255,7 +3107,6 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:bCs/>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3263,7 +3114,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3271,7 +3121,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:vertAlign w:val="superscript"/>
@@ -3280,7 +3129,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3297,14 +3145,12 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3312,7 +3158,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3328,14 +3173,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3343,7 +3186,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3359,14 +3201,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3374,7 +3214,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3390,14 +3229,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3406,7 +3243,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3422,14 +3258,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3438,7 +3272,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3447,7 +3280,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3455,7 +3287,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3463,7 +3294,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3471,7 +3301,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3480,7 +3309,6 @@
       <w:proofErr w:type="spellStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3489,7 +3317,6 @@
       <w:proofErr w:type="spellEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3497,7 +3324,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3513,14 +3339,12 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3528,7 +3352,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3547,7 +3370,6 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3555,7 +3377,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3564,7 +3385,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3585,7 +3405,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:lang w:val="en-US"/>
@@ -3594,7 +3413,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3602,7 +3420,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3611,7 +3428,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3620,7 +3436,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3638,7 +3453,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3646,7 +3460,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3654,7 +3467,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3672,7 +3484,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3680,7 +3491,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3688,7 +3498,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3706,7 +3515,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:lang w:val="en-US"/>
@@ -3715,7 +3523,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3723,7 +3530,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3732,7 +3538,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3741,7 +3546,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3759,7 +3563,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:lang w:val="en-US"/>
@@ -3768,7 +3571,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3776,7 +3578,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3785,7 +3586,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3794,7 +3594,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3803,7 +3602,6 @@
       <w:proofErr w:type="spellStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3812,7 +3610,6 @@
       <w:proofErr w:type="spellEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3830,7 +3627,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3838,7 +3634,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3846,7 +3641,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3854,7 +3648,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3872,7 +3665,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3880,7 +3672,6 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3888,7 +3679,6 @@
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3899,14 +3689,12 @@
       <w:pPr>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3918,14 +3706,12 @@
       <w:pPr>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3936,14 +3722,12 @@
       <w:pPr>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3952,7 +3736,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3961,7 +3744,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3972,14 +3754,12 @@
       <w:pPr>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3988,7 +3768,6 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -3997,7 +3776,6 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -4008,14 +3786,12 @@
       <w:pPr>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -4032,7 +3808,6 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:color w:val="000000"/>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -5397,7 +5172,6 @@
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -5407,7 +5181,6 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
           <w:bCs/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -5418,7 +5191,6 @@
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -5429,7 +5201,6 @@
           <w:rPr>
             <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
             <w:b/>
-            <w:color w:val="000000"/>
             <w:sz w:val="20"/>
             <w:szCs w:val="20"/>
           </w:rPr>
@@ -5440,7 +5211,6 @@
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -5450,7 +5220,6 @@
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
-          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -5461,7 +5230,6 @@
           <w:rPr>
             <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
             <w:b/>
-            <w:color w:val="000000"/>
             <w:sz w:val="20"/>
             <w:szCs w:val="20"/>
           </w:rPr>
