@@ -248,7 +248,6 @@ class Mbr
   def self.parse_from_mbr_file
     Dir.chdir(Rails.root.join('tmp'))
     file = File.new Rails.root.join('tmp', Dir.glob('*.xls')[0].to_s), 'r'
-    puts file.inspect
     book = Hpricot.parse file.read
     counter = book.search('//tr').count
     puts counter
@@ -259,19 +258,11 @@ class Mbr
         row[31] = book.search('//tr')[i].search('//td')[31].inner_text
         opts = row[31].split('.')
 
-        if (row[4].inner_text).split(/\s/)[0] == 'C200'
-            modelname = row[4].inner_text.gsub('C200', 'C 200')
-            klasse = "C"
-        elsif (row[4].inner_text).split(/\s/)[0] == 'C250'
-            modelname = row[4].inner_text.gsub('C250', 'C 250')
-            klasse = "C"
-        elsif (row[4].inner_text).split(/\s/)[0] == 'MERCEDES-BENZ'
-          klasse = 'V'
-          modelname = 'VIANO'
-        else
-            modelname = row[4].inner_text
-            klasse = (row[4].inner_text).split(/\s/)[0]
-        end
+        klasse_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})/)[0][0]
+        model_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})/)[0][1]
+        
+        klasse = Klasse.find_or_create_by_name(klasse_name)
+        model = Klasse.models.find_or_create_by_name(model_name)
 
         state = case row[5].inner_text  
           when 'At Customer' then '1_В наличии'
@@ -288,23 +279,8 @@ class Mbr
                         :state => state,
                         :order => row[0].inner_text,
                         :vin => book.search('//tr')[i].search('//td')[1].inner_text,
-                        :model => Model.find_or_create_by_name(row[4].inner_text
-                          .gsub(/"Особая с/,'')
-                          .gsub(/Особая/,'')
-                          .gsub(/BlueEFFICIENCY/,'')
-                          .gsub(/Седан/,'')
-                          .gsub(/MERCEDES-BENZ/, '')
-                          .gsub(/Внедорожник/, '')
-                          .gsub(/4MATIC/, '')
-                          .gsub(/  /,' ')
-                          .gsub(/ $/,'')
-                          .gsub(/^ /,'')
-                          .gsub(/  /,' ')
-                          .gsub('ОС','')
-                          .gsub(/\s+$/,'')
-
-                          ),
-                        :klasse_id => Klasse.find_by_name(klasse).id,
+                        :model => model,
+                        :klasse_id => klasse.id,
                         :color_id => row[29].inner_text,
                         :interior_id => row[30].inner_text,
                         :arrival => row[18].inner_text,
