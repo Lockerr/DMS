@@ -14,14 +14,17 @@
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
+          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
+          <w:lang w:val="en-US"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:b/>
+          <w:color w:val="000000"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -348,19 +351,7 @@
         <w:t xml:space="preserve"> </w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
-        <w:t>(да</w:t>
-      </w:r>
-      <w:r w:rsidR="00322826" w:rsidRPr="00254ACB">
-        <w:t>лее по тексту «</w:t>
-      </w:r>
-      <w:r w:rsidR="00C10B26" w:rsidRPr="00254ACB">
-        <w:t>автомобиль</w:t>
-      </w:r>
-      <w:r w:rsidR="00322826" w:rsidRPr="00254ACB">
-        <w:t>»)</w:t>
-      </w:r>
-      <w:r w:rsidR="00085E73" w:rsidRPr="00254ACB">
-        <w:t>.</w:t>
+        <w:t>(да лее по тексту «автомобиль»).</w:t>
       </w:r>
     </w:p>
     <w:p w:rsidR="000D076D" w:rsidRPr="00254ACB" w:rsidRDefault="000D076D" w:rsidP="000D076D">
@@ -2265,24 +2256,9 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">7.2. Общий гарантийный срок для малотоннажных автомобилей «Мерседес-Бенц» составляет 2 (два) года или 200 000 (двести тысяч) км пробега в зависимости от того, что наступит ранее. Срок действует </w:t>
+        <w:t xml:space="preserve">7.2. Общий гарантийный срок для малотоннажных автомобилей «Мерседес-Бенц» составляет 2 (два) года или 200 000 (двести тысяч) км пробега в зависимости от того, что наступит ранее. Срок действует с даты передачи автомобиля первому покупателю или с даты первой регистрации Автомобиля в органах ГИБДД в зависимости от того, какое событие наступило ранее (далее по тексту ДПР).</w:t>
       </w:r>
       <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>с даты передачи</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> автомобиля первому покупателю или с даты первой регистрации Автомобиля в органах ГИБДД в зависимости от того, какое событие наступило ранее (далее по тексту ДПР).</w:t>
-      </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
       <w:pPr>
@@ -2300,7 +2276,7 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>7.3. Затраты на буксировку автомобиля покрываются только до близлежащего авторизованного сервисного центра и при условии, что они непосредственно связаны с гарантийным случаем и транспортное средство не способно передвигаться своим ходом. </w:t>
+        <w:t xml:space="preserve">7.3. Затраты на буксировку автомобиля покрываются только до близлежащего авторизованного сервисного центра и при условии, что они непосредственно связаны с гарантийным случаем и транспортное средство не способно передвигаться своим ходом. </w:t>
       </w:r>
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
@@ -2323,33 +2299,59 @@
       </w:r>
       <w:proofErr w:type="gramStart"/>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="3"/>
+          <w:numId w:val="4"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>до- / пере- оборудования Автомобиля без санкции компании Даймлер . А именно:</w:t>
+        <w:t>д</w:t>
+      </w:r>
+      <w:r w:rsidRPr="00C82011">
+        <w:rPr>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>о-</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+      <w:r w:rsidRPr="00C82011">
+        <w:rPr>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>/ пере- оборудования Автомобиля без санкции компании Даймлер. А именно:</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="6"/>
+          <w:numId w:val="8"/>
         </w:numPr>
         <w:tabs>
           <w:tab w:val="left" w:pos="567"/>
@@ -2357,31 +2359,34 @@
         <w:ind w:left="284" w:firstLine="0"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>выполнения работ третьими лицами, не уполномоченными ДИСТРИБЬЮТОРОМ или заводом-изготовителем осуществлять такие изменения; </w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00540FB7" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00540FB7" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="6"/>
+          <w:numId w:val="8"/>
         </w:numPr>
         <w:tabs>
           <w:tab w:val="left" w:pos="567"/>
         </w:tabs>
-        <w:ind w:left="284" w:firstLine="0"/>
+        <w:ind w:hanging="720"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
@@ -2400,11 +2405,11 @@
         <w:t>;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="6"/>
+          <w:numId w:val="8"/>
         </w:numPr>
         <w:tabs>
           <w:tab w:val="left" w:pos="567"/>
@@ -2418,24 +2423,43 @@
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>использования для до- / переоборудования Автомобиля чужеродных деталей, не являющихся оригинальными, или неподходящих для данного Автомобиля. </w:t>
+        <w:t>использования для до-</w:t>
       </w:r>
-      <w:proofErr w:type="gramStart"/>
+      <w:r>
+        <w:rPr>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t xml:space="preserve"> </w:t>
+      </w:r>
+      <w:r w:rsidRPr="00C82011">
+        <w:rPr>
+          <w:color w:val="000000"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>/ переоборудования Автомобиля чужеродных деталей, не являющихся оригинальными, или неподходящих для данного
+          Автомобиля.
+        </w:t>
+      </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
@@ -2447,11 +2471,11 @@
         <w:t xml:space="preserve">установки деталей после несанкционированной разборки и ремонта деталей, узлов и агрегатов, включая, но не ограничиваясь этим: изменения программного обеспечения, заводских настроек, параметров электронных блоков управления;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:contextualSpacing/>
@@ -2469,11 +2493,11 @@
         <w:t>изменения мощности, конструкции и/ или типа Автомобиля;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -2490,11 +2514,11 @@
         <w:t>установки навесного, дополнительного оборудования или устройств, не имеющего одобрения ДАЙМЛЕР или ДИСТРИБЬЮТОРА, а также с нарушениями инструкций по его установке; </w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -2511,11 +2535,11 @@
         <w:t>проведения сервисного и технического обслуживания или ремонта Автомобилей третьими лицами, официально не уполномоченными ДИСТРИБЬЮТОРОМ или заводом-изготовителем осуществлять такие виды работ; </w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -2532,11 +2556,11 @@
         <w:t>использования при ремонте Автомобиля деталей, купленных вне официальной дилерской сети, за качество и оригинальность которых ДИСТРИБЬЮТОР и производитель не могут нести ответственность; </w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -2560,11 +2584,11 @@
         <w:t>;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -2595,11 +2619,11 @@
         <w:t>предписаний производителя в отношении технического обслуживания Автомобиля. Например:</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="5"/>
+          <w:numId w:val="7"/>
         </w:numPr>
         <w:tabs>
           <w:tab w:val="left" w:pos="567"/>
@@ -2616,23 +2640,7 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve"> при нарушении заданных </w:t>
-      </w:r>
-      <w:proofErr w:type="spellStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>межсервисных</w:t>
-      </w:r>
-      <w:proofErr w:type="spellEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> интервалов (по времени или пробегу)</w:t>
+        <w:t>при нарушении заданных межсервисных интервалов (по времени или пробегу)</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -2642,11 +2650,11 @@
         <w:t>;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00540FB7" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00540FB7" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="5"/>
+          <w:numId w:val="7"/>
         </w:numPr>
         <w:tabs>
           <w:tab w:val="left" w:pos="567"/>
@@ -2664,15 +2672,7 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>невыполнении</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r w:rsidRPr="00540FB7">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> всех необходимых объемов работ по техобслуживанию, включая дополнительные работы в соответствии с предписаниями сервисного листа (в зависимости от автомобиля), и с использованием рекомендованных эксплуатационных материалов</w:t>
+        <w:t>невыполнении всех необходимых объемов работ по техобслуживанию, включая дополнительные работы в соответствии с предписаниями сервисного листа (в зависимости от автомобиля), и с использованием рекомендованных эксплуатационных материалов </w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -2682,11 +2682,11 @@
         <w:t>;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00152CA8" w:rsidRDefault="00485D08" w:rsidP="00152CA8">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="2"/>
+          <w:numId w:val="3"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -2703,8 +2703,12 @@
         <w:t>использования Автомобилей не по обычному назначению, например, с целью проведения испытаний и тестов, автомобильных спортивных соревнований, обучения водителей или иных мер оприятий, связанных с обучением;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00152CA8" w:rsidRDefault="00485D08" w:rsidP="00152CA8">
       <w:pPr>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="3"/>
+        </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
@@ -2717,26 +2721,15 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:lastRenderedPageBreak/>
-        <w:t>j)</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:tab/>
-      </w:r>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>превышения допустимой полной массы Автомобилей, осевых нагрузок, допустимых для Автомобилей полезной нагрузки или грузоподъемности шасси; </w:t>
+        <w:t>превышения допустимой полной массы Автомобилей, осевых нагрузок, допустимых для Автомобилей полезной нагрузки или грузоподъемности шасси;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRDefault="00485D08" w:rsidP="00152CA8">
       <w:pPr>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="3"/>
+        </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
@@ -2744,20 +2737,6 @@
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>к)</w:t>
-      </w:r>
-      <w:r>
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:tab/>
-      </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
@@ -2767,7 +2746,8 @@
       </w:r>
       <w:r>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -2819,6 +2799,10 @@
     </w:p>
     <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
       <w:pPr>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="3"/>
+        </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
@@ -2838,14 +2822,14 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:tab/>
+        <w:t>В</w:t>
       </w:r>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>воздействия природных явлений и окружающей среды (например</w:t>
+        <w:t>оздействия природных явлений и окружающей среды (например</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -2873,26 +2857,10 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve"> </w:t>
-      </w:r>
-      <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>но</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> не ограничиваясь: града, камнепада, птичьего помета, дорожных реагентов, промышленных газов и отложений, пыли, цветочной пыльцы и металлической пыли, наводнений, влияний морской воды, проникновения насекомых/ животных и проч.) и обстоятельств непреодолимой силы.</w:t>
+        <w:t xml:space="preserve"> но не ограничиваясь: града, камнепада, птичьего помета, дорожных реагентов, промышленных газов и отложений, пыли, цветочной пыльцы и металлической пыли, наводнений, влияний морской воды, проникновения насекомых/ животных и проч.) и обстоятельств непреодолимой силы.</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:tabs>
           <w:tab w:val="left" w:pos="426"/>
@@ -2952,33 +2920,18 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">работы по регламентному техобслуживанию и уходу за Автомобилем; регулировочные и наладочные работы, например: регулировка в системе впрыска и зажигания; регулировка топливного насоса высокого давления; очистка топливной системы; уход за тормозной системой и ее прокачка; регулировка сцепления; регулировка натяжения ремней; балансировка, перестановка колес, проверка давления в шинах; подтяжка болтов и гаек; сход-развал; смазка и замена масел; регулировка люка в крыше и смазка направляющих; регулировка дверей; регулировка фар; очистка и регулировка форсунок </w:t>
-      </w:r>
-      <w:proofErr w:type="spellStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>омывателей</w:t>
-      </w:r>
-      <w:proofErr w:type="spellEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>; проверка на функциональную работоспособность, включая пробные поездки; контроль уровней рабочих жидкостей; уход за аккумулятором </w:t>
+        <w:t>работы по регламентному техобслуживанию и уходу за Автомобилем; регулировочные и наладочные работы, например: регулировка в системе впрыска и зажигания; регулировка топливного насоса высокого давления; очистка топливной системы; уход за тормозной системой и ее прокачка; регулировка сцепления; регулировка натяжения ремней; балансировка, перестановка колес, проверка давления в шинах; подтяжка болтов и гаек; сход-развал; смазка и замена масел; регулировка люка в крыше и смазка направляющих; регулировка дверей; регулировка фар; очистка и регулировка форсунок омывателей; проверка на функциональную работоспособность, включая пробные поездки; контроль уровней рабочих жидкостей; уход за аккумулятором </w:t>
       </w:r>
       <w:r>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>; обновление навигационных карт;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
@@ -2997,26 +2950,18 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t xml:space="preserve">любые детали, подверженные естественному износу в ходе эксплуатации. Например, включая, </w:t>
-      </w:r>
-      <w:proofErr w:type="gramStart"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>но</w:t>
-      </w:r>
-      <w:proofErr w:type="gramEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t xml:space="preserve"> не ограничиваясь этим: все детали и эксплуатационные жидкости, подлежащие замене в рамках регламентных работ и техобслуживания; фильтрующие элементы; амортизаторы, пружины и пневматические подушки подвески; свечи зажигания; свечи накаливания; конденсаторы; лампы накаливания (например, обрыв нити накаливания); предохранители; детали сцепления; тормозные колодки, фрикционные накладки, тормозные диски и барабаны; приводные ремни; щетки стеклоочистителя и профильные резинки щеток; стекла; шланги систем охлаждения и шланги подачи омывающих жидкостей; элементы выпускной системы; штыревые антенны; напольные коврики; колесные диски й шины; элементы питания для устройств дистанционного управления и т. д.</w:t>
+        <w:t>любые детали, подверженные естественному износу в ходе эксплуатации. Например, включая, но не ограничиваясь
+          этим: все детали и эксплуатационные жидкости, подлежащие замене в рамках регламентных работ и техобслуживания;
+          фильтрующие элементы; амортизаторы, пружины и пневматические подушки подвески; свечи зажигания; свечи
+          накаливания; конденсаторы; лампы накаливания (например, обрыв нити накаливания); предохранители; детали
+          сцепления; тормозные колодки, фрикционные накладки, тормозные диски и барабаны; приводные ремни; щетки
+          стеклоочистителя и профильные резинки щеток; стекла; шланги систем охлаждения и шланги подачи омывающих
+          жидкостей; элементы выпускной системы; штыревые антенны; напольные коврики; колесные диски й шины; элементы
+          питания для устройств дистанционного управления и т. д.
+        </w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:ind w:left="284"/>
         <w:contextualSpacing/>
@@ -3057,7 +3002,7 @@
         <w:t>являющимися однозначным следствием другой неисправности по вине производителя;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
@@ -3086,7 +3031,7 @@
         <w:t>твующие данному типу Автомобиля;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
@@ -3142,11 +3087,11 @@
         <w:t>;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="4"/>
+          <w:numId w:val="5"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -3171,11 +3116,11 @@
         <w:t>;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="4"/>
+          <w:numId w:val="5"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -3234,15 +3179,7 @@
           <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
-        <w:t>кузово</w:t>
-      </w:r>
-      <w:proofErr w:type="spellEnd"/>
-      <w:r w:rsidRPr="00C82011">
-        <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
-          <w:szCs w:val="20"/>
-        </w:rPr>
-        <w:t>-</w:t>
+        <w:t>кузово-</w:t>
       </w:r>
       <w:r>
         <w:rPr>
@@ -3252,11 +3189,11 @@
         <w:t>производителями;</w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="4"/>
+          <w:numId w:val="5"/>
         </w:numPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
@@ -3284,7 +3221,7 @@
       <w:pPr>
         <w:numPr>
           <w:ilvl w:val="0"/>
-          <w:numId w:val="4"/>
+          <w:numId w:val="5"/>
         </w:numPr>
         <w:tabs>
           <w:tab w:val="left" w:pos="284"/>
@@ -3474,7 +3411,7 @@
         <w:t>, в том числе деталей трансмиссии, подвески и рулевого управления, возникшие из-за возможных ошибочных действий при управлении автомобилем или неаккуратного вождения по неровному дорожному покрытию, сопряженного с ударными нагрузками на детали автомобиля; </w:t>
       </w:r>
     </w:p>
-    <w:p w:rsidR="00D35F38" w:rsidRPr="00C82011" w:rsidRDefault="00D35F38" w:rsidP="00D35F38">
+    <w:p w:rsidR="00485D08" w:rsidRPr="00C82011" w:rsidRDefault="00485D08" w:rsidP="003000E0">
       <w:pPr>
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
