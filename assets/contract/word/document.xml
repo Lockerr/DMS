@@ -2243,6 +2243,7 @@
         </w:tabs>
         <w:jc w:val="both"/>
         <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2251,6 +2252,7 @@
         <w:rPr>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
         </w:rPr>
         <w:t xml:space="preserve">7.1. Общий гарантийный срок для легковых и внедорожных автомобилей «Мерседес-Бенц» составляет 2 (два) года. Этот срок действует без ограничения пробега </w:t>
       </w:r>
@@ -2265,6 +2267,7 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2272,6 +2275,7 @@
       </w:r>
       <w:r w:rsidRPr="00FB054A">
         <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2279,6 +2283,7 @@
       </w:r>
       <w:r>
         <w:rPr>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -2292,13 +2297,13 @@
         </w:tabs>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">7.2. Общий гарантийный срок для малотоннажных автомобилей «Мерседес-Бенц» составляет 2 (два) года или 200 000 (двести тысяч) км пробега в зависимости от того, что наступит ранее. Срок действует </w:t>
@@ -2306,7 +2311,7 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>с даты передачи</w:t>
@@ -2314,7 +2319,7 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> автомобиля первому покупателю или с даты первой регистрации Автомобиля в органах ГИБДД в зависимости от того, какое событие наступило ранее (далее по тексту ДПР).</w:t>
@@ -2327,13 +2332,13 @@
         </w:tabs>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>7.3. Затраты на буксировку автомобиля покрываются только до близлежащего авторизованного сервисного центра и при условии, что они непосредственно связаны с гарантийным случаем и транспортное средство не способно передвигаться своим ходом. </w:t>
@@ -2346,13 +2351,13 @@
         </w:tabs>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">7.4. Гарантийные обязательства не распространяются на дефекты и повреждения, возникшие </w:t>
@@ -2360,7 +2365,7 @@
       <w:proofErr w:type="gramStart"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>вследствие</w:t>
@@ -2368,7 +2373,7 @@
       <w:proofErr w:type="gramEnd"/>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>:</w:t>
@@ -2385,14 +2390,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>д</w:t>
@@ -2401,7 +2406,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>о-</w:t>
@@ -2410,7 +2415,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -2418,7 +2423,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">/ пере- оборудования Автомобиля без санкции компании </w:t>
@@ -2427,7 +2432,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>Даймлер</w:t>
@@ -2436,7 +2441,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>. А именно:</w:t>
@@ -2455,14 +2460,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>выполнения работ третьими лицами, не уполномоченными ДИСТРИБЬЮТОРОМ или заводом-изготовителем осуществлять такие изменения; </w:t>
@@ -2481,14 +2486,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>при отсутствии технологии для выполнения таких изменений в документации завода-изготовителя</w:t>
@@ -2496,7 +2501,7 @@
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -2515,14 +2520,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>использования для д</w:t>
@@ -2531,7 +2536,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>о-</w:t>
@@ -2540,7 +2545,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -2548,7 +2553,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>/ переоборудования Автомобиля чужеродных деталей, не являющихся оригинальными, или неподходящих для данного Автомобиля. </w:t>
@@ -2565,14 +2570,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">установки деталей после несанкционированной разборки и ремонта деталей, узлов и агрегатов, включая, </w:t>
@@ -2581,7 +2586,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>но</w:t>
@@ -2590,7 +2595,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> не ограничиваясь этим: изменения программного обеспечения, заводских настроек, параметров электронных блоков управления;</w:t>
@@ -2607,14 +2612,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>изменения мощности, конструкции и/ или типа Автомобиля;</w:t>
@@ -2630,14 +2635,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>установки навесного, дополнительного оборудования или устройств, не имеющего одобрения ДАЙМЛЕР или ДИСТРИБЬЮТОРА, а также с нарушениями инструкций по его установке; </w:t>
@@ -2653,14 +2658,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>проведения сервисного и технического обслуживания или ремонта Автомобилей третьими лицами, официально не уполномоченными ДИСТРИБЬЮТОРОМ или заводом-изготовителем осуществлять такие виды работ; </w:t>
@@ -2676,14 +2681,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>использования при ремонте Автомобиля деталей, купленных вне официальной дилерской сети, за качество и оригинальность которых ДИСТРИБЬЮТОР и производитель не могут нести ответственность; </w:t>
@@ -2699,14 +2704,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>несоблюдения предписаний по обращению с Автомобилем (Руководства по эксплуатации и Сервисной книжки) или пренебрежения ими </w:t>
@@ -2714,7 +2719,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -2730,14 +2735,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>несоблюдения Покупателем (Клиентом) или иным владельцем Автомобиля</w:t>
@@ -2745,7 +2750,7 @@
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -2753,7 +2758,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>предписаний производителя в отношении технического обслуживания Автомобиля. Например:</w:t>
@@ -2772,14 +2777,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> при нарушении заданных </w:t>
@@ -2788,7 +2793,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>межсервисных</w:t>
@@ -2797,7 +2802,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> интервалов (по времени или пробегу)</w:t>
@@ -2805,7 +2810,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -2824,7 +2829,7 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
@@ -2832,7 +2837,7 @@
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>невыполнении</w:t>
@@ -2841,7 +2846,7 @@
       <w:r w:rsidRPr="00540FB7">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> всех необходимых объемов работ по техобслуживанию, включая дополнительные работы в соответствии с предписаниями сервисного листа (в зависимости от автомобиля), и с использованием рекомендованных эксплуатационных материалов</w:t>
@@ -2849,7 +2854,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -2865,14 +2870,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>использования Автомобилей не по обычному назначению, например, с целью проведения испытаний и тестов, автомобильных спортивных соревнований, обучения водителей или иных мер </w:t>
@@ -2880,7 +2885,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>оприятий, связанных с обучением;</w:t>
@@ -2892,14 +2897,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:lastRenderedPageBreak/>
@@ -2908,7 +2913,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -2916,7 +2921,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>превышения допустимой полной массы Автомобилей, осевых нагрузок, допустимых для Автомобилей полезной нагрузки или грузоподъемности шасси; </w:t>
@@ -2928,14 +2933,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>к)</w:t>
@@ -2943,7 +2948,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -2951,7 +2956,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>использования эксплуатационных материалов</w:t>
@@ -2959,7 +2964,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -2967,7 +2972,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>(масла для двигателей, КПП и гидравлических систем, смазки, охлаждающих жидкостей, жидкости для тормозных систем, консервирующих средств и др.), не разрешенных ДИСТРИБЬЮТОРОМ и/или заводо </w:t>
@@ -2976,7 +2981,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>м-</w:t>
@@ -2985,7 +2990,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> изготовителем, а также использование некачественного топлива,, которое не соотв</w:t>
@@ -2993,7 +2998,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>етствует техническим условиям по</w:t>
@@ -3001,7 +3006,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> действующим ГОСТам (ГОСТ Р 52368-2005 (ЕН590) и ГОСТ Р 51866-2002 (ЕН228), актуальным на момен</w:t>
@@ -3009,7 +3014,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>т подписания данного Приложения;</w:t>
@@ -3021,14 +3026,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>1)</w:t>
@@ -3036,7 +3041,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3044,7 +3049,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>воздействия природных явлений и окружающей среды (например</w:t>
@@ -3052,7 +3057,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>,</w:t>
@@ -3060,7 +3065,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> включая</w:t>
@@ -3068,7 +3073,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>,</w:t>
@@ -3076,7 +3081,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -3085,7 +3090,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>но</w:t>
@@ -3094,7 +3099,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> не ограничиваясь: града, камнепада, птичьего помета, дорожных реагентов, промышленных газов и отложений, пыли, цветочной пыльцы и металлической пыли, наводнений, влияний морской воды, проникновения насекомых/ животных и проч.) и обстоятельств непреодолимой силы.</w:t>
@@ -3109,14 +3114,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">7.5. </w:t>
@@ -3124,7 +3129,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>Гарантийные обязательства не распространя</w:t>
@@ -3132,7 +3137,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>ю</w:t>
@@ -3140,7 +3145,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>тся на:</w:t>
@@ -3157,14 +3162,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">работы по регламентному техобслуживанию и уходу за Автомобилем; регулировочные и наладочные работы, например: регулировка в системе впрыска и зажигания; регулировка топливного насоса высокого давления; очистка топливной системы; уход за тормозной системой и ее прокачка; регулировка сцепления; регулировка натяжения ремней; балансировка, перестановка колес, проверка давления в шинах; подтяжка болтов и гаек; сход-развал; смазка и замена масел; регулировка люка в крыше и смазка направляющих; регулировка дверей; регулировка фар; очистка и регулировка форсунок </w:t>
@@ -3173,7 +3178,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>омывателей</w:t>
@@ -3182,7 +3187,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>; проверка на функциональную работоспособность, включая пробные поездки; контроль уровней рабочих жидкостей; уход за аккумулятором </w:t>
@@ -3190,7 +3195,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>; обновление навигационных карт;</w:t>
@@ -3206,14 +3211,14 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">любые детали, подверженные естественному износу в ходе эксплуатации. Например, включая, </w:t>
@@ -3222,7 +3227,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>но</w:t>
@@ -3231,7 +3236,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> не ограничиваясь этим: все детали и эксплуатационные жидкости, подлежащие замене в рамках регламентных работ и техобслуживания; фильтрующие элементы; амортизаторы, пружины и пневматические подушки подвески; свечи зажигания; свечи накаливания; конденсаторы; лампы накаливания (например, обрыв нити накаливания); предохранители; детали сцепления; тормозные колодки, фрикционные накладки, тормозные диски и барабаны; приводные ремни; щетки стеклоочистителя и профильные резинки щеток; стекла; шланги систем охлаждения и шланги подачи омывающих жидкостей; элементы выпускной системы; штыревые антенны; напольные коврики; колесные диски й шины; элементы питания для устройств дистанционного управления и т. д.</w:t>
@@ -3243,7 +3248,7 @@
         <w:contextualSpacing/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
@@ -3251,7 +3256,7 @@
         <w:rPr>
           <w:bCs/>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">Исключение </w:t>
@@ -3259,7 +3264,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>составляют случаи, когда речь идет, например, о дефекте материала или повреждении,</w:t>
@@ -3267,7 +3272,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:vertAlign w:val="superscript"/>
         </w:rPr>
@@ -3276,7 +3281,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>являющимися однозначным следствием другой неисправности по вине производителя;</w:t>
@@ -3293,14 +3298,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>нормальные уровни шума и вибрации, соответс</w:t>
@@ -3308,7 +3313,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>твующие данному типу Автомобиля;</w:t>
@@ -3324,14 +3329,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">неразличимые без применения специальных методов недостатки: элементов отделки, кузова, </w:t>
@@ -3339,7 +3344,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>лакокрасочного и иного покрытия;</w:t>
@@ -3355,14 +3360,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>неисправности и повреждения, возникшие по причине нарушения предписаний производителя по хранению, уходу и обращению </w:t>
@@ -3370,7 +3375,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -3386,14 +3391,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>повреждения, возникшие не по вине завода-изготовителя или ДИСТРИБЬЮТОРА (например, из-за аварии или иного внешнего воздействия, случившегося после передачи автомобиля Покупателю/Клиенту)
@@ -3402,7 +3407,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -3418,14 +3423,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">нештатное встроенное или навесное оборудование, кузов, надстройки и/или работы, которые были </w:t>
@@ -3434,7 +3439,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>собраны</w:t>
@@ -3443,7 +3448,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> / установлены или выполнены не Производителем, в особенности на кузовное оборудование, изготовленное и установленное</w:t>
@@ -3451,7 +3456,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -3459,7 +3464,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>сторонними</w:t>
@@ -3467,7 +3472,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> </w:t>
@@ -3476,7 +3481,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>кузово</w:t>
@@ -3485,7 +3490,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>-</w:t>
@@ -3493,7 +3498,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>производителями;</w:t>
@@ -3509,14 +3514,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>дополнительные затраты на демонтаж навесного оборудования, кузовов, надстроек и т.д., установленных не Производителем, необходимые для проведения гарантийного ремонта Автомобиля </w:t>
@@ -3524,7 +3529,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -3543,7 +3548,7 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
@@ -3551,7 +3556,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>повреждения</w:t>
@@ -3560,7 +3565,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> возникшие от коррозионных процессов на деталях подвески, трансмиссий, двигателя и кузова, элементов отделки кузова, в результате естественного износа и воздействия внешних факторов окружающей среды;</w:t>
@@ -3574,14 +3579,14 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:lang w:val="en-US"/>
         </w:rPr>
@@ -3590,7 +3595,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>)</w:t>
@@ -3598,7 +3603,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3607,7 +3612,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>повреждения</w:t>
@@ -3616,7 +3621,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> лакокрасочного покрытия кузова вследствие внешних воздействий (царапины, следы попадания камней и других твердых предметов, удары и проч.), включая эрозионный износ и естественное истирание по местам контакта сопрягаемых деталей, возникший в процессе эксплуатации;</w:t>
@@ -3627,14 +3632,14 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>к)</w:t>
@@ -3642,7 +3647,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3650,7 +3655,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>неисправности деталей, узлов и агрегатов автомобиля, подвергшиеся конструктивным изменениям и последствия таких изменений (неисправность, повреждение, разрушение; преждевременный износ, старение и т.д.) на других деталях, узлах или их влияние на изменение характеристик автомобиля; </w:t>
@@ -3661,14 +3666,14 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>1)</w:t>
@@ -3676,7 +3681,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3684,7 +3689,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>диагностические работы, проводимые по инициативе клиента; в результате которых неисправность не была обнаружена; </w:t>
@@ -3695,14 +3700,14 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:lang w:val="en-US"/>
         </w:rPr>
@@ -3711,7 +3716,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>)</w:t>
@@ -3719,7 +3724,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3728,7 +3733,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>повреждения</w:t>
@@ -3737,7 +3742,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>, в том числе деталей трансмиссии, подвески и рулевого управления, возникшие из-за возможных ошибочных действий при управлении автомобилем или неаккуратного вождения по неровному дорожному покрытию, сопряженного с ударными нагрузками на детали автомобиля; </w:t>
@@ -3748,14 +3753,14 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
           <w:lang w:val="en-US"/>
         </w:rPr>
@@ -3764,7 +3769,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>)</w:t>
@@ -3772,7 +3777,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3781,7 +3786,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>неисправности</w:t>
@@ -3790,7 +3795,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> возникшие по причине </w:t>
@@ -3799,7 +3804,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>шламообразования</w:t>
@@ -3808,7 +3813,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> системы смазки вызванного, коагуляцией примесей и гидролизом присадок масла с образованием осадков явившихся следствием: частых пусков и остановок двигателя, длительной работы двигателя на холостом ходу, поездок на короткие расстояния, несоблюдения указаний по прогреву двигателя, смешивания разных масел и др., а также последующие последствия вызванные этим изменением;</w:t>
@@ -3819,14 +3824,14 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>о)</w:t>
@@ -3834,7 +3839,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3842,7 +3847,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>неисправности, возникшие в результате не устранения или несвоевременного устранения других неисправностей после их обнаружения или отказа клиента от немедленного устранения неисправности </w:t>
@@ -3850,7 +3855,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>;</w:t>
@@ -3861,14 +3866,14 @@
         <w:ind w:left="284" w:hanging="284"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>р)</w:t>
@@ -3876,7 +3881,7 @@
       <w:r>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:tab/>
@@ -3884,7 +3889,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>ощутимое изменение режимов или состояния работы трансмиссии (выбор диапазона, смена режима работы, переключение передач и проч.), обусловленное физическими процессами в сложных технических агрегатах. </w:t>
@@ -3895,14 +3900,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:lastRenderedPageBreak/>
@@ -3914,14 +3919,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>7.7. Гарантийный ремонт (устранение недостатков) производится в следующие сроки:</w:t>
@@ -3932,14 +3937,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">при наличии необходимых для выполнения гарантийного ремонта запасных частей на складе Продавец недостатки, обнаруженные в автомобиле, устраняются Продавцом в течение 45 (Сорока пяти) дней </w:t>
@@ -3948,7 +3953,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>с даты подтверждения</w:t>
@@ -3957,7 +3962,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> специалистами СТОА гарантийного случая, при обязательном оформлении Покупателем передачи автомобиля в гарантийный ремонт.</w:t>
@@ -3968,14 +3973,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve">7.8. </w:t>
@@ -3984,7 +3989,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>Покупатель осознаёт, что место его постоянного жительства и место постоянной эксплуатации транспортного средства может находиться на значительном расстоянии от ближайшей СТОА официального дилера, в связи с чем, для осуществления гарантийного обслуживания Покупатель за свой счет осуществляет доставку автомобиля до выбранного им дилера. </w:t>
@@ -3993,7 +3998,7 @@
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t xml:space="preserve"> Выезд специалиста СТОА Продавца к месту нахождения автомобиля Покупателя не осуществляется.</w:t>
@@ -4004,14 +4009,14 @@
         <w:jc w:val="both"/>
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>7.9. Покупатель осознаёт, что автомобиль, как технически сложный товар, может иметь незначительные отклонения, не влияющие на качество, характеристики и работоспособность автомобиля или его элементов, а также понимает, что фактические параметры автомобиля могут отличаться от справочных в зависимости от манеры вождения, температуры окружающего воздуха, качества топлива, состояния дорожного покрытия и прочих характеристик. </w:t>
@@ -4021,15 +4026,14 @@
       <w:pPr>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00C82011">
         <w:rPr>
           <w:color w:val="000000"/>
-          <w:sz w:val="20"/>
+          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/><w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:t>7.10. Клиент готов эксплуатировать автомобили с дизельным двигателем экологического класса Евро 4 и выше с учетом того, что данный двигатель требует применения соответствующего качественного топлива, содержание серы в котором не превышает 50 мг на 1 кг топлива. Клиент проинформирован, что содержание серы можно проверить, потребовав от АЗС предъявление сертификата о соответствии топлива ГОСТу, сверив и убедившись, что фактически измеренное содержание серы не более 50 мг/кг. Также клиент проинформирован, что использование несоответствующего топлива может привести к выходу из строя силового агрегата, топливной и/или выпускной системы автомобиля, при этом соответствующие дефекты, будут отнесены к не гарантийным случаям". Гарантийные обязательства по усмотрению Продавца могут не распространяться на Автомобиль при осуществлении Покупателем его эксплуатации с нарушениями требований ГОСТ Р50597-93 «Автомобильные дороги и улицы: Требования к эксплуатационному состоянию, допустимому по условиям обеспечения безопасности дорожного движения», ГОСТ Р51866-2002 «Топлива для двигателей внутреннего сгорания. Неэтилированный бензин. Технические условия» и/или ГОСТ 52368-2005 «Топливо дизельное. Технические условия». </w:t>
