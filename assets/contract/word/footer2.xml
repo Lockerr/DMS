@@ -11,26 +11,26 @@
     <w:pPr>
       <w:pStyle w:val="a4"/>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:b/>
       </w:rPr>
     </w:pPr>
     <w:r>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:b/>
       </w:rPr>
       <w:t>ПРОДАВЕЦ</w:t>
     </w:r>
     <w:r>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
       </w:rPr>
       <w:t xml:space="preserve">: </w:t>
     </w:r>
     <w:r>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:b/>
       </w:rPr>
       <w:t>ООО «УралАвтоХаус»</w:t>
@@ -47,7 +47,7 @@
     <w:r>
       <w:rPr>
         <w:i/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:iCs/>
         <w:sz w:val="20"/>
       </w:rPr>
@@ -60,7 +60,7 @@
       <w:r>
         <w:rPr>
           <w:i/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:iCs/>
           <w:sz w:val="20"/>
         </w:rPr>
@@ -71,7 +71,7 @@
       <w:rPr>
         <w:i/>
         <w:iCs/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
       </w:rPr>
       <w:t>. Челябинск, ул. Горелова, 12</w:t>
@@ -80,7 +80,7 @@
     <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
       <w:pPr>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -89,7 +89,7 @@
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -101,7 +101,7 @@
     <w:p w:rsidR="0077008E" w:rsidRPr="00254ACB" w:rsidRDefault="0077008E" w:rsidP="0077008E">
       <w:pPr>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -110,7 +110,7 @@
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -122,7 +122,7 @@
     <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
       <w:pPr>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -131,7 +131,7 @@
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -143,7 +143,7 @@
     <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
       <w:pPr>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -152,7 +152,7 @@
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -164,7 +164,7 @@
     <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
       <w:pPr>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -173,7 +173,7 @@
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -185,7 +185,7 @@
     <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
       <w:pPr>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -194,7 +194,7 @@
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -206,7 +206,7 @@
     <w:p w:rsidR="002437B5" w:rsidRPr="00254ACB" w:rsidRDefault="002437B5" w:rsidP="002437B5">
       <w:pPr>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -215,7 +215,7 @@
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:i/>
           <w:iCs/>
           <w:sz w:val="20"/>
@@ -228,7 +228,7 @@
     <w:pPr>
       <w:pStyle w:val="a4"/>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:b/>
       </w:rPr>
     </w:pPr>
@@ -237,13 +237,13 @@
     <w:pPr>
       <w:pStyle w:val="a4"/>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:b/>
       </w:rPr>
     </w:pPr>
     <w:r w:rsidRPr="004A6D87">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:b/>
       </w:rPr>
       <w:t xml:space="preserve">ПОКУПАТЕЛЬ: </w:t>
@@ -252,7 +252,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:iCs/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -273,7 +273,7 @@
       <w:rPr>
         <w:i/>
         <w:iCs/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -283,7 +283,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -304,7 +304,7 @@
     <w:r w:rsidRPr="004A6D87">
       <w:rPr>
         <w:i/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:iCs/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
@@ -315,7 +315,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -336,7 +336,7 @@
     <w:r w:rsidRPr="004A6D87">
       <w:rPr>
         <w:i/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:iCs/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
@@ -347,7 +347,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -360,7 +360,7 @@
     <w:r w:rsidRPr="004A6D87">
       <w:rPr>
         <w:i/>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:iCs/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
@@ -371,7 +371,7 @@
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
           <w:i/>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:iCs/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
@@ -399,7 +399,7 @@
     </w:pPr>
     <w:r w:rsidRPr="005D01BC">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -407,7 +407,7 @@
     </w:r>
     <w:r>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -431,7 +431,7 @@
     </w:r>
     <w:r>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -440,7 +440,7 @@
     <w:fldSimple w:instr=" DOCPROPERTY  s_name  \* MERGEFORMAT ">
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>

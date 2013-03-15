@@ -14,14 +14,14 @@
       </w:tabs>
       <w:jc w:val="both"/>
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
     </w:pPr>
     <w:r w:rsidRPr="002C01C9">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -29,7 +29,7 @@
     </w:r>
     <w:r w:rsidR="007741BA" w:rsidRPr="002C01C9">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -37,7 +37,7 @@
     </w:r>
     <w:r w:rsidRPr="002C01C9">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -45,7 +45,7 @@
     </w:r>
     <w:r w:rsidRPr="002C01C9">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
         <w:lang w:val="en-US"/>
@@ -54,7 +54,7 @@
     </w:r>
     <w:r w:rsidRPr="002C01C9">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
         <w:lang w:val="en-US"/>
@@ -63,7 +63,7 @@
     </w:r>
     <w:r w:rsidRPr="002C01C9">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>
@@ -72,7 +72,7 @@
     <w:fldSimple w:instr=" DOCPROPERTY  s_name  \* MERGEFORMAT ">
       <w:r w:rsidR="00445E78" w:rsidRPr="002C01C9">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:sz w:val="20"/>
           <w:szCs w:val="20"/>
         </w:rPr>
@@ -81,7 +81,7 @@
     </w:fldSimple>
     <w:r w:rsidRPr="002C01C9">
       <w:rPr>
-        <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         <w:sz w:val="20"/>
         <w:szCs w:val="20"/>
       </w:rPr>

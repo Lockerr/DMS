@@ -2195,7 +2195,7 @@
       <w:pPr>
         <w:pStyle w:val="a3"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
       </w:pPr>
@@ -2204,7 +2204,7 @@
       <w:pPr>
         <w:pStyle w:val="a3"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
       </w:pPr>
@@ -2213,26 +2213,26 @@
       <w:pPr>
         <w:pStyle w:val="a3"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
         <w:t>ПРОДАВЕЦ</w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
         </w:rPr>
         <w:t xml:space="preserve">: </w:t>
       </w:r>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
         <w:t>ООО «УралАвтоХаус»</w:t>
@@ -2401,7 +2401,7 @@
         <w:pStyle w:val="a3"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
       </w:pPr>
@@ -2411,7 +2411,7 @@
         <w:pStyle w:val="a3"/>
         <w:jc w:val="both"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
       </w:pPr>
@@ -2420,13 +2420,13 @@
       <w:pPr>
         <w:pStyle w:val="a3"/>
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
       </w:pPr>
       <w:r w:rsidRPr="00254ACB">
         <w:rPr>
-          <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+          <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:b/>
         </w:rPr>
         <w:t xml:space="preserve">ПОКУПАТЕЛЬ: </w:t>
@@ -2434,7 +2434,7 @@
       <w:fldSimple w:instr=" DOCPROPERTY  person_name_2  \* MERGEFORMAT ">
         <w:r w:rsidRPr="00254ACB">
           <w:rPr>
-            <w:rFonts w:ascii="CorporateS" w:hAnsi="CorporateS"/>
+            <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
             <w:b/>
           </w:rPr>
           <w:t>ФАМИЛИЯ ИМЯ ОТЧЕСТВО</w:t>
