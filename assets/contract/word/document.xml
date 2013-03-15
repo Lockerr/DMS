@@ -2555,13 +2555,12 @@
           <w:szCs w:val="20"/>
         </w:rPr>
         <w:sectPr w:rsidR="00783DDF" w:rsidRPr="00254ACB" w:rsidSect="003129C0">
-          <w:headerReference r:id='rId7' w:type='default'/>
-          <w:footerReference r:id='rId8' w:type='default'/>
-          <w:footerReference r:id='rId9' w:type='first'/>
-          <w:pgSz w:code='9' w:h='16838' w:w='11906'/>
-          <w:pgMar w:bottom='567' w:footer='567' w:gutter='0' w:header='284' w:left='1134' w:right='567' w:top='667'/>
-          <w:cols w:space='708'/>
-          <w:docGrid w:linePitch='360'/>
+          <w:footerReference w:type="default" r:id="rId8"/>
+          <w:footerReference w:type="first" r:id="rId9"/>
+          <w:pgSz w:w="11906" w:h="16838" w:code="9"/>
+          <w:pgMar w:top="667" w:right="567" w:bottom="567" w:left="1134" w:header="284" w:footer="567" w:gutter="0"/>
+          <w:cols w:space="708"/>
+          <w:docGrid w:linePitch="360"/>
         </w:sectPr>
       </w:pPr>
     </w:p>
