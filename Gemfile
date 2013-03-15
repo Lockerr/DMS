@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.11'
 
 gem 'rubyXL'
-
 gem 'roo'
 gem 'devise'
 gem 'tiny_tds'
@@ -13,7 +12,7 @@ gem 'arel'
 gem 'haml'
 gem 'hpricot'
 gem 'paperclip'
-gem 'ru_propisju', '2.1.2'
+gem 'ru_propisju'
 gem 'russian'
 gem 'spreadsheet'
 gem 'hirb'
@@ -42,6 +41,8 @@ gem 'ruby-debug19', :require => false
 
 group :development do
   gem 'rvm-capistrano'
+  gem 'guard-rails'
+  gem 'guard-bundler'
 end
 
 group :development, :test do
