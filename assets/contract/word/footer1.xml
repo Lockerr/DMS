@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<w:ftr xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"><w:p w:rsidR="00F01057" w:rsidRPr="00F01057" w:rsidRDefault="00F01057" w:rsidP="00F01057"><w:pPr><w:tabs><w:tab w:val="left" w:pos="4111"/></w:tabs><w:jc w:val="both"/><w:rPr><w:szCs w:val="20"/></w:rPr></w:pPr><w:r w:rsidRPr="002C01C9"><w:rPr><w:szCs w:val="20"/></w:rPr><w:t>_________________ / Пегеев К. В./</w:t></w:r><w:r w:rsidRPr="002C01C9"><w:rPr><w:szCs w:val="20"/><w:lang w:val="en-US"/></w:rPr><w:ptab w:relativeTo="margin" w:alignment="center" w:leader="none"/></w:r><w:r w:rsidRPr="002C01C9"><w:rPr><w:szCs w:val="20"/><w:lang w:val="en-US"/></w:rPr><w:ptab w:relativeTo="margin" w:alignment="right" w:leader="none"/></w:r><w:r w:rsidRPr="002C01C9"><w:rPr><w:szCs w:val="20"/></w:rPr><w:t xml:space="preserve">___________________/ </w:t></w:r><w:fldSimple w:instr=" DOCPROPERTY  s_name  \* MERGEFORMAT "><w:r w:rsidRPr="002C01C9"><w:rPr><w:szCs w:val="20"/></w:rPr><w:t>Моня</w:t></w:r><w:r><w:rPr><w:szCs w:val="20"/></w:rPr><w:t>ков Евгений Юрьевич (14:0</w:t></w:r><w:r w:rsidRPr="002C01C9"><w:rPr><w:szCs w:val="20"/></w:rPr><w:t>)</w:t></w:r></w:fldSimple><w:r w:rsidRPr="002C01C9"><w:rPr><w:szCs w:val="20"/></w:rPr><w:t>/</w:t></w:r></w:p></w:ftr>
+<w:ftr xmlns:ve="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
+  <w:p w:rsidR="00F01057" w:rsidRPr="00F01057" w:rsidRDefault="00F01057" w:rsidP="00F01057">
+    <w:pPr>
+      <w:tabs>
+        <w:tab w:val="left" w:pos="4111"/>
+      </w:tabs>
+      <w:jc w:val="both"/>
+      <w:rPr>
+        <w:szCs w:val="20"/>
+      </w:rPr>
+    </w:pPr>
+    <w:r w:rsidRPr="002C01C9">
+      <w:rPr>
+        <w:szCs w:val="20"/>
+      </w:rPr>
+      <w:t>_________________ / Пегеев К. В./</w:t>
+    </w:r>
+    <w:r w:rsidRPr="002C01C9">
+      <w:rPr>
+        <w:szCs w:val="20"/>
+        <w:lang w:val="en-US"/>
+      </w:rPr>
+      <w:ptab w:relativeTo="margin" w:alignment="center" w:leader="none"/>
+    </w:r>
+    <w:r w:rsidRPr="002C01C9">
+      <w:rPr>
+        <w:szCs w:val="20"/>
+        <w:lang w:val="en-US"/>
+      </w:rPr>
+      <w:ptab w:relativeTo="margin" w:alignment="right" w:leader="none"/>
+    </w:r>
+    <w:r w:rsidRPr="002C01C9">
+      <w:rPr>
+        <w:szCs w:val="20"/>
+      </w:rPr>
+      <w:t xml:space="preserve">___________________/ </w:t>
+    </w:r>
+    <w:fldSimple w:instr=" DOCPROPERTY  s_name  \* MERGEFORMAT ">
+      <w:r w:rsidRPr="002C01C9">
+        <w:rPr>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>Моня</w:t>
+      </w:r>
+    </w:fldSimple>
+    <w:r w:rsidRPr="002C01C9">
+      <w:rPr>
+        <w:szCs w:val="20"/>
+      </w:rPr>
+      <w:t>/</w:t>
+    </w:r>
+  </w:p>
+</w:ftr>
