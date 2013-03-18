@@ -118,7 +118,10 @@ class Car < ActiveRecord::Base
   end
 
   def codes
-    Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
+    hash = Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
+    hash['не указаны'] = real_options - klasse.opts.where(:code => real_options).map(&:code)
+    hash
+
   end
 end
 
