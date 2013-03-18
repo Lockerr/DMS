@@ -251,6 +251,7 @@
     <w:fldSimple w:instr=" DOCPROPERTY  person_name  \* MERGEFORMAT ">
       <w:r w:rsidR="004A6D87" w:rsidRPr="004A6D87">
         <w:rPr>
+          <w:b/>
           <w:iCs/>
           <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman"/>
           <w:sz w:val="20"/>

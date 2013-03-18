@@ -33,7 +33,7 @@ class Car < ActiveRecord::Base
 
 
   def interior
-    if interior = Interior.find_by_code(interior_id)
+    if interior = Interior.find_by_code_and_klasse_id(interior_id, klasse_id)
       interior.desc
     else
       "ОШИБКА (НЕТ КОДА)"
@@ -42,7 +42,7 @@ class Car < ActiveRecord::Base
   
   def color
     if color = Color.find_by_code(color_id)
-      "#{color.desc} #{color.metallic? ? 'металлик' : nil}"
+      "#{color.desc} #{color.metallic? ? 'металлик' : 'не металлик'}"
     else
       "ОШИБКА (НЕТ КОДА)"
     end    
@@ -51,7 +51,7 @@ class Car < ActiveRecord::Base
 
   
   def color_fact
-    if color = Color.find_by_code(color_id)
+    if color = Color.where(color_id)
       color.color
     else
       "ОШИБКА (НЕТ КОДА)"
