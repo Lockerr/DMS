@@ -27,6 +27,7 @@
       <w:fldSimple w:instr=" DOCPROPERTY  number  \* MERGEFORMAT ">
         <w:r w:rsidRPr="00254ACB">
           <w:rPr>
+            <w:b/>
             <w:szCs w:val="20"/>
           </w:rPr>
           <w:t>НЕ УКАЗАНА (ОШИБКА) </w:t>
@@ -177,6 +178,9 @@
       </w:r>
       <w:fldSimple w:instr=" DOCPROPERTY  car_model_name  \* MERGEFORMAT ">
         <w:r w:rsidRPr="00254ACB">
+          <w:rPr>
+            <w:b/>
+          </w:rPr>
           <w:t>НЕ УКАЗАНА (ОШИБКА) </w:t>
         </w:r>
       </w:fldSimple>
