@@ -2,6 +2,10 @@
 class Model < ActiveRecord::Base
   has_many :cars
   has_and_belongs_to_many :people, :uniq => true
+  belongs_to :klasse
+
+  validates_presence_of :name
+
 
   def substitute_name
     update_attributes :name => name.gsub(/"Особая с/,'')

@@ -126,7 +126,7 @@ class Document
 
         wrPr = REXML::Element.new 'w:rPr'
 
-        wrPr.add_element wrfonts
+        #wrPr.add_element wrfonts
         wrPr.add_element wsz
         wrPr.add_element wszcs
 

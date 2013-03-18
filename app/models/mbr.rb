@@ -252,17 +252,30 @@ class Mbr
     counter = book.search('//tr').count
     puts counter
     (1..counter).each do |i|
+
       row = []
       if book.search('//tr')[i]
+
         row = book.search('//tr')[i].search('//td')
+        next if row[4].inner_text.scan('VITO').any?
         row[31] = book.search('//tr')[i].search('//td')[31].inner_text
         opts = row[31].split('.')
 
-        klasse_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})/)[0][0]
-        model_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})/)[0][1]
+        puts row[4].inner_text
+        puts row[0].inner_text
+
+
+        klasse_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})|(VIANO)\s(\w+)/)[0].delete_if(&:nil?)[0]
+        klasse_name = 'V' if klasse_name == 'VIANO'
+        model_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})|(VIANO)\s(\w+)/)[0].delete_if(&:nil?)[1]
+
+        raise Error unless klasse_name
+        raise Error unless model_name
         
-        klasse = Klasse.find_or_create_by_name(klasse_name)
-        model = Klasse.models.find_or_create_by_name(model_name)
+        klasse = Klasse.find_by_name(klasse_name)
+        unless model = klasse.models.find_by_name(model_name.presence)
+          model = klasse.models.create!(name: model_name.presence)
+        end
 
         state = case row[5].inner_text  
           when 'At Customer' then '1_В наличии'
