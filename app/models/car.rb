@@ -42,7 +42,7 @@ class Car < ActiveRecord::Base
   
   def color
     if color = Color.find_by_code(color_id)
-      "#{color.desc} #{color.metallic? ? 'металлик' : 'не металлик'}"
+      "#{color.desc} #{color.metallic? ? 'металлик' : 'неметаллик'}"
     else
       "ОШИБКА (НЕТ КОДА)"
     end    
