@@ -51,7 +51,7 @@ class Car < ActiveRecord::Base
 
   
   def color_fact
-    if color = Color.where(color_id)
+    if color = Color.find_by_code(color_id)
       color.color
     else
       "ОШИБКА (НЕТ КОДА)"
