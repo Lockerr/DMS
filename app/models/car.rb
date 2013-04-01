@@ -1,7 +1,9 @@
 # encoding: utf-8
 class Car < ActiveRecord::Base
-  serialize :real_options, Array
 
+  require 'parser'
+
+  serialize :real_options, Array
   validates_presence_of :order
   validates_uniqueness_of :order
 
@@ -18,17 +20,6 @@ class Car < ActiveRecord::Base
   has_one :act
   has_one :dkp
   belongs_to :client
-
-  def self.rearrange_models
-    Model.find_each do |model|
-      next if model.name.scan('VIANO').any?
-      next if model.name.empty?
-      next if model.name.scan('VITO').any?
-      model.update_attributes(name: model.name.scan(/([\w]{1,3}?)\s?(\d{2,3})|(VIANO)\s(\w+)/)[0].delete_if(&:nil?)[1])
-    end
-  end
-  # after_create :check_for_mbclub_presence
-  # after_update :check_for_mbclub_presence
 
 
 
@@ -121,7 +112,6 @@ class Car < ActiveRecord::Base
     hash = Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
     hash['не указаны'] = real_options - klasse.opts.where(:code => real_options).map(&:code)
     hash
-
   end
 end
 

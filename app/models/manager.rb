@@ -6,24 +6,6 @@ class Manager < ActiveRecord::Base
   has_many :communications
 
 
-  def events_day
-
-  end
-
-
-  def events_week
-
-  end
-
-
-  def events_month
-
-  end
-
-
-  def events_year
-
-  end
 
 
 

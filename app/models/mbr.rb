@@ -74,7 +74,6 @@ class Mbr
   end
 
   def self.nal
-    source = '/home/user/shared/!Отдел продаж/Журналы/Nalichie.xlsx'
 
     file = Rails.root.join('tmp', 'file.xlsx')
     FileUtils.cp source, file
@@ -138,9 +137,8 @@ class Mbr
     book.worksheets[0].each do |row|
       if row[12] == '+'
         puts row[index].to_f
-        
       end
-    end    
+    end
     
   end
 
@@ -152,9 +150,9 @@ class Mbr
 
     book.worksheets[0].each do |row|
       if row[12] == '+'
-        MCar.where(:ordernum => row[1]).update_all(:end_cost => row[8].to_f)        
+        MCar.where(:ordernum => row[1]).update_all(:end_cost => row[8].to_f)
       end
-    end    
+    end
   end
 
   def self.get_cars_by_class
@@ -179,10 +177,7 @@ class Mbr
     # driver.find_element(:id, 'logonpassfield').send_keys 'Q@w3e4r5'
     # driver.find_element(:id, 'logonpassfield').send_keys 'Kfgfnf%$321'
     driver.find_element(:id, 'logonpassfield').send_keys 'Selenium123$'
-    
-    
 
-    
     driver.find_element(:class => 'urBtnStdNew').click
 
     puts 'loging ok'
@@ -200,12 +195,11 @@ class Mbr
     driver.switch_to.default_content
 
     wait.until { driver.find_element(:id => 'ivuFrm_page0ivu1') }
-          
     driver.switch_to.frame driver.find_element(:id => 'ivuFrm_page0ivu1')
-    
+
     wait.until { driver.find_element(:id => 'isolatedWorkArea') }
     driver.switch_to.frame driver.find_element(:id => 'isolatedWorkArea')
-    
+
     begin
       elements = wait.until { driver.find_element(:class => 'urBtnCnt') }
     rescue
@@ -271,7 +265,7 @@ class Mbr
 
         raise Error unless klasse_name
         raise Error unless model_name
-        
+
         klasse = Klasse.find_by_name(klasse_name)
         unless model = klasse.models.find_by_name(model_name.presence)
           model = klasse.models.create!(name: model_name.presence)

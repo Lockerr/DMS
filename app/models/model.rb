@@ -1,7 +1,7 @@
 #encoding: utf-8
 class Model < ActiveRecord::Base
   has_many :cars
-  has_and_belongs_to_many :people, :uniq => true
+  # has_and_belongs_to_many :people
   belongs_to :klasse
 
   validates_presence_of :name
