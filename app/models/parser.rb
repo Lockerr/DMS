@@ -10,7 +10,7 @@ module Parser
   end
 
   def self.point_assign()
-
+end
   def self.unique_models
     Model.group([:name, :klasse_id]).each do |model|
       models = Model.where(name: model.name, klasse_id: model.klasse_id)
