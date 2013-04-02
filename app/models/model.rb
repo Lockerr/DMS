@@ -25,4 +25,9 @@ class Model < ActiveRecord::Base
                           .gsub('Серия','')
                           .gsub(/\s+$/,'')
   end
+
+  def get_or_create_model_from_string(string)
+    inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})|(VIANO)\s(\w+)/)[0].delete_if(&:nil?)[1]
+  end
+
 end

@@ -241,70 +241,87 @@ class Mbr
 
   def self.parse_from_mbr_file
     Dir.chdir(Rails.root.join('tmp'))
-    file = File.new Rails.root.join('tmp', Dir.glob('*.xls')[0].to_s), 'r'
-    book = Hpricot.parse file.read
-    counter = book.search('//tr').count
-    puts counter
-    (1..counter).each do |i|
 
-      row = []
-      if book.search('//tr')[i]
+    book = Excel.new Dir.glob('*.xls')[0].to_s
 
-        row = book.search('//tr')[i].search('//td')
-        next if row[4].inner_text.scan('VITO').any?
-        row[31] = book.search('//tr')[i].search('//td')[31].inner_text
-        opts = row[31].split('.')
+    book.default_sheet = book.sheets[0]
 
-        puts row[4].inner_text
-        puts row[0].inner_text
+    2.upto(book.last_row) do |row|
+      book.cell(row, 13)
 
+      opts = book.cell(row, 32).split('.')
 
-        klasse_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})|(VIANO)\s(\w+)/)[0].delete_if(&:nil?)[0]
-        klasse_name = 'V' if klasse_name == 'VIANO'
-        model_name = row[4].inner_text.scan(/([\w]{1,3}?)\s?(\d{2,3})|(VIANO)\s(\w+)/)[0].delete_if(&:nil?)[1]
+      puts book.cell(row, 5)
+      puts book.cell(row, 1)
 
-        raise Error unless klasse_name
-        raise Error unless model_name
+      next if book.cell(row,5).match 'Sprinter'
+      next if book.cell(row,5).match 'VITO'
+      next if book.cell(row,5).match 'VIANO'
+      # def parse_array
+      #   re = /^(\w{1,3}?)\s?(\d{1,3})\s?([CDI|CGI|4MATIC]+\s?[CDI|CGI|4MATIC]+)?(.*)?$/
+      #   CARS.each do |k, v|
+      #     next if book.cell(row,5).match 'Sprinter'
+      #     next if book.cell(row,5).match 'VITO'
+      #     model_name = book.cell(row, 5).scan(re)[0][1..2].join(' ')
+      #     model.find_or_create_by_name(model_name)
 
-        klasse = Klasse.find_by_name(klasse_name)
-        unless model = klasse.models.find_by_name(model_name.presence)
-          model = klasse.models.create!(name: model_name.presence)
-        end
+      #   end
+      # end
+      re = /^(\w{1,3}?)\s?(\d{1,3})\s?([CDI|CGI|4MATIC]+\s?[CDI|CGI|4MATIC]+)?(.*)?$/
+      klasse_name = book.cell(row, 5).scan(/([\w]{1,3}?)\s?(\d{2,3})|(VIANO)\s(\w+)/)[0].delete_if(&:nil?)[0]
+      klasse_name = 'V' if (klasse_name == 'VIANO' or klasse_name == 'VITO' or klasse_name == 'Sprinter')
+      next if klasse_name == 'V'
+      puts book.cell(row, 5).scan(re)[1..2]
+      model_name = book.cell(row, 5).scan(re)[0][1..2].join(' ')
 
-        state = case row[5].inner_text  
-          when 'At Customer' then '1_В наличии'
-          when 'In Transit to Customer' then '2_Пути'
-          when 'Склад ОтветХранения' then '2_Склад ОтветХранения'
-          when 'д. Чашниково' then '3_Чашниково'
-          when 'Factory' then '3_Фабрика'
-          when 'Paldiski' then '3_Палдиски'
+      puts klasse_name
+      puts model_name
 
-          else '3_статус не известен'
-        end
+      raise Error unless klasse_name
+      raise Error unless model_name
 
-        attributes = {
-                        :state => state,
-                        :order => row[0].inner_text,
-                        :vin => book.search('//tr')[i].search('//td')[1].inner_text,
-                        :model => model,
-                        :klasse_id => klasse.id,
-                        :color_id => row[29].inner_text,
-                        :interior_id => row[30].inner_text,
-                        :arrival => row[18].inner_text,
-                        :engine_number => row[2].inner_text,
-                        :real_options => opts,
-                        :prod_date => row[10].inner_text
+      klasse = Klasse.find_by_name(klasse_name)
 
-                }
+      unless model = klasse.models.find_by_name(model_name)
+        model = klasse.models.create!(name: model_name)
+      end
 
-        if car = Car.find_by_order(row[0].inner_text.to_s)
-          car.update_attributes(attributes)
-        else
-          Car.create(attributes)
-        end
+      state = case book.cell(row, 6)
+        when 'At Customer' then '1_В наличии'
+        when 'In Transit to Customer' then '2_Пути'
+        when 'Склад ОтветХранения' then '2_Склад ОтветХранения'
+        when 'д. Чашниково' then '3_Чашниково'
+        when 'Factory' then '3_Фабрика'
+        when 'Paldiski' then '3_Палдиски'
+
+        else '3_статус не известен'
+      end
+
+      attributes = {
+                      :state => state,
+                      :order => book.cell(row, 1),
+                      :vin => book.cell(row, 2),
+                      :model_id => model.id,
+                      :klasse_id => klasse.id,
+                      :color_id => book.cell(row, 30),
+                      :interior_id => book.cell(row, 31),
+                      :arrival => book.cell(row, 19),
+                      :engine_number => book.cell(row, 3),
+                      :real_options => opts,
+                      :prod_date => book.cell(row, 11)
+
+              }
+      # gets
+
+      if car = Car.find_by_order(book.cell(row, 1).to_s)
+        car.update_attributes(attributes)
+      else
+        Car.create!(attributes)
       end
 
     end
 
   end
+
+
 end

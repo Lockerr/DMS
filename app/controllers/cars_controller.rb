@@ -73,11 +73,11 @@ class CarsController < ApplicationController
 
     end
 
-    if params[:state]
-      @cars = @cars.with_state params[:state]
-    else
-      @cars = @cars.with_state :pending
-    end
+    # if params[:state]
+    #   @cars = @cars.with_state params[:state]
+    # else
+    #   @cars = @cars.with_state :pending
+    # end
     
     @cars = @cars.includes([:model, :klasse])
 

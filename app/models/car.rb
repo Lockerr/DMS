@@ -1,7 +1,7 @@
 # encoding: utf-8
 class Car < ActiveRecord::Base
 
-  require 'parser'
+  # require 'parser'
 
   serialize :real_options, Array
   validates_presence_of :order
