@@ -41,7 +41,7 @@ class Dkp# < ActiveRecord::Base
             :doc_number => Time.now.year.to_s[2..3] + client.car.order.to_s[2..-1],
             :kop => price_kop(client.cost),
             :kop2 => price_kop(client.cost),
-            :car_model_name => client.car.model.name,
+            :car_model_name => "#{client.car.klasse.name} #{client.car.model.name}",
             :car_vin => client.car.vin,
             :car_prod_year => client.car.prod_date.year,
             :car_engine_number => client.car.engine_number,
