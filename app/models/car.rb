@@ -110,9 +110,14 @@ class Car < ActiveRecord::Base
 
   def codes
     hash = Hash[klasse.opts.where(:code => real_options).map{|i| [i.code,i.desc]}]
-    hash['не указаны'] = real_options - klasse.opts.where(:code => real_options).map(&:code)
-    hash
+    opts = Hash[Opt.where(code: real_options, klasse_id: nil).map{|i| [i.code,i.desc]}]
+    result = opts.merge hash
+
+
+    result['не указаны'] = real_options - result.keys
+    Hash[result.sort]
   end
 end
 
 
+Car.find_by_vin('WDD2462421N042338').codes
