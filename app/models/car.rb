@@ -118,6 +118,3 @@ class Car < ActiveRecord::Base
     Hash[result.sort]
   end
 end
-
-
-Car.find_by_vin('WDD2462421N042338').codes
