@@ -6,12 +6,12 @@ set :deploy_to, '/home/user/dms/'
 set :rvm_ruby_string, 'r328'
 require "rvm/capistrano"
 
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 
 set :scm, :git
-set :scm_passphrase, 'werwerw'
-set :scm_password, 'werwerw'
-set :scm_username, 'anton'
+# set :scm_passphrase, 'werwerw'
+# set :scm_password, 'werwerw'
+# set :scm_username, 'anton'
 set :use_sudo, true
 
 role :web, domain
@@ -50,3 +50,4 @@ task :tail, :roles => :app do
     break if stream == :err
   end
 end
+
