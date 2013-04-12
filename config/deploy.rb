@@ -1,10 +1,11 @@
 set :application, "crm"
 set :repository,  "git@github.com:Lockerr/DMS.git"
 set :domain, 'user@192.168.1.98'
-# set :password, 'ktghfpjhbq'
 set :deploy_to, '/home/user/dms/'
-set :rvm_ruby_string, 'r328'
+# set :rvm_ruby_string, 'r328'
 require "rvm/capistrano"
+
+set :ssh_options, { :forward_agent => true }
 
 set :deploy_via, :remote_cache
 
@@ -16,7 +17,7 @@ set :use_sudo, true
 
 role :web, domain
 role :app, domain
-role :db,  domain, :primary => true # This is where Rails migrations will run
+role :db,  domain
 
 
 after 'update_code', 'bundle install'
@@ -31,14 +32,7 @@ namespace :deploy do
 end
 
 
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+
 
 desc "tail production log files"
 task :tail, :roles => :app do
